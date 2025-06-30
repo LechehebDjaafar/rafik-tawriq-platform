@@ -1,0 +1,17 @@
+{
+  "name": "rafik-tawriq-platform",
+  "version": "1.0.0",
+  "description": "منصة رفيق توريق لدعم ريادة الأعمال",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "npm run build-css && npm run build-js",
+    "build-css": "tailwindcss -i ./assets/css/main.css -o ./dist/css/style.css --watch",
+    "build-js": "webpack --mode production"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.0",
+    "alpinejs": "^3.13.0",
+    "swiper": "^11.0.0",
+    "aos": "^2.3.4"
+  }
+}
