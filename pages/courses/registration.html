@@ -1,10 +1,1307 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تسجيل الدورات</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدورات - رفيق توريق</title>
+    <meta name="description" content="نموذج تسجيل الدورات التدريبية مع التحقق من البيانات">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/courses.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>تسجيل الدورات</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu المحسن -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة الدورات الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-blue-600 font-bold flex items-center relative">
+                        <i class="fas fa-graduation-cap ml-2"></i>
+                        الدورات التدريبية
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الدورات</span>
+                            </div>
+                            <a href="recorded-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-video text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات المسجلة</div>
+                                    <div class="text-xs text-gray-500">تعلم في أي وقت</div>
+                                </div>
+                            </a>
+                            <a href="live-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات الحضورية</div>
+                                    <div class="text-xs text-gray-500">تفاعل مباشر</div>
+                                </div>
+                            </a>
+                            <a href="industrial-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-industry text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات الصناعية</div>
+                                    <div class="text-xs text-gray-500">تخصص تقني</div>
+                                </div>
+                            </a>
+                            <a href="management-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">دورات الإدارة</div>
+                                    <div class="text-xs text-gray-500">مهارات قيادية</div>
+                                </div>
+                            </a>
+                            <hr class="my-2">
+                            <a href="registration.html" class="flex items-center px-4 py-3 text-green-600 bg-green-50 border-r-4 border-green-600">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-user-plus text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">تسجيل جديد</div>
+                                    <div class="text-xs text-green-500">الصفحة الحالية</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons المحسنة -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <button class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-user-plus ml-2"></i>
+                    تسجيل حالي
+                </button>
+                <button class="border-2 border-green-600 text-green-600 px-6 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../../index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-green-600 pr-3">
+                    <span class="text-green-600 font-bold text-sm">الدورات التدريبية</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="recorded-courses.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-video ml-2 w-4"></i>
+                            الدورات المسجلة
+                        </a>
+                        <a href="live-courses.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-users ml-2 w-4"></i>
+                            الدورات الحضورية
+                        </a>
+                        <a href="industrial-courses.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-industry ml-2 w-4"></i>
+                            الدورات الصناعية
+                        </a>
+                        <a href="management-courses.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-chart-line ml-2 w-4"></i>
+                            دورات الإدارة
+                        </a>
+                        <a href="registration.html" class="flex items-center text-green-600 font-medium py-1 text-sm">
+                            <i class="fas fa-user-plus ml-2 w-4"></i>
+                            تسجيل جديد (الحالية)
+                        </a>
+                    </div>
+                </div>
+                <a href="../incubator/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-seedling ml-3 w-5"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-handshake ml-3 w-5"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-cogs ml-3 w-5"></i>
+                    الآلات والمعدات
+                </a>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-user-plus ml-2"></i>
+                        تسجيل حالي
+                    </button>
+                    <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb المحسن -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الدورات التدريبية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تسجيل الدورات</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section المحسن -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-teal-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"registration\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1\" fill=\"white\"/><rect x=\"10\" y=\"10\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23registration)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-green-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-user-plus text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">انضم إلى مجتمع المتعلمين</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">سجل في دورتك المفضلة</h1>
+            <p class="text-xl mb-8 text-green-100 max-w-2xl mx-auto leading-relaxed">
+                املأ النموذج أدناه وسنتواصل معك خلال 24 ساعة لتأكيد التسجيل وبدء رحلة التعلم
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-8 max-w-xl mx-auto mb-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">24</div>
+                    <div class="text-sm text-green-200">ساعة للرد</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">100%</div>
+                    <div class="text-sm text-green-200">ضمان الجودة</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">30</div>
+                    <div class="text-sm text-green-200">يوم ضمان استرداد</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Form Section المحسن -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Progress Steps المحسن -->
+        <div class="flex items-center justify-center mb-12" data-aos="fade-up">
+            <div class="flex items-center">
+                <div class="step-indicator active flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full font-bold shadow-lg">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-green-600 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-gray-300 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step Labels -->
+        <div class="flex justify-between mb-8 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <span class="text-sm font-medium text-green-600">المعلومات الشخصية</span>
+            <span class="text-sm font-medium text-gray-500">اختيار الدورة</span>
+            <span class="text-sm font-medium text-gray-500">التأكيد</span>
+        </div>
+
+        <!-- Form المحسن -->
+        <form id="course-registration-form" class="space-y-8" novalidate>
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="1" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">المعلومات الشخصية</h2>
+                    <p class="text-gray-600">أدخل بياناتك الشخصية للتسجيل في الدورة</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="full-name" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-user ml-2 text-green-500"></i>
+                            الاسم الكامل *
+                        </label>
+                        <input type="text" id="full-name" name="full-name" placeholder="أدخل اسمك الكامل" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال الاسم الكامل</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-envelope ml-2 text-green-500"></i>
+                            البريد الإلكتروني *
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال بريد إلكتروني صحيح</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-phone ml-2 text-green-500"></i>
+                            رقم الهاتف *
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="0[567][0-9]{8}" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال رقم هاتف صحيح (05/06/07)</span>
+                        <small class="text-gray-500 text-xs mt-1 block">مثال: 0512345678</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-birthday-cake ml-2 text-green-500"></i>
+                            العمر
+                        </label>
+                        <input type="number" id="age" name="age" placeholder="25" min="16" max="65" 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-map-marker-alt ml-2 text-green-500"></i>
+                            المدينة *
+                        </label>
+                        <select id="city" name="city" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            <option value="">اختر المدينة</option>
+                            <option value="chlef">شلف</option>
+                            <option value="algiers">الجزائر</option>
+                            <option value="oran">وهران</option>
+                            <option value="constantine">قسنطينة</option>
+                            <option value="annaba">عنابة</option>
+                            <option value="setif">سطيف</option>
+                            <option value="batna">باتنة</option>
+                            <option value="djelfa">الجلفة</option>
+                            <option value="tlemcen">تلمسان</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار المدينة</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-graduation-cap ml-2 text-green-500"></i>
+                            المستوى التعليمي
+                        </label>
+                        <select id="education" name="education" 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            <option value="">اختر المستوى التعليمي</option>
+                            <option value="high-school">ثانوي</option>
+                            <option value="bachelor">ليسانس</option>
+                            <option value="master">ماستر</option>
+                            <option value="phd">دكتوراه</option>
+                            <option value="professional">تكوين مهني</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="button" class="next-step bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Course Selection -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="2">
+                <div class="text-center mb-8">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">اختيار الدورة</h2>
+                    <p class="text-gray-600">اختر الدورة التي تناسب أهدافك التعليمية</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="form-group">
+                        <label for="course-category" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-list ml-2 text-blue-500"></i>
+                            فئة الدورة *
+                        </label>
+                        <select id="course-category" name="course-category" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="">اختر فئة الدورة</option>
+                            <option value="recorded">الدورات المسجلة</option>
+                            <option value="live">الدورات الحضورية</option>
+                            <option value="industrial">الدورات الصناعية</option>
+                            <option value="management">دورات الإدارة</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار فئة الدورة</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course-select" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-book ml-2 text-blue-500"></i>
+                            اختر الدورة *
+                        </label>
+                        <select id="course-select" name="course-select" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="">اختر الدورة</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار الدورة</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience-level" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-signal ml-2 text-blue-500"></i>
+                            مستوى الخبرة *
+                        </label>
+                        <select id="experience-level" name="experience-level" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="">اختر مستوى الخبرة</option>
+                            <option value="beginner">مبتدئ - لا توجد خبرة سابقة</option>
+                            <option value="intermediate">متوسط - خبرة محدودة</option>
+                            <option value="advanced">متقدم - خبرة واسعة</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار مستوى الخبرة</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-target ml-2 text-blue-500"></i>
+                            أهدافك من الدورة
+                        </label>
+                        <textarea id="goals" name="goals" rows="4" placeholder="اكتب أهدافك من هذه الدورة وما تريد تحقيقه..." 
+                                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block mb-3 font-semibold text-gray-700">
+                            <i class="fas fa-question-circle ml-2 text-blue-500"></i>
+                            كيف سمعت عنا؟
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="source" value="social-media" class="ml-3 text-blue-600">
+                                <i class="fas fa-share-alt text-blue-500 ml-2"></i>
+                                <span>وسائل التواصل الاجتماعي</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="source" value="friends" class="ml-3 text-blue-600">
+                                <i class="fas fa-users text-blue-500 ml-2"></i>
+                                <span>الأصدقاء والمعارف</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="source" value="google" class="ml-3 text-blue-600">
+                                <i class="fab fa-google text-blue-500 ml-2"></i>
+                                <span>البحث في جوجل</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="source" value="other" class="ml-3 text-blue-600">
+                                <i class="fas fa-ellipsis-h text-blue-500 ml-2"></i>
+                                <span>أخرى</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="button" class="next-step bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="3">
+                <div class="text-center mb-8">
+                    <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">مراجعة وتأكيد البيانات</h2>
+                    <p class="text-gray-600">تأكد من صحة البيانات قبل إرسال طلب التسجيل</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-clipboard-list text-purple-500 ml-2"></i>
+                        ملخص التسجيل
+                    </h3>
+                    <div id="registration-summary" class="space-y-3 text-gray-700">
+                        <!-- Summary will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-blue-600 text-xl ml-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-3">معلومات مهمة:</h4>
+                            <ul class="text-blue-700 text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-clock text-blue-500 ml-2"></i>
+                                    سيتم التواصل معك خلال 24 ساعة لتأكيد التسجيل
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-credit-card text-blue-500 ml-2"></i>
+                                    يمكنك الدفع عند بداية الدورة أو مقدماً
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-book text-blue-500 ml-2"></i>
+                                    ستحصل على جميع المواد التدريبية
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-certificate text-blue-500 ml-2"></i>
+                                    شهادة إتمام معتمدة عند انتهاء الدورة
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-undo text-blue-500 ml-2"></i>
+                                    ضمان استرداد المبلغ خلال 30 يوم
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="flex items-start p-4 border-2 border-gray-200 rounded-lg hover:border-green-300 transition-all cursor-pointer">
+                        <input type="checkbox" id="terms-agreement" name="terms-agreement" required class="mt-1 ml-3 text-green-600">
+                        <span class="text-gray-700">
+                            أوافق على 
+                            <a href="#" class="text-blue-600 hover:underline font-medium">الشروط والأحكام</a> 
+                            و 
+                            <a href="#" class="text-blue-600 hover:underline font-medium">سياسة الخصوصية</a>
+                            الخاصة بمنصة رفيق توريق
+                        </span>
+                    </label>
+                    <span class="error-message text-red-500 text-sm hidden">يجب الموافقة على الشروط والأحكام</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="submit" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-check ml-2"></i>
+                        تأكيد التسجيل
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Message المحسن -->
+        <div id="success-message" class="hidden bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-xl p-8 text-center">
+            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-green-800 mb-4">تم التسجيل بنجاح!</h2>
+            <p class="text-green-700 mb-6 text-lg">
+                شكراً لك على التسجيل في منصة رفيق توريق. سيتم التواصل معك خلال 24 ساعة لتأكيد التسجيل وتحديد موعد بداية الدورة.
+            </p>
+            <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                <h3 class="font-bold text-gray-800 mb-2">الخطوات التالية:</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>✓ مراجعة طلب التسجيل</li>
+                    <li>✓ التواصل معك لتأكيد البيانات</li>
+                    <li>✓ إرسال تفاصيل الدورة والدفع</li>
+                    <li>✓ بدء الدورة في الموعد المحدد</li>
+                </ul>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-bold">
+                    <i class="fas fa-graduation-cap ml-2"></i>
+                    العودة للدورات
+                </a>
+                <a href="../../index.html" class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-all font-bold">
+                    <i class="fas fa-home ml-2"></i>
+                    العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section المحسن -->
+<section class="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">هل تحتاج مساعدة؟</h2>
+            <p class="text-xl text-blue-200 mb-8">
+                فريقنا جاهز لمساعدتك في اختيار الدورة المناسبة وإتمام عملية التسجيل
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-phone text-3xl text-yellow-400 mb-4"></i>
+                    <h3 class="font-bold mb-2">اتصل بنا</h3>
+                    <p class="text-blue-200 text-sm mb-4">تحدث مع فريق الدعم مباشرة</p>
+                    <a href="tel:027XXXXXX" class="bg-white text-blue-900 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors font-bold text-sm">
+                        027 XX XX XX
+                    </a>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fab fa-whatsapp text-3xl text-green-400 mb-4"></i>
+                    <h3 class="font-bold mb-2">واتساب</h3>
+                    <p class="text-blue-200 text-sm mb-4">راسلنا عبر الواتساب</p>
+                    <a href="https://wa.me/213XXXXXXXXX" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-bold text-sm">
+                        أرسل رسالة
+                    </a>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
+                    <i class="fas fa-envelope text-3xl text-purple-400 mb-4"></i>
+                    <h3 class="font-bold mb-2">البريد الإلكتروني</h3>
+                    <p class="text-blue-200 text-sm mb-4">أرسل استفسارك عبر الإيميل</p>
+                    <a href="mailto:info@rafiktawriq.dz" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-bold text-sm">
+                        أرسل إيميل
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer المحسن -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">منصة شاملة لدعم ريادة الأعمال والمقاولاتية</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2">
+                    <li><a href="../../index.html" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a></li>
+                    <li><a href="recorded-courses.html" class="text-gray-400 hover:text-white transition-colors">الدورات المسجلة</a></li>
+                    <li><a href="live-courses.html" class="text-gray-400 hover:text-white transition-colors">الدورات الحضورية</a></li>
+                    <li><a href="industrial-courses.html" class="text-gray-400 hover:text-white transition-colors">الدورات الصناعية</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم والمساعدة</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مركز المساعدة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li><a href="../contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الاسترداد</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">معلومات التواصل</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">registration@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-green-400 ml-3"></i>
+                        <span class="text-gray-400">شلف، الجزائر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 left-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-110 opacity-0 invisible">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/courses.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Registration form functionality
+    let currentStep = 1;
+    const totalSteps = 3;
+    
+    // Course data for dynamic population
+    const coursesByCategory = {
+        'recorded': [
+            'التسويق الرقمي المتقدم',
+            'إدارة المشاريع الاحترافية',
+            'أساسيات التحليل المالي',
+            'مهارات البيع المتقدمة',
+            'تسويق المحتوى الإبداعي',
+            'التسويق عبر وسائل التواصل'
+        ],
+        'live': [
+            'ورشة التسويق الرقمي المتقدم',
+            'دورة إدارة الموارد البشرية',
+            'ورشة ريادة الأعمال',
+            'دورة القيادة الفعالة',
+            'ورشة التخطيط الاستراتيجي'
+        ],
+        'industrial': [
+            'تصنيع الحلويات والمخبوزات',
+            'تقنيات اللحام الصناعي',
+            'تركيب أنظمة الطاقة الشمسية',
+            'صناعة الصابون والمنظفات',
+            'تصميم الأثاث الخشبي',
+            'صناعة الأحذية الجلدية'
+        ],
+        'management': [
+            'إدارة وحدات الإنتاج',
+            'التخطيط الصناعي',
+            'مراقبة الجودة',
+            'إعداد دراسة الجدوى',
+            'التسويق الصناعي',
+            'الشراكة مع المستثمرين'
+        ]
+    };
+    
+    // Step navigation
+    function updateStep(step) {
+        // Hide all steps
+        document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+        
+        // Show current step
+        document.querySelector(`[data-step="${step}"]`).classList.add('active');
+        
+        // Update step indicators
+        document.querySelectorAll('.step-indicator').forEach((indicator, index) => {
+            if (index + 1 <= step) {
+                indicator.classList.add('active');
+                indicator.classList.remove('bg-gray-300', 'text-gray-600');
+                indicator.classList.add('bg-green-600', 'text-white');
+            } else {
+                indicator.classList.remove('active');
+                indicator.classList.remove('bg-green-600', 'text-white');
+                indicator.classList.add('bg-gray-300', 'text-gray-600');
+            }
+        });
+        
+        // Update step lines
+        document.querySelectorAll('.step-line').forEach((line, index) => {
+            if (index + 1 < step) {
+                line.classList.remove('bg-gray-300');
+                line.classList.add('bg-green-600');
+            } else {
+                line.classList.remove('bg-green-600');
+                line.classList.add('bg-gray-300');
+            }
+        });
+        
+        // Update step labels
+        const labels = document.querySelectorAll('.step-labels span');
+        if (labels.length > 0) {
+            labels.forEach((label, index) => {
+                if (index + 1 <= step) {
+                    label.classList.remove('text-gray-500');
+                    label.classList.add('text-green-600');
+                } else {
+                    label.classList.remove('text-green-600');
+                    label.classList.add('text-gray-500');
+                }
+            });
+        }
+    }
+    
+    // Next step
+    document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (validateCurrentStep()) {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateStep(currentStep);
+                    
+                    if (currentStep === 3) {
+                        updateRegistrationSummary();
+                    }
+                }
+            }
+        });
+    });
+    
+    // Previous step
+    document.querySelectorAll('.prev-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStep(currentStep);
+            }
+        });
+    });
+    
+    // Course category change
+    document.getElementById('course-category').addEventListener('change', function() {
+        const category = this.value;
+        const courseSelect = document.getElementById('course-select');
+        
+        // Clear existing options
+        courseSelect.innerHTML = '<option value="">اختر الدورة</option>';
+        
+        if (category && coursesByCategory[category]) {
+            coursesByCategory[category].forEach(course => {
+                const option = document.createElement('option');
+                option.value = course;
+                option.textContent = course;
+                courseSelect.appendChild(option);
+            });
+        }
+    });
+    
+    // Form validation
+    function validateCurrentStep() {
+        const currentStepElement = document.querySelector(`[data-step="${currentStep}"]`);
+        const requiredFields = currentStepElement.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!validateField(field)) {
+                isValid = false;
+            }
+        });
+        
+        return isValid;
+    }
+    
+    function validateField(field) {
+        const value = field.value.trim();
+        const fieldType = field.type;
+        let isValid = true;
+        let errorMessage = '';
+        
+        // Required field validation
+        if (field.hasAttribute('required') && !value) {
+            isValid = false;
+            errorMessage = 'هذا الحقل مطلوب';
+        }
+        
+        // Specific validations
+        if (value) {
+            if (fieldType === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'يرجى إدخال بريد إلكتروني صحيح';
+                }
+            }
+            
+            if (fieldType === 'tel') {
+                const phoneRegex = /^0[567][0-9]{8}$/;
+                if (!phoneRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'يرجى إدخال رقم هاتف صحيح (05/06/07)';
+                }
+            }
+        }
+        
+        // Update field appearance
+        const errorElement = field.parentNode.querySelector('.error-message');
+        
+        if (isValid) {
+            field.classList.remove('border-red-500');
+            field.classList.add('border-gray-300');
+            if (errorElement) {
+                errorElement.classList.add('hidden');
+            }
+        } else {
+            field.classList.remove('border-gray-300');
+            field.classList.add('border-red-500');
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+                errorElement.classList.remove('hidden');
+            }
+        }
+        
+        return isValid;
+    }
+    
+    // Real-time validation
+    document.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => {
+            // Clear error on input
+            field.classList.remove('border-red-500');
+            field.classList.add('border-gray-300');
+            const errorElement = field.parentNode.querySelector('.error-message');
+            if (errorElement) {
+                errorElement.classList.add('hidden');
+            }
+        });
+    });
+    
+    // Update registration summary
+    function updateRegistrationSummary() {
+        const formData = new FormData(document.getElementById('course-registration-form'));
+        const data = Object.fromEntries(formData        .entries());
+        
+        const summaryHTML = `
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">الاسم الكامل:</strong> 
+                <span class="text-gray-900">${data['full-name'] || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">البريد الإلكتروني:</strong> 
+                <span class="text-gray-900">${data['email'] || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">رقم الهاتف:</strong> 
+                <span class="text-gray-900">${data['phone'] || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">المدينة:</strong> 
+                <span class="text-gray-900">${data['city'] || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">فئة الدورة:</strong> 
+                <span class="text-gray-900">${getCategoryName(data['course-category']) || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">الدورة المختارة:</strong> 
+                <span class="text-gray-900">${data['course-select'] || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2 border-b border-gray-200">
+                <strong class="text-gray-700">مستوى الخبرة:</strong> 
+                <span class="text-gray-900">${getExperienceName(data['experience-level']) || 'غير محدد'}</span>
+            </div>
+            <div class="summary-item flex justify-between py-2">
+                <strong class="text-gray-700">كيف سمعت عنا:</strong> 
+                <span class="text-gray-900">${getSourceName(data['source']) || 'غير محدد'}</span>
+            </div>
+        `;
+        
+        document.getElementById('registration-summary').innerHTML = summaryHTML;
+    }
+    
+    // Helper functions for display names
+    function getCategoryName(category) {
+        const categories = {
+            'recorded': 'الدورات المسجلة',
+            'live': 'الدورات الحضورية',
+            'industrial': 'الدورات الصناعية',
+            'management': 'دورات الإدارة'
+        };
+        return categories[category] || category;
+    }
+    
+    function getExperienceName(level) {
+        const levels = {
+            'beginner': 'مبتدئ - لا توجد خبرة سابقة',
+            'intermediate': 'متوسط - خبرة محدودة',
+            'advanced': 'متقدم - خبرة واسعة'
+        };
+        return levels[level] || level;
+    }
+    
+    function getSourceName(source) {
+        const sources = {
+            'social-media': 'وسائل التواصل الاجتماعي',
+            'friends': 'الأصدقاء والمعارف',
+            'google': 'البحث في جوجل',
+            'other': 'أخرى'
+        };
+        return sources[source] || source;
+    }
+    
+    // Form submission
+    document.getElementById('course-registration-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate terms agreement
+        const termsCheckbox = document.getElementById('terms-agreement');
+        if (!termsCheckbox.checked) {
+            const errorElement = termsCheckbox.parentNode.parentNode.querySelector('.error-message');
+            if (errorElement) {
+                errorElement.classList.remove('hidden');
+            }
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = document.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري الإرسال...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            // Hide form and show success message
+            document.getElementById('course-registration-form').style.display = 'none';
+            document.getElementById('success-message').classList.remove('hidden');
+            
+            // Scroll to success message
+            document.getElementById('success-message').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+            
+            // Clear saved data
+            localStorage.removeItem('courseRegistrationData');
+            
+            // Reset button (in case user goes back)
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            
+        }, 2000);
+    });
+    
+    // Auto-save form data
+    function autoSaveFormData() {
+        const formData = new FormData(document.getElementById('course-registration-form'));
+        const data = Object.fromEntries(formData.entries());
+        localStorage.setItem('courseRegistrationData', JSON.stringify(data));
+        
+        // Show auto-save indicator
+        showAutoSaveIndicator();
+    }
+    
+    function showAutoSaveIndicator() {
+        // Remove existing indicator
+        const existingIndicator = document.querySelector('.auto-save-indicator');
+        if (existingIndicator) {
+            existingIndicator.remove();
+        }
+        
+        const indicator = document.createElement('div');
+        indicator.className = 'auto-save-indicator fixed top-24 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-50 opacity-0 transition-opacity duration-300';
+        indicator.innerHTML = '<i class="fas fa-check ml-2"></i>تم الحفظ تلقائياً';
+        
+        document.body.appendChild(indicator);
+        
+        // Show indicator
+        setTimeout(() => indicator.style.opacity = '1', 100);
+        
+        // Hide and remove indicator
+        setTimeout(() => {
+            indicator.style.opacity = '0';
+            setTimeout(() => {
+                if (document.body.contains(indicator)) {
+                    document.body.removeChild(indicator);
+                }
+            }, 300);
+        }, 2000);
+    }
+    
+    // Load saved form data on page load
+    function loadSavedFormData() {
+        const savedData = localStorage.getItem('courseRegistrationData');
+        if (savedData) {
+            try {
+                const data = JSON.parse(savedData);
+                
+                // Populate form fields
+                Object.keys(data).forEach(key => {
+                    const field = document.querySelector(`[name="${key}"]`);
+                    if (field) {
+                        if (field.type === 'radio') {
+                            const radioField = document.querySelector(`[name="${key}"][value="${data[key]}"]`);
+                            if (radioField) radioField.checked = true;
+                        } else if (field.type === 'checkbox') {
+                            field.checked = data[key] === 'on';
+                        } else {
+                            field.value = data[key];
+                        }
+                    }
+                });
+                
+                // Trigger course category change if saved
+                if (data['course-category']) {
+                    const categorySelect = document.getElementById('course-category');
+                    categorySelect.dispatchEvent(new Event('change'));
+                }
+                
+            } catch (error) {
+                console.error('Error loading saved form data:', error);
+            }
+        }
+    }
+    
+    // Auto-save on input change
+    document.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('input', debounce(autoSaveFormData, 1000));
+        field.addEventListener('change', autoSaveFormData);
+    });
+    
+    // Debounce function
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+    
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Initialize saved data on page load
+    loadSavedFormData();
+    
+    // Initialize first step
+    updateStep(1);
+});
+
+// Additional utility functions
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `fixed top-24 right-4 p-4 rounded-lg shadow-lg text-white z-50 opacity-0 transition-all duration-300 transform translate-x-full`;
+    
+    const colors = {
+        success: 'bg-green-600',
+        error: 'bg-red-600',
+        warning: 'bg-yellow-600',
+        info: 'bg-blue-600'
+    };
+    
+    notification.classList.add(colors[type] || colors.info);
+    notification.innerHTML = `
+        <div class="flex items-center">
+            <i class="fas fa-${type === 'success' ? 'check' : type === 'error' ? 'times' : type === 'warning' ? 'exclamation' : 'info'} ml-2"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.remove('opacity-0', 'translate-x-full');
+    }, 100);
+    
+    // Hide notification
+    setTimeout(() => {
+        notification.classList.add('opacity-0', 'translate-x-full');
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 5000);
+}
+
+// Form validation enhancement
+function enhanceFormValidation() {
+    const form = document.getElementById('course-registration-form');
+    
+    // Add real-time validation feedback
+    form.addEventListener('input', function(e) {
+        const field = e.target;
+        if (field.hasAttribute('required') || field.type === 'email' || field.type === 'tel') {
+            validateFieldRealTime(field);
+        }
+    });
+}
+
+function validateFieldRealTime(field) {
+    const value = field.value.trim();
+    let isValid = true;
+    let message = '';
+    
+    // Check if field is required and empty
+    if (field.hasAttribute('required') && !value) {
+        isValid = false;
+        message = 'هذا الحقل مطلوب';
+    }
+    // Email validation
+    else if (field.type === 'email' && value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            isValid = false;
+            message = 'يرجى إدخال بريد إلكتروني صحيح';
+        }
+    }
+    // Phone validation
+    else if (field.type === 'tel' && value) {
+        const phoneRegex = /^0[567][0-9]{8}$/;
+        if (!phoneRegex.test(value)) {
+            isValid = false;
+            message = 'يرجى إدخال رقم هاتف صحيح (05/06/07)';
+        }
+    }
+    
+    // Update field styling
+    if (isValid) {
+        field.classList.remove('border-red-500', 'border-red-300');
+        field.classList.add('border-green-500');
+    } else {
+        field.classList.remove('border-green-500', 'border-gray-300');
+        field.classList.add('border-red-500');
+    }
+    
+    // Update error message
+    const errorElement = field.parentNode.querySelector('.error-message');
+    if (errorElement) {
+        if (isValid) {
+            errorElement.classList.add('hidden');
+        } else {
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+        }
+    }
+    
+    return isValid;
+}
+
+// Initialize enhanced validation
+enhanceFormValidation();
+</script>
+
 </body>
 </html>
+

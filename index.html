@@ -23,69 +23,185 @@
 </head>
 <body class="font-tajawal bg-gray-50">
 
-<!-- Header -->
-<header class="bg-white shadow-lg fixed w-full top-0 z-50">
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-4 space-x-reverse">
-                <div class="bg-blue-600 text-white p-2 rounded-lg">
-                    <i class="fas fa-rocket text-2xl"></i>
-                </div>
-                <div class="text-right">
-                    <h1 class="text-2xl font-bold text-blue-900">رفيق توريق</h1>
-                    <p class="text-sm text-gray-600">شريكك في النجاح</p>
-                </div>
+                <a href="#home" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
             </div>
 
-            <!-- Navigation Menu -->
+            <!-- Navigation Menu المحسن -->
             <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">الرئيسية</a>
-                <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">خدماتنا</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">من نحن</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">تواصل معنا</a>
+                <a href="#home" class="nav-link text-blue-600 font-bold transition-all relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة الخدمات الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium flex items-center relative">
+                        <i class="fas fa-th-large ml-2"></i>
+                        خدماتنا
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">خدماتنا المتميزة</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 p-2">
+                                <a href="pages/courses/index.html" class="flex items-center px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item rounded-lg">
+                                    <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                        <i class="fas fa-graduation-cap text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm">الدورات التدريبية</div>
+                                        <div class="text-xs text-gray-500">تعلم وتطور</div>
+                                    </div>
+                                </a>
+                                <a href="pages/incubator/index.html" class="flex items-center px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item rounded-lg">
+                                    <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                        <i class="fas fa-seedling text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm">حاضنة الأعمال</div>
+                                        <div class="text-xs text-gray-500">دعم المشاريع</div>
+                                    </div>
+                                </a>
+                                <a href="pages/consulting/index.html" class="flex items-center px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item rounded-lg">
+                                    <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                        <i class="fas fa-handshake text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm">الاستشارة</div>
+                                        <div class="text-xs text-gray-500">خبراء متخصصون</div>
+                                    </div>
+                                </a>
+                                <a href="pages/machinery/index.html" class="flex items-center px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item rounded-lg">
+                                    <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                        <i class="fas fa-cogs text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-sm">الآلات والمعدات</div>
+                                        <div class="text-xs text-gray-500">كتالوج شامل</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="my-2">
+                            <a href="#services" class="flex items-center px-4 py-3 text-blue-600 hover:bg-blue-50 transition-all">
+                                <i class="fas fa-th-large ml-3"></i>
+                                <span class="font-medium">عرض جميع الخدمات</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-users ml-2"></i>
+                    من نحن
+                </a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Buttons المحسنة -->
             <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
-                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                <a href="pages/courses/registration.html" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
                     ابدأ رحلتك
-                </button>
-                <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors">
+                </a>
+                <button class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
                     تسجيل الدخول
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="lg:hidden text-gray-700" id="mobile-menu-btn">
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div class="lg:hidden bg-white border-t hidden" id="mobile-menu">
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
         <div class="container mx-auto px-4 py-4">
-            <nav class="flex flex-col space-y-4">
-                <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
-                <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">خدماتنا</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">من نحن</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">تواصل معنا</a>
-                <div class="flex flex-col space-y-2 pt-4">
-                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg">ابدأ رحلتك</button>
-                    <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg">تسجيل الدخول</button>
+            <nav class="flex flex-col space-y-3">
+                <a href="#home" class="flex items-center text-blue-600 font-bold py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-blue-600 pr-3">
+                    <span class="text-blue-600 font-bold text-sm">خدماتنا</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="pages/courses/index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-graduation-cap ml-2 w-4"></i>
+                            الدورات التدريبية
+                        </a>
+                        <a href="pages/incubator/index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-seedling ml-2 w-4"></i>
+                            حاضنة الأعمال
+                        </a>
+                        <a href="pages/consulting/index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-handshake ml-2 w-4"></i>
+                            الاستشارة
+                        </a>
+                        <a href="pages/machinery/index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-cogs ml-2 w-4"></i>
+                            الآلات والمعدات
+                        </a>
+                    </div>
+                </div>
+                <a href="#about" class="flex items-center text-gray-700 hover:text-blue-600 transition-colors py-2">
+                    <i class="fas fa-users ml-3 w-5"></i>
+                    من نحن
+                </a>
+                <a href="#contact" class="flex items-center text-gray-700 hover:text-blue-600 transition-colors py-2">
+                    <i class="fas fa-phone ml-3 w-5"></i>
+                    تواصل معنا
+                </a>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="pages/courses/registration.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-rocket ml-2"></i>
+                        ابدأ رحلتك
+                    </a>
+                    <button class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
                 </div>
             </nav>
         </div>
     </div>
 </header>
 
-<!-- Hero Section -->
-<section id="home" class="pt-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white min-h-screen flex items-center">
-    <div class="container mx-auto px-4">
+<!-- Hero Section المحسن -->
+<section id="home" class="pt-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"hero-pattern\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23hero-pattern)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Content -->
             <div class="text-center lg:text-right" data-aos="fade-right">
+                <div class="inline-flex items-center bg-blue-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-star text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">منصة رائدة في دعم ريادة الأعمال</span>
+                </div>
                 <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                     منصة <span class="text-yellow-400">رفيق توريق</span>
                     <br>شريكك في رحلة النجاح
@@ -95,235 +211,246 @@
                     <br>منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة
                 </p>
 
-                <!-- Statistics -->
-                <div class="grid grid-cols-3 gap-6 mb-8">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-yellow-400" data-counter="500">0</div>
+                <!-- Statistics المحسنة -->
+                <div class="grid grid-cols-3 gap-6 mb-8 max-w-lg mx-auto lg:mx-0">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="500">0</div>
                         <div class="text-sm text-blue-200">مشروع مدعوم</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-yellow-400" data-counter="1200">0</div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1200">0</div>
                         <div class="text-sm text-blue-200">مستفيد</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-yellow-400" data-counter="85">0</div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="85">0</div>
                         <div class="text-sm text-blue-200">% معدل النجاح</div>
                     </div>
                 </div>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <button class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105">
+                <!-- CTA Buttons المحسنة -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="400">
+                    <a href="pages/courses/registration.html" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
                         <i class="fas fa-rocket ml-2"></i>
                         ابدأ رحلتك الآن
-                    </button>
-                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
+                    </a>
+                    <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
                         <i class="fas fa-play ml-2"></i>
                         استكشف خدماتنا
-                    </button>
+                    </a>
                 </div>
             </div>
 
-            <!-- Illustration -->
+            <!-- Illustration المحسنة -->
             <div class="text-center" data-aos="fade-left">
                 <div class="relative">
-                    <div class="w-96 h-96 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                    <div class="w-96 h-96 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
                         <i class="fas fa-chart-line text-8xl text-blue-900"></i>
                     </div>
-                    <!-- Floating Elements -->
-                    <div class="absolute top-10 right-10 bg-yellow-400 text-blue-900 p-3 rounded-full animate-bounce">
+                    <!-- Floating Elements المحسنة -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-blue-900 p-3 rounded-full animate-bounce shadow-lg">
                         <i class="fas fa-lightbulb text-2xl"></i>
                     </div>
-                    <div class="absolute bottom-10 left-10 bg-green-400 text-white p-3 rounded-full animate-pulse">
+                    <div class="absolute bottom-10 left-10 bg-green-400 text-white p-3 rounded-full animate-pulse shadow-lg">
                         <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-purple-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-star text-xl"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Scroll Indicator -->
+    <!-- Scroll Indicator المحسن -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <i class="fas fa-chevron-down text-2xl text-white"></i>
+        <a href="#services" class="text-white hover:text-yellow-400 transition-colors">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
     </div>
 </section>
 
-<!-- Services Grid Section -->
+<!-- Services Grid Section المحسن -->
 <section id="services" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-        <!-- Section Header -->
+        <!-- Section Header المحسن -->
         <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-blue-100 text-blue-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-th-large ml-2"></i>
+                <span class="text-sm font-medium">خدمات متنوعة ومتكاملة</span>
+            </div>
             <h2 class="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                 نقدم مجموعة شاملة من الخدمات المتخصصة لدعم رحلتك في عالم ريادة الأعمال والمقاولاتية
             </p>
         </div>
 
-        <!-- Services Grid -->
+        <!-- Services Grid المحسن -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <!-- Service 1: Courses -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-blue-500" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
-                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-graduation-cap text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">الدورات التدريبية</h3>
-                    <p class="text-gray-600 mb-4">دورات متخصصة في التسويق والتسيير مع إمكانية التسجيل للدورات الحضورية</p>
-                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">دورات متخصصة في التسويق والتسيير مع إمكانية التسجيل للدورات الحضورية</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-users ml-2"></i>
+                        <span>+1000 متدرب</span>
+                    </div>
+                    <a href="pages/courses/index.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         استكشف الدورات
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 2: Incubator -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-green-500" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
-                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-seedling text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">حاضنة الأعمال</h3>
-                    <p class="text-gray-600 mb-4">حاضنة رقمية وتقليدية لدعم مشروعك من الفكرة إلى التنفيذ</p>
-                    <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">حاضنة رقمية وتقليدية لدعم مشروعك من الفكرة إلى التنفيذ</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-rocket ml-2"></i>
+                        <span>+200 مشروع</span>
+                    </div>
+                    <a href="pages/incubator/index.html" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         انضم للحاضنة
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 3: Consulting -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-purple-500" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-handshake text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">خدمات الاستشارة</h3>
-                    <p class="text-gray-600 mb-4">استشارات متخصصة مع خبراء في مختلف المجالات وحجز مواعيد مرنة</p>
-                    <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">استشارات متخصصة مع خبراء في مختلف المجالات وحجز مواعيد مرنة</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-clock ml-2"></i>
+                        <span>24/7 متاح</span>
+                    </div>
+                    <a href="pages/consulting/index.html" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         احجز استشارة
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 4: Machinery -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center">
-                    <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-cogs text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">الآلات والمعدات</h3>
-                    <p class="text-gray-600 mb-4">كتالوج شامل للآلات الصناعية وقطع الغيار مع خدمات الصيانة</p>
-                    <button class="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">كتالوج شامل للآلات الصناعية وقطع الغيار مع خدمات الصيانة</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-tools ml-2"></i>
+                        <span>+500 آلة</span>
+                    </div>
+                    <a href="pages/machinery/index.html" class="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         تصفح الآلات
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 5: Real Estate -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-red-500" data-aos="fade-up" data-aos-delay="500">
                 <div class="text-center">
-                    <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-building text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">العقارات الصناعية</h3>
-                    <p class="text-gray-600 mb-4">أراضي ومصانع للكراء والشراء مع تفاصيل شاملة وأسعار تنافسية</p>
-                    <button class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">أراضي ومصانع للكراء والشراء مع تفاصيل شاملة وأسعار تنافسية</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-map ml-2"></i>
+                        <span>+100 عقار</span>
+                    </div>
+                    <a href="pages/real-estate/index.html" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         استعرض العقارات
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 6: Events -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="600">
                 <div class="text-center">
-                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-calendar-alt text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">الفعاليات والمعارض</h3>
-                    <p class="text-gray-600 mb-4">معارض وطنية ودولية مع إمكانية التسجيل والمشاركة</p>
-                    <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">معارض وطنية ودولية مع إمكانية التسجيل والمشاركة</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar ml-2"></i>
+                        <span>+50 فعالية</span>
+                    </div>
+                    <a href="pages/events/index.html" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         تصفح الفعاليات
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 7: Projects -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-teal-500" data-aos="fade-up" data-aos-delay="700">
                 <div class="text-center">
-                    <div class="bg-teal-100 text-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-teal-100 text-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-briefcase text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">المشاريع الجاهزة</h3>
-                    <p class="text-gray-600 mb-4">مشاريع جاهزة للاستثمار والشراكة مع دراسات جدوى كاملة</p>
-                    <button class="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">مشاريع جاهزة للاستثمار والشراكة مع دراسات جدوى كاملة</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-chart-bar ml-2"></i>
+                        <span>+30 مشروع</span>
+                    </div>
+                    <a href="pages/projects/index.html" class="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         استكشف المشاريع
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Service 8: Construction -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-yellow-500" data-aos="fade-up" data-aos-delay="800">
                 <div class="text-center">
-                    <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-hammer text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">بناء المصانع</h3>
-                    <p class="text-gray-600 mb-4">بناء المصانع المعدنية بأحدث التقنيات وأفضل الأسعار</p>
-                    <button class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors w-full">
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">بناء المصانع المعدنية بأحدث التقنيات وأفضل الأسعار</p>
+                    <div class="flex items-center justify-center mb-4 text-sm text-gray-500">
+                        <i class="fas fa-industry ml-2"></i>
+                        <span>+20 مصنع</span>
+                    </div>
+                    <a href="pages/construction/index.html" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-all w-full inline-block transform hover:scale-105 shadow-lg">
                         طلب عرض سعر
-                    </button>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Service 9: Legal -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="900">
-                <div class="text-center">
-                    <div class="bg-gray-100 text-gray-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-balance-scale text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الجوانب القانونية</h3>
-                    <p class="text-gray-600 mb-4">دليل شامل لتأسيس المشاريع وآليات التمويل المتاحة</p>
-                    <button class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors w-full">
-                        الدليل القانوني
-                    </button>
-                </div>
-            </div>
-
-            <!-- Service 10: Business Tourism -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="1000">
-                <div class="text-center">
-                    <div class="bg-pink-100 text-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-plane text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">سياحة الأعمال</h3>
-                    <p class="text-gray-600 mb-4">رحلات تجارية منظمة للمعارض واللقاءات الاستثمارية</p>
-                    <button class="bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700 transition-colors w-full">
-                        احجز رحلتك
-                    </button>
-                </div>
-            </div>
-
-            <!-- Service 11: Contact & Support -->
-            <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="1100">
-                <div class="text-center">
-                    <div class="bg-cyan-100 text-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-headset text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التواصل والدعم</h3>
-                    <p class="text-gray-600 mb-4">دعم فني متواصل وخدمة عملاء متميزة على مدار الساعة</p>
-                    <button class="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors w-full">
-                        تواصل معنا
-                    </button>
-                </div>
-            </div>
+        <!-- View All Services Button -->
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="900">
+            <a href="#services" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                <i class="fas fa-th-large ml-2"></i>
+                عرض جميع الخدمات
+            </a>
         </div>
     </div>
 </section>
 
-<!-- About Section -->
+<!-- About Section المحسن -->
 <section id="about" class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Content -->
             <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-blue-100 text-blue-600 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-users ml-2"></i>
+                    <span class="text-sm font-medium">فريق محترف وخبرة واسعة</span>
+                </div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-6">من نحن</h2>
                 <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                     منصة رفيق توريق هي منصة شاملة تجمع بين مكتب أعمال تقليدي ومنصة رقمية متطورة، 
@@ -334,84 +461,137 @@
                     مع فريق من الخبراء المتخصصين في مختلف المجالات.
                 </p>
                 
-                <!-- Features -->
+                <!-- Features المحسنة -->
                 <div class="space-y-4">
-                    <div class="flex items-center">
+                    <div class="flex items-center p-3 bg-green-50 rounded-lg">
                         <i class="fas fa-check-circle text-green-500 text-xl ml-3"></i>
-                        <span class="text-gray-700">خبرة أكثر من 10 سنوات في دعم المشاريع</span>
+                        <span class="text-gray-700 font-medium">خبرة أكثر من 10 سنوات في دعم المشاريع</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 text-xl ml-3"></i>
-                        <span class="text-gray-700">فريق متخصص من الخبراء والمستشارين</span>
+                    <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <i class="fas fa-check-circle text-blue-500 text-xl ml-3"></i>
+                        <span class="text-gray-700 font-medium">فريق متخصص من الخبراء والمستشارين</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 text-xl ml-3"></i>
-                        <span class="text-gray-700">شبكة واسعة من الشركاء والمستثمرين</span>
+                    <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                        <i class="fas fa-check-circle text-purple-500 text-xl ml-3"></i>
+                        <span class="text-gray-700 font-medium">شبكة واسعة من الشركاء والمستثمرين</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Image -->
+            <!-- Image المحسنة -->
             <div class="text-center" data-aos="fade-left">
-                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8">
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                     <i class="fas fa-users text-8xl text-white mb-4"></i>
                     <h3 class="text-2xl font-bold text-white mb-2">فريق متميز</h3>
                     <p class="text-blue-100">نعمل معاً لتحقيق أهدافك</p>
+                    <div class="grid grid-cols-3 gap-4 mt-6">
+                        <div class="bg-white bg-opacity-20 rounded-lg p-3 backdrop-blur-sm">
+                            <div class="text-2xl font-bold text-white">50+</div>
+                            <div class="text-xs text-blue-200">خبير</div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg p-3 backdrop-blur-sm">
+                            <div class="text-2xl font-bold text-white">24/7</div>
+                            <div class="text-xs text-blue-200">دعم</div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg p-3 backdrop-blur-sm">
+                            <div class="text-2xl font-bold text-white">100%</div>
+                            <div class="text-xs text-blue-200">جودة</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-blue-900 text-white">
-    <div class="container mx-auto px-4">
+<!-- Contact Section المحسن -->
+<section id="contact" class="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"contact-pattern\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23contact-pattern)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-12" data-aos="fade-up">
+            <div class="inline-flex items-center bg-blue-800 bg-opacity-50 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-phone ml-2"></i>
+                <span class="text-sm font-medium">تواصل معنا في أي وقت</span>
+            </div>
             <h2 class="text-4xl font-bold mb-4">تواصل معنا</h2>
             <p class="text-xl text-blue-200">نحن هنا لمساعدتك في تحقيق أهدافك</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Phone -->
-            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm hover:bg-opacity-20 transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <i class="fas fa-phone text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">الهاتف</h3>
-                <p class="text-blue-200">027 XX XX XX</p>
+                <p class="text-blue-200 mb-3">027 XX XX XX</p>
+                <a href="tel:027XXXXXX" class="text-yellow-400 hover:text-yellow-300 transition-colors text-sm">
+                    اتصل الآن
+                </a>
             </div>
 
             <!-- Email -->
-            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm hover:bg-opacity-20 transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <i class="fas fa-envelope text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">البريد الإلكتروني</h3>
-                <p class="text-blue-200">info@rafiktawriq.dz</p>
+                <p class="text-blue-200 mb-3">info@rafiktawriq.dz</p>
+                <a href="mailto:info@rafiktawriq.dz" class="text-yellow-400 hover:text-yellow-300 transition-colors text-sm">
+                    أرسل إيميل
+                </a>
             </div>
 
             <!-- Location -->
-            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm hover:bg-opacity-20 transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <i class="fas fa-map-marker-alt text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">الموقع</h3>
-                <p class="text-blue-200">شلف، الجزائر</p>
+                <p class="text-blue-200 mb-3">شلف، الجزائر</p>
+                <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors text-sm">
+                    عرض الخريطة
+                </a>
             </div>
 
             <!-- Hours -->
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm hover:bg-opacity-20 transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <i class="fas fa-clock text-2xl"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2">ساعات العمل</h3>
-                <p class="text-blue-200">8:00 - 17:00</p>
+                <p class="text-blue-200 mb-3">8:00 - 17:00</p>
+                <span class="text-yellow-400 text-sm">
+                    السبت - الخميس
+                </span>
+            </div>
+        </div>
+
+        <!-- Quick Contact Form -->
+        <div class="max-w-2xl mx-auto mt-12" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                <h3 class="text-2xl font-bold text-center mb-6">أرسل رسالة سريعة</h3>
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="الاسم" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <input type="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    </div>
+                    <textarea placeholder="رسالتك" rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"></textarea>
+                    <button type="submit" class="w-full bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Footer المحسن -->
 <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -434,6 +614,9 @@
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
                 </div>
             </div>
 
@@ -441,10 +624,10 @@
             <div>
                 <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">حاضنة الأعمال</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الاستشارة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الآلات والمعدات</a></li>
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">حاضنة الأعمال</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارة</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات والمعدات</a></li>
                 </ul>
             </div>
 
@@ -452,10 +635,10 @@
             <div>
                 <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">العقارات الصناعية</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الفعاليات والمعارض</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المشاريع الجاهزة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات الصناعية</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات والمعارض</a></li>
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع الجاهزة</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
                 </ul>
             </div>
 
@@ -475,6 +658,10 @@
                         <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
                         <span class="text-gray-400">شلف، الجزائر</span>
                     </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <span class="text-gray-400">8:00 - 17:00</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -485,9 +672,126 @@
     </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 left-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110 opacity-0 invisible">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+    
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+    
+    // Counter animation
+    const counters = document.querySelectorAll('[data-counter]');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Service cards hover effect
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+</script>
 
 </body>
 </html>

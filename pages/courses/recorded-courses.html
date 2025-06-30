@@ -1,10 +1,854 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الدورات المسجلة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدورات المسجلة - رفيق توريق</title>
+    <meta name="description" content="تعلم في أي وقت ومن أي مكان مع دوراتنا المسجلة عالية الجودة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/courses.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>الدورات المسجلة</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu المحسن -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة الدورات الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-blue-600 font-bold flex items-center relative">
+                        <i class="fas fa-graduation-cap ml-2"></i>
+                        الدورات التدريبية
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الدورات</span>
+                            </div>
+                            <a href="recorded-courses.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-video text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات المسجلة</div>
+                                    <div class="text-xs text-purple-500">الصفحة الحالية</div>
+                                </div>
+                            </a>
+                            <a href="live-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات الحضورية</div>
+                                    <div class="text-xs text-gray-500">تفاعل مباشر</div>
+                                </div>
+                            </a>
+                            <a href="industrial-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-industry text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الدورات الصناعية</div>
+                                    <div class="text-xs text-gray-500">تخصص تقني</div>
+                                </div>
+                            </a>
+                            <a href="management-courses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">دورات الإدارة</div>
+                                    <div class="text-xs text-gray-500">مهارات قيادية</div>
+                                </div>
+                            </a>
+                            <hr class="my-2">
+                            <a href="registration.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-user-plus text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">تسجيل جديد</div>
+                                    <div class="text-xs text-gray-500">انضم إلينا</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons المحسنة -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-user-plus ml-2"></i>
+                    سجل الآن
+                </a>
+                <button class="border-2 border-purple-600 text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-purple-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../../index.html" class="flex items-center text-gray-700 hover:text-purple-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-purple-600 pr-3">
+                    <span class="text-purple-600 font-bold text-sm">الدورات التدريبية</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="recorded-courses.html" class="flex items-center text-purple-600 font-medium py-1 text-sm">
+                            <i class="fas fa-video ml-2 w-4"></i>
+                            الدورات المسجلة (الحالية)
+                        </a>
+                        <a href="live-courses.html" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-users ml-2 w-4"></i>
+                            الدورات الحضورية
+                        </a>
+                        <a href="industrial-courses.html" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-industry ml-2 w-4"></i>
+                            الدورات الصناعية
+                        </a>
+                        <a href="management-courses.html" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-chart-line ml-2 w-4"></i>
+                            دورات الإدارة
+                        </a>
+                    </div>
+                </div>
+                <a href="../incubator/index.html" class="flex items-center text-gray-700 hover:text-purple-600 transition-colors py-2">
+                    <i class="fas fa-seedling ml-3 w-5"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="flex items-center text-gray-700 hover:text-purple-600 transition-colors py-2">
+                    <i class="fas fa-handshake ml-3 w-5"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="flex items-center text-gray-700 hover:text-purple-600 transition-colors py-2">
+                    <i class="fas fa-cogs ml-3 w-5"></i>
+                    الآلات والمعدات
+                </a>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="registration.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-user-plus ml-2"></i>
+                        سجل الآن
+                    </a>
+                    <button class="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb المحسن -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الدورات التدريبية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">الدورات المسجلة</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section المحسن -->
+<section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-blue-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"recorded\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"1\" fill=\"white\"/><rect x=\"8\" y=\"8\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23recorded)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-video text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">تعلم في أي وقت ومن أي مكان</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">الدورات المسجلة</h1>
+            <p class="text-xl mb-8 text-purple-100 max-w-3xl mx-auto leading-relaxed">
+                تعلم في أي وقت ومن أي مكان مع مكتبتنا الشاملة من الدورات المسجلة عالية الجودة
+            </p>
+            
+            <!-- Statistics -->
+            <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-yellow-400 mb-2" data-counter="120">0</div>
+                    <div class="text-sm text-purple-200">دورة متاحة</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-yellow-400 mb-2" data-counter="15000">0</div>
+                    <div class="text-sm text-purple-200">ساعة محتوى</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-yellow-400 mb-2">4.8</div>
+                    <div class="text-sm text-purple-200">تقييم المتدربين</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters and Search المحسن -->
+<section class="py-8 bg-white border-b shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="bg-gray-50 rounded-xl p-6" data-aos="fade-up">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input type="text" id="course-search" placeholder="ابحث عن دورة..." 
+                               class="w-full pr-12 pl-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <select class="course-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 min-w-[150px]" data-filter="category">
+                        <option value="">جميع الفئات</option>
+                        <option value="marketing">التسويق</option>
+                        <option value="management">التسيير</option>
+                        <option value="finance">المالية</option>
+                        <option value="technology">التكنولوجيا</option>
+                        <option value="sales">المبيعات</option>
+                    </select>
+
+                    <select class="course-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 min-w-[150px]" data-filter="level">
+                        <option value="">جميع المستويات</option>
+                        <option value="beginner">مبتدئ</option>
+                        <option value="intermediate">متوسط</option>
+                        <option value="advanced">متقدم</option>
+                    </select>
+
+                    <select class="course-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 min-w-[150px]" data-filter="price">
+                        <option value="">جميع الأسعار</option>
+                        <option value="free">مجاني</option>
+                        <option value="paid">مدفوع</option>
+                        <option value="premium">مميز</option>
+                    </select>
+
+                    <button class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-filter ml-2"></i>
+                        تطبيق الفلاتر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Grid المحسن -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <!-- Results Header -->
+        <div class="flex items-center justify-between mb-8" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                <i class="fas fa-video text-purple-600 ml-3"></i>
+                النتائج (120 دورة)
+            </h2>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-600">ترتيب حسب:</span>
+                <select class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 bg-white">
+                    <option value="popular">الأكثر شعبية</option>
+                    <option value="newest">الأحدث</option>
+                    <option value="rating">الأعلى تقييماً</option>
+                    <option value="price-low">السعر: من الأقل للأعلى</option>
+                    <option value="price-high">السعر: من الأعلى للأقل</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="recorded-courses-grid">
+            <!-- Course Card 1 المحسن -->
+            <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-category="marketing" data-level="intermediate" data-price="paid">
+                <div class="relative">
+                    <img src="../../assets/images/courses/digital-marketing.jpg" alt="التسويق الرقمي المتقدم" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-play ml-1"></i>
+                        25 فيديو
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        15 ساعة
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">التسويق</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">4.9 (342)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 hover:text-purple-600 transition-colors cursor-pointer">التسويق الرقمي المتقدم</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">دورة شاملة تغطي جميع جوانب التسويق الرقمي من إعلانات جوجل إلى التسويق عبر وسائل التواصل الاجتماعي</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-user ml-1 text-purple-500"></i>
+                            <span>أحمد محمد</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users ml-1 text-purple-500"></i>
+                            <span>2,150 طالب</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-purple-600">6,500 دج</span>
+                            <span class="text-sm text-gray-500 line-through mr-2">8,500 دج</span>
+                        </div>
+                        <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 text-sm font-bold" onclick="window.location.href='course-details.html'">
+                            ابدأ الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 2 المحسن -->
+            <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100" data-category="management" data-level="advanced" data-price="paid">
+                <div class="relative">
+                    <img src="../../assets/images/courses/project-management.jpg" alt="إدارة المشاريع" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        الأكثر مبيعاً
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-play ml-1"></i>
+                        32 فيديو
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        22 ساعة
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">الإدارة</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">4.8 (567)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 hover:text-purple-600 transition-colors cursor-pointer">إدارة المشاريع الاحترافية</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">تعلم منهجيات إدارة المشاريع العالمية وكيفية قيادة الفرق بفعالية لتحقيق أهداف المشروع</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-user ml-1 text-purple-500"></i>
+                            <span>فاطمة بن علي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users ml-1 text-purple-500"></i>
+                            <span>1,890 طالب</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-purple-600">8,200 دج</span>
+                            <span class="text-sm text-gray-500 line-through mr-2">10,500 دج</span>
+                        </div>
+                        <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 text-sm font-bold" onclick="window.location.href='course-details.html'">
+                            ابدأ الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 المحسن -->
+            <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200" data-category="finance" data-level="beginner" data-price="free">
+                <div class="relative">
+                    <img src="../../assets/images/courses/financial-analysis.jpg" alt="التحليل المالي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مجاني
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-play ml-1"></i>
+                        18 فيديو
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        12 ساعة
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">المالية</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">4.7 (234)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 hover:text-purple-600 transition-colors cursor-pointer">أساسيات التحليل المالي</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">تعلم كيفية قراءة وتحليل القوائم المالية واتخاذ قرارات استثمارية مدروسة</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-user ml-1 text-purple-500"></i>
+                            <span>محمد الأمين</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users ml-1 text-purple-500"></i>
+                            <span>3,420 طالب</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-green-600">مجاني</span>
+                        </div>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 text-sm font-bold" onclick="window.location.href='course-details.html'">
+                            ابدأ الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 المحسن -->
+            <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300" data-category="sales" data-level="intermediate" data-price="paid">
+                <div class="relative">
+                    <img src="../../assets/images/courses/sales-skills.jpg" alt="مهارات البيع" class="w-full h-48 object-cover">
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-play ml-1"></i>
+                        20 فيديو
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        14 ساعة
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">المبيعات</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">4.6 (189)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 hover:text-purple-600 transition-colors cursor-pointer">مهارات البيع المتقدمة</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">طور مهاراتك في البيع وتعلم تقنيات الإقناع والتفاوض الفعال</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-user ml-1 text-purple-500"></i>
+                            <span>سارة أحمد</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users ml-1 text-purple-500"></i>
+                            <span>1,567 طالب</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-purple-600">5,800 دج</span>
+                        </div>
+                        <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 text-sm font-bold" onclick="window.location.href='course-details.html'">
+                            ابدأ الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- إضافة المزيد من البطاقات هنا -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg" id="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من الدورات
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Navigation -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">استكشف أنواع الدورات الأخرى</h3>
+            <p class="text-gray-600">تصفح مجموعتنا الكاملة من الدورات التدريبية</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="live-courses.html" class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-green-200" data-aos="fade-up">
+                <div class="bg-green-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">الدورات الحضورية</h4>
+                <p class="text-sm text-gray-600">تفاعل مباشر مع المدربين</p>
+            </a>
+            
+            <a href="industrial-courses.html" class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-orange-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-orange-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-industry text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">الدورات الصناعية</h4>
+                <p class="text-sm text-gray-600">تخصص تقني متقدم</p>
+            </a>
+            
+            <a href="management-courses.html" class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">دورات الإدارة</h4>
+                <p class="text-sm text-gray-600">مهارات قيادية وإدارية</p>
+            </a>
+            
+            <a href="registration.html" class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-blue-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-blue-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-user-plus text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">التسجيل</h4>
+                <p class="text-sm text-gray-600">انضم إلينا الآن</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section المحسن -->
+<section class="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-blue-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"cta-pattern\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23cta-pattern)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">ابدأ رحلة التعلم اليوم</h2>
+            <p class="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+                اشترك في خطة التعلم الشاملة واحصل على وصول غير محدود لجميع الدورات المسجلة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="registration.html" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-crown ml-2"></i>
+                    اشترك في الخطة المميزة
+                </a>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-gift ml-2"></i>
+                    جرب مجاناً لمدة 7 أيام
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer المحسن -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">منصة شاملة لدعم ريادة الأعمال والمقاولاتية</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدورات المسجلة</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">التسويق الرقمي</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">إدارة المشاريع</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">التحليل المالي</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مهارات البيع</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم والمساعدة</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مركز المساعدة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li><a href="../contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الاسترداد</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">معلومات التواصل</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">courses@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">شلف، الجزائر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-all transform hover:scale-110 opacity-0 invisible">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/courses.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+    
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+    
+    // Counter animation
+    const counters = document.querySelectorAll('[data-counter]');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Course filtering functionality
+    const searchInput = document.getElementById('course-search');
+    const filterSelects = document.querySelectorAll('.course-filter');
+    const courseCards = document.querySelectorAll('.course-card');
+    
+    function filterCourses() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const categoryFilter = document.querySelector('[data-filter="category"]').value;
+        const levelFilter = document.querySelector('[data-filter="level"]').value;
+        const priceFilter = document.querySelector('[data-filter="price"]').value;
+        
+        courseCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+            const level = card.getAttribute('data-level');
+            const price = card.getAttribute('data-price');
+            
+            const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+            const matchesCategory = !categoryFilter || category === categoryFilter;
+            const matchesLevel = !levelFilter || level === levelFilter;
+            const matchesPrice = !priceFilter || price === priceFilter;
+            
+            if (matchesSearch && matchesCategory && matchesLevel && matchesPrice) {
+                card.style.display = 'block';
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, 100);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    // Add event listeners for filtering
+    searchInput.addEventListener('input', filterCourses);
+    filterSelects.forEach(select => {
+        select.addEventListener('change', filterCourses);
+    });
+    
+    // Load more functionality
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            // Simulate loading more courses
+            this.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التحميل...';
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-plus ml-2"></i>عرض المزيد من الدورات';
+                // Here you would normally load more courses from the server
+            }, 1500);
+        });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
