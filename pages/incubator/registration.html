@@ -1,10 +1,710 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تسجيل الحاضنة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل في الحاضنة - رفيق توريق</title>
+    <meta name="description" content="سجل في حاضنة الأعمال واحصل على الدعم اللازم لمشروعك">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/incubator.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>تسجيل الحاضنة</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-seedling ml-2"></i>
+                        حاضنة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-home ml-3 text-green-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="digital-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-laptop-code ml-3 text-green-500"></i>
+                                <span>الحاضنة الرقمية</span>
+                            </a>
+                            <a href="business-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-briefcase ml-3 text-green-500"></i>
+                                <span>الحاضنة التقليدية</span>
+                            </a>
+                            <a href="partners.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-handshake ml-3 text-green-500"></i>
+                                <span>الشركاء</span>
+                            </a>
+                            <a href="success-stories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-trophy ml-3 text-green-500"></i>
+                                <span>قصص النجاح</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <button class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    تسجيل حالي
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">حاضنة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">التسجيل في الحاضنة</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-teal-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"registration\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"1\" fill=\"white\"/><rect x=\"8\" y=\"8\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23registration)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-green-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-paper-plane text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">انضم إلى مجتمع رواد الأعمال</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">سجل في حاضنة الأعمال</h1>
+            <p class="text-xl mb-8 text-green-100 max-w-2xl mx-auto leading-relaxed">
+                املأ النموذج أدناه وسنتواصل معك خلال 48 ساعة لمناقشة مشروعك وإمكانيات الدعم
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-8 max-w-xl mx-auto mb-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">48</div>
+                    <div class="text-sm text-green-200">ساعة للرد</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">100%</div>
+                    <div class="text-sm text-green-200">مجاني</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-2xl font-bold text-yellow-400 mb-1">85%</div>
+                    <div class="text-sm text-green-200">معدل القبول</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Form Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Progress Steps -->
+        <div class="flex items-center justify-center mb-12" data-aos="fade-up">
+            <div class="flex items-center">
+                <div class="step-indicator active flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full font-bold shadow-lg">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-green-600 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-gray-300 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-gray-300 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step Labels -->
+        <div class="flex justify-between mb-8 max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <span class="text-sm font-medium text-green-600">المعلومات الشخصية</span>
+            <span class="text-sm font-medium text-gray-500">فكرة المشروع</span>
+            <span class="text-sm font-medium text-gray-500">التفاصيل المالية</span>
+            <span class="text-sm font-medium text-gray-500">المراجعة</span>
+        </div>
+
+        <!-- Form -->
+        <form id="incubator-registration-form" class="space-y-8" novalidate>
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="1" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">المعلومات الشخصية</h2>
+                    <p class="text-gray-600">أدخل بياناتك الشخصية ومعلومات التواصل</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="full-name" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-user ml-2 text-green-500"></i>
+                            الاسم الكامل *
+                        </label>
+                        <input type="text" id="full-name" name="full-name" placeholder="أدخل اسمك الكامل" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال الاسم الكامل</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-envelope ml-2 text-green-500"></i>
+                            البريد الإلكتروني *
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال بريد إلكتروني صحيح</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-phone ml-2 text-green-500"></i>
+                            رقم الهاتف *
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern="0[567][0-9]{8}" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال رقم هاتف صحيح</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-birthday-cake ml-2 text-green-500"></i>
+                            العمر *
+                        </label>
+                        <input type="number" id="age" name="age" placeholder="25" min="18" max="65" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يجب أن يكون العمر بين 18 و 65</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-map-marker-alt ml-2 text-green-500"></i>
+                            المدينة *
+                        </label>
+                        <select id="city" name="city" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            <option value="">اختر المدينة</option>
+                            <option value="chlef">شلف</option>
+                            <option value="algiers">الجزائر</option>
+                            <option value="oran">وهران</option>
+                            <option value="constantine">قسنطينة</option>
+                            <option value="annaba">عنابة</option>
+                            <option value="setif">سطيف</option>
+                            <option value="batna">باتنة</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار المدينة</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-graduation-cap ml-2 text-green-500"></i>
+                            المستوى التعليمي *
+                        </label>
+                        <select id="education" name="education" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            <option value="">اختر المستوى التعليمي</option>
+                            <option value="high-school">ثانوي</option>
+                            <option value="bachelor">ليسانس</option>
+                            <option value="master">ماستر</option>
+                            <option value="phd">دكتوراه</option>
+                            <option value="professional">تكوين مهني</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار المستوى التعليمي</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience" class="block mb-2 font-semibold text-gray-700">
+                        <i class="fas fa-briefcase ml-2 text-green-500"></i>
+                        الخبرة المهنية
+                    </label>
+                    <textarea id="experience" name="experience" rows="3" placeholder="اكتب خبرتك المهنية السابقة..." 
+                              class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all resize-none"></textarea>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="button" class="next-step bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Project Idea -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="2">
+                <div class="text-center mb-8">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">فكرة المشروع</h2>
+                    <p class="text-gray-600">أخبرنا عن فكرة مشروعك وتفاصيله</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="form-group">
+                        <label for="project-name" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-tag ml-2 text-blue-500"></i>
+                            اسم المشروع *
+                        </label>
+                        <input type="text" id="project-name" name="project-name" placeholder="أدخل اسم مشروعك" required 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        <span class="error-message text-red-500 text-sm hidden">يرجى إدخال اسم المشروع</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-list ml-2 text-blue-500"></i>
+                            نوع المشروع *
+                        </label>
+                        <select id="project-type" name="project-type" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="">اختر نوع المشروع</option>
+                            <option value="digital">مشروع رقمي/تقني</option>
+                            <option value="traditional">مشروع تقليدي/صناعي</option>
+                            <option value="service">خدمات</option>
+                            <option value="ecommerce">تجارة إلكترونية</option>
+                            <option value="manufacturing">تصنيع</option>
+                            <option value="food">صناعات غذائية</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار نوع المشروع</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-description" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-file-alt ml-2 text-blue-500"></i>
+                            وصف المشروع *
+                        </label>
+                        <textarea id="project-description" name="project-description" rows="5" placeholder="اكتب وصفاً مفصلاً لفكرة مشروعك والمشكلة التي يحلها..." required 
+                                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"></textarea>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى كتابة وصف للمشروع</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="target-market" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-bullseye ml-2 text-blue-500"></i>
+                            السوق المستهدف *
+                        </label>
+                        <textarea id="target-market" name="target-market" rows="3" placeholder="من هم عملاؤك المستهدفون؟" required 
+                                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"></textarea>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى تحديد السوق المستهدف</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-stage" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-chart-line ml-2 text-blue-500"></i>
+                            مرحلة المشروع *
+                        </label>
+                        <select id="project-stage" name="project-stage" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                            <option value="">اختر مرحلة المشروع</option>
+                            <option value="idea">مجرد فكرة</option>
+                            <option value="planning">مرحلة التخطيط</option>
+                            <option value="prototype">نموذج أولي</option>
+                            <option value="mvp">منتج أولي</option>
+                            <option value="launched">تم الإطلاق</option>
+                            <option value="scaling">مرحلة النمو</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار مرحلة المشروع</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block mb-3 font-semibold text-gray-700">
+                            <i class="fas fa-users ml-2 text-blue-500"></i>
+                            هل لديك فريق عمل؟
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="has-team" value="yes" class="ml-3 text-blue-600">
+                                <i class="fas fa-users text-blue-500 ml-2"></i>
+                                <span>نعم، لدي فريق</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                                <input type="radio" name="has-team" value="no" class="ml-3 text-blue-600">
+                                <i class="fas fa-user text-blue-500 ml-2"></i>
+                                <span>لا، أعمل بمفردي</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group team-details hidden">
+                        <label for="team-size" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-hashtag ml-2 text-blue-500"></i>
+                            عدد أعضاء الفريق
+                        </label>
+                        <input type="number" id="team-size" name="team-size" placeholder="عدد الأعضاء" min="1" max="20" 
+                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="button" class="next-step bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Financial Details -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="3">
+                <div class="text-center mb-8">
+                    <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">التفاصيل المالية</h2>
+                    <p class="text-gray-600">معلومات حول التمويل المطلوب والتوقعات المالية</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="form-group">
+                        <label for="funding-needed" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-dollar-sign ml-2 text-purple-500"></i>
+                            التمويل المطلوب (بالدينار الجزائري) *
+                        </label>
+                        <select id="funding-needed" name="funding-needed" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                            <option value="">اختر مبلغ التمويل</option>
+                            <option value="under-1m">أقل من مليون دج</option>
+                            <option value="1m-5m">1-5 مليون دج</option>
+                            <option value="5m-10m">5-10 مليون دج</option>
+                            <option value="10m-20m">10-20 مليون دج</option>
+                            <option value="20m-50m">20-50 مليون دج</option>
+                            <option value="over-50m">أكثر من 50 مليون دج</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار مبلغ التمويل</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="funding-purpose" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-list-ul ml-2 text-purple-500"></i>
+                            الغرض من التمويل *
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="equipment" class="ml-3 text-purple-600">
+                                <i class="fas fa-tools text-purple-500 ml-2"></i>
+                                <span>شراء معدات</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="inventory" class="ml-3 text-purple-600">
+                                <i class="fas fa-boxes text-purple-500 ml-2"></i>
+                                <span>مخزون أولي</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="marketing" class="ml-3 text-purple-600">
+                                <i class="fas fa-bullhorn text-purple-500 ml-2"></i>
+                                <span>تسويق وإعلان</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="development" class="ml-3 text-purple-600">
+                                <i class="fas fa-code text-purple-500 ml-2"></i>
+                                <span>تطوير المنتج</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="operations" class="ml-3 text-purple-600">
+                                <i class="fas fa-cogs text-purple-500 ml-2"></i>
+                                <span>تكاليف تشغيلية</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="checkbox" name="funding-purpose" value="other" class="ml-3 text-purple-600">
+                                <i class="fas fa-ellipsis-h text-purple-500 ml-2"></i>
+                                <span>أخرى</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revenue-model" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-chart-pie ml-2 text-purple-500"></i>
+                            نموذج الإيرادات *
+                        </label>
+                        <select id="revenue-model" name="revenue-model" required 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                            <option value="">اختر نموذج الإيرادات</option>
+                            <option value="product-sales">بيع المنتجات</option>
+                            <option value="service-fees">رسوم الخدمات</option>
+                            <option value="subscription">اشتراكات شهرية/سنوية</option>
+                            <option value="commission">عمولات</option>
+                            <option value="advertising">إعلانات</option>
+                            <option value="licensing">ترخيص التكنولوجيا</option>
+                            <option value="mixed">نموذج مختلط</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden">يرجى اختيار نموذج الإيرادات</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expected-revenue" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-chart-bar ml-2 text-purple-500"></i>
+                            الإيرادات المتوقعة (السنة الأولى)
+                        </label>
+                        <select id="expected-revenue" name="expected-revenue" 
+                                class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                            <option value="">اختر الإيرادات المتوقعة</option>
+                            <option value="under-500k">أقل من 500 ألف دج</option>
+                            <option value="500k-1m">500 ألف - مليون دج</option>
+                            <option value="1m-5m">1-5 مليون دج</option>
+                            <option value="5m-10m">5-10 مليون دج</option>
+                            <option value="10m-20m">10-20 مليون دج</option>
+                            <option value="over-20m">أكثر من 20 مليون دج</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business-plan" class="block mb-2 font-semibold text-gray-700">
+                            <i class="fas fa-file-contract ml-2 text-purple-500"></i>
+                            هل لديك خطة عمل؟
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="radio" name="business-plan" value="complete" class="ml-3 text-purple-600">
+                                <span>خطة كاملة</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="radio" name="business-plan" value="partial" class="ml-3 text-purple-600">
+                                <span>خطة جزئية</span>
+                            </label>
+                            <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                                <input type="radio" name="business-plan" value="none" class="ml-3 text-purple-600">
+                                <span>لا توجد</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="button" class="next-step bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 4: Review and Submit -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="4">
+                <div class="text-center mb-8">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">مراجعة وإرسال الطلب</h2>
+                    <p class="text-gray-600">تأكد من صحة البيانات قبل إرسال طلب الانضمام</p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-clipboard-list text-green-500 ml-2"></i>
+                        ملخص الطلب
+                    </h3>
+                    <div id="application-summary" class="space-y-3 text-gray-700">
+                        <!-- Summary will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-blue-600 text-xl ml-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-3">الخطوات التالية:</h4>
+                            <ul class="text-blue-700 text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-clock text-blue-500 ml-2"></i>
+                                    سيتم مراجعة طلبك خلال 48 ساعة
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-phone text-blue-500 ml-2"></i>
+                                    مقابلة أولية عبر الهاتف أو الفيديو
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-handshake text-blue-500 ml-2"></i>
+                                    لقاء شخصي لمناقشة التفاصيل
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-blue-500 ml-2"></i>
+                                    قرار القبول والبدء في البرنامج
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="flex items-start p-4 border-2 border-gray-200 rounded-lg hover:border-green-300 transition-all cursor-pointer">
+                        <input type="checkbox" id="terms-agreement" name="terms-agreement" required class="mt-1 ml-3 text-green-600">
+                        <span class="text-gray-700">
+                            أوافق على 
+                            <a href="#" class="text-blue-600 hover:underline font-medium">شروط وأحكام</a> 
+                            حاضنة الأعمال و 
+                            <a href="#" class="text-blue-600 hover:underline font-medium">سياسة الخصوصية</a>
+                            الخاصة بمنصة رفيق توريق
+                        </span>
+                    </label>
+                    <span class="error-message text-red-500 text-sm hidden">يجب الموافقة على الشروط والأحكام</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="submit" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        إرسال الطلب
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-xl p-8 text-center">
+            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-green-800 mb-4">تم إرسال الطلب بنجاح!</h2>
+            <p class="text-green-700 mb-6 text-lg">
+                شكراً لك على اهتمامك بالانضمام إلى حاضنة رفيق توريق. سيتم مراجعة طلبك والتواصل معك خلال 48 ساعة.
+            </p>
+            <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                <h3 class="font-bold text-gray-800 mb-2">رقم الطلب:</h3>
+                <p class="text-2xl font-bold text-green-600" id="application-number">INC-2025-001</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-bold">
+                    <i class="fas fa-home ml-2"></i>
+                    العودة للحاضنة
+                </a>
+                <a href="../../index.html" class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-all font-bold">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">حاضنة الأعمال الرائدة في الجزائر</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدمات الحاضنة</h4>
+                <ul class="space-y-2">
+                    <li><a href="digital-incubator.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة الرقمية</a></li>
+                    <li><a href="business-incubator.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة التقليدية</a></li>
+                    <li><a href="partners.html" class="text-gray-400 hover:text-white transition-colors">الشركاء</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مركز المساعدة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li><a href="../contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>[2]
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">incubator@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - حاضنة الأعمال. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/incubator.js"></script>
+
 </body>
 </html>

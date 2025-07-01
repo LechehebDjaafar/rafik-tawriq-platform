@@ -1,10 +1,944 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>صفحة الحاضنة الرئيسية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاضنة الأعمال - رفيق توريق</title>
+    <meta name="description" content="حاضنة رقمية وتقليدية لدعم مشروعك من الفكرة إلى التنفيذ">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/incubator.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>صفحة الحاضنة الرئيسية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu المحسن -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة الحاضنة الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-seedling ml-2"></i>
+                        حاضنة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الحاضنات</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-green-600 bg-green-50 border-r-4 border-green-600">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-green-500">نظرة شاملة</div>
+                                </div>
+                            </a>
+                            <a href="digital-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-cyan-100 text-cyan-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-laptop-code text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الحاضنة الرقمية</div>
+                                    <div class="text-xs text-gray-500">مشاريع تقنية</div>
+                                </div>
+                            </a>
+                            <a href="business-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-briefcase text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الحاضنة التقليدية</div>
+                                    <div class="text-xs text-gray-500">مشاريع صناعية</div>
+                                </div>
+                            </a>
+                            <a href="partners.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-handshake text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">شبكة الشركاء</div>
+                                    <div class="text-xs text-gray-500">مستثمرون وخبراء</div>
+                                </div>
+                            </a>
+                            <a href="success-stories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-yellow-100 text-yellow-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">قصص النجاح</div>
+                                    <div class="text-xs text-gray-500">إنجازات ملهمة</div>
+                                </div>
+                            </a>
+                            <hr class="my-2">
+                            <a href="registration.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-paper-plane text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">انضم للحاضنة</div>
+                                    <div class="text-xs text-gray-500">ابدأ رحلتك معنا</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../courses/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-graduation-cap ml-2"></i>
+                    الدورات التدريبية
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons المحسنة -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    انضم للحاضنة
+                </a>
+                <button class="border-2 border-green-600 text-green-600 px-6 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../../index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-green-600 pr-3">
+                    <span class="text-green-600 font-bold text-sm">حاضنة الأعمال</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-green-600 font-medium py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية (الحالية)
+                        </a>
+                        <a href="digital-incubator.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-laptop-code ml-2 w-4"></i>
+                            الحاضنة الرقمية
+                        </a>
+                        <a href="business-incubator.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-briefcase ml-2 w-4"></i>
+                            الحاضنة التقليدية
+                        </a>
+                        <a href="partners.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-handshake ml-2 w-4"></i>
+                            شبكة الشركاء
+                        </a>
+                        <a href="success-stories.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-trophy ml-2 w-4"></i>
+                            قصص النجاح
+                        </a>
+                    </div>
+                </div>
+                <a href="../courses/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-graduation-cap ml-3 w-5"></i>
+                    الدورات التدريبية
+                </a>
+                <a href="../consulting/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-handshake ml-3 w-5"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-cogs ml-3 w-5"></i>
+                    الآلات والمعدات
+                </a>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="registration.html" class="bg-green-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        انضم للحاضنة
+                    </a>
+                    <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">حاضنة الأعمال</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-teal-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"incubator\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1.5\" fill=\"white\"/><path d=\"M10 10 L20 10 L20 20 L10 20 Z\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23incubator)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-green-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-seedling text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">من الفكرة إلى النجاح</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">حاضنة الأعمال</h1>
+                <p class="text-xl mb-8 text-green-100 leading-relaxed">
+                    نحن هنا لدعم رحلتك في ريادة الأعمال من الفكرة الأولى حتى تحقيق النجاح والنمو المستدام
+                </p>
+                
+                <!-- Statistics -->
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="200">0</div>
+                        <div class="text-sm text-green-200">مشروع مدعوم</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="85">0</div>
+                        <div class="text-sm text-green-200">% معدل النجاح</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="50">0</div>
+                        <div class="text-sm text-green-200">مليون دج تمويل</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="registration.html" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        انضم للحاضنة
+                    </a>
+                    <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        تعرف على خدماتنا
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-green-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-seedling text-8xl text-green-900"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-green-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-purple-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-star text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Incubator Types Section المحسن -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-green-100 text-green-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-cogs ml-2"></i>
+                <span class="text-sm font-medium">أنواع الحاضنات المتاحة</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">اختر النوع المناسب لمشروعك</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نوفر نوعين من الحاضنات لتناسب جميع أنواع المشاريع والأفكار
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <!-- Digital Incubator -->
+            <div class="incubator-type-card bg-gradient-to-br from-cyan-50 to-blue-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-cyan-200" data-aos="fade-up">
+                <div class="text-center mb-6">
+                    <div class="bg-cyan-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-laptop-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">الحاضنة الرقمية</h3>
+                    <p class="text-gray-600 mb-6">منصة متطورة لدعم المشاريع التقنية والرقمية</p>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-cloud text-cyan-500 ml-3"></i>
+                        <span class="text-gray-700">بنية تحتية سحابية متقدمة</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-code text-cyan-500 ml-3"></i>
+                        <span class="text-gray-700">أدوات تطوير احترافية</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-users text-cyan-500 ml-3"></i>
+                        <span class="text-gray-700">مجتمع مطورين متخصص</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-chart-line text-cyan-500 ml-3"></i>
+                        <span class="text-gray-700">تحليلات وإحصائيات متقدمة</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">إحصائيات الحاضنة الرقمية:</h4>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-cyan-600" data-counter="150">0</div>
+                            <div class="text-xs text-gray-500">مشروع رقمي</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-cyan-600">24/7</div>
+                            <div class="text-xs text-gray-500">دعم تقني</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-cyan-600" data-counter="95">0</div>
+                            <div class="text-xs text-gray-500">% نجاح</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="digital-incubator.html" class="w-full bg-cyan-600 text-white py-3 rounded-lg hover:bg-cyan-700 transition-all font-bold text-center block transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    استكشف الحاضنة الرقمية
+                </a>
+            </div>
+
+            <!-- Traditional Incubator -->
+            <div class="incubator-type-card bg-gradient-to-br from-orange-50 to-red-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center mb-6">
+                    <div class="bg-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-industry text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">الحاضنة التقليدية</h3>
+                    <p class="text-gray-600 mb-6">دعم شامل للمشاريع الصناعية والتجارية</p>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-clipboard-list text-orange-500 ml-3"></i>
+                        <span class="text-gray-700">دراسات جدوى متخصصة</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-tools text-orange-500 ml-3"></i>
+                        <span class="text-gray-700">توريد المعدات والآلات</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-file-contract text-orange-500 ml-3"></i>
+                        <span class="text-gray-700">إجراءات قانونية وإدارية</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+                        <i class="fas fa-bullhorn text-orange-500 ml-3"></i>
+                        <span class="text-gray-700">استراتيجيات تسويق فعالة</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">إحصائيات الحاضنة التقليدية:</h4>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600" data-counter="80">0</div>
+                            <div class="text-xs text-gray-500">مشروع تقليدي</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600" data-counter="90">0</div>
+                            <div class="text-xs text-gray-500">% نجاح</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600" data-counter="25">0</div>
+                            <div class="text-xs text-gray-500">مليون دج</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="business-incubator.html" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-all font-bold text-center block transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-industry ml-2"></i>
+                    استكشف الحاضنة التقليدية
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">خدمات الحاضنة الشاملة</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نقدم مجموعة شاملة من الخدمات لدعم مشروعك في كل مرحلة من مراحل النمو
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card bg-white rounded-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">دعم الشركات الناشئة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">من تطوير الفكرة إلى إطلاق المنتج</p>
+                    <div class="bg-green-50 rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-green-600" data-counter="200">0</div>
+                        <div class="text-xs text-gray-500">شركة ناشئة مدعومة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card bg-white rounded-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-dollar-sign text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">التمويل والاستثمار</h3>
+                    <p class="text-gray-600 mb-4 text-sm">ربطك بالمستثمرين وجهات التمويل</p>
+                    <div class="bg-blue-50 rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-blue-600" data-counter="100">0</div>
+                        <div class="text-xs text-gray-500">مليون دج تمويل</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card bg-white rounded-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الإرشاد والتوجيه</h3>
+                    <p class="text-gray-600 mb-4 text-sm">خبراء متخصصون لتوجيه مشروعك</p>
+                    <div class="bg-purple-50 rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-purple-600" data-counter="50">0</div>
+                        <div class="text-xs text-gray-500">خبير ومرشد</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card bg-white rounded-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">مساحات العمل</h3>
+                    <p class="text-gray-600 mb-4 text-sm">بيئة عمل محفزة للإبداع والتطوير</p>
+                    <div class="bg-orange-50 rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-orange-600" data-counter="20">0</div>
+                        <div class="text-xs text-gray-500">مساحة عمل متاحة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Navigation Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">استكشف المزيد</h3>
+            <p class="text-gray-600">تصفح جميع أقسام حاضنة الأعمال</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="partners.html" class="quick-nav-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-purple-200" data-aos="fade-up">
+                <div class="bg-purple-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-handshake text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">شبكة الشركاء</h4>
+                <p class="text-sm text-gray-600">مستثمرون وخبراء متخصصون</p>
+                <div class="mt-3 text-purple-600 font-bold">
+                    <span data-counter="50">0</span> شريك
+                </div>
+            </a>
+            
+            <a href="success-stories.html" class="quick-nav-card bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-yellow-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-yellow-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-trophy text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">قصص النجاح</h4>
+                <p class="text-sm text-gray-600">إنجازات ملهمة ومؤثرة</p>
+                <div class="mt-3 text-yellow-600 font-bold">
+                    <span data-counter="200">0</span> قصة نجاح
+                </div>
+            </a>
+            
+            <a href="digital-incubator.html" class="quick-nav-card bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-cyan-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-cyan-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-laptop-code text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">الحاضنة الرقمية</h4>
+                <p class="text-sm text-gray-600">مشاريع تقنية ورقمية</p>
+                <div class="mt-3 text-cyan-600 font-bold">
+                    <span data-counter="150">0</span> مشروع رقمي
+                </div>
+            </a>
+            
+            <a href="business-incubator.html" class="quick-nav-card bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all text-center group border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-500 text-white p-3 rounded-full w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-industry text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">الحاضنة التقليدية</h4>
+                <p class="text-sm text-gray-600">مشاريع صناعية وتجارية</p>
+                <div class="mt-3 text-orange-600 font-bold">
+                    <span data-counter="80">0</span> مشروع تقليدي
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories Preview -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">قصص نجاح ملهمة</h2>
+            <p class="text-xl text-gray-600">شركات ناشئة نجحت بدعم من حاضنة رفيق توريق</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Success Story 1 -->
+            <div class="success-story bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <div class="flex items-center mb-4">
+                    <img src="../../assets/images/startups/startup1.jpg" alt="تطبيق توصيل" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">تطبيق توصيل سريع</h3>
+                        <p class="text-sm text-gray-600">محمد أحمد - المؤسس</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">رقمي</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "بدأنا بفكرة بسيطة وبدعم من حاضنة رفيق توريق تمكنا من تطوير تطبيق يخدم أكثر من 10,000 مستخدم في شلف."
+                </p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>قطاع: التكنولوجيا</span>
+                    <span>التمويل: 2 مليون دج</span>
+                </div>
+            </div>
+
+            <!-- Success Story 2 -->
+            <div class="success-story bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4">
+                    <img src="../../assets/images/startups/startup2.jpg" alt="مصنع الحلويات" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">مصنع الحلويات الطبيعية</h3>
+                        <p class="text-sm text-gray-600">فاطمة بن علي - المؤسسة</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">تقليدي</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "من مطبخ صغير إلى مصنع ينتج 500 كيلو يومياً. الحاضنة ساعدتني في كل خطوة من التخطيط إلى التسويق."
+                </p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>قطاع: الصناعات الغذائية</span>
+                    <span>التمويل: 5 مليون دج</span>
+                </div>
+            </div>
+
+            <!-- Success Story 3 -->
+            <div class="success-story bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4">
+                    <img src="../../assets/images/startups/startup3.jpg" alt="منصة تعليمية" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">منصة التعليم الإلكتروني</h3>
+                        <p class="text-sm text-gray-600">أمين الدين - المؤسس</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">رقمي</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "منصة تعليمية تخدم الطلاب في الجزائر. بدعم الحاضنة وصلنا إلى 50,000 طالب مسجل في أقل من سنة."
+                </p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>قطاع: التعليم</span>
+                    <span>التمويل: 3 مليون دج</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="success-stories.html" class="bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-all transform hover:scale-105 shadow-lg font-bold">
+                <i class="fas fa-trophy ml-2"></i>
+                اكتشف جميع قصص النجاح
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">كيف تعمل الحاضنة؟</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة للانضمام إلى حاضنة الأعمال</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="relative">
+                <!-- Progress Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-500 to-blue-500 rounded-full"></div>
+                
+                <!-- Steps -->
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-green-50 rounded-lg p-6 border border-green-200">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">1. تقديم الطلب</h3>
+                                <p class="text-gray-600">قدم فكرة مشروعك من خلال نموذج الطلب المفصل</p>
+                                <a href="registration.html" class="text-green-600 hover:text-green-800 font-bold text-sm mt-2 inline-block">
+                                    ابدأ التسجيل <i class="fas fa-arrow-left mr-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                1
+                            </div>
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                2
+                            </div>
+                        </div>
+                        <div class="flex-1 text-left pl-8">
+                            <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
+                                <h3 class="text-xl font-bold text-blue-800 mb-2">2. التقييم والمراجعة</h3>
+                                <p class="text-gray-600">فريق من الخبراء يقيم فكرتك ويقدم التوجيه اللازم</p>
+                                <span class="text-blue-600 font-bold text-sm mt-2 inline-block">
+                                    خلال 48 ساعة
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-purple-50 rounded-lg p-6 border border-purple-200">
+                                <h3 class="text-xl font-bold text-purple-800 mb-2">3. القبول والبدء</h3>
+                                <p class="text-gray-600">عند القبول، تبدأ رحلة التطوير مع فريق الدعم</p>
+                                <span class="text-purple-600 font-bold text-sm mt-2 inline-block">
+                                    85% معدل القبول
+                                </span>
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                3
+                            </div>
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+                                4
+                            </div>
+                        </div>
+                        <div class="flex-1 text-left pl-8">
+                            <div class="bg-orange-50 rounded-lg p-6 border border-orange-200">
+                                <h3 class="text-xl font-bold text-orange-800 mb-2">4. الإطلاق والنمو</h3>
+                                <p class="text-gray-600">إطلاق مشروعك في السوق مع الدعم المستمر</p>
+                                <a href="success-stories.html" class="text-orange-600 hover:text-orange-800 font-bold text-sm mt-2 inline-block">
+                                    شاهد قصص النجاح <i class="fas fa-arrow-left mr-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-green-900 via-green-800 to-teal-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل أنت مستعد لبدء رحلتك؟</h2>
+            <p class="text-xl text-green-200 mb-8 max-w-2xl mx-auto">
+                انضم إلى مجتمع رواد الأعمال الناجحين واحصل على الدعم الذي تحتاجه لتحقيق حلمك
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="registration.html" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    قدم طلبك الآن
+                </a>
+                <a href="partners.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                    <i class="fas fa-handshake ml-2"></i>
+                    تعرف على الشركاء
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">منصة شاملة لدعم ريادة الأعمال والمقاولاتية</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Incubator Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">أنواع الحاضنات</h4>
+                <ul class="space-y-2">
+                    <li><a href="digital-incubator.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة الرقمية</a></li>
+                    <li><a href="business-incubator.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة التقليدية</a></li>
+                    <li><a href="partners.html" class="text-gray-400 hover:text-white transition-colors">شبكة الشركاء</a></li>
+                    <li><a href="success-stories.html" class="text-gray-400 hover:text-white transition-colors">قصص النجاح</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2">
+                    <li><a href="../../index.html" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a></li>
+                    <li><a href="../courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارة</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">انضم للحاضنة</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">معلومات التواصل</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">incubator@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-green-400 ml-3"></i>
+                        <span class="text-gray-400">شلف، الجزائر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 left-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-110 opacity-0 invisible">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/incubator.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+    
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+    
+    // Counter animation
+    const counters = document.querySelectorAll('[data-counter]');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
+

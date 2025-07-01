@@ -1,10 +1,484 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الحاضنة الرقمية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحاضنة الرقمية - رفيق توريق</title>
+    <meta name="description" content="حاضنة رقمية متطورة لدعم المشاريع التقنية والتكنولوجية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/incubator.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>الحاضنة الرقمية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-cyan-600 font-bold flex items-center relative">
+                        <i class="fas fa-seedling ml-2"></i>
+                        حاضنة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 transition-all">
+                                <i class="fas fa-home ml-3 text-cyan-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="digital-incubator.html" class="flex items-center px-4 py-3 text-cyan-600 bg-cyan-50 border-r-4 border-cyan-600">
+                                <i class="fas fa-laptop-code ml-3 text-cyan-500"></i>
+                                <span>الحاضنة الرقمية</span>
+                            </a>
+                            <a href="business-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 transition-all">
+                                <i class="fas fa-briefcase ml-3 text-cyan-500"></i>
+                                <span>الحاضنة التقليدية</span>
+                            </a>
+                            <a href="partners.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 transition-all">
+                                <i class="fas fa-handshake ml-3 text-cyan-500"></i>
+                                <span>الشركاء</span>
+                            </a>
+                            <a href="success-stories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 transition-all">
+                                <i class="fas fa-trophy ml-3 text-cyan-500"></i>
+                                <span>قصص النجاح</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../courses/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-graduation-cap ml-2"></i>
+                    الدورات التدريبية
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html" class="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-6 py-2 rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    انضم للحاضنة
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-cyan-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">حاضنة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">الحاضنة الرقمية</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-cyan-900 via-cyan-800 to-blue-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"digital\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/><rect x=\"5\" y=\"5\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23digital)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-cyan-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-laptop-code text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">تكنولوجيا متقدمة ودعم رقمي</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">الحاضنة الرقمية</h1>
+                <p class="text-xl mb-8 text-cyan-100 leading-relaxed">
+                    منصة رقمية متطورة لدعم المشاريع التقنية والتكنولوجية بأحدث الأدوات والتقنيات
+                </p>
+                
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="150">0</div>
+                        <div class="text-sm text-cyan-200">مشروع رقمي</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="24">0</div>
+                        <div class="text-sm text-cyan-200">ساعة دعم</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="95">0</div>
+                        <div class="text-sm text-cyan-200">% نجاح رقمي</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="registration.html" class="bg-yellow-500 text-cyan-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-rocket ml-2"></i>
+                        ابدأ مشروعك الرقمي
+                    </a>
+                    <a href="#features" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        تعرف على المميزات
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-laptop-code text-8xl text-cyan-900"></i>
+                    </div>
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-cyan-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مميزات الحاضنة الرقمية</h2>
+            <p class="text-xl text-gray-600">أدوات وتقنيات متطورة لدعم مشروعك الرقمي</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="feature-card bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-cyan-200" data-aos="fade-up">
+                <div class="bg-cyan-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-cloud text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">البنية التحتية السحابية</h3>
+                <p class="text-gray-600 text-center mb-4">خوادم سحابية متطورة وآمنة لاستضافة مشاريعك</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-cyan-500 ml-2"></i>استضافة مجانية لمدة سنة</li>
+                    <li class="flex items-center"><i class="fas fa-check text-cyan-500 ml-2"></i>نسخ احتياطي تلقائي</li>
+                    <li class="flex items-center"><i class="fas fa-check text-cyan-500 ml-2"></i>حماية متقدمة</li>
+                </ul>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-code text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">أدوات التطوير</h3>
+                <p class="text-gray-600 text-center mb-4">مجموعة شاملة من أدوات التطوير والبرمجة</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>بيئات تطوير متكاملة</li>
+                    <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>أدوات اختبار متقدمة</li>
+                    <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>إدارة الإصدارات</li>
+                </ul>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">مجتمع المطورين</h3>
+                <p class="text-gray-600 text-center mb-4">شبكة واسعة من المطورين والخبراء التقنيين</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>منتديات نقاش تقنية</li>
+                    <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>ورش عمل أسبوعية</li>
+                    <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>دعم فني مباشر</li>
+                </ul>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">تحليلات متقدمة</h3>
+                <p class="text-gray-600 text-center mb-4">أدوات تحليل البيانات ومراقبة الأداء</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>تحليل سلوك المستخدمين</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>تقارير أداء مفصلة</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>إحصائيات في الوقت الفعلي</li>
+                </ul>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">الأمان والحماية</h3>
+                <p class="text-gray-600 text-center mb-4">أعلى معايير الأمان لحماية مشروعك</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>تشفير متقدم</li>
+                    <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>مراقبة أمنية 24/7</li>
+                    <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>نسخ احتياطي آمن</li>
+                </ul>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-pink-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i class="fas fa-rocket text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">التسويق الرقمي</h3>
+                <p class="text-gray-600 text-center mb-4">استراتيجيات تسويق رقمي فعالة</p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-center"><i class="fas fa-check text-pink-500 ml-2"></i>حملات إعلانية مجانية</li>
+                    <li class="flex items-center"><i class="fas fa-check text-pink-500 ml-2"></i>تحسين محركات البحث</li>
+                    <li class="flex items-center"><i class="fas fa-check text-pink-500 ml-2"></i>إدارة وسائل التواصل</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Digital Technologies Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">التقنيات المدعومة</h2>
+            <p class="text-xl text-gray-600">نوفر الدعم لأحدث التقنيات والمنصات</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <!-- Technology 1 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in">
+                <i class="fab fa-react text-4xl text-blue-500 mb-3"></i>
+                <h4 class="font-bold text-gray-800">React</h4>
+            </div>
+
+            <!-- Technology 2 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-vue text-4xl text-green-500 mb-3"></i>
+                <h4 class="font-bold text-gray-800">Vue.js</h4>
+            </div>
+
+            <!-- Technology 3 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-angular text-4xl text-red-500 mb-3"></i>
+                <h4 class="font-bold text-gray-800">Angular</h4>
+            </div>
+
+            <!-- Technology 4 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-node-js text-4xl text-green-600 mb-3"></i>
+                <h4 class="font-bold text-gray-800">Node.js</h4>
+            </div>
+
+            <!-- Technology 5 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fab fa-python text-4xl text-yellow-500 mb-3"></i>
+                <h4 class="font-bold text-gray-800">Python</h4>
+            </div>
+
+            <!-- Technology 6 -->
+            <div class="tech-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fab fa-aws text-4xl text-orange-500 mb-3"></i>
+                <h4 class="font-bold text-gray-800">AWS</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">قصص نجاح رقمية</h2>
+            <p class="text-xl text-gray-600">مشاريع رقمية ناجحة من حاضنتنا</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Digital Success 1 -->
+            <div class="success-story bg-gradient-to-br from-cyan-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <div class="flex items-center mb-4">
+                    <div class="bg-cyan-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800">تطبيق التوصيل الذكي</h3>
+                        <p class="text-sm text-gray-600">أحمد محمد - مطور</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    تطبيق توصيل ذكي يستخدم الذكاء الاصطناعي لتحسين مسارات التوصيل. وصل إلى 50,000 مستخدم في 6 أشهر.
+                </p>
+                <div class="flex items-center justify-between text-sm">
+                    <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded">React Native</span>
+                    <span class="text-gray-500">تمويل: 3M دج</span>
+                </div>
+            </div>
+
+            <!-- Digital Success 2 -->
+            <div class="success-story bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4">
+                    <div class="bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800">منصة التعلم الإلكتروني</h3>
+                        <p class="text-sm text-gray-600">سارة أحمد - مؤسسة</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    منصة تعليمية تفاعلية تستخدم الواقع المعزز. تخدم 25,000 طالب في الجزائر والمغرب العربي.
+                </p>
+                <div class="flex items-center justify-between text-sm">
+                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">Vue.js + AR</span>
+                    <span class="text-gray-500">تمويل: 4M دج</span>
+                </div>
+            </div>
+
+            <!-- Digital Success 3 -->
+            <div class="success-story bg-gradient-to-br from-green-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800">نظام إدارة المخازن</h3>
+                        <p class="text-sm text-gray-600">محمد الأمين - مطور</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    نظام ذكي لإدارة المخازن باستخدام إنترنت الأشياء. يخدم أكثر من 200 شركة في الجزائر.
+                </p>
+                <div class="flex items-center justify-between text-sm">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded">IoT + Python</span>
+                    <span class="text-gray-500">تمويل: 5M دج</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-cyan-900 via-cyan-800 to-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">ابدأ مشروعك الرقمي اليوم</h2>
+            <p class="text-xl text-cyan-200 mb-8 max-w-2xl mx-auto">
+                انضم إلى الحاضنة الرقمية واحصل على الدعم التقني والتمويل اللازم لتحويل فكرتك إلى واقع رقمي
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="registration.html" class="bg-yellow-500 text-cyan-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    سجل في الحاضنة الرقمية
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تحدث مع خبير تقني
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">الحاضنة الرقمية الرائدة في الجزائر</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الحاضنة الرقمية</h4>
+                <ul class="space-y-2">
+                    <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">المميزات</a></li>
+                    <li><a href="#technologies" class="text-gray-400 hover:text-white transition-colors">التقنيات</a></li>
+                    <li><a href="success-stories.html" class="text-gray-400 hover:text-white transition-colors">قصص النجاح</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم التقني</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الوثائق التقنية</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المنتديات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الدعم المباشر</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-cyan-400 ml-3"></i>
+                        <span class="text-gray-400">digital@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-github text-cyan-400 ml-3"></i>
+                        <span class="text-gray-400">github.com/rafiktawriq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - الحاضنة الرقمية. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/incubator.js"></script>
+
 </body>
 </html>

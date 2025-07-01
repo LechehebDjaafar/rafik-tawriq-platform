@@ -1,10 +1,685 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>قصص النجاح</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصص النجاح - رفيق توريق</title>
+    <meta name="description" content="قصص نجاح ملهمة من حاضنة الأعمال رفيق توريق">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/incubator.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>قصص النجاح</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-yellow-600 font-bold flex items-center relative">
+                        <i class="fas fa-seedling ml-2"></i>
+                        حاضنة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all">
+                                <i class="fas fa-home ml-3 text-yellow-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="digital-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all">
+                                <i class="fas fa-laptop-code ml-3 text-yellow-500"></i>
+                                <span>الحاضنة الرقمية</span>
+                            </a>
+                            <a href="business-incubator.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all">
+                                <i class="fas fa-briefcase ml-3 text-yellow-500"></i>
+                                <span>الحاضنة التقليدية</span>
+                            </a>
+                            <a href="partners.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all">
+                                <i class="fas fa-handshake ml-3 text-yellow-500"></i>
+                                <span>الشركاء</span>
+                            </a>
+                            <a href="success-stories.html" class="flex items-center px-4 py-3 text-yellow-600 bg-yellow-50 border-r-4 border-yellow-600">
+                                <i class="fas fa-trophy ml-3 text-yellow-500"></i>
+                                <span>قصص النجاح</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../courses/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-graduation-cap ml-2"></i>
+                    الدورات التدريبية
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html" class="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white px-6 py-2 rounded-lg hover:from-yellow-700 hover:to-yellow-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-star ml-2"></i>
+                    كن قصة نجاح
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-yellow-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">حاضنة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">قصص النجاح</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-yellow-900 via-yellow-800 to-orange-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"success\" width=\"35\" height=\"35\" patternUnits=\"userSpaceOnUse\"><circle cx=\"17.5\" cy=\"17.5\" r=\"2\" fill=\"white\"/><path d=\"M10 17.5 L15 22.5 L25 12.5\" stroke=\"white\" stroke-width=\"1\" fill=\"none\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23success)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+            <div class="inline-flex items-center bg-yellow-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-trophy text-yellow-300 ml-2"></i>
+                <span class="text-sm font-medium">قصص ملهمة من رواد أعمال ناجحين</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">قصص النجاح</h1>
+            <p class="text-xl mb-8 text-yellow-100 max-w-3xl mx-auto leading-relaxed">
+                اكتشف قصص نجاح ملهمة لرواد أعمال بدأوا رحلتهم من حاضنة رفيق توريق وحققوا إنجازات مذهلة
+            </p>
+            
+            <!-- Success Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-8">
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-yellow-300 mb-1" data-counter="200">0</div>
+                    <div class="text-sm text-yellow-200">مشروع ناجح</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-yellow-300 mb-1" data-counter="500">0</div>
+                    <div class="text-sm text-yellow-200">وظيفة مُنشأة</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-yellow-300 mb-1" data-counter="150">0</div>
+                    <div class="text-sm text-yellow-200">مليون دج إيرادات</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl font-bold text-yellow-300 mb-1" data-counter="85">0</div>
+                    <div class="text-sm text-yellow-200">% معدل النجاح</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-8 bg-white border-b shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="bg-gray-50 rounded-xl p-6" data-aos="fade-up">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input type="text" id="story-search" placeholder="ابحث في قصص النجاح..." 
+                               class="w-full pr-12 pl-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <select class="story-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 min-w-[150px]" data-filter="sector">
+                        <option value="">جميع القطاعات</option>
+                        <option value="technology">التكنولوجيا</option>
+                        <option value="food">الصناعات الغذائية</option>
+                        <option value="textile">النسيج والملابس</option>
+                        <option value="services">الخدمات</option>
+                        <option value="ecommerce">التجارة الإلكترونية</option>
+                        <option value="manufacturing">التصنيع</option>
+                    </select>
+
+                    <select class="story-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 min-w-[150px]" data-filter="type">
+                        <option value="">جميع الأنواع</option>
+                        <option value="digital">مشاريع رقمية</option>
+                        <option value="traditional">مشاريع تقليدية</option>
+                        <option value="hybrid">مشاريع مختلطة</option>
+                    </select>
+
+                    <select class="story-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 min-w-[150px]" data-filter="year">
+                        <option value="">جميع السنوات</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Success Story -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">قصة النجاح المميزة</h2>
+            <p class="text-lg text-gray-600">أبرز قصة نجاح هذا الشهر</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <!-- Image Section -->
+                    <div class="relative">
+                        <img src="../../assets/images/success-stories/featured-story.jpg" alt="قصة النجاح المميزة" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-white bg-opacity-90 rounded-lg p-4 backdrop-blur-sm">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">منصة "تعلم معنا"</h4>
+                                        <p class="text-sm text-gray-600">منصة تعليمية تفاعلية</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-2xl font-bold text-green-600">15M</div>
+                                        <div class="text-xs text-gray-500">دج إيرادات سنوية</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="p-8 lg:p-12">
+                        <div class="flex items-center mb-6">
+                            <img src="../../assets/images/founders/sarah-ahmed.jpg" alt="سارة أحمد" class="w-16 h-16 rounded-full ml-4 object-cover">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">سارة أحمد</h3>
+                                <p class="text-gray-600">مؤسسة منصة "تعلم معنا"</p>
+                                <div class="flex items-center mt-1">
+                                    <i class="fas fa-map-marker-alt text-gray-400 ml-1"></i>
+                                    <span class="text-sm text-gray-500">الجزائر العاصمة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <blockquote class="text-lg text-gray-700 mb-6 leading-relaxed italic border-r-4 border-yellow-500 pr-4">
+                            "بدأت بفكرة بسيطة لمساعدة الطلاب في التعلم عن بُعد. بدعم حاضنة رفيق توريق، تمكنت من تطوير منصة تخدم اليوم أكثر من 100,000 طالب في الجزائر والمغرب العربي."
+                        </blockquote>
+
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-800 mb-2">الإنجازات</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• 100,000+ مستخدم مسجل</li>
+                                    <li>• 50+ دورة تعليمية</li>
+                                    <li>• 25 موظف</li>
+                                    <li>• توسع في 5 دول</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-800 mb-2">الدعم المقدم</h5>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• تمويل 5 مليون دج</li>
+                                    <li>• إرشاد تقني متخصص</li>
+                                    <li>• دعم تسويقي</li>
+                                    <li>• شبكة شركاء</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-2 space-x-reverse">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">تكنولوجيا</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">تعليم</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2023</span>
+                            </div>
+                            <button class="text-yellow-600 hover:text-yellow-800 font-bold transition-colors" onclick="openStoryModal('featured')">
+                                اقرأ القصة كاملة <i class="fas fa-arrow-left mr-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories Grid -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">جميع قصص النجاح</h2>
+            <p class="text-lg text-gray-600">مجموعة متنوعة من قصص النجاح الملهمة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="success-stories-grid">
+            <!-- Success Story 1 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-sector="technology" data-type="digital" data-year="2024">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/delivery-app.jpg" alt="تطبيق التوصيل الذكي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        نمو 300%
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-mobile-alt ml-1"></i>
+                        تطبيق جوال
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/mohamed-ahmed.jpg" alt="محمد أحمد" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">محمد أحمد</h3>
+                            <p class="text-sm text-gray-600">مؤسس تطبيق "توصيل سريع"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">تطبيق التوصيل الذكي</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        تطبيق توصيل يستخدم الذكاء الاصطناعي لتحسين مسارات التوصيل. بدأ بفكرة بسيطة ووصل إلى 50,000 مستخدم في 6 أشهر.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">تكنولوجيا</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2024</span>
+                        </div>
+                        <span class="text-green-600 font-bold">3M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('delivery-app')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Story 2 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100" data-sector="food" data-type="traditional" data-year="2023">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/bakery.jpg" alt="مخبزة الحلويات التقليدية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        توسع إقليمي
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-bread-slice ml-1"></i>
+                        صناعة غذائية
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/fatima-benali.jpg" alt="فاطمة بن علي" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">فاطمة بن علي</h3>
+                            <p class="text-sm text-gray-600">مؤسسة "حلويات الأصالة"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">مخبزة الحلويات التقليدية</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        بدأت من مطبخ صغير وبدعم الحاضنة أصبحت تملك مخبزة تنتج 1000 قطعة حلوى يومياً وتوظف 15 عامل.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">صناعات غذائية</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2023</span>
+                        </div>
+                        <span class="text-green-600 font-bold">8M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('bakery')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Story 3 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200" data-sector="ecommerce" data-type="digital" data-year="2023">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/ecommerce.jpg" alt="متجر إلكتروني للمنتجات المحلية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        ربح مستدام
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-shopping-cart ml-1"></i>
+                        تجارة إلكترونية
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/youcef-mansouri.jpg" alt="يوسف منصوري" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">يوسف منصوري</h3>
+                            <p class="text-sm text-gray-600">مؤسس "سوق الجزائر"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">متجر إلكتروني للمنتجات المحلية</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        منصة تجارة إلكترونية تربط المنتجين المحليين بالمستهلكين. حققت 10,000 طلب في السنة الأولى.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">تجارة إلكترونية</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2023</span>
+                        </div>
+                        <span class="text-green-600 font-bold">6M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('ecommerce')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Story 4 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300" data-sector="manufacturing" data-type="traditional" data-year="2022">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/natural-oils.jpg" alt="مصنع الزيوت الطبيعية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        تصدير دولي
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-leaf ml-1"></i>
+                        منتجات طبيعية
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/amine-dine.jpg" alt="أمين الدين" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">أمين الدين</h3>
+                            <p class="text-sm text-gray-600">مؤسس "زيوت الطبيعة"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">مصنع الزيوت الطبيعية</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        مصنع متخصص في إنتاج الزيوت الطبيعية والعطرية. يصدر منتجاته لدول المغرب العربي وأوروبا.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">تصنيع</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2022</span>
+                        </div>
+                        <span class="text-green-600 font-bold">12M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('natural-oils')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Story 5 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400" data-sector="textile" data-type="traditional" data-year="2022">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/fashion-workshop.jpg" alt="ورشة الخياطة العصرية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        علامة تجارية
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-tshirt ml-1"></i>
+                        أزياء
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/sara-ahmed2.jpg" alt="سارة أحمد" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">سارة أحمد</h3>
+                            <p class="text-sm text-gray-600">مؤسسة "أزياء العصر"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">ورشة الخياطة العصرية</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        ورشة خياطة متخصصة في الملابس التقليدية والعصرية. تخدم أكثر من 500 زبون شهرياً.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-xs">نسيج</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2022</span>
+                        </div>
+                        <span class="text-green-600 font-bold">6M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('fashion-workshop')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Story 6 -->
+            <div class="success-story-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500" data-sector="services" data-type="hybrid" data-year="2021">
+                <div class="relative">
+                    <img src="../../assets/images/success-stories/logistics.jpg" alt="شركة خدمات لوجستية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        شراكات قوية
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-truck ml-1"></i>
+                        لوجستيات
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="../../assets/images/founders/karim-benaissa.jpg" alt="كريم بن عيسى" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">كريم بن عيسى</h3>
+                            <p class="text-sm text-gray-600">مؤسس "لوجستيك بلس"</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">شركة خدمات لوجستية</h4>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        شركة خدمات لوجستية تقدم حلول النقل والتخزين للشركات الصغيرة والمتوسطة في الجزائر.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex space-x-2 space-x-reverse">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">خدمات</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">2021</span>
+                        </div>
+                        <span class="text-green-600 font-bold">10M دج تمويل</span>
+                    </div>
+                    <button class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors font-bold" onclick="openStoryModal('logistics')">
+                        اقرأ القصة كاملة
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-all transform hover:scale-105 shadow-lg" id="load-more-stories">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من القصص
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-4">الأثر الاقتصادي والاجتماعي</h2>
+            <p class="text-xl text-gray-300">تأثير حاضنة رفيق توريق على الاقتصاد المحلي</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Impact 1 -->
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm" data-aos="fade-up">
+                <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-briefcase text-2xl text-white"></i>
+                </div>
+                <div class="text-3xl font-bold text-yellow-400 mb-2" data-counter="500">0</div>
+                <h3 class="font-bold mb-2">وظيفة مُنشأة</h3>
+                <p class="text-gray-300 text-sm">فرص عمل جديدة للشباب الجزائري</p>
+            </div>
+
+            <!-- Impact 2 -->
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-2xl text-white"></i>
+                </div>
+                <div class="text-3xl font-bold text-green-400 mb-2" data-counter="150">0</div>
+                <h3 class="font-bold mb-2">مليون دج إيرادات</h3>
+                <p class="text-gray-300 text-sm">إجمالي الإيرادات المحققة</p>
+            </div>
+
+            <!-- Impact 3 -->
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-globe text-2xl text-white"></i>
+                </div>
+                <div class="text-3xl font-bold text-blue-400 mb-2" data-counter="15">0</div>
+                <h3 class="font-bold mb-2">دولة للتصدير</h3>
+                <p class="text-gray-300 text-sm">أسواق دولية تم الوصول إليها</p>
+            </div>
+
+            <!-- Impact 4 -->
+            <div class="text-center bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-2xl text-white"></i>
+                </div>
+                <div class="text-3xl font-bold text-purple-400 mb-2" data-counter="50000">0</div>
+                <h3 class="font-bold mb-2">مستفيد مباشر</h3>
+                <p class="text-gray-300 text-sm">عدد المستفيدين من المشاريع</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-yellow-900 via-yellow-800 to-orange-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">كن قصة النجاح القادمة</h2>
+            <p class="text-xl text-yellow-200 mb-8 max-w-2xl mx-auto">
+                انضم إلى مجتمع رواد الأعمال الناجحين واكتب قصة نجاحك مع حاضنة رفيق توريق
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="registration.html" class="bg-white text-yellow-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    ابدأ رحلتك الآن
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-yellow-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تحدث مع مستشار
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Story Modal -->
+<div id="story-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+            <h3 class="text-2xl font-bold text-gray-800" id="modal-title">تفاصيل قصة النجاح</h3>
+            <button onclick="closeStoryModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="p-6" id="modal-content">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">قصص نجاح ملهمة من حاضنة الأعمال الرائدة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">قصص النجاح</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المشاريع الرقمية</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المشاريع التقليدية</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">قصص ملهمة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط مفيدة</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">حاضنة الأعمال</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">التسجيل</a></li>
+                    <li><a href="partners.html" class="text-gray-400 hover:text-white transition-colors">الشركاء</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-yellow-400 ml-3"></i>
+                        <span class="text-gray-400">success@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-yellow-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - قصص النجاح. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/incubator.js"></script>
+
 </body>
 </html>

@@ -1,10 +1,616 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
-  <title>الحاضنة التقليدية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحاضنة التقليدية - رفيق توريق</title>
+  <meta name="description" content="حاضنة أعمال تقليدية لدعم المشاريع الصناعية والتجارية">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/incubator.css">
+
+  <!-- Google Fonts for Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>الحاضنة التقليدية</h1>
+
+<body class="font-tajawal bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+            <div
+              class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+              <i class="fas fa-rocket text-2xl"></i>
+            </div>
+            <div class="text-right">
+              <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+              <p class="text-sm text-gray-600">شريكك في النجاح</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+          <a href="../../index.html"
+            class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+            <i class="fas fa-home ml-2"></i>
+            الرئيسية
+          </a>
+
+          <div class="relative group">
+            <a href="index.html" class="nav-link text-orange-600 font-bold flex items-center relative">
+              <i class="fas fa-seedling ml-2"></i>
+              حاضنة الأعمال
+              <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+            </a>
+            <div
+              class="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+              <div class="py-3">
+                <a href="index.html"
+                  class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                  <i class="fas fa-home ml-3 text-orange-500"></i>
+                  <span>الصفحة الرئيسية</span>
+                </a>
+                <a href="digital-incubator.html"
+                  class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                  <i class="fas fa-laptop-code ml-3 text-orange-500"></i>
+                  <span>الحاضنة الرقمية</span>
+                </a>
+                <a href="business-incubator.html"
+                  class="flex items-center px-4 py-3 text-orange-600 bg-orange-50 border-r-4 border-orange-600">
+                  <i class="fas fa-briefcase ml-3 text-orange-500"></i>
+                  <span>الحاضنة التقليدية</span>
+                </a>
+                <a href="partners.html"
+                  class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                  <i class="fas fa-handshake ml-3 text-orange-500"></i>
+                  <span>الشركاء</span>
+                </a>
+                <a href="success-stories.html"
+                  class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                  <i class="fas fa-trophy ml-3 text-orange-500"></i>
+                  <span>قصص النجاح</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="../courses/index.html"
+            class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+            <i class="fas fa-graduation-cap ml-2"></i>
+            الدورات التدريبية
+          </a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+          <a href="registration.html"
+            class="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-6 py-2 rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all transform hover:scale-105 shadow-lg">
+            <i class="fas fa-paper-plane ml-2"></i>
+            انضم للحاضنة
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-gray-700 hover:text-orange-600 transition-colors" id="mobile-menu-btn">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+        <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+          <i class="fas fa-home ml-1"></i>
+          الرئيسية
+        </a>
+        <i class="fas fa-chevron-left text-gray-400"></i>
+        <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">حاضنة الأعمال</a>
+        <i class="fas fa-chevron-left text-gray-400"></i>
+        <span class="text-gray-600 font-medium">الحاضنة التقليدية</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section
+    class="py-16 bg-gradient-to-br from-orange-900 via-orange-800 to-red-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"
+        http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\">
+        <defs>
+          <pattern id=\"business\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\">
+            <circle cx=\"12.5\" cy=\"12.5\" r=\"1.5\" fill=\"white\" />
+            <rect x=\"7\" y=\"7\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"white\" stroke-width=\"0.4\" />
+          </pattern>
+        </defs>
+        <rect width=\"100\" height=\"100\" fill=\"url(%23business)\" /></svg>');">
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div class="inline-flex items-center bg-orange-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+            <i class="fas fa-briefcase text-yellow-400 ml-2"></i>
+            <span class="text-sm font-medium">دعم شامل للمشاريع التقليدية</span>
+          </div>
+          <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">الحاضنة التقليدية</h1>
+          <p class="text-xl mb-8 text-orange-100 leading-relaxed">
+            دعم شامل للمشاريع الصناعية والتجارية التقليدية مع خدمات متكاملة من التخطيط إلى التنفيذ
+          </p>
+
+          <div class="grid grid-cols-3 gap-6 mb-8">
+            <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="80">0</div>
+              <div class="text-sm text-orange-200">مشروع تقليدي</div>
+            </div>
+            <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="90">0</div>
+              <div class="text-sm text-orange-200">% معدل النجاح</div>
+            </div>
+            <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="25">0</div>
+              <div class="text-sm text-orange-200">مليون دج تمويل</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="registration.html"
+              class="bg-yellow-500 text-orange-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+              <i class="fas fa-industry ml-2"></i>
+              ابدأ مشروعك التقليدي
+            </a>
+            <a href="#services"
+              class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-900 transition-all">
+              <i class="fas fa-info-circle ml-2"></i>
+              تعرف على الخدمات
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-left">
+          <div class="relative">
+            <div
+              class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
+              <i class="fas fa-industry text-8xl text-orange-900"></i>
+            </div>
+            <div
+              class="absolute top-10 right-10 bg-yellow-400 text-orange-900 p-3 rounded-full animate-bounce shadow-lg">
+              <i class="fas fa-cogs text-xl"></i>
+            </div>
+            <div class="absolute bottom-10 left-10 bg-red-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+              <i class="fas fa-chart-bar text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">خدمات الحاضنة التقليدية</h2>
+        <p class="text-xl text-gray-600">دعم شامل لجميع مراحل مشروعك التقليدي</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div
+          class="service-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200"
+          data-aos="fade-up">
+          <div
+            class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-clipboard-list text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">دراسة الجدوى</h3>
+          <p class="text-gray-600 text-center mb-4">تحليل شامل لجدوى مشروعك اقتصادياً وتقنياً</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>دراسة السوق المحلي</li>
+            <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>تحليل المنافسين</li>
+            <li class="flex items-center"><i class="fas fa-check text-orange-500 ml-2"></i>التوقعات المالية</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div
+          class="service-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-map-marked-alt text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">اختيار الموقع</h3>
+          <p class="text-gray-600 text-center mb-4">مساعدة في اختيار الموقع الأمثل لمشروعك</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>تحليل المواقع المتاحة</li>
+            <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>دراسة إمكانية الوصول</li>
+            <li class="flex items-center"><i class="fas fa-check text-blue-500 ml-2"></i>تقييم التكاليف</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="service-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-file-contract text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">الإجراءات القانونية</h3>
+          <p class="text-gray-600 text-center mb-4">مساعدة في جميع الإجراءات القانونية والإدارية</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>تأسيس الشركة</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>التراخيص المطلوبة</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 ml-2"></i>التسجيل الضريبي</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div
+          class="service-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-tools text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">المعدات والآلات</h3>
+          <p class="text-gray-600 text-center mb-4">توفير وتوريد المعدات والآلات المطلوبة</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>استشارة تقنية</li>
+            <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>توريد المعدات</li>
+            <li class="flex items-center"><i class="fas fa-check text-purple-500 ml-2"></i>التركيب والصيانة</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div
+          class="service-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200"
+          data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-users text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">التدريب والتأهيل</h3>
+          <p class="text-gray-600 text-center mb-4">برامج تدريبية متخصصة لفريق العمل</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-red-500 ml-2"></i>تدريب تقني</li>
+            <li class="flex items-center"><i class="fas fa-check text-red-500 ml-2"></i>مهارات الإدارة</li>
+            <li class="flex items-center"><i class="fas fa-check text-red-500 ml-2"></i>السلامة المهنية</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div
+          class="service-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200"
+          data-aos="fade-up" data-aos-delay="500">
+          <div
+            class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <i class="fas fa-bullhorn text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">التسويق والمبيعات</h3>
+          <p class="text-gray-600 text-center mb-4">استراتيجيات تسويقية فعالة لمنتجاتك</p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-teal-500 ml-2"></i>خطة تسويقية</li>
+            <li class="flex items-center"><i class="fas fa-check text-teal-500 ml-2"></i>شبكة التوزيع</li>
+            <li class="flex items-center"><i class="fas fa-check text-teal-500 ml-2"></i>العلامة التجارية</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industrial Sectors -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">القطاعات الصناعية المدعومة</h2>
+        <p class="text-xl text-gray-600">نوفر الدعم لمختلف القطاعات الصناعية والتجارية</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <!-- Sector 1 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in">
+          <i class="fas fa-bread-slice text-4xl text-orange-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">الصناعات الغذائية</h4>
+        </div>
+
+        <!-- Sector 2 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in"
+          data-aos-delay="100">
+          <i class="fas fa-tshirt text-4xl text-blue-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">النسيج والملابس</h4>
+        </div>
+
+        <!-- Sector 3 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in"
+          data-aos-delay="200">
+          <i class="fas fa-hammer text-4xl text-gray-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">الصناعات المعدنية</h4>
+        </div>
+
+        <!-- Sector 4 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in"
+          data-aos-delay="300">
+          <i class="fas fa-leaf text-4xl text-green-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">المنتجات الطبيعية</h4>
+        </div>
+
+        <!-- Sector 5 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in"
+          data-aos-delay="400">
+          <i class="fas fa-cube text-4xl text-purple-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">مواد البناء</h4>
+        </div>
+
+        <!-- Sector 6 -->
+        <div class="sector-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="zoom-in"
+          data-aos-delay="500">
+          <i class="fas fa-recycle text-4xl text-teal-500 mb-3"></i>
+          <h4 class="font-bold text-gray-800 text-sm">إعادة التدوير</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">قصص نجاح تقليدية</h2>
+        <p class="text-xl text-gray-600">مشاريع تقليدية ناجحة من حاضنتنا</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Traditional Success 1 -->
+        <div
+          class="success-story bg-gradient-to-br from-orange-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300"
+          data-aos="fade-up">
+          <div class="flex items-center mb-4">
+            <div class="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+              <i class="fas fa-bread-slice"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">مخبزة الحلويات التقليدية</h3>
+              <p class="text-sm text-gray-600">فاطمة بن علي - مؤسسة</p>
+            </div>
+          </div>
+          <p class="text-gray-700 mb-4">
+            بدأت من المنزل وبدعم الحاضنة أصبحت تملك مخبزة تنتج 1000 قطعة حلوى يومياً وتوظف 15 عامل.
+          </p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded">صناعات غذائية</span>
+            <span class="text-gray-500">تمويل: 8M دج</span>
+          </div>
+        </div>
+
+        <!-- Traditional Success 2 -->
+        <div
+          class="success-story bg-gradient-to-br from-blue-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">ورشة الخياطة العصرية</h3>
+              <p class="text-sm text-gray-600">سارة أحمد - مؤسسة</p>
+            </div>
+          </div>
+          <p class="text-gray-700 mb-4">
+            ورشة خياطة متخصصة في الملابس التقليدية والعصرية. تخدم أكثر من 500 زبون شهرياً.
+          </p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">النسيج والملابس</span>
+            <span class="text-gray-500">تمويل: 6M دج</span>
+          </div>
+        </div>
+
+        <!-- Traditional Success 3 -->
+        <div
+          class="success-story bg-gradient-to-br from-green-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center ml-4">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">مصنع الزيوت الطبيعية</h3>
+              <p class="text-sm text-gray-600">محمد الأمين - مؤسس</p>
+            </div>
+          </div>
+          <p class="text-gray-700 mb-4">
+            مصنع متخصص في إنتاج الزيوت الطبيعية والعطرية. يصدر منتجاته لدول المغرب العربي.
+          </p>
+          <div class="flex items-center justify-between text-sm">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded">منتجات طبيعية</span>
+            <span class="text-gray-500">تمويل: 12M دج</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">مراحل دعم المشروع التقليدي</h2>
+        <p class="text-xl text-gray-600">خطوات منظمة لضمان نجاح مشروعك</p>
+      </div>
+
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="process-step text-center" data-aos="fade-up">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <i class="fas fa-lightbulb text-3xl text-white"></i>
+              </div>
+              <div
+                class="absolute -top-2 -right-2 bg-yellow-400 text-orange-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                1
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">تقييم الفكرة</h3>
+            <p class="text-gray-600">دراسة شاملة لفكرة مشروعك وإمكانياته في السوق</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <i class="fas fa-chart-line text-3xl text-white"></i>
+              </div>
+              <div
+                class="absolute -top-2 -right-2 bg-yellow-400 text-blue-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                2
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">التخطيط والتصميم</h3>
+            <p class="text-gray-600">وضع خطة عمل مفصلة وتصميم المشروع تقنياً</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <i class="fas fa-tools text-3xl text-white"></i>
+              </div>
+              <div
+                class="absolute -top-2 -right-2 bg-yellow-400 text-green-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                3
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">التنفيذ والإنشاء</h3>
+            <p class="text-gray-600">تنفيذ المشروع مع المتابعة المستمرة والدعم التقني</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                <i class="fas fa-rocket text-3xl text-white"></i>
+              </div>
+              <div
+                class="absolute -top-2 -right-2 bg-yellow-400 text-purple-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                4
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">الإطلاق والنمو</h3>
+            <p class="text-gray-600">إطلاق المشروع في السوق مع استراتيجيات النمو</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <div data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">ابدأ مشروعك التقليدي اليوم</h2>
+        <p class="text-xl text-orange-200 mb-8 max-w-2xl mx-auto">
+          انضم إلى الحاضنة التقليدية واحصل على الدعم الشامل لتحويل فكرتك إلى مشروع ناجح ومربح
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="registration.html"
+            class="bg-yellow-500 text-orange-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+            <i class="fas fa-industry ml-2"></i>
+            سجل في الحاضنة التقليدية
+          </a>
+          <a href="../contact/index.html"
+            class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-900 transition-all">
+            <i class="fas fa-phone ml-2"></i>
+            تحدث مع خبير صناعي
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+              <i class="fas fa-rocket text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold">رفيق توريق</h3>
+          </div>
+          <p class="text-gray-400 mb-4">الحاضنة التقليدية الرائدة في الجزائر</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">الحاضنة التقليدية</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">الخدمات</a></li>
+            <li><a href="#sectors" class="text-gray-400 hover:text-white transition-colors">القطاعات</a></li>
+            <li><a href="success-stories.html" class="text-gray-400 hover:text-white transition-colors">قصص النجاح</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">الدعم الصناعي</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الاستشارة التقنية</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">توريد المعدات</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">التدريب المهني</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <i class="fas fa-phone text-orange-400 ml-3"></i>
+              <span class="text-gray-400">027 XX XX XX</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-orange-400 ml-3"></i>
+              <span class="text-gray-400">business@rafiktawriq.dz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 رفيق توريق - الحاضنة التقليدية. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/incubator.js"></script>
+
 </body>
+
 </html>
