@@ -1,10 +1,539 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>المستشارون</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستشارون - رفيق توريق</title>
+    <meta name="description" content="تصفح قائمة المستشارين المتخصصين في مختلف المجالات">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/consulting.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>المستشارون</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-blue-600 font-bold flex items-center relative">
+                        <i class="fas fa-handshake ml-2"></i>
+                        خدمات الاستشارة
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-home ml-3 text-blue-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="consultants.html" class="flex items-center px-4 py-3 text-blue-600 bg-blue-50 border-r-4 border-blue-600">
+                                <i class="fas fa-users ml-3 text-blue-500"></i>
+                                <span>المستشارون</span>
+                            </a>
+                            <a href="consultation-types.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-list ml-3 text-blue-500"></i>
+                                <span>أنواع الاستشارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-calendar-alt ml-3 text-blue-500"></i>
+                                <span>حجز موعد</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="booking.html" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                    احجز استشارة
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">خدمات الاستشارة</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">المستشارون</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"consultants\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"2\" fill=\"white\"/><circle cx=\"5\" cy=\"5\" r=\"1\" fill=\"white\"/><circle cx=\"25\" cy=\"25\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23consultants)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-blue-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-users text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">خبراء متخصصون في جميع المجالات</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">المستشارون المتخصصون</h1>
+            <p class="text-xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                تصفح قائمة المستشارين المحترفين واختر الخبير المناسب لمجال عملك
+            </p>
+            
+            <!-- Statistics -->
+            <div class="grid grid-cols-4 gap-6 max-w-2xl mx-auto mb-8">
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="50">0</div>
+                    <div class="text-sm text-blue-200">مستشار</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                    <div class="text-sm text-blue-200">تخصص</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1000">0</div>
+                    <div class="text-sm text-blue-200">استشارة</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1">4.8</div>
+                    <div class="text-sm text-blue-200">تقييم</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters Section -->
+<section class="py-8 bg-white border-b shadow-sm">
+    <div class="container mx-auto px-4">
+        <div class="bg-gray-50 rounded-xl p-6" data-aos="fade-up">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input type="text" id="consultant-search" placeholder="ابحث عن مستشار..." 
+                               class="w-full pr-12 pl-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <select class="consultant-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 min-w-[150px]" data-filter="specialization">
+                        <option value="">جميع التخصصات</option>
+                        <option value="management">إدارة</option>
+                        <option value="financial">مالية</option>
+                        <option value="marketing">تسويق</option>
+                        <option value="technical">تقنية</option>
+                        <option value="legal">قانونية</option>
+                        <option value="hr">موارد بشرية</option>
+                    </select>
+
+                    <select class="consultant-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 min-w-[150px]" data-filter="experience">
+                        <option value="">جميع مستويات الخبرة</option>
+                        <option value="junior">أقل من 5 سنوات</option>
+                        <option value="mid">5-10 سنوات</option>
+                        <option value="senior">أكثر من 10 سنوات</option>
+                    </select>
+
+                    <select class="consultant-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 min-w-[150px]" data-filter="rating">
+                        <option value="">جميع التقييمات</option>
+                        <option value="5">5 نجوم</option>
+                        <option value="4">4+ نجوم</option>
+                        <option value="3">3+ نجوم</option>
+                    </select>
+
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-filter ml-2"></i>
+                        تطبيق الفلاتر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultants Grid -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <!-- Results Header -->
+        <div class="flex items-center justify-between mb-8" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-gray-800 flex items-center">
+                <i class="fas fa-users text-blue-600 ml-3"></i>
+                النتائج (50 مستشار)
+            </h2>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-600">ترتيب حسب:</span>
+                <select class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white">
+                    <option value="rating">الأعلى تقييماً</option>
+                    <option value="experience">الأكثر خبرة</option>
+                    <option value="popular">الأكثر شعبية</option>
+                    <option value="newest">الأحدث انضماماً</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Consultants Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="consultants-grid">
+            <!-- Consultant Card 1 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-specialization="management" data-experience="senior" data-rating="5">
+                <div class="relative">
+                    <img src="../../assets/images/consultants/consultant1.jpg" alt="د. أحمد محمد" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متاح الآن
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        15 سنة خبرة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">إدارة</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">(4.9)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">د. أحمد محمد</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">خبير في الإدارة الاستراتيجية وتطوير الأعمال مع خبرة 15 سنة في قيادة الشركات</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase ml-1 text-blue-500"></i>
+                            <span>200+ استشارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock ml-1 text-blue-500"></i>
+                            <span>متوسط الرد: 2 ساعة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-blue-600">5,000 دج</span>
+                            <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="consultant-profile.html?id=1" class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-sm">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="booking.html?consultant=1" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all text-sm font-bold">
+                                احجز
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultant Card 2 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100" data-specialization="financial" data-experience="senior" data-rating="5">
+                <div class="relative">
+                    <img src="../../assets/images/consultants/consultant2.jpg" alt="أ. فاطمة بن علي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مشغولة
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        12 سنة خبرة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">مالية</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">(4.8)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">أ. فاطمة بن علي</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">خبيرة في التخطيط المالي والاستثمار مع سجل حافل في إدارة المحافظ الاستثمارية</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase ml-1 text-green-500"></i>
+                            <span>180+ استشارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock ml-1 text-green-500"></i>
+                            <span>متوسط الرد: 1 ساعة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-green-600">6,000 دج</span>
+                            <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="consultant-profile.html?id=2" class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-sm">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="booking.html?consultant=2" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all text-sm font-bold">
+                                احجز
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultant Card 3 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200" data-specialization="technical" data-experience="mid" data-rating="5">
+                <div class="relative">
+                    <img src="../../assets/images/consultants/consultant3.jpg" alt="م. يوسف الأمين" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متاح الآن
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        10 سنوات خبرة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">تقنية</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-1">(4.9)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">م. يوسف الأمين</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">مهندس برمجيات متخصص في التحول الرقمي وتطوير الأنظمة التقنية</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase ml-1 text-orange-500"></i>
+                            <span>150+ استشارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock ml-1 text-orange-500"></i>
+                            <span>متوسط الرد: 30 دقيقة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-orange-600">4,500 دج</span>
+                            <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="consultant-profile.html?id=3" class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-sm">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="booking.html?consultant=3" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-all text-sm font-bold">
+                                احجز
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultant Card 4 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300" data-specialization="marketing" data-experience="mid" data-rating="4">
+                <div class="relative">
+                    <img src="../../assets/images/consultants/consultant4.jpg" alt="أ. سارة أحمد" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متاحة الآن
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm">
+                        <i class="fas fa-clock ml-1"></i>
+                        8 سنوات خبرة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">تسويق</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 text-sm mr-1">(4.7)</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">أ. سارة أحمد</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">خبيرة في التسويق الرقمي ووسائل التواصل الاجتماعي مع تركيز على الشركات الناشئة</p>
+                    
+                    <div class="flex items-center justify-between mb-4 text-sm text-gray-500">
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase ml-1 text-purple-500"></i>
+                            <span>120+ استشارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock ml-1 text-purple-500"></i>
+                            <span>متوسط الرد: 1 ساعة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-right">
+                            <span class="text-xl font-bold text-purple-600">4,000 دج</span>
+                            <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="consultant-profile.html?id=4" class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-sm">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="booking.html?consultant=4" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all text-sm font-bold">
+                                احجز
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more consultant cards here... -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg" id="load-more-consultants">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من المستشارين
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">لم تجد المستشار المناسب؟</h2>
+            <p class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+                تواصل معنا وسنساعدك في العثور على الخبير المناسب لاحتياجاتك الخاصة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact/index.html" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+                <a href="consultation-types.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
+                    <i class="fas fa-list ml-2"></i>
+                    أنواع الاستشارات
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">أفضل المستشارين في خدمتك</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">التخصصات</h4>
+                <ul class="space-y-2">
+                    <li><a href="consultation-types.html#management" class="text-gray-400 hover:text-white transition-colors">استشارات إدارية</a></li>
+                    <li><a href="consultation-types.html#financial" class="text-gray-400 hover:text-white transition-colors">استشارات مالية</a></li>
+                    <li><a href="consultation-types.html#marketing" class="text-gray-400 hover:text-white transition-colors">استشارات تسويقية</a></li>
+                    <li><a href="consultation-types.html#technical" class="text-gray-400 hover:text-white transition-colors">استشارات تقنية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">خدمات الاستشارة</a></li>
+                    <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">حجز موعد</a></li>
+                    <li><a href="consultants.html" class="text-gray-400 hover:text-white transition-colors">المستشارون</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <span class="text-gray-400">consulting@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - المستشارون. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/consulting.js"></script>
+
 </body>
 </html>

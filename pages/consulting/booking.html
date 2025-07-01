@@ -1,10 +1,1252 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>حجز المواعيد</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد استشارة - رفيق توريق</title>
+    <meta name="description" content="احجز موعد استشارة مع خبرائنا المتخصصين بسهولة ومرونة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/consulting.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Calendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
-<body>
-  <h1>حجز المواعيد</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-orange-600 font-bold flex items-center relative">
+                        <i class="fas fa-handshake ml-2"></i>
+                        خدمات الاستشارة
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-home ml-3 text-orange-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="consultants.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-users ml-3 text-orange-500"></i>
+                                <span>المستشارون</span>
+                            </a>
+                            <a href="consultation-types.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-list ml-3 text-orange-500"></i>
+                                <span>أنواع الاستشارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-orange-600 bg-orange-50 border-r-4 border-orange-600">
+                                <i class="fas fa-calendar-alt ml-3 text-orange-500"></i>
+                                <span>حجز موعد</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-orange-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">خدمات الاستشارة</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">حجز موعد</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-orange-900 via-orange-800 to-red-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"booking\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/><rect x=\"5\" y=\"5\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23booking)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-orange-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-calendar-alt text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">احجز موعدك بسهولة ومرونة</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">حجز موعد استشارة</h1>
+            <p class="text-xl mb-8 text-orange-100 max-w-2xl mx-auto leading-relaxed">
+                اختر المستشار المناسب والوقت الذي يناسبك واحجز استشارتك في دقائق معدودة
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <!-- Progress Steps -->
+        <div class="flex items-center justify-center mb-12" data-aos="fade-up">
+            <div class="flex items-center">
+                <div class="step-indicator active flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full font-bold shadow-lg">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-orange-600 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-calendar"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-gray-300 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="step-line w-20 h-1 bg-gray-300 mx-3 rounded-full"></div>
+                <div class="step-indicator flex items-center justify-center w-12 h-12 bg-gray-300 text-gray-600 rounded-full font-bold">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step Labels -->
+        <div class="flex justify-between mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <span class="text-sm font-medium text-orange-600">اختيار المستشار</span>
+            <span class="text-sm font-medium text-gray-500">اختيار الموعد</span>
+            <span class="text-sm font-medium text-gray-500">الدفع</span>
+            <span class="text-sm font-medium text-gray-500">التأكيد</span>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="booking-form" class="space-y-8" novalidate>
+            <!-- Step 1: Choose Consultant -->
+            <div class="form-step active bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="1" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">اختر المستشار</h2>
+                    <p class="text-gray-600">اختر المستشار المناسب لاحتياجاتك</p>
+                </div>
+
+                <!-- Consultant Selection -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Consultant Option 1 -->
+                    <label class="consultant-option cursor-pointer">
+                        <input type="radio" name="consultant" value="1" class="hidden">
+                        <div class="consultant-card bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-orange-500 transition-all duration-300 hover:shadow-lg">
+                            <div class="text-center">
+                                <img src="../../assets/images/consultants/consultant1.jpg" alt="د. أحمد محمد" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">د. أحمد محمد</h3>
+                                <p class="text-orange-600 font-medium mb-2">مستشار إداري</p>
+                                <div class="flex items-center justify-center mb-3">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm mr-2">(4.9)</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">15 سنة خبرة في الإدارة الاستراتيجية</p>
+                                <div class="bg-orange-50 rounded-lg p-3">
+                                    <span class="text-lg font-bold text-orange-600">5,000 دج</span>
+                                    <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Consultant Option 2 -->
+                    <label class="consultant-option cursor-pointer">
+                        <input type="radio" name="consultant" value="2" class="hidden">
+                        <div class="consultant-card bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-orange-500 transition-all duration-300 hover:shadow-lg">
+                            <div class="text-center">
+                                <img src="../../assets/images/consultants/consultant2.jpg" alt="أ. فاطمة بن علي" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">أ. فاطمة بن علي</h3>
+                                <p class="text-green-600 font-medium mb-2">مستشارة مالية</p>
+                                <div class="flex items-center justify-center mb-3">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm mr-2">(4.8)</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">12 سنة خبرة في التخطيط المالي</p>
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <span class="text-lg font-bold text-green-600">6,000 دج</span>
+                                    <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Consultant Option 3 -->
+                    <label class="consultant-option cursor-pointer">
+                        <input type="radio" name="consultant" value="3" class="hidden">
+                        <div class="consultant-card bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-orange-500 transition-all duration-300 hover:shadow-lg">
+                            <div class="text-center">
+                                <img src="../../assets/images/consultants/consultant3.jpg" alt="م. يوسف الأمين" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg font-bold text-gray-800 mb-1">م. يوسف الأمين</h3>
+                                <p class="text-blue-600 font-medium mb-2">مستشار تقني</p>
+                                <div class="flex items-center justify-center mb-3">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm mr-2">(4.9)</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">10 سنوات في التحول الرقمي</p>
+                                <div class="bg-blue-50 rounded-lg p-3">
+                                    <span class="text-lg font-bold text-blue-600">4,500 دج</span>
+                                    <span class="text-sm text-gray-500 block">للساعة الواحدة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Consultation Type -->
+                <div class="mt-8">
+                    <label class="block mb-4 font-semibold text-gray-700">
+                        <i class="fas fa-list ml-2 text-orange-500"></i>
+                        نوع الاستشارة
+                    </label>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg hover:border-orange-300 transition-all cursor-pointer">
+                            <input type="radio" name="consultation-type" value="video" class="ml-3 text-orange-600">
+                            <i class="fas fa-video text-orange-500 ml-3"></i>
+                            <div>
+                                <span class="font-medium">استشارة عبر الفيديو</span>
+                                <div class="text-sm text-gray-500">جلسة مباشرة عبر الإنترنت</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg hover:border-orange-300 transition-all cursor-pointer">
+                            <input type="radio" name="consultation-type" value="office" class="ml-3 text-orange-600">
+                            <i class="fas fa-building text-orange-500 ml-3"></i>
+                            <div>
+                                <span class="font-medium">استشارة في المكتب</span>
+                                <div class="text-sm text-gray-500">لقاء شخصي في مكتبنا</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="button" class="next-step bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-3 rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Choose Date & Time -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="2">
+                <div class="text-center mb-8">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">اختر الموعد والوقت</h2>
+                    <p class="text-gray-600">اختر التاريخ والوقت المناسب لك</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Calendar -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-calendar-alt text-blue-500 ml-2"></i>
+                            اختر التاريخ
+                        </h3>
+                        <div id="booking-calendar" class="w-full"></div>
+                    </div>
+
+                    <!-- Time Slots -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-clock text-blue-500 ml-2"></i>
+                            الأوقات المتاحة
+                        </h3>
+                        <div id="time-slots" class="grid grid-cols-2 gap-3">
+                            <!-- Time slots will be populated by JavaScript -->
+                            <div class="text-center text-gray-500 py-8">
+                                <i class="fas fa-calendar-day text-4xl mb-4"></i>
+                                <p>اختر تاريخاً لعرض الأوقات المتاحة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duration Selection -->
+                <div class="mt-8 bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-hourglass-half text-blue-500 ml-2"></i>
+                        مدة الاستشارة
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                            <input type="radio" name="duration" value="30" class="ml-3 text-blue-600">
+                            <div class="text-center flex-1">
+                                <div class="font-bold text-blue-600">30 دقيقة</div>
+                                <div class="text-sm text-gray-500">استشارة سريعة</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                            <input type="radio" name="duration" value="60" class="ml-3 text-blue-600" checked>
+                            <div class="text-center flex-1">
+                                <div class="font-bold text-blue-600">60 دقيقة</div>
+                                <div class="text-sm text-gray-500">استشارة مفصلة</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg hover:border-blue-300 transition-all cursor-pointer">
+                            <input type="radio" name="duration" value="90" class="ml-3 text-blue-600">
+                            <div class="text-center flex-1">
+                                <div class="font-bold text-blue-600">90 دقيقة</div>
+                                <div class="text-sm text-gray-500">استشارة شاملة</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="button" class="next-step bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Payment & Personal Info -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="3">
+                <div class="text-center mb-8">
+                    <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-credit-card text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">المعلومات الشخصية والدفع</h2>
+                    <p class="text-gray-600">أدخل بياناتك ومعلومات الدفع</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Personal Information -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-user text-green-500 ml-2"></i>
+                            المعلومات الشخصية
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="form-group">
+                                <label for="client-name" class="block mb-2 font-semibold text-gray-700">الاسم الكامل *</label>
+                                <input type="text" id="client-name" name="client-name" placeholder="أدخل اسمك الكامل" required 
+                                       class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            </div>
+                            <div class="form-group">
+                                <label for="client-email" class="block mb-2 font-semibold text-gray-700">البريد الإلكتروني *</label>
+                                <input type="email" id="client-email" name="client-email" placeholder="example@example.com" required 
+                                       class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone" class="block mb-2 font-semibold text-gray-700">رقم الهاتف *</label>
+                                <input type="tel" id="client-phone" name="client-phone" placeholder="0XXXXXXXXX" required 
+                                       class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                            </div>
+                            <div class="form-group">
+                                <label for="consultation-topic" class="block mb-2 font-semibold text-gray-700">موضوع الاستشارة</label>
+                                <textarea id="consultation-topic" name="consultation-topic" rows="3" placeholder="اكتب موضوع الاستشارة أو الأسئلة التي تريد مناقشتها..." 
+                                          class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-credit-card text-green-500 ml-2"></i>
+                            معلومات الدفع
+                        </h3>
+                        
+                        <!-- Booking Summary -->
+                        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                            <h4 class="font-bold text-gray-800 mb-3">ملخص الحجز</h4>
+                            <div id="booking-summary" class="space-y-2 text-sm">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block mb-3 font-semibold text-gray-700">طريقة الدفع</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-green-300 transition-all cursor-pointer">
+                                        <input type="radio" name="payment-method" value="card" class="ml-3 text-green-600" checked>
+                                        <i class="fas fa-credit-card text-green-500 ml-3"></i>
+                                        <span>بطاقة ائتمان/خصم</span>
+                                    </label>
+                                    <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-green-300 transition-all cursor-pointer">
+                                        <input type="radio" name="payment-method" value="paypal" class="ml-3 text-green-600">
+                                        <i class="fab fa-paypal text-blue-500 ml-3"></i>
+                                        <span>PayPal</span>
+                                    </label>
+                                    <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg hover:border-green-300 transition-all cursor-pointer">
+                                        <input type="radio" name="payment-method" value="cash" class="ml-3 text-green-600">
+                                        <i class="fas fa-money-bill text-green-500 ml-3"></i>
+                                        <span>دفع نقدي (للاستشارات في المكتب)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Card Details -->
+                            <div id="card-details" class="space-y-4">
+                                <div class="form-group">
+                                    <label for="card-number" class="block mb-2 font-semibold text-gray-700">رقم البطاقة</label>
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" 
+                                           class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="form-group">
+                                        <label for="expiry-date" class="block mb-2 font-semibold text-gray-700">تاريخ الانتهاء</label>
+                                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" 
+                                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv" class="block mb-2 font-semibold text-gray-700">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" 
+                                               class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="button" class="next-step bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 4: Confirmation -->
+            <div class="form-step bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-lg border border-gray-200" data-step="4">
+                <div class="text-center mb-8">
+                    <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">مراجعة وتأكيد الحجز</h2>
+                    <p class="text-gray-600">تأكد من صحة البيانات قبل إتمام الحجز</p>
+                </div>
+
+                <!-- Final Summary -->
+                <div class="bg-white rounded-xl p-6 mb-6 shadow-md border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-clipboard-list text-purple-500 ml-2"></i>
+                        ملخص الحجز النهائي
+                    </h3>
+                    <div id="final-booking-summary" class="space-y-3 text-gray-700">
+                        <!-- Final summary will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mb-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-blue-600 text-xl ml-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-blue-800 mb-3">شروط وأحكام الحجز:</h4>
+                            <ul class="text-blue-700 text-sm space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 ml-2 mt-1"></i>
+                                    يمكن إلغاء الحجز قبل 24 ساعة من الموعد دون رسوم
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 ml-2 mt-1"></i>
+                                    سيتم إرسال رابط الاجتماع قبل 15 دقيقة من الموعد
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 ml-2 mt-1"></i>
+                                    في حالة التأخير أكثر من 15 دقيقة، قد يتم إلغاء الجلسة
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 ml-2 mt-1"></i>
+                                    جميع المعلومات المشاركة محمية بسرية تامة
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agreement Checkbox -->
+                <div class="mb-6">
+                    <label class="flex items-start p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-all cursor-pointer">
+                        <input type="checkbox" id="terms-agreement" name="terms-agreement" required class="mt-1 ml-3 text-purple-600">
+                        <span class="text-gray-700">
+                            أوافق على 
+                            <a href="#" class="text-purple-600 hover:underline font-medium">شروط وأحكام</a> 
+                            خدمة الاستشارة و 
+                            <a href="#" class="text-purple-600 hover:underline font-medium">سياسة الخصوصية</a>
+                            الخاصة بمنصة رفيق توريق
+                        </span>
+                    </label>
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" class="prev-step bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold transform hover:scale-105">
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    <button type="submit" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all font-bold transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-check ml-2"></i>
+                        تأكيد الحجز
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-success" class="hidden bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-xl p-8 text-center">
+            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-green-800 mb-4">تم تأكيد حجزك بنجاح!</h2>
+            <p class="text-green-700 mb-6 text-lg">
+                شكراً لك على حجز الاستشارة. سيتم إرسال تفاصيل الموعد إلى بريدك الإلكتروني.
+            </p>
+            <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                <h3 class="font-bold text-gray-800 mb-2">رقم الحجز:</h3>
+                <p class="text-2xl font-bold text-green-600" id="booking-number">CONS-2025-001</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 font-bold">
+                    <i class="fas fa-home ml-2"></i>
+                    العودة للاستشارة
+                </a>
+                <a href="../../index.html" class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-all font-bold">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">احجز استشارتك بسهولة ومرونة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدمات الحجز</h4>
+                <ul class="space-y-2">
+                    <li><a href="consultants.html" class="text-gray-400 hover:text-white transition-colors">المستشارون</a></li>
+                    <li><a href="consultation-types.html" class="text-gray-400 hover:text-white transition-colors">أنواع الاستشارات</a></li>
+                    <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">حجز موعد</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مركز المساعدة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li><a href="../contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">booking@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - حجز المواعيد. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ar.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/consulting.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize booking form functionality
+    initializeBookingForm();
+    
+    // Initialize calendar
+    initializeCalendar();
+    
+    // Initialize form validation
+    initializeFormValidation();
+});
+
+function initializeBookingForm() {
+    let currentStep = 1;
+    const totalSteps = 4;
+    
+    // Step navigation
+    document.querySelectorAll('.next-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (validateCurrentStep(currentStep)) {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateStep(currentStep);
+                    updateBookingSummary();
+                }
+            }
+        });
+    });
+    
+    document.querySelectorAll('.prev-step').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStep(currentStep);
+            }
+        });
+    });
+    
+    // Form submission
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        handleBookingSubmission();
+    });
+    
+    // Consultant selection
+    document.querySelectorAll('input[name="consultant"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            updateConsultantSelection();
+        });
+    });
+    
+    // Payment method change
+    document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            togglePaymentFields();
+        });
+    });
+}
+
+function updateStep(step) {
+    // Hide all steps
+    document.querySelectorAll('.form-step').forEach(s => {
+        s.classList.remove('active');
+    });
+    
+    // Show current step
+    const currentStepElement = document.querySelector(`[data-step="${step}"]`);
+    if (currentStepElement) {
+        currentStepElement.classList.add('active');
+    }
+    
+    // Update step indicators
+    updateStepIndicators(step);
+    
+    // Scroll to top of form
+    currentStepElement?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function updateStepIndicators(step) {
+    const indicators = document.querySelectorAll('.step-indicator');
+    const lines = document.querySelectorAll('.step-line');
+    
+    indicators.forEach((indicator, index) => {
+        if (index + 1 <= step) {
+            indicator.classList.add('active');
+            indicator.classList.remove('bg-gray-300', 'text-gray-600');
+            indicator.classList.add('bg-orange-600', 'text-white');
+        } else {
+            indicator.classList.remove('active');
+            indicator.classList.remove('bg-orange-600', 'text-white');
+            indicator.classList.add('bg-gray-300', 'text-gray-600');
+        }
+    });
+    
+    lines.forEach((line, index) => {
+        if (index + 1 < step) {
+            line.classList.remove('bg-gray-300');
+            line.classList.add('bg-orange-600');
+        } else {
+            line.classList.remove('bg-orange-600');
+            line.classList.add('bg-gray-300');
+        }
+    });
+}
+
+function initializeCalendar() {
+    const calendar = flatpickr("#booking-calendar", {
+        locale: "ar",
+        inline: true,
+        minDate: "today",
+        maxDate: new Date().fp_incr(60), // 60 days from today
+        disable: [
+            function(date) {
+                // Disable Fridays (5) and Saturdays (6)
+                return (date.getDay() === 5 || date.getDay() === 6);
+            }
+        ],
+        onChange: function(selectedDates, dateStr, instance) {
+            if (selectedDates.length > 0) {
+                generateTimeSlots(selectedDates[0]);
+            }
+        }
+    });
+}
+
+function generateTimeSlots(selectedDate) {
+    const timeSlotsContainer = document.getElementById('time-slots');
+    const timeSlots = [
+        '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+        '14:00', '14:30', '15:00', '15:30', '16:00', '16:30'
+    ];
+    
+    timeSlotsContainer.innerHTML = '';
+    
+    timeSlots.forEach(time => {
+        const slot = document.createElement('label');
+        slot.className = 'time-slot cursor-pointer';
+        slot.innerHTML = `
+            <input type="radio" name="appointment-time" value="${time}" class="hidden">
+            <div class="time-slot-btn bg-white border-2 border-gray-200 rounded-lg p-3 text-center hover:border-orange-500 hover:bg-orange-50 transition-all">
+                <div class="font-bold text-gray-800">${time}</div>
+                <div class="text-xs text-gray-500">متاح</div>
+            </div>
+        `;
+        timeSlotsContainer.appendChild(slot);
+    });
+    
+    // Add event listeners to time slots
+    document.querySelectorAll('input[name="appointment-time"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            updateTimeSlotSelection();
+        });
+    });
+}
+
+function updateConsultantSelection() {
+    document.querySelectorAll('.consultant-option').forEach(option => {
+        const radio = option.querySelector('input[type="radio"]');
+        const card = option.querySelector('.consultant-card');
+        
+        if (radio.checked) {
+            card.classList.add('border-orange-500', 'bg-orange-50');
+            card.classList.remove('border-gray-200');
+        } else {
+            card.classList.remove('border-orange-500', 'bg-orange-50');
+            card.classList.add('border-gray-200');
+        }
+    });
+}
+
+function updateTimeSlotSelection() {
+    document.querySelectorAll('.time-slot').forEach(slot => {
+        const radio = slot.querySelector('input[type="radio"]');
+        const btn = slot.querySelector('.time-slot-btn');
+        
+        if (radio.checked) {
+            btn.classList.add('border-orange-500', 'bg-orange-100');
+            btn.classList.remove('border-gray-200');
+        } else {
+            btn.classList.remove('border-orange-500', 'bg-orange-100');
+            btn.classList.add('border-gray-200');
+        }
+    });
+}
+
+function updateBookingSummary() {
+    const selectedConsultant = document.querySelector('input[name="consultant"]:checked');
+    const selectedDate = document.querySelector('input[name="appointment-time"]:checked');
+    const selectedDuration = document.querySelector('input[name="duration"]:checked');
+    const consultationType = document.querySelector('input[name="consultation-type"]:checked');
+    
+    const summaryContainer = document.getElementById('booking-summary');
+    const finalSummaryContainer = document.getElementById('final-booking-summary');
+    
+    let summaryHTML = '';
+    
+    if (selectedConsultant) {
+        const consultantCard = selectedConsultant.closest('.consultant-option').querySelector('.consultant-card');
+        const consultantName = consultantCard.querySelector('h3').textContent;
+        const consultantPrice = consultantCard.querySelector('.font-bold').textContent;
+        
+        summaryHTML += `
+            <div class="flex justify-between py-2 border-b border-gray-200">
+                <strong>المستشار:</strong> 
+                <span>${consultantName}</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-gray-200">
+                <strong>السعر:</strong> 
+                <span>${consultantPrice}</span>
+            </div>
+        `;
+    }
+    
+    if (consultationType) {
+        const typeLabel = consultationType.closest('label').querySelector('span').textContent;
+        summaryHTML += `
+            <div class="flex justify-between py-2 border-b border-gray-200">
+                <strong>نوع الاستشارة:</strong> 
+                <span>${typeLabel}</span>
+            </div>
+        `;
+    }
+    
+    if (selectedDuration) {
+        summaryHTML += `
+            <div class="flex justify-between py-2 border-b border-gray-200">
+                <strong>المدة:</strong> 
+                <span>${selectedDuration.value} دقيقة</span>
+            </div>
+        `;
+    }
+    
+    if (selectedDate) {
+        const calendar = document.querySelector('#booking-calendar')._flatpickr;
+        const selectedDateStr = calendar.selectedDates[0] ? 
+            calendar.selectedDates[0].toLocaleDateString('ar-SA') : '';
+        
+        summaryHTML += `
+            <div class="flex justify-between py-2 border-b border-gray-200">
+                <strong>التاريخ:</strong> 
+                <span>${selectedDateStr}</span>
+            </div>
+            <div class="flex justify-between py-2">
+                <strong>الوقت:</strong> 
+                <span>${selectedDate.value}</span>
+            </div>
+        `;
+    }
+    
+    if (summaryContainer) {
+        summaryContainer.innerHTML = summaryHTML;
+    }
+    
+    if (finalSummaryContainer) {
+        finalSummaryContainer.innerHTML = summaryHTML;
+    }
+}
+
+function validateCurrentStep(step) {
+    switch (step) {
+        case 1:
+            const selectedConsultant = document.querySelector('input[name="consultant"]:checked');
+            const consultationType = document.querySelector('input[name="consultation-type"]:checked');
+            
+            if (!selectedConsultant) {
+                alert('يرجى اختيار مستشار');
+                return false;
+            }
+            
+            if (!consultationType) {
+                alert('يرجى اختيار نوع الاستشارة');
+                return false;
+            }
+            
+            return true;
+            
+        case 2:
+            const selectedTime = document.querySelector('input[name="appointment-time"]:checked');
+            const selectedDuration = document.querySelector('input[name="duration"]:checked');
+            
+            if (!selectedTime) {
+                alert('يرجى اختيار موعد');
+                return false;
+            }
+            
+            if (!selectedDuration) {
+                alert('يرجى اختيار مدة الاستشارة');
+                return false;
+            }
+            
+            return true;
+            
+        case 3:
+            const name = document.getElementById('client-name').value.trim();
+            const email = document.getElementById('client-email').value.trim();
+            const phone = document.getElementById('client-phone').value.trim();
+            
+            if (!name || !email || !phone) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return false;
+            }
+            
+            return true;
+            
+        default:
+            return true;
+    }
+}
+
+function togglePaymentFields() {
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+    const cardDetails = document.getElementById('card-details');
+    
+    if (paymentMethod === 'card') {
+        cardDetails.style.display = 'block';
+    } else {
+        cardDetails.style.display = 'none';
+    }
+}
+
+function handleBookingSubmission() {
+    const termsAgreement = document.getElementById('terms-agreement').checked;
+    
+    if (!termsAgreement) {
+        alert('يجب الموافقة على الشروط والأحكام');
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = document.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري المعالجة...';
+    submitBtn.disabled = true;
+    
+    // Simulate booking process
+    setTimeout(() => {
+        showBookingSuccess();
+        
+        // Reset button state
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }, 3000);
+}
+
+function showBookingSuccess() {
+    const form = document.getElementById('booking-form');
+    const successMessage = document.getElementById('booking-success');
+    
+    if (form && successMessage) {
+        form.style.display = 'none';
+        successMessage.classList.remove('hidden');
+        
+        // Generate booking number
+        const bookingNumber = generateBookingNumber();
+        const bookingNumberElement = document.getElementById('booking-number');
+        if (bookingNumberElement) {
+            bookingNumberElement.textContent = bookingNumber;
+        }
+        
+        // Scroll to success message
+        successMessage.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+
+function generateBookingNumber() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    
+    return `CONS-${year}${month}${day}-${random}`;
+}
+
+function initializeFormValidation() {
+    // Add real-time validation for email and phone
+    const emailField = document.getElementById('client-email');
+    const phoneField = document.getElementById('client-phone');
+    
+    if (emailField) {
+        emailField.addEventListener('blur', function() {
+            validateEmail(this);
+        });
+    }
+    
+    if (phoneField) {
+        phoneField.addEventListener('blur', function() {
+            validatePhone(this);
+        });
+    }
+}
+
+function validateEmail(field) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(field.value);
+    
+    if (!isValid && field.value.trim() !== '') {
+        field.classList.add('border-red-500');
+        field.classList.remove('border-green-500');
+    } else if (field.value.trim() !== '') {
+        field.classList.remove('border-red-500');
+        field.classList.add('border-green-500');
+    }
+    
+    return isValid;
+}
+
+function validatePhone(field) {
+    const phoneRegex = /^0[567][0-9]{8}$/;
+    const isValid = phoneRegex.test(field.value);
+    
+    if (!isValid && field.value.trim() !== '') {
+        field.classList.add('border-red-500');
+        field.classList.remove('border-green-500');
+    } else if (field.value.trim() !== '') {
+        field.classList.remove('border-red-500');
+        field.classList.add('border-green-500');
+    }
+    
+    return isValid;
+}
+
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+    easing: 'ease-out-cubic'
+});
+
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        const icon = this.querySelector('i');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    });
+}
+
+// Header scroll effect
+const header = document.getElementById('main-header');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Counter animation for statistics
+const counters = document.querySelectorAll('[data-counter]');
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.getAttribute('data-counter'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+            counterObserver.unobserve(counter);
+        }
+    });
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
+
+// Card number formatting
+const cardNumberField = document.getElementById('card-number');
+if (cardNumberField) {
+    cardNumberField.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+        let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+        e.target.value = formattedValue;
+    });
+}
+
+// Expiry date formatting
+const expiryField = document.getElementById('expiry-date');
+if (expiryField) {
+    expiryField.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length >= 2) {
+            value = value.substring(0, 2) + '/' + value.substring(2, 4);
+        }
+        e.target.value = value;
+    });
+}
+
+// CVV validation
+const cvvField = document.getElementById('cvv');
+if (cvvField) {
+    cvvField.addEventListener('input', function(e) {
+        e.target.value = e.target.value.replace(/\D/g, '').substring(0, 4);
+    });
+}
+
+// Auto-save booking data
+function autoSaveBookingData() {
+    const form = document.getElementById('booking-form');
+    if (!form) return;
+    
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+        localStorage.setItem('bookingData', JSON.stringify(data));
+    } catch (error) {
+        console.error('Error saving booking data:', error);
+    }
+}
+
+// Load saved booking data
+function loadSavedBookingData() {
+    try {
+        const savedData = localStorage.getItem('bookingData');
+        if (!savedData) return;
+        
+        const data = JSON.parse(savedData);
+        
+        Object.keys(data).forEach(key => {
+            const field = document.querySelector(`[name="${key}"]`);
+            if (field) {
+                if (field.type === 'radio') {
+                    const radioField = document.querySelector(`[name="${key}"][value="${data[key]}"]`);
+                    if (radioField) radioField.checked = true;
+                } else if (field.type === 'checkbox') {
+                    field.checked = data[key] === 'on';
+                } else {
+                    field.value = data[key];
+                }
+            }
+        });
+        
+        console.log('Saved booking data loaded successfully');
+    } catch (error) {
+        console.error('Error loading saved data:', error);
+    }
+}
+
+// Clear saved booking data
+function clearSavedBookingData() {
+    try {
+        localStorage.removeItem('bookingData');
+    } catch (error) {
+        console.error('Error clearing saved data:', error);
+    }
+}
+
+// Auto-save on form changes
+const form = document.getElementById('booking-form');
+if (form) {
+    form.addEventListener('input', function() {
+        autoSaveBookingData();
+    });
+    
+    form.addEventListener('change', function() {
+        autoSaveBookingData();
+    });
+}
+
+// Load saved data on page load
+loadSavedBookingData();
+
+// Clear saved data on successful booking
+function clearDataOnSuccess() {
+    clearSavedBookingData();
+}
+
+// Add to booking success function
+const originalShowBookingSuccess = showBookingSuccess;
+showBookingSuccess = function() {
+    originalShowBookingSuccess();
+    clearDataOnSuccess();
+};
+
+console.log('🗓️ Booking system initialized successfully!');
+</script>
+
 </body>
 </html>

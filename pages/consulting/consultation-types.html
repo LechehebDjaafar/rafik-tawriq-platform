@@ -1,10 +1,1215 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>أنواع الاستشارات</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع الاستشارات - رفيق توريق</title>
+    <meta name="description" content="تعرف على جميع أنواع الاستشارات المتاحة مع خبرائنا المتخصصين في مختلف المجالات">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/consulting.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>أنواع الاستشارات</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-teal-600 font-bold flex items-center relative">
+                        <i class="fas fa-handshake ml-2"></i>
+                        خدمات الاستشارة
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+                                <i class="fas fa-home ml-3 text-teal-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="consultants.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+                                <i class="fas fa-users ml-3 text-teal-500"></i>
+                                <span>المستشارون</span>
+                            </a>
+                            <a href="consultation-types.html" class="flex items-center px-4 py-3 text-teal-600 bg-teal-50 border-r-4 border-teal-600">
+                                <i class="fas fa-list ml-3 text-teal-500"></i>
+                                <span>أنواع الاستشارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+                                <i class="fas fa-calendar-alt ml-3 text-teal-500"></i>
+                                <span>حجز موعد</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="booking.html" class="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                    احجز استشارة
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-teal-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">خدمات الاستشارة</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">أنواع الاستشارات</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"types\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/><rect x=\"5\" y=\"5\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23types)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div data-aos="fade-up">
+            <div class="inline-flex items-center bg-teal-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-list text-yellow-400 ml-2"></i>
+                <span class="text-sm font-medium">تخصصات متنوعة لجميع احتياجاتك</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">أنواع الاستشارات</h1>
+            <p class="text-xl mb-8 text-teal-100 max-w-3xl mx-auto leading-relaxed">
+                اكتشف مجموعة شاملة من الخدمات الاستشارية المتخصصة التي نقدمها لمساعدتك في تطوير أعمالك
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-8">
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                    <div class="text-sm text-teal-200">نوع استشارة</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="50">0</div>
+                    <div class="text-sm text-teal-200">مستشار خبير</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1000">0</div>
+                    <div class="text-sm text-teal-200">استشارة مكتملة</div>
+                </div>
+                <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="95">0</div>
+                    <div class="text-sm text-teal-200">% رضا العملاء</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Categories -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">فئات الاستشارات الرئيسية</h2>
+            <p class="text-xl text-gray-600">تصفح الفئات المختلفة واختر ما يناسب احتياجاتك</p>
+        </div>
+
+        <!-- Category Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Management Consulting -->
+            <div class="category-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الاستشارات الإدارية</h3>
+                    <p class="text-gray-600 mb-6">تطوير الاستراتيجيات الإدارية وتحسين الأداء التنظيمي</p>
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-3xl font-bold text-blue-600 mb-1" data-counter="15">0</div>
+                        <div class="text-sm text-gray-500">مستشار متخصص</div>
+                    </div>
+                    <a href="#management" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all font-bold w-full inline-block text-center">
+                        استكشف التفاصيل
+                    </a>
+                </div>
+            </div>
+
+            <!-- Financial Consulting -->
+            <div class="category-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-dollar-sign text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الاستشارات المالية</h3>
+                    <p class="text-gray-600 mb-6">التخطيط المالي وإدارة الاستثمارات والتمويل</p>
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-3xl font-bold text-green-600 mb-1" data-counter="12">0</div>
+                        <div class="text-sm text-gray-500">مستشار متخصص</div>
+                    </div>
+                    <a href="#financial" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all font-bold w-full inline-block text-center">
+                        استكشف التفاصيل
+                    </a>
+                </div>
+            </div>
+
+            <!-- Marketing Consulting -->
+            <div class="category-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-bullhorn text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الاستشارات التسويقية</h3>
+                    <p class="text-gray-600 mb-6">استراتيجيات التسويق والعلامة التجارية والترويج</p>
+                    <div class="bg-white rounded-lg p-4 mb-6">
+                        <div class="text-3xl font-bold text-purple-600 mb-1" data-counter="18">0</div>
+                        <div class="text-sm text-gray-500">مستشار متخصص</div>
+                    </div>
+                    <a href="#marketing" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all font-bold w-full inline-block text-center">
+                        استكشف التفاصيل
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="bg-gray-50 rounded-xl p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">تصفح سريع للتخصصات</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#management" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-chart-line text-2xl text-blue-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">إدارية</div>
+                </a>
+                <a href="#financial" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-dollar-sign text-2xl text-green-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">مالية</div>
+                </a>
+                <a href="#marketing" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-bullhorn text-2xl text-purple-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">تسويقية</div>
+                </a>
+                <a href="#technical" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-laptop-code text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">تقنية</div>
+                </a>
+                <a href="#legal" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-gavel text-2xl text-red-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">قانونية</div>
+                </a>
+                <a href="#hr" class="quick-nav-item bg-white p-4 rounded-lg text-center hover:shadow-lg transition-all group">
+                    <i class="fas fa-users text-2xl text-teal-500 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-sm font-medium text-gray-700">موارد بشرية</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Management Consulting Section -->
+<section id="management" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-chart-line text-3xl"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الاستشارات الإدارية</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">خدمات استشارية شاملة لتطوير الأداء الإداري والتنظيمي</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">ما نقدمه في الاستشارات الإدارية:</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <i class="fas fa-chess text-blue-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">التخطيط الاستراتيجي</h4>
+                            <p class="text-gray-600 text-sm">وضع استراتيجيات طويلة المدى وخطط تنفيذية فعالة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <i class="fas fa-sitemap text-blue-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">إعادة الهيكلة التنظيمية</h4>
+                            <p class="text-gray-600 text-sm">تطوير الهياكل التنظيمية وتحسين الكفاءة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <i class="fas fa-exchange-alt text-blue-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">إدارة التغيير</h4>
+                            <p class="text-gray-600 text-sm">قيادة عمليات التحول والتطوير المؤسسي</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <i class="fas fa-chart-bar text-blue-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">تحسين الأداء</h4>
+                            <p class="text-gray-600 text-sm">تطوير مؤشرات الأداء وأنظمة القياس</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">أسعار الاستشارات الإدارية</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                            <span class="text-gray-700">استشارة فردية (60 دقيقة)</span>
+                            <span class="font-bold text-blue-600">5,000 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                            <span class="text-gray-700">حزمة 3 جلسات</span>
+                            <span class="font-bold text-blue-600">13,500 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                            <span class="text-gray-700">مشروع إعادة هيكلة</span>
+                            <span class="font-bold text-blue-600">25,000 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                            <span class="text-gray-700">تخطيط استراتيجي شامل</span>
+                            <span class="font-bold text-blue-600">50,000 دج</span>
+                        </div>
+                    </div>
+                    <a href="booking.html?type=management" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-all font-bold text-center mt-6 block">
+                        احجز استشارة إدارية
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Management Consultants -->
+        <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">المستشارون الإداريون</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant1.jpg" alt="د. أحمد محمد" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h4 class="font-bold text-gray-800 mb-1">د. أحمد محمد</h4>
+                    <p class="text-blue-600 text-sm mb-2">خبير التخطيط الاستراتيجي</p>
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="consultant-profile.html?id=1" class="text-blue-600 hover:text-blue-800 text-sm font-medium">عرض الملف الشخصي</a>
+                </div>
+                
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant5.jpg" alt="د. ليلى بوعزة" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h4 class="font-bold text-gray-800 mb-1">د. ليلى بوعزة</h4>
+                    <p class="text-blue-600 text-sm mb-2">خبيرة إعادة الهيكلة</p>
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <a href="consultant-profile.html?id=5" class="text-blue-600 hover:text-blue-800 text-sm font-medium">عرض الملف الشخصي</a>
+                </div>
+                
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant6.jpg" alt="أ. كريم الدين" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h4 class="font-bold text-gray-800 mb-1">أ. كريم الدين</h4>
+                    <p class="text-blue-600 text-sm mb-2">مختص إدارة التغيير</p>
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="consultant-profile.html?id=6" class="text-blue-600 hover:text-blue-800 text-sm font-medium">عرض الملف الشخصي</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Financial Consulting Section -->
+<section id="financial" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-dollar-sign text-3xl"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الاستشارات المالية</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">خدمات مالية متخصصة لإدارة الأموال والاستثمارات</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div data-aos="fade-right">
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">خدماتنا المالية</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-gray-700">تخطيط مالي شخصي</span>
+                            <span class="font-bold text-green-600">4,000 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-gray-700">إدارة المحافظ الاستثمارية</span>
+                            <span class="font-bold text-green-600">6,000 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-gray-700">تحليل الجدوى المالية</span>
+                            <span class="font-bold text-green-600">8,000 دج</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="text-gray-700">استشارة تمويل المشاريع</span>
+                            <span class="font-bold text-green-600">10,000 دج</span>
+                        </div>
+                    </div>
+                    <a href="booking.html?type=financial" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-all font-bold text-center mt-6 block">
+                        احجز استشارة مالية
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">خدماتنا المالية تشمل:</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border border-green-200">
+                        <i class="fas fa-chart-pie text-green-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">التخطيط المالي</h4>
+                            <p class="text-gray-600 text-sm">وضع خطط مالية شاملة للأفراد والشركات</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border border-green-200">
+                        <i class="fas fa-coins text-green-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">إدارة الاستثمارات</h4>
+                            <p class="text-gray-600 text-sm">استراتيجيات استثمارية متنوعة ومدروسة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border border-green-200">
+                        <i class="fas fa-calculator text-green-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">تحليل الجدوى</h4>
+                            <p class="text-gray-600 text-sm">دراسات مالية مفصلة للمشاريع الجديدة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border border-green-200">
+                        <i class="fas fa-hand-holding-usd text-green-500 text-xl ml-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">استشارات التمويل</h4>
+                            <p class="text-gray-600 text-sm">إيجاد مصادر التمويل المناسبة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial Success Stories -->
+        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 border border-green-200" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">قصص نجاح مالية</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h4 class="font-bold text-gray-800 mb-2">شركة التجارة المتقدمة</h4>
+                    <p class="text-gray-600 text-sm mb-4">زيادة الأرباح بنسبة 180% خلال سنتين من خلال إعادة هيكلة المحفظة الاستثمارية</p>
+                    <div class="flex items-center justify-between">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs">تخطيط مالي</span>
+                        <span class="text-green-600 font-bold">+180% أرباح</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h4 class="font-bold text-gray-800 mb-2">مشروع الصناعات الغذائية</h4>
+                    <p class="text-gray-600 text-sm mb-4">حصول على تمويل 15 مليون دج لتوسيع المشروع بعد دراسة جدوى مفصلة</p>
+                    <div class="flex items-center justify-between">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs">تمويل</span>
+                        <span class="text-green-600 font-bold">15M دج</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marketing Consulting Section -->
+<section id="marketing" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-bullhorn text-3xl"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الاستشارات التسويقية</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">استراتيجيات تسويقية مبتكرة لتعزيز حضورك في السوق</p>
+        </div>
+
+        <!-- Marketing Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-search text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">أبحاث السوق</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">دراسة السوق المستهدف وتحليل المنافسين</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">3,500 دج</span>
+                    <span class="text-sm text-gray-500 block">للدراسة الواحدة</span>
+                </div>
+            </div>
+
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-palette text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">تطوير العلامة التجارية</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">تصميم الهوية البصرية واستراتيجية العلامة</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">8,000 دج</span>
+                    <span class="text-sm text-gray-500 block">للحزمة الكاملة</span>
+                </div>
+            </div>
+
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-share-alt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">التسويق الرقمي</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">استراتيجيات وسائل التواصل الاجتماعي</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">5,000 دج</span>
+                    <span class="text-sm text-gray-500 block">للاستراتيجية</span>
+                </div>
+            </div>
+
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-ad text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">الحملات الإعلانية</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">تصميم وإدارة الحملات الإعلانية</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">7,500 دج</span>
+                    <span class="text-sm text-gray-500 block">للحملة الواحدة</span>
+                </div>
+            </div>
+
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">تحليل الأداء</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">قياس فعالية الحملات التسويقية</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">4,000 دج</span>
+                    <span class="text-sm text-gray-500 block">للتقرير الشهري</span>
+                </div>
+            </div>
+
+            <div class="marketing-service bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">إدارة العلاقات</h3>
+                <p class="text-gray-600 text-sm mb-4 text-center">استراتيجيات الاحتفاظ بالعملاء</p>
+                <div class="text-center">
+                    <span class="text-lg font-bold text-purple-600">6,000 دج</span>
+                    <span class="text-sm text-gray-500 block">للاستراتيجية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marketing Package -->
+        <div class="bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-xl p-8" data-aos="fade-up">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">حزمة التسويق الشاملة</h3>
+                <p class="text-purple-200 mb-6">احصل على جميع خدماتنا التسويقية بسعر مخفض</p>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold mb-4">ما تحصل عليه:</h4>
+                        <ul class="text-purple-200 space-y-2 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-yellow-400 ml-2"></i>
+                                دراسة السوق الشاملة
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-yellow-400 ml-2"></i>
+                                تطوير العلامة التجارية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-yellow-400 ml-2"></i>
+                                استراتيجية التسويق الرقمي
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-yellow-400 ml-2"></i>
+                                3 حملات إعلانية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-yellow-400 ml-2"></i>
+                                تقارير أداء شهرية (6 أشهر)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm">
+                            <div class="text-sm text-purple-200 mb-2">السعر العادي: 45,000 دج</div>
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">30,000 دج</div>
+                            <div class="text-sm text-purple-200">توفير 15,000 دج</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="booking.html?type=marketing&package=complete" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    احجز الحزمة الشاملة
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Consultation Types -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">تخصصات أخرى</h2>
+            <p class="text-xl text-gray-600">المزيد من الخدمات الاستشارية المتخصصة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Technical Consulting -->
+            <div id="technical" class="consultation-type bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الاستشارات التقنية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">التحول الرقمي وتطوير الأنظمة التقنية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-orange-600">20 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="booking.html?type=technical" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-all w-full inline-block text-center font-bold">
+                        احجز استشارة تقنية
+                    </a>
+                </div>
+            </div>
+
+            <!-- Legal Consulting -->
+            <div id="legal" class="consultation-type bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-gavel text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الاستشارات القانونية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">القوانين والتشريعات التجارية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-red-600">8 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="booking.html?type=legal" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all w-full inline-block text-center font-bold">
+                        احجز استشارة قانونية
+                    </a>
+                </div>
+            </div>
+
+            <!-- HR Consulting -->
+            <div id="hr" class="consultation-type bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الموارد البشرية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">إدارة الفرق وتطوير المواهب</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-teal-600">10 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="booking.html?type=hr" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-all w-full inline-block text-center font-bold">
+                        احجز استشارة موارد بشرية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مقارنة أنواع الاستشارات</h2>
+            <p class="text-xl text-gray-600">اختر النوع المناسب لاحتياجاتك</p>
+        </div>
+
+        <div class="overflow-x-auto" data-aos="fade-up">
+            <table class="w-full bg-white rounded-xl shadow-lg border border-gray-200">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-6 py-4 text-right font-bold text-gray-800">نوع الاستشارة</th>
+                        <th class="px-6 py-4 text-center font-bold text-gray-800">المدة</th>
+                        <th class="px-6 py-4 text-center font-bold text-gray-800">السعر</th>
+                        <th class="px-6 py-4 text-center font-bold text-gray-800">المستشارون</th>
+                        <th class="px-6 py-4 text-center font-bold text-gray-800">التقييم</th>
+                        <th class="px-6 py-4 text-center font-bold text-gray-800">الحجز</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-chart-line text-blue-500 ml-3"></i>
+                                <span class="font-medium">الاستشارات الإدارية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-blue-600">5,000 دج</td>
+                        <td class="px-6 py-4 text-center">15</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=management" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-dollar-sign text-green-500 ml-3"></i>
+                                <span class="font-medium">الاستشارات المالية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-green-600">6,000 دج</td>
+                        <td class="px-6 py-4 text-center">12</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=financial" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-bullhorn text-purple-500 ml-3"></i>
+                                <span class="font-medium">الاستشارات التسويقية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-purple-600">4,000 دج</td>
+                        <td class="px-6 py-4 text-center">18</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=marketing" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-laptop-code text-orange-500 ml-3"></i>
+                                <span class="font-medium">الاستشارات التقنية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-orange-600">4,500 دج</td>
+                        <td class="px-6 py-4 text-center">20</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=technical" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-gavel text-red-500 ml-3"></i>
+                                <span class="font-medium">الاستشارات القانونية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-red-600">7,000 دج</td>
+                        <td class="px-6 py-4 text-center">8</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=legal" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-teal-500 ml-3"></i>
+                                <span class="font-medium">الموارد البشرية</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">60 دقيقة</td>
+                        <td class="px-6 py-4 text-center font-bold text-teal-600">5,500 دج</td>
+                        <td class="px-6 py-4 text-center">10</td>
+                        <td class="px-6 py-4 text-center">
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="booking.html?type=hr" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-all text-sm">احجز</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الأسئلة الشائعة</h2>
+            <p class="text-xl text-gray-600">إجابات على أكثر الأسئلة شيوعاً حول خدماتنا الاستشارية</p>
+        </div>
+
+        <div class="space-y-6" data-aos="fade-up">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>كيف أختار نوع الاستشارة المناسب لي؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>يعتمد اختيار نوع الاستشارة على طبيعة التحدي الذي تواجهه:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>الاستشارات الإدارية:</strong> إذا كنت تحتاج لتطوير استراتيجية أو إعادة هيكلة</li>
+                        <li><strong>الاستشارات المالية:</strong> إذا كنت تحتاج لتخطيط مالي أو دراسة جدوى</li>
+                        <li><strong>الاستشارات التسويقية:</strong> إذا كنت تريد تحسين حضورك في السوق</li>
+                        <li><strong>الاستشارات التقنية:</strong> إذا كنت تحتاج للتحول الرقمي</li>
+                    </ul>
+                    <p class="mt-3">يمكنك أيضاً التواصل معنا للحصول على استشارة مجانية لتحديد النوع المناسب.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>ما هي مدة الجلسة الاستشارية؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>نوفر خيارات مختلفة لمدة الجلسات:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>30 دقيقة:</strong> للاستشارات السريعة والأسئلة المحددة</li>
+                        <li><strong>60 دقيقة:</strong> الجلسة الاستشارية المعتادة (الأكثر شيوعاً)</li>
+                        <li><strong>90 دقيقة:</strong> للاستشارات المعقدة والمفصلة</li>
+                        <li><strong>يوم كامل:</strong> للمشاريع الكبيرة والتدريب المؤسسي</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>هل يمكنني الحصول على استشارة عبر الإنترنت؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>نعم، نوفر خيارات متعددة للاستشارة:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>استشارة عبر الفيديو:</strong> باستخدام Zoom أو Google Meet</li>
+                        <li><strong>استشارة في المكتب:</strong> لقاء شخصي في مكتبنا بشلف</li>
+                        <li><strong>استشارة في موقعك:</strong> زيارة ميدانية لشركتك (رسوم إضافية)</li>
+                        <li><strong>استشارة هاتفية:</strong> للاستشارات السريعة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>ما هي طرق الدفع المتاحة؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>نقبل طرق دفع متعددة لراحتك:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>الدفع النقدي:</strong> في المكتب أو عند الزيارة الميدانية</li>
+                        <li><strong>التحويل البنكي:</strong> إلى حسابنا البنكي</li>
+                        <li><strong>بطاقة ائتمان:</strong> عبر منصة الدفع الآمنة</li>
+                        <li><strong>PayPal:</strong> للعملاء الدوليين</li>
+                    </ul>
+                    <p class="mt-3">يمكن الدفع قبل الجلسة أو بعدها حسب تفضيلك.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>هل تقدمون ضمان على الخدمات؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>نعم، نقدم ضمانات متعددة:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>ضمان الرضا:</strong> إذا لم تكن راضياً عن الجلسة، نعيد لك المبلغ كاملاً</li>
+                        <li><strong>ضمان المتابعة:</strong> متابعة مجانية لمدة شهر بعد انتهاء الاستشارة</li>
+                        <li><strong>ضمان السرية:</strong> حماية كاملة لجميع معلوماتك التجارية</li>
+                        <li><strong>ضمان الجودة:</strong> جميع مستشارينا معتمدون ومؤهلون</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <button class="faq-question w-full text-right flex items-center justify-between font-bold text-gray-800 text-lg" onclick="toggleFAQ(this)">
+                    <span>كيف يمكنني إلغاء أو تعديل موعدي؟</span>
+                    <i class="fas fa-chevron-down text-teal-600 transition-transform"></i>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600 leading-relaxed">
+                    <p>سياسة الإلغاء والتعديل مرنة:</p>
+                    <ul class="list-disc list-inside mt-3 space-y-1">
+                        <li><strong>الإلغاء قبل 24 ساعة:</strong> إلغاء مجاني بدون رسوم</li>
+                        <li><strong>التعديل قبل 12 ساعة:</strong> تعديل مجاني للموعد</li>
+                        <li><strong>الإلغاء المتأخر:</strong> رسوم 50% من قيمة الجلسة</li>
+                        <li><strong>عدم الحضور:</strong> رسوم كاملة</li>
+                    </ul>
+                    <p class="mt-3">يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني لأي تعديل.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
+            <p class="text-xl text-teal-200 mb-8 max-w-2xl mx-auto">
+                اختر نوع الاستشارة المناسب لك واحجز موعدك اليوم للحصول على الدعم المتخصص
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html" class="bg-yellow-500 text-teal-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                    احجز استشارتك الآن
+                </a>
+                <a href="consultants.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-teal-900 transition-all">
+                    <i class="fas fa-users ml-2"></i>
+                    تصفح المستشارين
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">أنواع استشارات متنوعة لجميع احتياجاتك</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">أنواع الاستشارات</h4>
+                <ul class="space-y-2">
+                    <li><a href="#management" class="text-gray-400 hover:text-white transition-colors">استشارات إدارية</a></li>
+                    <li><a href="#financial" class="text-gray-400 hover:text-white transition-colors">استشارات مالية</a></li>
+                    <li><a href="#marketing" class="text-gray-400 hover:text-white transition-colors">استشارات تسويقية</a></li>
+                    <li><a href="#technical" class="text-gray-400 hover:text-white transition-colors">استشارات تقنية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">خدمات الاستشارة</a></li>
+                    <li><a href="consultants.html" class="text-gray-400 hover:text-white transition-colors">المستشارون</a></li>
+                    <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">حجز موعد</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">types@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">شلف، الجزائر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - أنواع الاستشارات. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/consulting.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Initialize counter animations
+    initializeCounters();
+    
+    // Initialize smooth scrolling for anchor links
+    initializeSmoothScrolling();
+    
+    // Initialize mobile menu
+    initializeMobileMenu();
+    
+    // Initialize header scroll effect
+    initializeHeaderScroll();
+});
+
+function initializeCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+function initializeSmoothScrolling() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+}
+
+function initializeHeaderScroll() {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+}
+
+function toggleFAQ(button) {
+    const faqItem = button.closest('.faq-item');
+    const answer = faqItem.querySelector('.faq-answer');
+    const icon = button.querySelector('i');
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) {
+            const otherAnswer = item.querySelector('.faq-answer');
+            const otherIcon = item.querySelector('.faq-question i');
+            otherAnswer.classList.add('hidden');
+            otherIcon.classList.remove('fa-chevron-up');
+            otherIcon.classList.add('fa-chevron-down');
+        }
+    });
+    
+    // Toggle current FAQ item
+    if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+    } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+    }
+}
+
+// Category card hover effects
+document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Quick navigation hover effects
+document.querySelectorAll('.quick-nav-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        const icon = this.querySelector('i');
+        icon.style.transform = 'scale(1.2)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        const icon = this.querySelector('i');
+        icon.style.transform = 'scale(1)';
+    });
+});
+
+console.log('📋 Consultation types page initialized successfully!');
+</script>
+
 </body>
 </html>
+

@@ -1,10 +1,584 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>صفحة الاستشارة الرئيسية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الاستشارة - رفيق توريق</title>
+    <meta name="description" content="استشارات متخصصة مع خبراء في مختلف المجالات وحجز مواعيد مرنة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/consulting.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>صفحة الاستشارة الرئيسية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-purple-600 font-bold flex items-center relative">
+                        <i class="fas fa-handshake ml-2"></i>
+                        خدمات الاستشارة
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">خدمات الاستشارة</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-purple-500">نظرة شاملة</div>
+                                </div>
+                            </a>
+                            <a href="consultants.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المستشارون</div>
+                                    <div class="text-xs text-gray-500">خبراء متخصصون</div>
+                                </div>
+                            </a>
+                            <a href="consultation-types.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-list text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">أنواع الاستشارات</div>
+                                    <div class="text-xs text-gray-500">تخصصات متنوعة</div>
+                                </div>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-calendar-alt text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">حجز موعد</div>
+                                    <div class="text-xs text-gray-500">مواعيد مرنة</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../courses/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-graduation-cap ml-2"></i>
+                    الدورات التدريبية
+                </a>
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="booking.html" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                    احجز استشارة
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-purple-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">خدمات الاستشارة</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"consulting\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"1.5\" fill=\"white\"/><path d=\"M8 8 L17 8 L17 17 L8 17 Z\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23consulting)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-handshake text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">استشارات متخصصة مع خبراء محترفين</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">خدمات الاستشارة</h1>
+                <p class="text-xl mb-8 text-purple-100 leading-relaxed">
+                    احصل على استشارات متخصصة من خبراء في مختلف المجالات لتطوير مشروعك وتحقيق أهدافك
+                </p>
+                
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="50">0</div>
+                        <div class="text-sm text-purple-200">مستشار خبير</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="24">0</div>
+                        <div class="text-sm text-purple-200">ساعة متاحة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="95">0</div>
+                        <div class="text-sm text-purple-200">% رضا العملاء</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="booking.html" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        احجز استشارة الآن
+                    </a>
+                    <a href="consultants.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                        <i class="fas fa-users ml-2"></i>
+                        تصفح المستشارين
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-handshake text-8xl text-purple-900"></i>
+                    </div>
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-purple-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Types Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع الاستشارات المتاحة</h2>
+            <p class="text-xl text-gray-600">تخصصات متنوعة لتلبية جميع احتياجاتك</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Consultation Type 1 -->
+            <div class="consultation-type-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات إدارية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تطوير الاستراتيجيات الإدارية وتحسين الأداء</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-blue-600">15 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#management" class="text-blue-600 hover:text-blue-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Type 2 -->
+            <div class="consultation-type-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-dollar-sign text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات مالية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">التخطيط المالي وإدارة الاستثمارات</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-green-600">12 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#financial" class="text-green-600 hover:text-green-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Type 3 -->
+            <div class="consultation-type-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات تسويقية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">استراتيجيات التسويق والعلامة التجارية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-purple-600">18 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#marketing" class="text-purple-600 hover:text-purple-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Type 4 -->
+            <div class="consultation-type-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات تقنية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">التكنولوجيا والتحول الرقمي</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-orange-600">20 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#technical" class="text-orange-600 hover:text-orange-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Type 5 -->
+            <div class="consultation-type-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-gavel text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات قانونية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">القوانين والتشريعات التجارية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-red-600">8 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#legal" class="text-red-600 hover:text-red-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Type 6 -->
+            <div class="consultation-type-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استشارات الموارد البشرية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">إدارة الفرق وتطوير المواهب</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-teal-600">10 مستشار</div>
+                        <div class="text-xs text-gray-500">متخصص متاح</div>
+                    </div>
+                    <a href="consultation-types.html#hr" class="text-teal-600 hover:text-teal-800 font-bold">
+                        اعرف المزيد <i class="fas fa-arrow-left mr-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Top Consultants Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">أفضل المستشارين</h2>
+            <p class="text-xl text-gray-600">خبراء متميزون بسجل حافل من النجاحات</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Consultant 1 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant1.jpg" alt="د. أحمد محمد" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">د. أحمد محمد</h3>
+                    <p class="text-purple-600 font-medium mb-2">مستشار إداري</p>
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm mr-2">(4.9)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">15 سنة خبرة في الإدارة الاستراتيجية</p>
+                    <a href="consultant-profile.html?id=1" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all w-full inline-block text-center">
+                        عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultant 2 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant2.jpg" alt="أ. فاطمة بن علي" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">أ. فاطمة بن علي</h3>
+                    <p class="text-green-600 font-medium mb-2">مستشارة مالية</p>
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm mr-2">(4.8)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">12 سنة خبرة في التخطيط المالي</p>
+                    <a href="consultant-profile.html?id=2" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all w-full inline-block text-center">
+                        عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultant 3 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant3.jpg" alt="م. يوسف الأمين" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">م. يوسف الأمين</h3>
+                    <p class="text-orange-600 font-medium mb-2">مستشار تقني</p>
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm mr-2">(4.9)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">10 سنوات في التحول الرقمي</p>
+                    <a href="consultant-profile.html?id=3" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-all w-full inline-block text-center">
+                        عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultant 4 -->
+            <div class="consultant-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <img src="../../assets/images/consultants/consultant4.jpg" alt="أ. سارة أحمد" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">أ. سارة أحمد</h3>
+                    <p class="text-blue-600 font-medium mb-2">مستشارة تسويق</p>
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm mr-2">(4.7)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">8 سنوات في التسويق الرقمي</p>
+                    <a href="consultant-profile.html?id=4" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all w-full inline-block text-center">
+                        عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="consultants.html" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg font-bold">
+                <i class="fas fa-users ml-2"></i>
+                عرض جميع المستشارين
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">كيف تعمل خدمة الاستشارة؟</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة للحصول على الاستشارة المناسبة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="step-card text-center" data-aos="fade-up">
+                <div class="relative mb-6">
+                    <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                        <i class="fas fa-search text-3xl text-white"></i>
+                    </div>
+                    <div class="absolute -top-2 -right-2 bg-yellow-400 text-purple-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                        1
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">اختر المستشار</h3>
+                <p class="text-gray-600">تصفح قائمة المستشارين واختر المناسب لاحتياجاتك</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative mb-6">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                        <i class="fas fa-calendar-alt text-3xl text-white"></i>
+                    </div>
+                    <div class="absolute -top-2 -right-2 bg-yellow-400 text-blue-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                        2
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">احجز موعد</h3>
+                <p class="text-gray-600">اختر الوقت المناسب لك من المواعيد المتاحة</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative mb-6">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                        <i class="fas fa-video text-3xl text-white"></i>
+                    </div>
+                    <div class="absolute -top-2 -right-2 bg-yellow-400 text-green-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                        3
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">احضر الجلسة</h3>
+                <p class="text-gray-600">التقي بالمستشار عبر الإنترنت أو في المكتب</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative mb-6">
+                    <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                        <i class="fas fa-chart-line text-3xl text-white"></i>
+                    </div>
+                    <div class="absolute -top-2 -right-2 bg-yellow-400 text-orange-900 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                        4
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">طبق النصائح</h3>
+                <p class="text-gray-600">اتبع التوصيات واحصل على المتابعة اللازمة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل تحتاج إلى استشارة متخصصة؟</h2>
+            <p class="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+                احجز استشارتك اليوم واحصل على النصائح المهنية التي تحتاجها لتطوير مشروعك
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                    احجز استشارة الآن
+                </a>
+                <a href="consultants.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-users ml-2"></i>
+                    تصفح المستشارين
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">خدمات استشارة متخصصة لنجاح مشروعك</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدمات الاستشارة</h4>
+                <ul class="space-y-2">
+                    <li><a href="consultation-types.html" class="text-gray-400 hover:text-white transition-colors">أنواع الاستشارات</a></li>
+                    <li><a href="consultants.html" class="text-gray-400 hover:text-white transition-colors">المستشارون</a></li>
+                    <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">حجز موعد</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2">
+                    <li><a href="../../index.html" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a></li>
+                    <li><a href="../courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="../incubator/index.html" class="text-gray-400 hover:text-white transition-colors">حاضنة الأعمال</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">consulting@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - خدمات الاستشارة. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/consulting.js"></script>
+
 </body>
 </html>
