@@ -1,10 +1,548 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تفاصيل العقار</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل العقار - رفيق توريق</title>
+    <meta name="description" content="تفاصيل كاملة للعقار مع الصور والمواصفات والموقع">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/real-estate.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css">
 </head>
-<body>
-  <h1>تفاصيل العقار</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-emerald-600 font-bold flex items-center relative">
+                        <i class="fas fa-building ml-2"></i>
+                        العقارات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="virtual-tour.html?id=1" class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-6 py-2 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-vr-cardboard ml-2"></i>
+                    جولة افتراضية
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">العقارات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="sale.html" class="text-blue-600 hover:text-blue-800 transition-colors">عقارات للبيع</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تفاصيل العقار</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Property Images Gallery -->
+<section class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Image Slider -->
+            <div class="lg:col-span-2" data-aos="fade-right">
+                <div class="swiper property-gallery-main rounded-xl overflow-hidden shadow-lg">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../assets/images/real-estate/property-1-main.jpg" alt="صورة رئيسية للعقار" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/images/real-estate/property-1-living.jpg" alt="غرفة المعيشة" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/images/real-estate/property-1-kitchen.jpg" alt="المطبخ" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/images/real-estate/property-1-bedroom.jpg" alt="غرفة النوم" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/images/real-estate/property-1-bathroom.jpg" alt="الحمام" class="w-full h-96 object-cover">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                <!-- Thumbnail Gallery -->
+                <div class="swiper property-gallery-thumbs mt-4 rounded-lg overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../assets/images/real-estate/property-1-main.jpg" alt="صورة مصغرة" class="w-full h-20 object-cover">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../assets/images/real-estate/property-1-living.jpg" alt="صورة مصغرة" class="w-full h-20 object-cover">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../assets/images/real-estate/property-1-kitchen.jpg" alt="صورة مصغرة" class="w-full h-20 object-cover">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../assets/images/real-estate/property-1-bedroom.jpg" alt="صورة مصغرة" class="w-full h-20 object-cover">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../assets/images/real-estate/property-1-bathroom.jpg" alt="صورة مصغرة" class="w-full h-20 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Info Card -->
+            <div class="lg:col-span-1" data-aos="fade-left">
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-28">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium">للبيع</span>
+                        <div class="flex items-center space-x-2 space-x-reverse">
+                            <button class="text-gray-400 hover:text-red-500 transition-colors">
+                                <i class="far fa-heart text-xl"></i>
+                            </button>
+                            <button class="text-gray-400 hover:text-blue-500 transition-colors">
+                                <i class="fas fa-share-alt text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-2xl font-bold text-gray-800 mb-4">شقة 4 غرف في حي راقي</h1>
+                    
+                    <div class="text-3xl font-bold text-emerald-600 mb-6">8,500,000 دج</div>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">المساحة</span>
+                            <span class="font-bold">120 م²</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">عدد الغرف</span>
+                            <span class="font-bold">4 غرف</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">عدد الحمامات</span>
+                            <span class="font-bold">2 حمام</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">الطابق</span>
+                            <span class="font-bold">الطابق الثالث</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">سنة البناء</span>
+                            <span class="font-bold">2020</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-all font-bold">
+                            <i class="fas fa-phone ml-2"></i>
+                            اتصل الآن
+                        </button>
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-all font-bold">
+                            <i class="fab fa-whatsapp ml-2"></i>
+                            واتساب
+                        </button>
+                        <a href="virtual-tour.html?id=1" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all font-bold inline-block text-center">
+                            <i class="fas fa-vr-cardboard ml-2"></i>
+                            جولة افتراضية
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Property Details -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Description -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">وصف العقار</h2>
+                    <div class="prose prose-lg max-w-none text-gray-600">
+                        <p class="mb-4">
+                            شقة رائعة تقع في حي راقي بالجزائر العاصمة، تتميز بتصميم عصري وموقع استراتيجي. 
+                            الشقة مكونة من 4 غرف نوم واسعة، صالة كبيرة، مطبخ مجهز بالكامل، وحمامين.
+                        </p>
+                        <p class="mb-4">
+                            تتمتع الشقة بإطلالة رائعة على المدينة وتحتوي على شرفة واسعة. المبنى حديث البناء 
+                            ويضم مصعد وحارس أمن على مدار الساعة.
+                        </p>
+                        <p>
+                            الموقع ممتاز بالقرب من جميع الخدمات الأساسية مثل المدارس والمستشفيات ومراكز التسوق 
+                            ووسائل المواصلات العامة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">المميزات</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h3 class="text-lg font-bold text-gray-700 mb-3">المميزات الداخلية</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>مطبخ مجهز بالكامل</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>مكيف هواء في جميع الغرف</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>أرضيات سيراميك فاخر</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>خزائن مدمجة</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>شرفة واسعة</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-lg font-bold text-gray-700 mb-3">المميزات الخارجية</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>موقف سيارة مخصص</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>حارس أمن 24/7</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>مصعد</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>حديقة مشتركة</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 ml-3"></i>
+                                <span>قرب المواصلات</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floor Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">مخطط الشقة</h2>
+                    <div class="text-center">
+                        <img src="../assets/images/real-estate/floor-plan.jpg" alt="مخطط الشقة" class="w-full max-w-2xl mx-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <!-- Location Map -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">الموقع على الخريطة</h2>
+                    <div id="property-map" class="h-96 rounded-lg"></div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Agent Info -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">معلومات الوسيط</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/agents/agent-1.jpg" alt="الوسيط العقاري" class="w-16 h-16 rounded-full object-cover ml-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">أحمد بن علي</h4>
+                            <p class="text-gray-600 text-sm">وسيط عقاري معتمد</p>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-600 mr-2">(4.9)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-emerald-500 ml-3"></i>
+                            <span class="text-gray-700">027 XX XX XX</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-500 ml-3"></i>
+                            <span class="text-gray-700">05XXXXXXXX</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 ml-3"></i>
+                            <span class="text-gray-700">ahmed@rafiktawriq.dz</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mortgage Calculator -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">حاسبة القرض</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">سعر العقار</label>
+                            <input type="text" value="8,500,000 دج" readonly class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">الدفعة الأولى (%)</label>
+                            <input type="range" min="10" max="50" value="20" class="w-full" id="down-payment">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>10%</span>
+                                <span id="down-payment-value">20%</span>
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">مدة القرض (سنة)</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+                                <option>15 سنة</option>
+                                <option>20 سنة</option>
+                                <option selected>25 سنة</option>
+                                <option>30 سنة</option>
+                            </select>
+                        </div>
+                        <div class="bg-emerald-50 rounded-lg p-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-emerald-600" id="monthly-payment">28,500 دج</div>
+                                <div class="text-sm text-gray-600">القسط الشهري المتوقع</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Properties -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">عقارات مشابهة</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <img src="../assets/images/real-estate/similar-1.jpg" alt="عقار مشابه" class="w-16 h-16 rounded-lg object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-800 text-sm">شقة 3 غرف</h4>
+                                <p class="text-gray-600 text-xs">الجزائر العاصمة</p>
+                                <p class="text-emerald-600 font-bold text-sm">7,200,000 دج</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <img src="../assets/images/real-estate/similar-2.jpg" alt="عقار مشابه" class="w-16 h-16 rounded-lg object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-800 text-sm">شقة 4 غرف</h4>
+                                <p class="text-gray-600 text-xs">الجزائر العاصمة</p>
+                                <p class="text-emerald-600 font-bold text-sm">9,100,000 دج</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <img src="../assets/images/real-estate/similar-3.jpg" alt="عقار مشابه" class="w-16 h-16 rounded-lg object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-gray-800 text-sm">شقة 5 غرف</h4>
+                                <p class="text-gray-600 text-xs">الجزائر العاصمة</p>
+                                <p class="text-emerald-600 font-bold text-sm">11,500,000 دج</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">شريكك الموثوق في عالم العقارات</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="sale.html" class="text-gray-400 hover:text-white transition-colors">عقارات للبيع</a></li>
+                    <li><a href="rent.html" class="text-gray-400 hover:text-white transition-colors">عقارات للكراء</a></li>
+                    <li><a href="virtual-tour.html" class="text-gray-400 hover:text-white transition-colors">الجولة الافتراضية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط مفيدة</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">حاسبة القرض</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">نصائح الاستثمار</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">دليل المشتري</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-emerald-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-emerald-400 ml-3"></i>
+                        <span class="text-gray-400">info@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - تفاصيل العقار. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/real-estate.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    initializeImageGallery();
+    initializeMap();
+    initializeMortgageCalculator();
+});
+
+function initializeImageGallery() {
+    // Main gallery
+    const galleryMain = new Swiper('.property-gallery-main', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
+    
+    // Thumbnail gallery
+    const galleryThumbs = new Swiper('.property-gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+}
+
+function initializeMap() {
+    // Initialize Leaflet map
+    const map = L.map('property-map').setView([36.7538, 3.0588], 15);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    
+    // Add marker for property location
+    L.marker([36.7538, 3.0588]).addTo(map)
+        .bindPopup('موقع العقار')
+        .openPopup();
+}
+
+function initializeMortgageCalculator() {
+    const downPaymentSlider = document.getElementById('down-payment');
+    const downPaymentValue = document.getElementById('down-payment-value');
+    const monthlyPayment = document.getElementById('monthly-payment');
+    
+    const propertyPrice = 8500000;
+    
+    downPaymentSlider.addEventListener('input', function() {
+        const percentage = this.value;
+        downPaymentValue.textContent = percentage + '%';
+        
+        // Calculate monthly payment (simplified calculation)
+        const loanAmount = propertyPrice * (1 - percentage / 100);
+        const monthlyRate = 0.05 / 12; // 5% annual rate
+        const numberOfPayments = 25 * 12; // 25 years
+        
+        const monthly = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+                       (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+        
+        monthlyPayment.textContent = Math.round(monthly).toLocaleString('ar-DZ') + ' دج';
+    });
+}
+
+console.log('🏠 Property details page initialized successfully!');
+</script>
+
 </body>
 </html>

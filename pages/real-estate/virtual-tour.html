@@ -1,10 +1,618 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الجولة الافتراضية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجولة الافتراضية - رفيق توريق</title>
+    <meta name="description" content="جولة افتراضية تفاعلية للعقار مع تقنية 360 درجة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/real-estate.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- A-Frame for VR -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    
+    <!-- Pannellum for 360 panorama -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 </head>
-<body>
-  <h1>الجولة الافتراضية</h1>
+<body class="font-tajawal bg-gray-900">
+
+<!-- Header -->
+<header class="bg-black bg-opacity-80 shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-lg"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">رفيق توريق</h1>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center space-x-6 space-x-reverse">
+                <a href="property-details.html?id=1" class="text-white hover:text-blue-300 transition-all font-medium">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة للتفاصيل
+                </a>
+            </nav>
+
+            <!-- Controls -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button id="fullscreen-btn" class="text-white hover:text-blue-300 transition-colors">
+                    <i class="fas fa-expand text-lg"></i>
+                </button>
+                <button id="vr-btn" class="text-white hover:text-blue-300 transition-colors">
+                    <i class="fas fa-vr-cardboard text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Virtual Tour Container -->
+<section class="h-screen relative">
+    <!-- 360 Panorama Viewer -->
+    <div id="panorama-viewer" class="w-full h-full"></div>
+    
+    <!-- Tour Controls Overlay -->
+    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 text-white p-4 z-40">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <!-- Room Navigation -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <h3 class="text-lg font-bold" id="current-room">غرفة المعيشة</h3>
+                    <div class="flex space-x-2 space-x-reverse">
+                        <button class="room-btn active bg-blue-600 text-white px-3 py-1 rounded-lg text-sm" data-room="living" data-panorama="../assets/images/360/living-room.jpg">
+                            المعيشة
+                        </button>
+                        <button class="room-btn bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-500" data-room="kitchen" data-panorama="../assets/images/360/kitchen.jpg">
+                            المطبخ
+                        </button>
+                        <button class="room-btn bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-500" data-room="bedroom1" data-panorama="../assets/images/360/bedroom1.jpg">
+                            غرفة النوم الرئيسية
+                        </button>
+                        <button class="room-btn bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-500" data-room="bedroom2" data-panorama="../assets/images/360/bedroom2.jpg">
+                            غرفة النوم الثانية
+                        </button>
+                        <button class="room-btn bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-500" data-room="bathroom" data-panorama="../assets/images/360/bathroom.jpg">
+                            الحمام
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Tour Controls -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button id="auto-rotate-btn" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+                        <i class="fas fa-sync-alt ml-2"></i>
+                        دوران تلقائي
+                    </button>
+                    <button id="info-btn" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        معلومات
+                    </button>
+                    <button id="share-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                        <i class="fas fa-share-alt ml-2"></i>
+                        مشاركة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Room Information Panel -->
+    <div id="info-panel" class="absolute top-20 right-4 bg-black bg-opacity-90 text-white p-6 rounded-xl max-w-sm hidden z-40">
+        <div class="flex items-center justify-between mb-4">
+            <h4 class="text-lg font-bold" id="info-title">معلومات الغرفة</h4>
+            <button id="close-info" class="text-gray-400 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="info-content">
+            <p class="text-gray-300 mb-4">غرفة معيشة واسعة ومريحة مع إطلالة رائعة على المدينة.</p>
+            <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                    <span class="text-gray-400">المساحة:</span>
+                    <span class="font-bold">25 م²</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-gray-400">النوافذ:</span>
+                    <span class="font-bold">نافذتان كبيرتان</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-gray-400">الإضاءة:</span>
+                    <span class="font-bold">طبيعية وصناعية</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hotspots -->
+    <div class="absolute inset-0 pointer-events-none z-30">
+        <!-- Navigation Hotspots will be added dynamically -->
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="absolute inset-0 bg-gray-900 flex items-center justify-center z-50">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
+            <h3 class="text-white text-xl font-bold mb-2">جاري تحميل الجولة الافتراضية</h3>
+            <p class="text-gray-400">يرجى الانتظار...</p>
+        </div>
+    </div>
+</section>
+
+<!-- Tour Instructions Modal -->
+<div id="instructions-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-60 hidden">
+    <div class="bg-white rounded-xl p-8 max-w-2xl mx-4 text-center">
+        <div class="text-6xl text-blue-600 mb-6">
+            <i class="fas fa-vr-cardboard"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">مرحباً بك في الجولة الافتراضية</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="text-center">
+                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-mouse text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">التنقل</h3>
+                <p class="text-gray-600 text-sm">اسحب بالماوس أو اللمس للنظر حولك</p>
+            </div>
+            <div class="text-center">
+                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hand-pointer text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">النقاط التفاعلية</h3>
+                <p class="text-gray-600 text-sm">انقر على النقاط للانتقال بين الغرف</p>
+            </div>
+        </div>
+        <button id="start-tour" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all font-bold">
+            <i class="fas fa-play ml-2"></i>
+            ابدأ الجولة
+        </button>
+    </div>
+</div>
+
+<!-- Property Info Sidebar -->
+<div id="property-sidebar" class="fixed top-20 left-4 bg-black bg-opacity-90 text-white p-6 rounded-xl max-w-xs z-40">
+    <h3 class="text-lg font-bold mb-4">شقة 4 غرف في حي راقي</h3>
+    <div class="space-y-3 mb-6">
+        <div class="flex items-center justify-between">
+            <span class="text-gray-400">السعر:</span>
+            <span class="font-bold text-emerald-400">8,500,000 دج</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-gray-400">المساحة:</span>
+            <span class="font-bold">120 م²</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-gray-400">الغرف:</span>
+            <span class="font-bold">4 غرف</span>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-gray-400">الحمامات:</span>
+            <span class="font-bold">2 حمام</span>
+        </div>
+    </div>
+    <div class="space-y-2">
+        <button class="w-full bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition-all font-bold text-sm">
+            <i class="fas fa-phone ml-2"></i>
+            اتصل الآن
+        </button>
+        <a href="property-details.html?id=1" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm inline-block text-center">
+            <i class="fas fa-info-circle ml-2"></i>
+            التفاصيل الكاملة
+        </a>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/real-estate.js"></script>
+
+<script>
+let viewer;
+let isAutoRotating = false;
+
+const roomData = {
+    living: {
+        name: 'غرفة المعيشة',
+        panorama: '../assets/images/360/living-room.jpg',
+        info: {
+            description: 'غرفة معيشة واسعة ومريحة مع إطلالة رائعة على المدينة.',
+            area: '25 م²',
+            windows: 'نافذتان كبيرتان',
+            lighting: 'طبيعية وصناعية'
+        },
+        hotspots: [
+            {
+                id: 'to-kitchen',
+                pitch: -10,
+                yaw: 90,
+                type: 'scene',
+                text: 'إلى المطبخ',
+                sceneId: 'kitchen'
+            },
+            {
+                id: 'to-bedroom1',
+                pitch: -5,
+                yaw: 180,
+                type: 'scene',
+                text: 'إلى غرفة النوم الرئيسية',
+                sceneId: 'bedroom1'
+            }
+        ]
+    },
+    kitchen: {
+        name: 'المطبخ',
+        panorama: '../assets/images/360/kitchen.jpg',
+        info: {
+            description: 'مطبخ حديث مجهز بالكامل مع جميع الأجهزة الكهربائية.',
+            area: '12 م²',
+            appliances: 'جميع الأجهزة متوفرة',
+            style: 'تصميم عصري'
+        },
+        hotspots: [
+            {
+                id: 'to-living',
+                pitch: -10,
+                yaw: 270,
+                type: 'scene',
+                text: 'إلى غرفة المعيشة',
+                sceneId: 'living'
+            }
+        ]
+    },
+    bedroom1: {
+        name: 'غرفة النوم الرئيسية',
+        panorama: '../assets/images/360/bedroom1.jpg',
+        info: {
+            description: 'غرفة نوم رئيسية واسعة مع حمام خاص وخزانة مدمجة.',
+            area: '18 م²',
+            features: 'حمام خاص، خزانة مدمجة',
+            view: 'إطلالة على الحديقة'
+        },
+        hotspots: [
+            {
+                id: 'to-living',
+                pitch: -5,
+                yaw: 0,
+                type: 'scene',
+                text: 'إلى غرفة المعيشة',
+                sceneId: 'living'
+            },
+            {
+                id: 'to-bathroom',
+                pitch: -10,
+                yaw: 90,
+                type: 'scene',
+                text: 'إلى الحمام',
+                sceneId: 'bathroom'
+            }
+        ]
+    },
+    bedroom2: {
+        name: 'غرفة النوم الثانية',
+        panorama: '../assets/images/360/bedroom2.jpg',
+        info: {
+            description: 'غرفة نوم مريحة مناسبة للأطفال أو الضيوف.',
+            area: '14 م²',
+            features: 'خزانة مدمجة، مكتب',
+            lighting: 'إضاءة طبيعية ممتازة'
+        },
+        hotspots: [
+            {
+                id: 'to-living',
+                pitch: -5,
+                yaw: 180,
+                type: 'scene',
+                text: 'إلى غرفة المعيشة',
+                sceneId: 'living'
+            }
+        ]
+    },
+    bathroom: {
+        name: 'الحمام',
+        panorama: '../assets/images/360/bathroom.jpg',
+        info: {
+            description: 'حمام عصري مجهز بجميع المرافق الحديثة.',
+            area: '6 م²',
+            features: 'دش، حوض استحمام، مرايا كبيرة',
+            style: 'تصميم عصري أنيق'
+        },
+        hotspots: [
+            {
+                id: 'to-bedroom1',
+                pitch: -10,
+                yaw: 270,
+                type: 'scene',
+                text: 'إلى غرفة النوم الرئيسية',
+                sceneId: 'bedroom1'
+            }
+        ]
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Show instructions modal
+    document.getElementById('instructions-modal').classList.remove('hidden');
+    
+    // Initialize tour when start button is clicked
+    document.getElementById('start-tour').addEventListener('click', function() {
+        document.getElementById('instructions-modal').classList.add('hidden');
+        initializeVirtualTour();
+    });
+    
+    // Initialize other controls
+    initializeControls();
+});
+
+function initializeVirtualTour() {
+    // Hide loading screen after a short delay
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+    }, 2000);
+    
+    // Initialize Pannellum viewer
+    viewer = pannellum.viewer('panorama-viewer', {
+        type: 'equirectangular',
+        panorama: roomData.living.panorama,
+        autoLoad: true,
+        autoRotate: -2,
+        autoRotateInactivityDelay: 3000,
+        showZoomCtrl: true,
+        showFullscreenCtrl: false,
+        showControls: true,
+        hotSpots: createHotspots(roomData.living.hotspots),
+        compass: true,
+        northOffset: 0,
+        preview: '../assets/images/360/preview.jpg'
+    });
+    
+    // Initialize room navigation
+    initializeRoomNavigation();
+}
+
+function createHotspots(hotspots) {
+    return hotspots.map(hotspot => ({
+        ...hotspot,
+        cssClass: 'hotspot-nav',
+        createTooltipFunc: function(hotSpotDiv, args) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'hotspot-tooltip bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm';
+            tooltip.innerHTML = args.text;
+            hotSpotDiv.appendChild(tooltip);
+        },
+        clickHandlerFunc: function() {
+            switchRoom(hotspot.sceneId);
+        }
+    }));
+}
+
+function initializeRoomNavigation() {
+    const roomButtons = document.querySelectorAll('.room-btn');
+    
+    roomButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const roomId = this.getAttribute('data-room');
+            switchRoom(roomId);
+            
+            // Update active button
+            roomButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600'));
+            roomButtons.forEach(btn => btn.classList.add('bg-gray-600'));
+            this.classList.add('active', 'bg-blue-600');
+            this.classList.remove('bg-gray-600');
+        });
+    });
+}
+
+function switchRoom(roomId) {
+    const room = roomData[roomId];
+    if (!room) return;
+    
+    // Update current room display
+    document.getElementById('current-room').textContent = room.name;
+    
+    // Load new panorama
+    viewer.loadScene(room.panorama, room.panorama, {
+        hotSpots: createHotspots(room.hotspots)
+    });
+    
+    // Update info panel if open
+    updateInfoPanel(room);
+}
+
+function updateInfoPanel(room) {
+    const infoPanel = document.getElementById('info-panel');
+    if (!infoPanel.classList.contains('hidden')) {
+        document.getElementById('info-title').textContent = `معلومات ${room.name}`;
+        
+        const infoContent = document.getElementById('info-content');
+        infoContent.innerHTML = `
+            <p class="text-gray-300 mb-4">${room.info.description}</p>
+            <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                    <span class="text-gray-400">المساحة:</span>
+                    <span class="font-bold">${room.info.area}</span>
+                </div>
+                ${Object.entries(room.info).slice(1).map(([key, value]) => `
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400">${getArabicLabel(key)}:</span>
+                        <span class="font-bold">${value}</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+}
+
+function getArabicLabel(key) {
+    const labels = {
+        windows: 'النوافذ',
+        lighting: 'الإضاءة',
+        appliances: 'الأجهزة',
+        style: 'الطراز',
+        features: 'المميزات',
+        view: 'الإطلالة'
+    };
+    return labels[key] || key;
+}
+
+function initializeControls() {
+    // Auto rotate button
+    document.getElementById('auto-rotate-btn').addEventListener('click', function() {
+        isAutoRotating = !isAutoRotating;
+        if (viewer) {
+            if (isAutoRotating) {
+                viewer.setAutoRotate(-2);
+                this.innerHTML = '<i class="fas fa-pause ml-2"></i>إيقاف الدوران';
+                this.classList.add('bg-red-600');
+                this.classList.remove('bg-emerald-600');
+            } else {
+                viewer.setAutoRotate(false);
+                this.innerHTML = '<i class="fas fa-sync-alt ml-2"></i>دوران تلقائي';
+                this.classList.add('bg-emerald-600');
+                this.classList.remove('bg-red-600');
+            }
+        }
+    });
+    
+    // Info button
+    document.getElementById('info-btn').addEventListener('click', function() {
+        const infoPanel = document.getElementById('info-panel');
+        infoPanel.classList.toggle('hidden');
+    });
+    
+    // Close info panel
+    document.getElementById('close-info').addEventListener('click', function() {
+        document.getElementById('info-panel').classList.add('hidden');
+    });
+    
+    // Fullscreen button
+    document.getElementById('fullscreen-btn').addEventListener('click', function() {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+            this.innerHTML = '<i class="fas fa-expand text-lg"></i>';
+        } else {
+            document.documentElement.requestFullscreen();
+            this.innerHTML = '<i class="fas fa-compress text-lg"></i>';
+        }
+    });
+    
+    // VR button
+    document.getElementById('vr-btn').addEventListener('click', function() {
+        if (viewer) {
+            // This would integrate with WebXR for VR devices
+            alert('ميزة الواقع الافتراضي ستكون متاحة قريباً!');
+        }
+    });
+    
+    // Share button
+    document.getElementById('share-btn').addEventListener('click', function() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'جولة افتراضية - شقة 4 غرف',
+                text: 'شاهد هذه الجولة الافتراضية الرائعة للعقار',
+                url: window.location.href
+            });
+        } else {
+            // Fallback for browsers that don't support Web Share API
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('تم نسخ الرابط إلى الحافظة!');
+            });
+        }
+    });
+}
+
+// Handle keyboard controls
+document.addEventListener('keydown', function(e) {
+    switch(e.key) {
+        case 'f':
+        case 'F':
+            document.getElementById('fullscreen-btn').click();
+            break;
+        case 'i':
+        case 'I':
+            document.getElementById('info-btn').click();
+            break;
+        case 'r':
+        case 'R':
+            document.getElementById('auto-rotate-btn').click();
+            break;
+        case 'Escape':
+            document.getElementById('info-panel').classList.add('hidden');
+            break;
+    }
+});
+
+// Add custom CSS for hotspots
+const style = document.createElement('style');
+style.textContent = `
+    .hotspot-nav {
+        width: 30px;
+        height: 30px;
+        background: rgba(59, 130, 246, 0.8);
+        border: 3px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        animation: pulse 2s infinite;
+        position: relative;
+    }
+    
+    .hotspot-nav:hover {
+        background: rgba(59, 130, 246, 1);
+        transform: scale(1.2);
+    }
+    
+    .hotspot-tooltip {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+    }
+    
+    .hotspot-nav:hover .hotspot-tooltip {
+        opacity: 1;
+    }
+    
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('🏠 Virtual tour page initialized successfully!');
+</script>
+
 </body>
 </html>
