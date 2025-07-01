@@ -1,10 +1,771 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الصناعات الغذائية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلات الصناعات الغذائية - رفيق توريق</title>
+    <meta name="description" content="آلات ومعدات الصناعات الغذائية عالية الجودة للمطاعم والمصانع ومعامل الأغذية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/machinery.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>الصناعات الغذائية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-cogs ml-2"></i>
+                        الآلات والمعدات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-home ml-3 text-green-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="categories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-th-large ml-3 text-green-500"></i>
+                                <span>تصنيفات الآلات</span>
+                            </a>
+                            <a href="food-industry.html" class="flex items-center px-4 py-3 text-green-600 bg-green-50 border-r-4 border-green-600">
+                                <i class="fas fa-utensils ml-3 text-green-500"></i>
+                                <span>الصناعات الغذائية</span>
+                            </a>
+                            <a href="plastic-industry.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-cube ml-3 text-green-500"></i>
+                                <span>الصناعات البلاستيكية</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="help-selection.html" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-question-circle ml-2"></i>
+                    مساعدة الاختيار
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الآلات والمعدات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="categories.html" class="text-blue-600 hover:text-blue-800 transition-colors">التصنيفات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">الصناعات الغذائية</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-emerald-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"food\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/><path d=\"M5 5 L15 5 L15 15 L5 15 Z\" fill=\"none\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23food)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-green-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-utensils text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">آلات الصناعات الغذائية المتطورة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">آلات الصناعات الغذائية</h1>
+                <p class="text-xl mb-8 text-green-100 leading-relaxed">
+                    معدات متطورة لتصنيع وتعبئة وتغليف المواد الغذائية بأعلى معايير الجودة والسلامة
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="120">0</div>
+                        <div class="text-sm text-green-200">نوع آلة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="25">0</div>
+                        <div class="text-sm text-green-200">علامة تجارية</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="500">0</div>
+                        <div class="text-sm text-green-200">عميل راضي</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="99">0</div>
+                        <div class="text-sm text-green-200">% جودة</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#products" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-eye ml-2"></i>
+                        تصفح الآلات
+                    </a>
+                    <a href="help-selection.html?category=food" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                        <i class="fas fa-question-circle ml-2"></i>
+                        مساعدة الاختيار
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-green-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-utensils text-8xl text-green-900"></i>
+                    </div>
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-green-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-cookie-bite text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-orange-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-bread-slice text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-5 bg-red-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-apple-alt text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">فئات آلات الصناعات الغذائية</h2>
+            <p class="text-xl text-gray-600">اختر الفئة المناسبة لنوع إنتاجك الغذائي</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Mixing Equipment -->
+            <div class="category-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-blender text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">معدات الخلط والعجن</h3>
+                    <p class="text-gray-600 mb-4 text-sm">خلاطات ومعدات عجن للمخابز والحلويات</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-orange-600">28 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-all font-bold text-sm" onclick="filterBySubcategory('mixing')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Packaging Equipment -->
+            <div class="category-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-box text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">معدات التعبئة والتغليف</h3>
+                    <p class="text-gray-600 mb-4 text-sm">آلات تعبئة وتغليف المواد الغذائية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-blue-600">35 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm" onclick="filterBySubcategory('packaging')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cooking Equipment -->
+            <div class="category-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">معدات الطبخ والتسخين</h3>
+                    <p class="text-gray-600 mb-4 text-sm">أفران ومعدات طبخ صناعية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-red-600">22 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-all font-bold text-sm" onclick="filterBySubcategory('cooking')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Processing Equipment -->
+            <div class="category-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">معدات المعالجة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">آلات تقطيع وطحن ومعالجة الأغذية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-purple-600">35 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-all font-bold text-sm" onclick="filterBySubcategory('processing')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters Section -->
+<section class="py-8 bg-gray-50 border-y">
+    <div class="container mx-auto px-4">
+        <div class="bg-white rounded-xl p-6 shadow-md" data-aos="fade-up">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input type="text" id="food-machinery-search" placeholder="ابحث عن آلة غذائية..." 
+                               class="w-full pr-12 pl-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <select class="food-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" data-filter="subcategory">
+                        <option value="">جميع الفئات</option>
+                        <option value="mixing">معدات الخلط</option>
+                        <option value="packaging">معدات التعبئة</option>
+                        <option value="cooking">معدات الطبخ</option>
+                        <option value="processing">معدات المعالجة</option>
+                        <option value="refrigeration">معدات التبريد</option>
+                        <option value="cleaning">معدات التنظيف</option>
+                    </select>
+
+                    <select class="food-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" data-filter="capacity">
+                        <option value="">جميع السعات</option>
+                        <option value="small">صغيرة (أقل من 50 كجم)</option>
+                        <option value="medium">متوسطة (50-200 كجم)</option>
+                        <option value="large">كبيرة (أكثر من 200 كجم)</option>
+                    </select>
+
+                    <select class="food-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" data-filter="condition">
+                        <option value="">جميع الحالات</option>
+                        <option value="new">جديدة</option>
+                        <option value="used">مستعملة</option>
+                        <option value="refurbished">مجددة</option>
+                    </select>
+
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-filter ml-2"></i>
+                        تطبيق الفلاتر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section id="products" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between mb-8" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800">آلات الصناعات الغذائية</h2>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-600">ترتيب حسب:</span>
+                <select class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 bg-white">
+                    <option value="newest">الأحدث</option>
+                    <option value="price-low">السعر: من الأقل للأعلى</option>
+                    <option value="price-high">السعر: من الأعلى للأقل</option>
+                    <option value="popular">الأكثر شعبية</option>
+                    <option value="rating">الأعلى تقييماً</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="food-products-grid">
+            <!-- Product 1: Industrial Mixer -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-subcategory="mixing" data-capacity="large" data-condition="new">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/industrial-mixer.jpg" alt="خلاط صناعي للأغذية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        خصم 15%
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        سعة 500 لتر
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">خلط وعجن</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">خلاط صناعي للأغذية 500L</h3>
+                    <p class="text-gray-600 text-sm mb-4">خلاط عالي الكفاءة مع نظام تحكم رقمي، مثالي للمخابز والمصانع</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مصنوع من الستانلس ستيل</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>نظام تحكم رقمي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ضمان سنتين</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <span class="text-sm text-gray-500 line-through">850,000 دج</span>
+                            <div class="text-xl font-bold text-green-600">722,500 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-truck ml-1"></i>
+                            توصيل مجاني
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=food-mixer-500" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Packaging Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-subcategory="packaging" data-capacity="medium" data-condition="new">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/packaging-machine.jpg" alt="ماكينة تعبئة أوتوماتيكية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        الأكثر مبيعاً
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        100 عبوة/دقيقة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">تعبئة وتغليف</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة تعبئة أوتوماتيكية</h3>
+                    <p class="text-gray-600 text-sm mb-4">ماكينة تعبئة متطورة للسوائل والمساحيق الغذائية</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>تعبئة دقيقة ومتسقة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>شاشة تحكم تعمل باللمس</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>سهولة التنظيف والصيانة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-blue-600">1,250,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-tools ml-1"></i>
+                            تركيب مجاني
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=packaging-auto" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: Industrial Oven -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-subcategory="cooking" data-capacity="large" data-condition="used">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/industrial-oven.jpg" alt="فرن صناعي للمخابز" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مستعمل
+                    </div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        وفر 40%
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        12 صينية
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">طبخ وتسخين</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">فرن صناعي للمخابز</h3>
+                    <p class="text-gray-600 text-sm mb-4">فرن عالي الكفاءة للمخابز والحلويات، حالة ممتازة</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>توزيع حرارة متجانس</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>نظام بخار مدمج</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>عزل حراري ممتاز</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <span class="text-sm text-gray-500 line-through">2,800,000 دج</span>
+                            <div class="text-xl font-bold text-red-600">1,680,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-certificate ml-1"></i>
+                            ضمان سنة
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=industrial-oven" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: Food Processor -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-subcategory="processing" data-capacity="medium" data-condition="new">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/food-processor.jpg" alt="معالج الأغذية الصناعي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متعدد الوظائف
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        200 كجم/ساعة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">معالجة</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">معالج الأغذية الصناعي</h3>
+                    <p class="text-gray-600 text-sm mb-4">آلة متعددة الوظائف للتقطيع والطحن والخلط</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>شفرات قابلة للتبديل</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>سرعات متغيرة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>نظام أمان متقدم</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-purple-600">980,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-shipping-fast ml-1"></i>
+                            شحن سريع
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=food-processor" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg" id="load-more-food-products">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من الآلات
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">العلامات التجارية المتاحة</h2>
+            <p class="text-xl text-gray-600">نتعامل مع أفضل الماركات العالمية</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <!-- Brand logos would go here -->
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">HOBART</span>
+                </div>
+                <p class="text-sm text-gray-600">معدات مطابخ احترافية</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">RATIONAL</span>
+                </div>
+                <p class="text-sm text-gray-600">أفران ذكية</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">TETRA PAK</span>
+                </div>
+                <p class="text-sm text-gray-600">حلول التعبئة</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">BOSCH</span>
+                </div>
+                <p class="text-sm text-gray-600">تقنيات التعبئة</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">ALFA LAVAL</span>
+                </div>
+                <p class="text-sm text-gray-600">معدات الألبان</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-2xl font-bold text-gray-600">MULTIVAC</span>
+                </div>
+                <p class="text-sm text-gray-600">آلات التفريغ</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-green-900 via-green-800 to-emerald-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل تحتاج إلى استشارة متخصصة؟</h2>
+            <p class="text-xl text-green-200 mb-8 max-w-2xl mx-auto">
+                فريقنا من الخبراء جاهز لمساعدتك في اختيار الآلة المناسبة لمشروعك الغذائي
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="help-selection.html?category=food" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-question-circle ml-2"></i>
+                    احصل على استشارة مجانية
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">آلات الصناعات الغذائية عالية الجودة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">فئات الآلات الغذائية</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterBySubcategory('mixing')">معدات الخلط</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterBySubcategory('packaging')">معدات التعبئة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterBySubcategory('cooking')">معدات الطبخ</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterBySubcategory('processing')">معدات المعالجة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="maintenance.html" class="text-gray-400 hover:text-white transition-colors">صيانة الآلات</a></li>
+                    <li><a href="spare-parts.html" class="text-gray-400 hover:text-white transition-colors">قطع الغيار</a></li>
+                    <li><a href="help-selection.html" class="text-gray-400 hover:text-white transition-colors">مساعدة الاختيار</a></li>
+                    <li><a href="used-machinery.html" class="text-gray-400 hover:text-white transition-colors">آلات مستعملة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">food@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - آلات الصناعات الغذائية. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/machinery.js"></script>
+
+<script>
+// Filter by subcategory function
+function filterBySubcategory(subcategory) {
+    const products = document.querySelectorAll('.product-card');
+    
+    products.forEach(product => {
+        const productSubcategory = product.getAttribute('data-subcategory');
+        
+        if (subcategory === 'all' || productSubcategory === subcategory) {
+            product.style.display = 'block';
+            product.style.opacity = '0';
+            setTimeout(() => {
+                product.style.opacity = '1';
+            }, 100);
+        } else {
+            product.style.display = 'none';
+        }
+    });
+    
+    // Scroll to products section
+    document.getElementById('products').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+</script>
+
 </body>
 </html>

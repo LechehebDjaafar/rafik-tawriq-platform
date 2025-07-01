@@ -1,10 +1,500 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>التغليف والتعليب</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلات التغليف والتعليب - رفيق توريق</title>
+    <meta name="description" content="آلات ومعدات التغليف والتعليب المتطورة لجميع أنواع المنتجات والصناعات">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/machinery.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>التغليف والتعليب</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-teal-600 font-bold flex items-center relative">
+                        <i class="fas fa-cogs ml-2"></i>
+                        الآلات والمعدات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="packaging.html" class="flex items-center px-4 py-3 text-teal-600 bg-teal-50 border-r-4 border-teal-600">
+                                <i class="fas fa-box ml-3 text-teal-500"></i>
+                                <span>التغليف والتعليب</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="help-selection.html" class="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-question-circle ml-2"></i>
+                    مساعدة الاختيار
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"packaging\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><rect x=\"5\" y=\"5\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23packaging)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10 pt-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">آلات التغليف والتعليب</h1>
+                <p class="text-xl mb-8 text-teal-100 leading-relaxed">
+                    حلول شاملة للتغليف والتعليب لجميع أنواع المنتجات مع أحدث التقنيات الآلية
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="90">0</div>
+                        <div class="text-sm text-teal-200">نوع آلة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="18">0</div>
+                        <div class="text-sm text-teal-200">علامة تجارية</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="350">0</div>
+                        <div class="text-sm text-teal-200">مشروع منجز</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="99">0</div>
+                        <div class="text-sm text-teal-200">% كفاءة</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-teal-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-box text-8xl text-teal-900"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Packaging Types -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع التغليف والتعليب</h2>
+            <p class="text-xl text-gray-600">حلول متنوعة لجميع احتياجات التغليف</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Filling -->
+            <div class="packaging-type bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-fill-drip text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التعبئة والملء</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تعبئة السوائل والمساحيق والمواد الصلبة</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-blue-600">25 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm" onclick="filterByType('filling')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sealing -->
+            <div class="packaging-type bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lock text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الختم والإغلاق</h3>
+                    <p class="text-gray-600 mb-4 text-sm">ختم وإغلاق العبوات بطرق مختلفة</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-green-600">22 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all font-bold text-sm" onclick="filterByType('sealing')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Labeling -->
+            <div class="packaging-type bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-tag text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">وضع الملصقات</h3>
+                    <p class="text-gray-600 mb-4 text-sm">وضع الملصقات والعلامات التجارية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-purple-600">18 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-all font-bold text-sm" onclick="filterByType('labeling')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wrapping -->
+            <div class="packaging-type bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-gift text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التغليف الخارجي</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تغليف المنتجات بمواد الحماية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-orange-600">25 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-all font-bold text-sm" onclick="filterByType('wrapping')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Applications -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">التطبيقات الصناعية</h2>
+            <p class="text-xl text-gray-600">آلات التغليف لجميع القطاعات الصناعية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Food Industry -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-utensils text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">الصناعات الغذائية</h3>
+                <p class="text-gray-600 mb-4">تغليف المواد الغذائية والمشروبات</p>
+                <div class="text-green-600 font-bold">30 حل متاح</div>
+            </div>
+
+            <!-- Pharmaceutical -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-pills text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">الصناعات الدوائية</h3>
+                <p class="text-gray-600 mb-4">تغليف معقم للأدوية والمستحضرات</p>
+                <div class="text-blue-600 font-bold">20 حل متاح</div>
+            </div>
+
+            <!-- Cosmetics -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-pink-100 text-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-spray-can text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">مستحضرات التجميل</h3>
+                <p class="text-gray-600 mb-4">تغليف أنيق للمستحضرات</p>
+                <div class="text-pink-600 font-bold">15 حل متاح</div>
+            </div>
+
+            <!-- Electronics -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-microchip text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">الإلكترونيات</h3>
+                <p class="text-gray-600 mb-4">تغليف واقي للأجهزة الإلكترونية</p>
+                <div class="text-purple-600 font-bold">12 حل متاح</div>
+            </div>
+
+            <!-- Automotive -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-car text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">قطع السيارات</h3>
+                <p class="text-gray-600 mb-4">تغليف قطع الغيار والمكونات</p>
+                <div class="text-orange-600 font-bold">8 حل متاح</div>
+            </div>
+
+            <!-- Textiles -->
+            <div class="application-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-teal-100 text-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-tshirt text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">المنسوجات</h3>
+                <p class="text-gray-600 mb-4">تغليف الملابس والأقمشة</p>
+                <div class="text-teal-600 font-bold">5 حل متاح</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section id="products" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800">آلات التغليف والتعليب</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="packaging-products-grid">
+            <!-- Product 1: Filling Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-type="filling">
+                <div class="relative">
+                    <img src="../../assets/images/packaging-machinery/filling-machine.jpg" alt="ماكينة تعبئة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        أوتوماتيكية
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة التعبئة الأوتوماتيكية</h3>
+                    <p class="text-gray-600 text-sm mb-4">تعبئة دقيقة للسوائل والمساحيق</p>
+                    <div class="text-xl font-bold text-blue-600 mb-4">1,250,000 دج</div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm">
+                        طلب عرض سعر
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: Sealing Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-type="sealing">
+                <div class="relative">
+                    <img src="../../assets/images/packaging-machinery/sealing-machine.jpg" alt="ماكينة ختم" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        حراري
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة الختم الحراري</h3>
+                    <p class="text-gray-600 text-sm mb-4">ختم محكم للأكياس والعبوات</p>
+                    <div class="text-xl font-bold text-green-600 mb-4">450,000 دج</div>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all font-bold text-sm">
+                        طلب عرض سعر
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: Labeling Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-type="labeling">
+                <div class="relative">
+                    <img src="../../assets/images/packaging-machinery/labeling-machine.jpg" alt="ماكينة وضع الملصقات" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        دقيقة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة وضع الملصقات</h3>
+                    <p class="text-gray-600 text-sm mb-4">وضع دقيق للملصقات على العبوات</p>
+                    <div class="text-xl font-bold text-purple-600 mb-4">850,000 دج</div>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-all font-bold text-sm">
+                        طلب عرض سعر
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4: Wrapping Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-type="wrapping">
+                <div class="relative">
+                    <img src="../../assets/images/packaging-machinery/wrapping-machine.jpg" alt="ماكينة التغليف" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مرنة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة التغليف بالبلاستيك</h3>
+                    <p class="text-gray-600 text-sm mb-4">تغليف بالبلاستيك المطاط للحماية</p>
+                    <div class="text-xl font-bold text-orange-600 mb-4">680,000 دج</div>
+                    <button class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-all font-bold text-sm">
+                        طلب عرض سعر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">آلات التغليف والتعليب المتطورة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">أنواع التغليف</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByType('filling')">التعبئة والملء</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByType('sealing')">الختم والإغلاق</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByType('labeling')">وضع الملصقات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByType('wrapping')">التغليف الخارجي</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">التطبيقات</h4>
+                <ul class="space-y-2">
+                    <li><span class="text-gray-400">الصناعات الغذائية</span></li>
+                    <li><span class="text-gray-400">الصناعات الدوائية</span></li>
+                    <li><span class="text-gray-400">مستحضرات التجميل</span></li>
+                    <li><span class="text-gray-400">الإلكترونيات</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">packaging@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - آلات التغليف والتعليب. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/machinery.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    initializeCounters();
+});
+
+function initializeCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+window.filterByType = function(type) {
+    const products = document.querySelectorAll('.product-card');
+    
+    products.forEach(product => {
+        const productType = product.getAttribute('data-type');
+        
+        if (type === 'all' || productType === type) {
+            product.style.display = 'block';
+            product.style.opacity = '0';
+            setTimeout(() => {
+                product.style.opacity = '1';
+            }, 100);
+        } else {
+            product.style.display = 'none';
+        }
+    });
+    
+    document.getElementById('products').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+};
+
+console.log('📦 Packaging machinery page initialized successfully!');
+</script>
+
 </body>
 </html>

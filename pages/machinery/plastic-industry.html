@@ -1,10 +1,824 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الصناعات البلاستيكية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلات الصناعات البلاستيكية - رفيق توريق</title>
+    <meta name="description" content="آلات ومعدات الصناعات البلاستيكية المتطورة للحقن والبثق والنفخ والتشكيل">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/machinery.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>الصناعات البلاستيكية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-purple-600 font-bold flex items-center relative">
+                        <i class="fas fa-cogs ml-2"></i>
+                        الآلات والمعدات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-home ml-3 text-purple-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="categories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-th-large ml-3 text-purple-500"></i>
+                                <span>تصنيفات الآلات</span>
+                            </a>
+                            <a href="food-industry.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-utensils ml-3 text-purple-500"></i>
+                                <span>الصناعات الغذائية</span>
+                            </a>
+                            <a href="plastic-industry.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
+                                <i class="fas fa-cube ml-3 text-purple-500"></i>
+                                <span>الصناعات البلاستيكية</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="help-selection.html" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-question-circle ml-2"></i>
+                    مساعدة الاختيار
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-purple-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الآلات والمعدات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="categories.html" class="text-blue-600 hover:text-blue-800 transition-colors">التصنيفات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">الصناعات البلاستيكية</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"plastic\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><rect x=\"5\" y=\"5\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"2\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23plastic)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-cube text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">تقنيات متطورة لصناعة البلاستيك</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">آلات الصناعات البلاستيكية</h1>
+                <p class="text-xl mb-8 text-purple-100 leading-relaxed">
+                    معدات حديثة للحقن والبثق والنفخ والتشكيل البلاستيكي بأحدث التقنيات العالمية
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="85">0</div>
+                        <div class="text-sm text-purple-200">نوع آلة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="20">0</div>
+                        <div class="text-sm text-purple-200">علامة تجارية</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="300">0</div>
+                        <div class="text-sm text-purple-200">مشروع منجز</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="98">0</div>
+                        <div class="text-sm text-purple-200">% دقة</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#products" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-eye ml-2"></i>
+                        تصفح الآلات
+                    </a>
+                    <a href="help-selection.html?category=plastic" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                        <i class="fas fa-question-circle ml-2"></i>
+                        مساعدة الاختيار
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-cube text-8xl text-purple-900"></i>
+                    </div>
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-purple-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-industry text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-pink-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-shapes text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-5 bg-blue-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-recycle text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Types -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">عمليات التصنيع البلاستيكي</h2>
+            <p class="text-xl text-gray-600">تقنيات متنوعة لتشكيل وتصنيع المنتجات البلاستيكية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Injection Molding -->
+            <div class="process-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-syringe text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الحقن البلاستيكي</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تشكيل المنتجات المعقدة بدقة عالية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-blue-600">32 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm" onclick="filterByProcess('injection')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Extrusion -->
+            <div class="process-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-stream text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">البثق البلاستيكي</h3>
+                    <p class="text-gray-600 mb-4 text-sm">إنتاج الأنابيب والملامح المستمرة</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-green-600">25 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all font-bold text-sm" onclick="filterByProcess('extrusion')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blow Molding -->
+            <div class="process-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-wind text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">النفخ البلاستيكي</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تصنيع الزجاجات والحاويات المجوفة</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-orange-600">18 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-all font-bold text-sm" onclick="filterByProcess('blow')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+
+            <!-- Thermoforming -->
+            <div class="process-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-fire text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التشكيل الحراري</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تشكيل الألواح البلاستيكية بالحرارة</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-lg font-bold text-red-600">10 آلة</div>
+                        <div class="text-xs text-gray-500">متاحة</div>
+                    </div>
+                    <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-all font-bold text-sm" onclick="filterByProcess('thermoforming')">
+                        عرض الآلات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters Section -->
+<section class="py-8 bg-gray-50 border-y">
+    <div class="container mx-auto px-4">
+        <div class="bg-white rounded-xl p-6 shadow-md" data-aos="fade-up">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input type="text" id="plastic-machinery-search" placeholder="ابحث عن آلة بلاستيكية..." 
+                               class="w-full pr-12 pl-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4">
+                    <select class="plastic-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" data-filter="process">
+                        <option value="">جميع العمليات</option>
+                        <option value="injection">الحقن</option>
+                        <option value="extrusion">البثق</option>
+                        <option value="blow">النفخ</option>
+                        <option value="thermoforming">التشكيل الحراري</option>
+                        <option value="recycling">إعادة التدوير</option>
+                    </select>
+
+                    <select class="plastic-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" data-filter="tonnage">
+                        <option value="">جميع الأحجام</option>
+                        <option value="small">صغيرة (أقل من 100 طن)</option>
+                        <option value="medium">متوسطة (100-500 طن)</option>
+                        <option value="large">كبيرة (أكثر من 500 طن)</option>
+                    </select>
+
+                    <select class="plastic-filter px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" data-filter="automation">
+                        <option value="">مستوى الأتمتة</option>
+                        <option value="manual">يدوي</option>
+                        <option value="semi">شبه آلي</option>
+                        <option value="full">آلي بالكامل</option>
+                    </select>
+
+                    <button class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-filter ml-2"></i>
+                        تطبيق الفلاتر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section id="products" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between mb-8" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800">آلات الصناعات البلاستيكية</h2>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-600">ترتيب حسب:</span>
+                <select class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 bg-white">
+                    <option value="newest">الأحدث</option>
+                    <option value="tonnage-high">الحمولة: من الأعلى للأقل</option>
+                    <option value="tonnage-low">الحمولة: من الأقل للأعلى</option>
+                    <option value="price-low">السعر: من الأقل للأعلى</option>
+                    <option value="price-high">السعر: من الأعلى للأقل</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="plastic-products-grid">
+            <!-- Product 1: Injection Molding Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-process="injection" data-tonnage="medium" data-automation="full">
+                <div class="relative">
+                    <img src="../../assets/images/plastic-machinery/injection-machine.jpg" alt="ماكينة حقن بلاستيكية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        الأكثر مبيعاً
+                    </div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        آلي بالكامل
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        250 طن
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">حقن</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة حقن بلاستيكية 250T</h3>
+                    <p class="text-gray-600 text-sm mb-4">ماكينة حقن عالية الدقة مع نظام تحكم متطور</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>نظام تحكم CNC</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>توفير طاقة 30%</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>دقة عالية ±0.02mm</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-blue-600">2,850,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-tools ml-1"></i>
+                            تدريب مجاني
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=injection-250t" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Extrusion Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-process="extrusion" data-tonnage="large" data-automation="semi">
+                <div class="relative">
+                    <img src="../../assets/images/plastic-machinery/extrusion-machine.jpg" alt="ماكينة بثق بلاستيكية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        خصم 20%
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        Ø90mm
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">بثق</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة بثق للأنابيب 90mm</h3>
+                    <p class="text-gray-600 text-sm mb-4">خط إنتاج متكامل للأنابيب البلاستيكية</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إنتاجية عالية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تحكم في السماكة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>قطع أوتوماتيكي</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <span class="text-sm text-gray-500 line-through">4,200,000 دج</span>
+                            <div class="text-xl font-bold text-green-600">3,360,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-truck ml-1"></i>
+                            توصيل مجاني
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=extrusion-90mm" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: Blow Molding Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-process="blow" data-tonnage="small" data-automation="full">
+                <div class="relative">
+                    <img src="../../assets/images/plastic-machinery/blow-molding.jpg" alt="ماكينة نفخ بلاستيكية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متخصصة
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        2L زجاجات
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">نفخ</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة نفخ الزجاجات 2L</h3>
+                    <p class="text-gray-600 text-sm mb-4">ماكينة نفخ عالية السرعة للزجاجات البلاستيكية</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span>سرعة 2000 زجاجة/ساعة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span>تحكم في سماكة الجدار</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span>نظام تبريد سريع</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <div class="text-xl font-bold text-orange-600">1,950,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-certificate ml-1"></i>
+                            ضمان سنتين
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=blow-molding-2l" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: Thermoforming Machine -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-process="thermoforming" data-tonnage="medium" data-automation="semi">
+                <div class="relative">
+                    <img src="../../assets/images/plastic-machinery/thermoforming.jpg" alt="ماكينة تشكيل حراري" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مستعملة
+                    </div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        وفر 35%
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs">
+                        1200x800mm
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">تشكيل حراري</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة تشكيل حراري</h3>
+                    <p class="text-gray-600 text-sm mb-4">ماكينة تشكيل للأطباق والعبوات البلاستيكية</p>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>تشكيل دقيق ومتجانس</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>نظام تسخين متطور</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span>قطع مدمج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-right">
+                            <span class="text-sm text-gray-500 line-through">2,300,000 دج</span>
+                            <div class="text-xl font-bold text-red-600">1,495,000 دج</div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-wrench ml-1"></i>
+                            صيانة شاملة
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="product-details.html?id=thermoforming" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <button class="flex-1 bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 transition-all text-sm font-bold">
+                            <i class="fas fa-shopping-cart ml-1"></i>
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg" id="load-more-plastic-products">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من الآلات
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Specifications -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">المواصفات التقنية</h2>
+            <p class="text-xl text-gray-600">معايير عالية الجودة لجميع آلاتنا البلاستيكية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Specification 1 -->
+            <div class="spec-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-thermometer-half text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">التحكم في درجة الحرارة</h3>
+                <p class="text-sm text-gray-600 mb-3">دقة ±1°C في جميع المناطق</p>
+                <div class="text-blue-600 font-bold">معايير CE</div>
+            </div>
+
+            <!-- Specification 2 -->
+            <div class="spec-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-tachometer-alt text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">الضغط والسرعة</h3>
+                <p class="text-sm text-gray-600 mb-3">تحكم دقيق في معدلات الإنتاج</p>
+                <div class="text-green-600 font-bold">ISO 9001</div>
+            </div>
+
+            <!-- Specification 3 -->
+            <div class="spec-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">أنظمة الأمان</h3>
+                <p class="text-sm text-gray-600 mb-3">حماية شاملة للمشغلين</p>
+                <div class="text-purple-600 font-bold">معايير السلامة</div>
+            </div>
+
+            <!-- Specification 4 -->
+            <div class="spec-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-leaf text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">كفاءة الطاقة</h3>
+                <p class="text-sm text-gray-600 mb-3">توفير 30% من استهلاك الكهرباء</p>
+                <div class="text-orange-600 font-bold">صديقة للبيئة</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">العلامات التجارية الرائدة</h2>
+            <p class="text-xl text-gray-600">شراكات مع أفضل مصنعي الآلات البلاستيكية عالمياً</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">HAITIAN</span>
+                </div>
+                <p class="text-sm text-gray-600">آلات الحقن</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">KRAUSS MAFFEI</span>
+                </div>
+                <p class="text-sm text-gray-600">تقنيات متقدمة</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">BATTENFELD</span>
+                </div>
+                <p class="text-sm text-gray-600">آلات البثق</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">KRONES</span>
+                </div>
+                <p class="text-sm text-gray-600">آلات النفخ</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">ARBURG</span>
+                </div>
+                <p class="text-sm text-gray-600">حلول الحقن</p>
+            </div>
+            
+            <div class="brand-card bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
+                <div class="h-16 flex items-center justify-center mb-4">
+                    <span class="text-xl font-bold text-gray-600">HUSKY</span>
+                </div>
+                <p class="text-sm text-gray-600">تقنيات PET</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل تحتاج إلى حل مخصص؟</h2>
+            <p class="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+                فريقنا التقني جاهز لتصميم خط إنتاج مخصص يناسب احتياجاتك الصناعية
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="help-selection.html?category=plastic" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-cogs ml-2"></i>
+                    تصميم خط إنتاج
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل مع الخبراء
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">آلات الصناعات البلاستيكية المتطورة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">عمليات التصنيع</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('injection')">الحقن البلاستيكي</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('extrusion')">البثق البلاستيكي</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('blow')">النفخ البلاستيكي</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('thermoforming')">التشكيل الحراري</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="maintenance.html" class="text-gray-400 hover:text-white transition-colors">صيانة الآلات</a></li>
+                    <li><a href="spare-parts.html" class="text-gray-400 hover:text-white transition-colors">قطع الغيار</a></li>
+                    <li><a href="help-selection.html" class="text-gray-400 hover:text-white transition-colors">تصميم خطوط الإنتاج</a></li>
+                    <li><a href="used-machinery.html" class="text-gray-400 hover:text-white transition-colors">آلات مستعملة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">plastic@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - آلات الصناعات البلاستيكية. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/machinery.js"></script>
+
+<script>
+// Filter by process function
+function filterByProcess(process) {
+    const products = document.querySelectorAll('.product-card');
+    
+    products.forEach(product => {
+        const productProcess = product.getAttribute('data-process');
+        
+        if (process === 'all' || productProcess === process) {
+            product.style.display = 'block';
+            product.style.opacity = '0';
+            setTimeout(() => {
+                product.style.opacity = '1';
+            }, 100);
+        } else {
+            product.style.display = 'none';
+        }
+    });
+    
+    // Scroll to products section
+    document.getElementById('products').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+</script>
+
 </body>
 </html>

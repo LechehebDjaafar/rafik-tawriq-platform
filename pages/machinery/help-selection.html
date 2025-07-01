@@ -1,10 +1,1248 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>مساعدة الاختيار</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعدة الاختيار - رفيق توريق</title>
+    <meta name="description" content="استشارة مجانية لاختيار الآلة المناسبة لمشروعك مع خبراء متخصصين">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/machinery.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>مساعدة الاختيار</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-teal-600 font-bold flex items-center relative">
+                        <i class="fas fa-cogs ml-2"></i>
+                        الآلات والمعدات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+                                <i class="fas fa-home ml-3 text-teal-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="categories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+                                <i class="fas fa-th-large ml-3 text-teal-500"></i>
+                                <span>تصنيفات الآلات</span>
+                            </a>
+                            <a href="help-selection.html" class="flex items-center px-4 py-3 text-teal-600 bg-teal-50 border-r-4 border-teal-600">
+                                <i class="fas fa-question-circle ml-3 text-teal-500"></i>
+                                <span>مساعدة الاختيار</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="#consultation" class="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    استشارة مجانية
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-teal-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الآلات والمعدات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">مساعدة الاختيار</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"help\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"2\" fill=\"white\"/><path d=\"M10 10 Q15 5 20 10 Q15 15 10 10\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23help)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-teal-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-lightbulb text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">استشارة مجانية من خبراء متخصصين</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">مساعدة الاختيار</h1>
+                <p class="text-xl mb-8 text-teal-100 leading-relaxed">
+                    لا تعرف أي آلة تناسب مشروعك؟ دع خبراءنا يساعدونك في اختيار الآلة المثالية لاحتياجاتك
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                        <div class="text-sm text-teal-200">سنة خبرة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="20">0</div>
+                        <div class="text-sm text-teal-200">خبير متخصص</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1500">0</div>
+                        <div class="text-sm text-teal-200">مشروع ناجح</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="100">0</div>
+                        <div class="text-sm text-teal-200">% نجاح</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#wizard" class="bg-yellow-500 text-teal-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-magic ml-2"></i>
+                        ابدأ الآن
+                    </a>
+                    <a href="#consultation" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-teal-900 transition-all">
+                        <i class="fas fa-phone ml-2"></i>
+                        تحدث مع خبير
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-teal-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-question-circle text-8xl text-teal-900"></i>
+                    </div>
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-teal-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-green-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-check text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-5 bg-blue-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-cogs text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Selection Wizard -->
+<section id="wizard" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">معالج اختيار الآلة</h2>
+            <p class="text-xl text-gray-600">أجب على بعض الأسئلة البسيطة وسنساعدك في اختيار الآلة المناسبة</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mb-8" data-aos="fade-up">
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-sm font-medium text-gray-600">الخطوة <span id="current-step">1</span> من 5</span>
+                <span class="text-sm font-medium text-gray-600"><span id="progress-percent">20</span>% مكتمل</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+                <div id="progress-bar" class="bg-gradient-to-r from-teal-500 to-cyan-500 h-3 rounded-full transition-all duration-500" style="width: 20%"></div>
+            </div>
+        </div>
+
+        <!-- Wizard Form -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden" data-aos="fade-up">
+            <form id="selection-wizard">
+                <!-- Step 1: Industry Type -->
+                <div class="wizard-step active" data-step="1">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ما نوع الصناعة التي تعمل بها؟</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="food" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-transparent hover:border-green-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-utensils text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">الصناعات الغذائية</h4>
+                                        <p class="text-sm text-gray-600 mt-2">مخابز، مطاعم، مصانع أغذية</p>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="plastic" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border-2 border-transparent hover:border-purple-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-cube text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">الصناعات البلاستيكية</h4>
+                                        <p class="text-sm text-gray-600 mt-2">تشكيل، حقن، بثق</p>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="pharmaceutical" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-transparent hover:border-blue-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-pills text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">الصناعات الصيدلانية</h4>
+                                        <p class="text-sm text-gray-600 mt-2">أدوية، مستحضرات طبية</p>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="textile" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border-2 border-transparent hover:border-pink-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-tshirt text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">الصناعات النسيجية</h4>
+                                        <p class="text-sm text-gray-600 mt-2">أقمشة، ملابس، منسوجات</p>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="metallic" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-transparent hover:border-gray-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-hammer text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">الصناعات المعدنية</h4>
+                                        <p class="text-sm text-gray-600 mt-2">تشكيل، لحام، قطع</p>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label class="industry-option cursor-pointer">
+                                <input type="radio" name="industry" value="other" class="hidden">
+                                <div class="industry-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-transparent hover:border-orange-500 transition-all">
+                                    <div class="text-center">
+                                        <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <i class="fas fa-ellipsis-h text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800">أخرى</h4>
+                                        <p class="text-sm text-gray-600 mt-2">صناعات أخرى</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Production Scale -->
+                <div class="wizard-step" data-step="2">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ما حجم الإنتاج المطلوب؟</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <label class="scale-option cursor-pointer">
+                                <input type="radio" name="scale" value="small" class="hidden">
+                                <div class="scale-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-transparent hover:border-green-500 transition-all text-center">
+                                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-home text-2xl"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">إنتاج صغير</h4>
+                                    <p class="text-sm text-gray-600">للمشاريع الصغيرة والمحلات</p>
+                                    <div class="mt-4 text-green-600 font-bold">أقل من 100 وحدة/يوم</div>
+                                </div>
+                            </label>
+
+                            <label class="scale-option cursor-pointer">
+                                <input type="radio" name="scale" value="medium" class="hidden">
+                                <div class="scale-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-transparent hover:border-blue-500 transition-all text-center">
+                                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-building text-2xl"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">إنتاج متوسط</h4>
+                                    <p class="text-sm text-gray-600">للشركات المتوسطة</p>
+                                    <div class="mt-4 text-blue-600 font-bold">100-1000 وحدة/يوم</div>
+                                </div>
+                            </label>
+
+                            <label class="scale-option cursor-pointer">
+                                <input type="radio" name="scale" value="large" class="hidden">
+                                <div class="scale-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border-2 border-transparent hover:border-purple-500 transition-all text-center">
+                                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-industry text-2xl"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">إنتاج كبير</h4>
+                                    <p class="text-sm text-gray-600">للمصانع الكبيرة</p>
+                                    <div class="mt-4 text-purple-600 font-bold">أكثر من 1000 وحدة/يوم</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Budget Range -->
+                <div class="wizard-step" data-step="3">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ما الميزانية المتاحة؟</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <label class="budget-option cursor-pointer">
+                                <input type="radio" name="budget" value="low" class="hidden">
+                                <div class="budget-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-transparent hover:border-green-500 transition-all text-center">
+                                    <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-dollar-sign text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">محدودة</h4>
+                                    <div class="text-green-600 font-bold">أقل من 500,000 دج</div>
+                                </div>
+                            </label>
+
+                            <label class="budget-option cursor-pointer">
+                                <input type="radio" name="budget" value="medium" class="hidden">
+                                <div class="budget-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-transparent hover:border-blue-500 transition-all text-center">
+                                    <div class="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-coins text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">متوسطة</h4>
+                                    <div class="text-blue-600 font-bold">500,000 - 2,000,000 دج</div>
+                                </div>
+                            </label>
+
+                            <label class="budget-option cursor-pointer">
+                                <input type="radio" name="budget" value="high" class="hidden">
+                                <div class="budget-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border-2 border-transparent hover:border-purple-500 transition-all text-center">
+                                    <div class="bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-gem text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">عالية</h4>
+                                    <div class="text-purple-600 font-bold">2,000,000 - 5,000,000 دج</div>
+                                </div>
+                            </label>
+
+                            <label class="budget-option cursor-pointer">
+                                <input type="radio" name="budget" value="unlimited" class="hidden">
+                                <div class="budget-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-transparent hover:border-orange-500 transition-all text-center">
+                                    <div class="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-infinity text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">مفتوحة</h4>
+                                    <div class="text-orange-600 font-bold">أكثر من 5,000,000 دج</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Timeline -->
+                <div class="wizard-step" data-step="4">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">متى تحتاج الآلة؟</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <label class="timeline-option cursor-pointer">
+                                <input type="radio" name="timeline" value="urgent" class="hidden">
+                                <div class="timeline-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border-2 border-transparent hover:border-red-500 transition-all text-center">
+                                    <div class="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-bolt text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">عاجل</h4>
+                                    <div class="text-red-600 font-bold">خلال أسبوع</div>
+                                </div>
+                            </label>
+
+                            <label class="timeline-option cursor-pointer">
+                                <input type="radio" name="timeline" value="soon" class="hidden">
+                                <div class="timeline-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-transparent hover:border-orange-500 transition-all text-center">
+                                    <div class="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-clock text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">قريباً</h4>
+                                    <div class="text-orange-600 font-bold">خلال شهر</div>
+                                </div>
+                            </label>
+
+                            <label class="timeline-option cursor-pointer">
+                                <input type="radio" name="timeline" value="planned" class="hidden">
+                                <div class="timeline-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-transparent hover:border-blue-500 transition-all text-center">
+                                    <div class="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-calendar text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">مخطط</h4>
+                                    <div class="text-blue-600 font-bold">خلال 3 أشهر</div>
+                                </div>
+                            </label>
+
+                            <label class="timeline-option cursor-pointer">
+                                <input type="radio" name="timeline" value="future" class="hidden">
+                                <div class="timeline-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-transparent hover:border-green-500 transition-all text-center">
+                                    <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-hourglass text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 mb-2">مستقبلي</h4>
+                                    <div class="text-green-600 font-bold">أكثر من 6 أشهر</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Contact Info -->
+                <div class="wizard-step" data-step="5">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">معلومات التواصل</h3>
+                        <div class="max-w-2xl mx-auto space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block mb-2 font-bold text-gray-700">الاسم الكامل *</label>
+                                    <input type="text" name="name" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                                </div>
+                                <div>
+                                    <label class="block mb-2 font-bold text-gray-700">رقم الهاتف *</label>
+                                    <input type="tel" name="phone" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="05XXXXXXXX">[2]
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block mb-2 font-bold text-gray-700">البريد الإلكتروني</label>
+                                <input type="email" name="email" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                            </div>
+                            
+                            <div>
+                                <label class="block mb-2 font-bold text-gray-700">اسم الشركة/المشروع</label>
+                                <input type="text" name="company" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                            </div>
+                            
+                            <div>
+                                <label class="block mb-2 font-bold text-gray-700">تفاصيل إضافية</label>
+                                <textarea name="details" rows="4" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all resize-none" placeholder="أي متطلبات خاصة أو معلومات إضافية..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="bg-gray-50 px-8 py-6 flex justify-between items-center">
+                    <button type="button" id="prev-btn" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                        السابق
+                    </button>
+                    
+                    <div class="flex space-x-2 space-x-reverse">
+                        <div class="step-dot w-3 h-3 rounded-full bg-teal-500"></div>
+                        <div class="step-dot w-3 h-3 rounded-full bg-gray-300"></div>
+                        <div class="step-dot w-3 h-3 rounded-full bg-gray-300"></div>
+                        <div class="step-dot w-3 h-3 rounded-full bg-gray-300"></div>
+                        <div class="step-dot w-3 h-3 rounded-full bg-gray-300"></div>
+                    </div>
+                    
+                    <button type="button" id="next-btn" class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-all font-bold disabled:opacity-50 disabled:cursor-not-allowed">
+                        التالي
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results" class="py-20 bg-gray-50 hidden">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">النتائج المقترحة</h2>
+            <p class="text-xl text-gray-600">بناءً على إجاباتك، إليك أفضل الخيارات المناسبة لك</p>
+        </div>
+
+        <div id="recommendations" class="space-y-8">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+
+        <div class="text-center mt-12">
+            <button onclick="restartWizard()" class="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition-all font-bold">
+                <i class="fas fa-redo ml-2"></i>
+                ابدأ من جديد
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Section -->
+<section id="consultation" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">تحدث مع خبير</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    هل تحتاج إلى استشارة شخصية؟ تحدث مع أحد خبرائنا المتخصصين للحصول على نصائح مخصصة لمشروعك
+                </p>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-teal-500 text-white p-3 rounded-full ml-4 mt-1">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">مكالمة هاتفية</h3>
+                            <p class="text-gray-600">تحدث مباشرة مع خبير متخصص</p>
+                            <div class="text-teal-600 font-bold mt-2">027 XX XX XX</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-500 text-white p-3 rounded-full ml-4 mt-1">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">واتساب</h3>
+                            <p class="text-gray-600">تواصل سريع عبر الواتساب</p>
+                            <div class="text-green-600 font-bold mt-2">05XXXXXXXX</div>[2]
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 text-white p-3 rounded-full ml-4 mt-1">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">موعد شخصي</h3>
+                            <p class="text-gray-600">احجز موعد لزيارة مكاتبنا</p>
+                            <div class="text-blue-600 font-bold mt-2">شلف، الجزائر</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">اطلب استشارة مجانية</h3>
+                    <form class="space-y-6" id="consultation-form">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block mb-2 font-bold text-gray-700">الاسم *</label>
+                                <input type="text" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-bold text-gray-700">الهاتف *</label>
+                                <input type="tel" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" placeholder="05XXXXXXXX">[2]
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 font-bold text-gray-700">البريد الإلكتروني</label>
+                            <input type="email" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 font-bold text-gray-700">نوع الاستشارة</label>
+                            <select class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                                <option>اختيار آلة مناسبة</option>
+                                <option>تقييم احتياجات المشروع</option>
+                                <option>مقارنة بين الخيارات</option>
+                                <option>استشارة فنية</option>
+                                <option>أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 font-bold text-gray-700">تفاصيل الاستشارة</label>
+                            <textarea rows="4" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 resize-none" placeholder="اشرح احتياجاتك بالتفصيل..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-all font-bold">
+                            <i class="fas fa-paper-plane ml-2"></i>
+                            اطلب الاستشارة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">مساعدة خبراء لاختيار الآلة المناسبة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدمات الاستشارة</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">اختيار الآلة المناسبة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">تقييم الاحتياجات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مقارنة الخيارات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">استشارة فنية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الصناعات</h4>
+                <ul class="space-y-2">
+                    <li><a href="food-industry.html" class="text-gray-400 hover:text-white transition-colors">الصناعات الغذائية</a></li>
+                    <li><a href="plastic-industry.html" class="text-gray-400 hover:text-white transition-colors">الصناعات البلاستيكية</a></li>
+                    <li><a href="pharmaceutical.html" class="text-gray-400 hover:text-white transition-colors">الصناعات الصيدلانية</a></li>
+                    <li><a href="textile.html" class="text-gray-400 hover:text-white transition-colors">الصناعات النسيجية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-whatsapp text-green-400 ml-3"></i>
+                        <span class="text-gray-400">05XXXXXXXX</span>[2]
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">help@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - مساعدة الاختيار. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/machinery.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Initialize wizard
+    initializeWizard();
+    
+    // Initialize counter animations
+    initializeCounters();
+    
+    // Initialize consultation form
+    initializeConsultationForm();
+});
+
+let currentStep = 1;
+const totalSteps = 5;
+let wizardData = {};
+
+function initializeWizard() {
+    // Initialize step navigation
+    document.getElementById('next-btn').addEventListener('click', nextStep);
+    document.getElementById('prev-btn').addEventListener('click', prevStep);
+    
+    // Initialize option selections
+    initializeOptionSelections();
+    
+    // Update initial state
+    updateStepDisplay();
+    updateNavigationButtons();
+}
+
+function initializeOptionSelections() {
+    // Industry selection
+    document.querySelectorAll('.industry-option input').forEach(input => {
+        input.addEventListener('change', function() {
+            updateOptionSelection('.industry-option', this);
+            wizardData.industry = this.value;
+            updateNavigationButtons();
+        });
+    });
+    
+    // Scale selection
+    document.querySelectorAll('.scale-option input').forEach(input => {
+        input.addEventListener('change', function() {
+            updateOptionSelection('.scale-option', this);
+            wizardData.scale = this.value;
+            updateNavigationButtons();
+        });
+    });
+    
+    // Budget selection
+    document.querySelectorAll('.budget-option input').forEach(input => {
+        input.addEventListener('change', function() {
+            updateOptionSelection('.budget-option', this);
+            wizardData.budget = this.value;
+            updateNavigationButtons();
+        });
+    });
+    
+    // Timeline selection
+    document.querySelectorAll('.timeline-option input').forEach(input => {
+        input.addEventListener('change', function() {
+            updateOptionSelection('.timeline-option', this);
+            wizardData.timeline = this.value;
+            updateNavigationButtons();
+        });
+    });
+}
+
+function updateOptionSelection(selector, selectedInput) {
+    // Reset all options
+    document.querySelectorAll(selector).forEach(option => {
+        const card = option.querySelector('.industry-card, .scale-card, .budget-card, .timeline-card');
+        card.classList.remove('border-teal-500', 'bg-teal-50');
+        card.classList.add('border-transparent');
+    });
+    
+    // Highlight selected option
+    const selectedCard = selectedInput.closest(selector).querySelector('.industry-card, .scale-card, .budget-card, .timeline-card');
+    selectedCard.classList.add('border-teal-500', 'bg-teal-50');
+    selectedCard.classList.remove('border-transparent');
+}
+
+function nextStep() {
+    if (currentStep < totalSteps) {
+        if (validateCurrentStep()) {
+            currentStep++;
+            updateStepDisplay();
+            updateNavigationButtons();
+            updateProgressBar();
+            
+            if (currentStep === totalSteps) {
+                // Last step - change button text
+                document.getElementById('next-btn').innerHTML = '<i class="fas fa-check ml-2"></i>إنهاء';
+            }
+        }
+    } else {
+        // Submit wizard
+        submitWizard();
+    }
+}
+
+function prevStep() {
+    if (currentStep > 1) {
+        currentStep--;
+        updateStepDisplay();
+        updateNavigationButtons();
+        updateProgressBar();
+        
+        // Reset button text
+        document.getElementById('next-btn').innerHTML = 'التالي <i class="fas fa-arrow-left mr-2"></i>';
+    }
+}
+
+function updateStepDisplay() {
+    // Hide all steps
+    document.querySelectorAll('.wizard-step').forEach(step => {
+        step.classList.remove('active');
+        step.style.display = 'none';
+    });
+    
+    // Show current step
+    const currentStepElement = document.querySelector(`[data-step="${currentStep}"]`);
+    if (currentStepElement) {
+        currentStepElement.style.display = 'block';
+        setTimeout(() => {
+            currentStepElement.classList.add('active');
+        }, 50);
+    }
+    
+    // Update step indicators
+    document.querySelectorAll('.step-dot').forEach((dot, index) => {
+        if (index < currentStep) {
+            dot.classList.remove('bg-gray-300');
+            dot.classList.add('bg-teal-500');
+        } else {
+            dot.classList.remove('bg-teal-500');
+            dot.classList.add('bg-gray-300');
+        }
+    });
+    
+    // Update step counter
+    document.getElementById('current-step').textContent = currentStep;
+}
+
+function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    // Previous button
+    prevBtn.disabled = currentStep === 1;
+    
+    // Next button
+    const isStepValid = validateCurrentStep();
+    nextBtn.disabled = !isStepValid;
+}
+
+function updateProgressBar() {
+    const progress = (currentStep / totalSteps) * 100;
+    document.getElementById('progress-bar').style.width = `${progress}%`;
+    document.getElementById('progress-percent').textContent = Math.round(progress);
+}
+
+function validateCurrentStep() {
+    switch (currentStep) {
+        case 1:
+            return wizardData.industry !== undefined;
+        case 2:
+            return wizardData.scale !== undefined;
+        case 3:
+            return wizardData.budget !== undefined;
+        case 4:
+            return wizardData.timeline !== undefined;
+        case 5:
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const phone = document.querySelector('input[name="phone"]').value.trim();
+            return name && phone;
+        default:
+            return true;
+    }
+}
+
+function submitWizard() {
+    // Collect final form data
+    const formData = new FormData(document.getElementById('selection-wizard'));
+    Object.keys(wizardData).forEach(key => {
+        formData.append(key, wizardData[key]);
+    });
+    
+    // Show loading
+    const nextBtn = document.getElementById('next-btn');
+    nextBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري المعالجة...';
+    nextBtn.disabled = true;
+    
+    // Simulate processing
+    setTimeout(() => {
+        showResults();
+        showNotification('تم إرسال طلبك بنجاح! سنتواصل معك قريباً.', 'success');
+    }, 2000);
+}
+
+function showResults() {
+    // Hide wizard
+    document.getElementById('wizard').style.display = 'none';
+    
+    // Show results
+    const resultsSection = document.getElementById('results');
+    resultsSection.classList.remove('hidden');
+    
+    // Generate recommendations
+    generateRecommendations();
+    
+    // Scroll to results
+    resultsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function generateRecommendations() {
+    const recommendationsContainer = document.getElementById('recommendations');
+    
+    // Sample recommendations based on wizard data
+    const recommendations = getRecommendationsBasedOnData();
+    
+    recommendationsContainer.innerHTML = recommendations.map(rec => `
+        <div class="recommendation-card bg-white rounded-xl p-6 shadow-lg border border-gray-200" data-aos="fade-up">
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+                <div>
+                    <img src="${rec.image}" alt="${rec.name}" class="w-full h-48 object-cover rounded-lg">
+                </div>
+                <div class="md:col-span-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-gray-800">${rec.name}</h3>
+                        <span class="bg-${rec.color}-100 text-${rec.color}-600 px-3 py-1 rounded-full text-sm font-medium">${rec.match}% مطابقة</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">${rec.description}</p>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <span class="text-sm text-gray-500">السعر المتوقع:</span>
+                            <div class="font-bold text-${rec.color}-600">${rec.price}</div>
+                        </div>
+                        <div>
+                            <span class="text-sm text-gray-500">مدة التوصيل:</span>
+                            <div class="font-bold text-gray-800">${rec.delivery}</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="product-details.html?id=${rec.id}" class="bg-${rec.color}-600 text-white px-6 py-2 rounded-lg hover:bg-${rec.color}-700 transition-all font-bold">
+                            عرض التفاصيل
+                        </a>
+                        <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-200 transition-all">
+                            طلب عرض سعر
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function getRecommendationsBasedOnData() {
+    // This would typically come from a backend API
+    // For demo purposes, we'll return sample data
+    
+    const baseRecommendations = {
+        food: [
+            {
+                id: 'food-mixer-500',
+                name: 'خلاط صناعي للأغذية 500L',
+                description: 'خلاط عالي الكفاءة مناسب للمخابز ومصانع الأغذية',
+                price: '722,500 دج',
+                delivery: '7-10 أيام',
+                match: 95,
+                color: 'green',
+                image: '../../assets/images/food-machinery/mixer-main.jpg'
+            }
+        ],
+        plastic: [
+            {
+                id: 'injection-250t',
+                name: 'ماكينة حقن بلاستيكية 250T',
+                description: 'ماكينة حقن عالية الدقة للمنتجات البلاستيكية',
+                price: '2,850,000 دج',
+                delivery: '14-21 يوم',
+                match: 92,
+                color: 'purple',
+                image: '../../assets/images/plastic-machinery/injection-machine.jpg'
+            }
+        ]
+    };
+    
+    return baseRecommendations[wizardData.industry] || baseRecommendations.food;
+}
+
+function restartWizard() {
+    currentStep = 1;
+    wizardData = {};
+    
+    // Reset form
+    document.getElementById('selection-wizard').reset();
+    
+    // Reset selections
+    document.querySelectorAll('.industry-option, .scale-option, .budget-option, .timeline-option').forEach(option => {
+        const card = option.querySelector('.industry-card, .scale-card, .budget-card, .timeline-card');
+        card.classList.remove('border-teal-500', 'bg-teal-50');
+        card.classList.add('border-transparent');
+    });
+    
+    // Hide results
+    document.getElementById('results').classList.add('hidden');
+    
+    // Show wizard
+    document.getElementById('wizard').style.display = 'block';
+    
+    // Reset step display
+    updateStepDisplay();
+    updateNavigationButtons();
+    updateProgressBar();
+    
+    // Scroll to wizard
+    document.getElementById('wizard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function initializeCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+function initializeConsultationForm() {
+    const form = document.getElementById('consultation-form');
+    if (form) {
+        form.addEventListener('submit', handleConsultationSubmission);
+    }
+}
+
+function handleConsultationSubmission(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Validate phone number format according to preferences[2]
+    const phoneInput = event.target.querySelector('input[type="tel"]');
+    if (phoneInput && !validatePhoneNumber(phoneInput.value)) {
+        showNotification('يرجى إدخال رقم هاتف صحيح (05XXXXXXXX أو 06XXXXXXXX أو 07XXXXXXXX)', 'error');
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = event.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري الإرسال...';
+    submitBtn.disabled = true;
+    
+    // Simulate form submission
+    setTimeout(() => {
+        showNotification('تم إرسال طلب الاستشارة بنجاح! سنتواصل معك خلال 24 ساعة.', 'success');
+        event.target.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // Send confirmation email simulation
+        console.log('📧 Sending consultation request:', data);
+    }, 2000);
+}
+
+function validatePhoneNumber(phone) {
+    // Validate phone number according to preferences[2]
+    const phoneRegex = /^0[567][0-9]{8}$/;
+    return phoneRegex.test(phone);
+}
+
+// Notification system
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `fixed top-24 right-4 z-50 bg-white border-l-4 rounded-lg shadow-xl p-4 transform translate-x-full transition-all duration-300 max-w-sm`;
+    
+    const colors = {
+        success: 'border-green-500',
+        error: 'border-red-500',
+        warning: 'border-yellow-500',
+        info: 'border-blue-500'
+    };
+    
+    const icons = {
+        success: 'fas fa-check-circle text-green-500',
+        error: 'fas fa-times-circle text-red-500',
+        warning: 'fas fa-exclamation-triangle text-yellow-500',
+        info: 'fas fa-info-circle text-blue-500'
+    };
+    
+    notification.classList.add(colors[type]);
+    
+    notification.innerHTML = `
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <i class="${icons[type]} text-lg"></i>
+            </div>
+            <div class="mr-3 flex-1">
+                <p class="text-sm font-medium text-gray-800">${message}</p>
+            </div>
+            <button class="notification-close flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+        notification.classList.add('translate-x-0');
+    }, 100);
+    
+    // Add close functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        removeNotification(notification);
+    });
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        removeNotification(notification);
+    }, 5000);
+}
+
+function removeNotification(notification) {
+    notification.classList.add('translate-x-full');
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 300);
+}
+
+// Mobile menu functionality
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+}
+
+// Header scroll effect
+function initializeHeaderScroll() {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+}
+
+// Utility functions
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// URL parameter handling
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Pre-fill wizard based on URL parameters
+function prefilWizardFromUrl() {
+    const category = getUrlParameter('category');
+    const type = getUrlParameter('type');
+    
+    if (category) {
+        wizardData.industry = category;
+        // Pre-select the industry option
+        const industryInput = document.querySelector(`input[name="industry"][value="${category}"]`);
+        if (industryInput) {
+            industryInput.checked = true;
+            updateOptionSelection('.industry-option', industryInput);
+        }
+    }
+    
+    if (type === 'used') {
+        // Add logic for used machinery preferences
+        console.log('Pre-filling for used machinery selection');
+    }
+}
+
+// Initialize everything when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu
+    initializeMobileMenu();
+    
+    // Initialize header scroll effect
+    initializeHeaderScroll();
+    
+    // Pre-fill wizard from URL parameters
+    prefilWizardFromUrl();
+});
+
+// Export functions for global use
+window.HelpSelectionJS = {
+    showNotification,
+    validatePhoneNumber,
+    restartWizard,
+    debounce
+};
+
+console.log('🎯 Help selection page initialized successfully!');
+</script>
+
 </body>
 </html>
+

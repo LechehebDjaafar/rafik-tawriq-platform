@@ -1,10 +1,1358 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تفاصيل المنتج</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - خلاط صناعي للأغذية 500L - رفيق توريق</title>
+    <meta name="description" content="تفاصيل شاملة عن خلاط صناعي للأغذية بسعة 500 لتر مع المواصفات التقنية والأسعار">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/machinery.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS for image gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
-<body>
-  <h1>تفاصيل المنتج</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-orange-600 font-bold flex items-center relative">
+                        <i class="fas fa-cogs ml-2"></i>
+                        الآلات والمعدات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-home ml-3 text-orange-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="categories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-th-large ml-3 text-orange-500"></i>
+                                <span>تصنيفات الآلات</span>
+                            </a>
+                            <a href="food-industry.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
+                                <i class="fas fa-utensils ml-3 text-orange-500"></i>
+                                <span>الصناعات الغذائية</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <button class="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-6 py-2 rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all transform hover:scale-105 shadow-lg" onclick="openQuoteModal()">
+                    <i class="fas fa-shopping-cart ml-2"></i>
+                    طلب عرض سعر
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-orange-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الآلات والمعدات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="food-industry.html" class="text-blue-600 hover:text-blue-800 transition-colors">الصناعات الغذائية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">خلاط صناعي للأغذية 500L</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Product Details Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div class="space-y-6" data-aos="fade-right">
+                <!-- Main Image Gallery -->
+                <div class="swiper product-gallery rounded-xl overflow-hidden shadow-lg">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../../assets/images/food-machinery/mixer-main.jpg" alt="خلاط صناعي للأغذية - المنظر الرئيسي" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/images/food-machinery/mixer-interior.jpg" alt="خلاط صناعي للأغذية - الداخل" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/images/food-machinery/mixer-control.jpg" alt="خلاط صناعي للأغذية - لوحة التحكم" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/images/food-machinery/mixer-operation.jpg" alt="خلاط صناعي للأغذية - أثناء التشغيل" class="w-full h-96 object-cover">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <!-- Thumbnail Gallery -->
+                <div class="swiper product-thumbnails">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../../assets/images/food-machinery/mixer-main.jpg" alt="صورة مصغرة 1" class="w-full h-20 object-cover rounded-lg border-2 border-transparent hover:border-orange-500 transition-all">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../../assets/images/food-machinery/mixer-interior.jpg" alt="صورة مصغرة 2" class="w-full h-20 object-cover rounded-lg border-2 border-transparent hover:border-orange-500 transition-all">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../../assets/images/food-machinery/mixer-control.jpg" alt="صورة مصغرة 3" class="w-full h-20 object-cover rounded-lg border-2 border-transparent hover:border-orange-500 transition-all">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="../../assets/images/food-machinery/mixer-operation.jpg" alt="صورة مصغرة 4" class="w-full h-20 object-cover rounded-lg border-2 border-transparent hover:border-orange-500 transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Badges -->
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                        <i class="fas fa-certificate ml-2"></i>
+                        ضمان سنتين
+                    </span>
+                    <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                        <i class="fas fa-truck ml-2"></i>
+                        توصيل مجاني
+                    </span>
+                    <span class="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                        <i class="fas fa-tools ml-2"></i>
+                        تركيب مجاني
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="space-y-6" data-aos="fade-left">
+                <!-- Product Header -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">الصناعات الغذائية</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">جديد</span>
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">خصم 15%</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">خلاط صناعي للأغذية 500L</h1>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="flex text-yellow-400 text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">(4.9) - 127 تقييم</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-green-600 font-medium">متوفر في المخزن</span>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        خلاط صناعي عالي الكفاءة مصمم خصيصاً للمخابز ومصانع الأغذية. يتميز بتصميم من الستانلس ستيل المقاوم للصدأ ونظام تحكم رقمي متطور لضمان الخلط المثالي.
+                    </p>
+                </div>
+
+                <!-- Pricing -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="text-lg text-gray-500 line-through">850,000 دج</span>
+                            <div class="text-3xl font-bold text-green-600">722,500 دج</div>
+                            <span class="text-sm text-green-600">توفر 127,500 دج (15%)</span>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-gray-600">أو بالتقسيط</div>
+                            <div class="text-lg font-bold text-blue-600">60,208 دج/شهر</div>
+                            <div class="text-sm text-gray-500">لمدة 12 شهر</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center gap-4 mb-6">
+                        <label class="text-gray-700 font-medium">الكمية:</label>
+                        <div class="flex items-center border-2 border-gray-300 rounded-lg">
+                            <button class="px-3 py-2 hover:bg-gray-100 transition-colors" onclick="decreaseQuantity()">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" id="quantity" value="1" min="1" class="w-16 text-center border-none focus:outline-none">
+                            <button class="px-3 py-2 hover:bg-gray-100 transition-colors" onclick="increaseQuantity()">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <span class="text-sm text-gray-500">5 قطع متوفرة</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-3">
+                        <button class="w-full bg-orange-600 text-white py-4 rounded-lg hover:bg-orange-700 transition-all font-bold text-lg transform hover:scale-105 shadow-lg" onclick="openQuoteModal()">
+                            <i class="fas fa-shopping-cart ml-2"></i>
+                            طلب عرض سعر مفصل
+                        </button>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button class="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-all font-bold" onclick="openContactModal()">
+                                <i class="fas fa-phone ml-2"></i>
+                                اتصل بنا
+                            </button>
+                            <button class="bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-all font-bold" onclick="addToWishlist()">
+                                <i class="fas fa-heart ml-2"></i>
+                                إضافة للمفضلة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">المميزات الرئيسية</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">ستانلس ستيل 304</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">نظام تحكم رقمي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">سعة 500 لتر</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">محرك 15 حصان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">3 سرعات خلط</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                            <span class="text-gray-700">نظام أمان متطور</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Tabs -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap border-b border-gray-200 mb-8" data-aos="fade-up">
+            <button class="tab-btn active px-6 py-3 font-bold text-orange-600 border-b-2 border-orange-600" onclick="showTab('specifications')">
+                <i class="fas fa-cogs ml-2"></i>
+                المواصفات التقنية
+            </button>
+            <button class="tab-btn px-6 py-3 font-bold text-gray-600 hover:text-orange-600 transition-colors" onclick="showTab('features')">
+                <i class="fas fa-star ml-2"></i>
+                المميزات والفوائد
+            </button>
+            <button class="tab-btn px-6 py-3 font-bold text-gray-600 hover:text-orange-600 transition-colors" onclick="showTab('reviews')">
+                <i class="fas fa-comments ml-2"></i>
+                التقييمات (127)
+            </button>
+            <button class="tab-btn px-6 py-3 font-bold text-gray-600 hover:text-orange-600 transition-colors" onclick="showTab('warranty')">
+                <i class="fas fa-shield-alt ml-2"></i>
+                الضمان والخدمات
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Specifications Tab -->
+            <div id="specifications" class="tab-panel active" data-aos="fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">المواصفات التقنية المفصلة</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- General Specifications -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-info-circle text-blue-500 ml-2"></i>
+                                المواصفات العامة
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">السعة الإجمالية</span>
+                                    <span class="font-medium">500 لتر</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">السعة العملية</span>
+                                    <span class="font-medium">400 لتر</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">المادة</span>
+                                    <span class="font-medium">ستانلس ستيل 304</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">الوزن</span>
+                                    <span class="font-medium">850 كجم</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">بلد المنشأ</span>
+                                    <span class="font-medium">ألمانيا</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Specifications -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-cog text-orange-500 ml-2"></i>
+                                المواصفات التقنية
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">قوة المحرك</span>
+                                    <span class="font-medium">15 حصان (11 كيلو واط)</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">سرعة الدوران</span>
+                                    <span class="font-medium">30-90 دورة/دقيقة</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">الجهد الكهربائي</span>
+                                    <span class="font-medium">380V / 50Hz</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">نوع التحكم</span>
+                                    <span class="font-medium">PLC + شاشة لمس</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-600">مستوى الضوضاء</span>
+                                    <span class="font-medium">أقل من 75 ديسيبل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dimensions -->
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-ruler text-purple-500 ml-2"></i>
+                            الأبعاد والمساحة المطلوبة
+                        </h4>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-800 mb-2">2.5م</div>
+                                <div class="text-gray-600">الطول</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-800 mb-2">1.8م</div>
+                                <div class="text-gray-600">العرض</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-800 mb-2">2.2م</div>
+                                <div class="text-gray-600">الارتفاع</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div id="features" class="tab-panel hidden" data-aos="fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">المميزات والفوائد</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Features List -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4">المميزات التقنية</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">نظام خلط متطور</h5>
+                                        <p class="text-gray-600 text-sm">تصميم خاص للخلاطات يضمن توزيع متجانس للمكونات</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">توفير الطاقة</h5>
+                                        <p class="text-gray-600 text-sm">محرك عالي الكفاءة يوفر 30% من استهلاك الكهرباء</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">سهولة التنظيف</h5>
+                                        <p class="text-gray-600 text-sm">تصميم يسمح بالتنظيف السريع والفعال</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">نظام أمان متقدم</h5>
+                                        <p class="text-gray-600 text-sm">حماية من الحمولة الزائدة والتشغيل الخاطئ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4">الفوائد للمستخدم</h4>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-blue-800 mb-2">زيادة الإنتاجية</h5>
+                                    <p class="text-blue-700 text-sm">خلط أسرع وأكثر كفاءة يزيد من معدل الإنتاج</p>
+                                </div>
+                                <div class="bg-green-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-green-800 mb-2">جودة عالية</h5>
+                                    <p class="text-green-700 text-sm">خلط متجانس يضمن جودة ثابتة للمنتج النهائي</p>
+                                </div>
+                                <div class="bg-purple-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-purple-800 mb-2">توفير التكاليف</h5>
+                                    <p class="text-purple-700 text-sm">تقليل الفاقد وتوفير الطاقة والعمالة</p>
+                                </div>
+                                <div class="bg-orange-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-orange-800 mb-2">سهولة التشغيل</h5>
+                                    <p class="text-orange-700 text-sm">واجهة بسيطة وتدريب سريع للمشغلين</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Tab -->
+            <div id="reviews" class="tab-panel hidden" data-aos="fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">تقييمات العملاء</h3>
+                        <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-all">
+                            <i class="fas fa-plus ml-2"></i>
+                            إضافة تقييم
+                        </button>
+                    </div>
+
+                    <!-- Rating Summary -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-orange-600 mb-2">4.9</div>
+                            <div class="flex justify-center text-yellow-400 text-xl mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="text-gray-600">بناءً على 127 تقييم</div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <span class="text-sm w-8">5 ⭐</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+                                    <div class="bg-yellow-400 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <span class="text-sm w-8">108</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm w-8">4 ⭐</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+                                    <div class="bg-yellow-400 h-2 rounded-full" style="width: 12%"></div>
+                                </div>
+                                <span class="text-sm w-8">15</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm w-8">3 ⭐</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+                                    <div class="bg-yellow-400 h-2 rounded-full" style="width: 2%"></div>
+                                </div>
+                                <span class="text-sm w-8">3</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm w-8">2 ⭐</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+                                    <div class="bg-yellow-400 h-2 rounded-full" style="width: 1%"></div>
+                                </div>
+                                <span class="text-sm w-8">1</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm w-8">1 ⭐</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+                                    <div class="bg-yellow-400 h-2 rounded-full" style="width: 0%"></div>
+                                </div>
+                                <span class="text-sm w-8">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Individual Reviews -->
+                    <div class="space-y-6">
+                        <!-- Review 1 -->
+                        <div class="border-b border-gray-200 pb-6">
+                            <div class="flex items-start gap-4">
+                                <img src="../../assets/images/avatars/user1.jpg" alt="أحمد محمد" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <h5 class="font-bold text-gray-800">أحمد محمد</h5>
+                                            <p class="text-sm text-gray-600">مدير مخبز الأصالة</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="flex text-yellow-400">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-sm text-gray-500">منذ أسبوعين</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        خلاط ممتاز جداً! استخدمناه في مخبزنا منذ 6 أشهر والنتائج رائعة. الخلط متجانس والآلة سهلة التشغيل والتنظيف. فريق التركيب كان محترف جداً والتدريب كان شامل. أنصح به بشدة لأي مخبز أو مصنع أغذية.
+                                    </p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="text-gray-500 hover:text-blue-600 transition-colors text-sm">
+                                            <i class="fas fa-thumbs-up ml-1"></i>
+                                            مفيد (12)
+                                        </button>
+                                        <button class="text-gray-500 hover:text-orange-600 transition-colors text-sm">
+                                            <i class="fas fa-reply ml-1"></i>
+                                            رد
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="border-b border-gray-200 pb-6">
+                            <div class="flex items-start gap-4">
+                                <img src="../../assets/images/avatars/user2.jpg" alt="فاطمة الزهراء" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <h5 class="font-bold text-gray-800">فاطمة الزهراء</h5>
+                                            <p class="text-sm text-gray-600">مديرة مصنع الحلويات الذهبية</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="flex text-yellow-400">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-sm text-gray-500">منذ شهر</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        استثمار ممتاز! الخلاط زاد من إنتاجيتنا بشكل كبير وحسن من جودة منتجاتنا. المحرك قوي والتحكم الرقمي يسهل ضبط السرعات. الصيانة بسيطة وقطع الغيار متوفرة. خدمة ما بعد البيع ممتازة.
+                                    </p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="text-gray-500 hover:text-blue-600 transition-colors text-sm">
+                                            <i class="fas fa-thumbs-up ml-1"></i>
+                                            مفيد (8)
+                                        </button>
+                                        <button class="text-gray-500 hover:text-orange-600 transition-colors text-sm">
+                                            <i class="fas fa-reply ml-1"></i>
+                                            رد
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Reviews -->
+                    <div class="text-center mt-6">
+                        <button class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all">
+                            عرض المزيد من التقييمات
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warranty Tab -->
+            <div id="warranty" class="tab-panel hidden" data-aos="fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">الضمان والخدمات</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Warranty Information -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-shield-alt text-green-500 ml-2"></i>
+                                تفاصيل الضمان
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="bg-green-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-green-800 mb-2">ضمان شامل لمدة سنتين</h5>
+                                    <ul class="text-green-700 text-sm space-y-1">
+                                        <li>• ضمان على جميع القطع والمكونات</li>
+                                        <li>• ضمان على المحرك والنظام الكهربائي</li>
+                                        <li>• صيانة مجانية خلال فترة الضمان</li>
+                                        <li>• استبدال القطع التالفة مجاناً</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h5 class="font-bold text-blue-800 mb-2">خدمات إضافية</h5>
+                                    <ul class="text-blue-700 text-sm space-y-1">
+                                        <li>• تدريب مجاني للمشغلين</li>
+                                        <li>• دليل التشغيل باللغة العربية</li>
+                                        <li>• دعم فني على مدار الساعة</li>
+                                        <li>• زيارات صيانة دورية</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- After Sales Services -->
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-tools text-orange-500 ml-2"></i>
+                                خدمات ما بعد البيع
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">تركيب وتشغيل</h5>
+                                        <p class="text-gray-600 text-sm">فريق متخصص لتركيب الآلة وتشغيلها</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">تدريب المشغلين</h5>
+                                        <p class="text-gray-600 text-sm">برنامج تدريبي شامل لفريق العمل</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">صيانة دورية</h5>
+                                        <p class="text-gray-600 text-sm">جدولة صيانة منتظمة لضمان الأداء الأمثل</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 text-xl ml-3 mt-1"></i>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800">قطع الغيار</h5>
+                                        <p class="text-gray-600 text-sm">توفر دائم لقطع الغيار الأصلية</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="mt-6 bg-gray-50 rounded-lg p-4">
+                                <h5 class="font-bold text-gray-800 mb-3">للدعم الفني</h5>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-phone text-green-500 ml-2"></i>
+                                        <span class="text-gray-700">027 XX XX XX</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-envelope text-blue-500 ml-2"></i>
+                                        <span class="text-gray-700">support@rafiktawriq.dz</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-clock text-orange-500 ml-2"></i>
+                                        <span class="text-gray-700">24/7 دعم فني</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">منتجات ذات صلة</h2>
+            <p class="text-xl text-gray-600">قد تهمك هذه المنتجات أيضاً</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Related Product 1 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/dough-mixer.jpg" alt="عجانة صناعية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">عجانة صناعية 200L</h3>
+                    <p class="text-gray-600 text-sm mb-3">عجانة متطورة للعجائن الثقيلة</p>
+                    <div class="text-xl font-bold text-blue-600 mb-3">580,000 دج</div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all font-bold text-sm">
+                        عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+
+            <!-- Related Product 2 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/food-processor.jpg" alt="معالج الأغذية" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متوفر
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">معالج الأغذية الصناعي</h3>
+                    <p class="text-gray-600 text-sm mb-3">متعدد الوظائف للتقطيع والطحن</p>
+                    <div class="text-xl font-bold text-green-600 mb-3">980,000 دج</div>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all font-bold text-sm">
+                        عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+
+            <!-- Related Product 3 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/packaging-machine.jpg" alt="ماكينة تعبئة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مميز
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ماكينة تعبئة أوتوماتيكية</h3>
+                    <p class="text-gray-600 text-sm mb-3">للسوائل والمساحيق الغذائية</p>
+                    <div class="text-xl font-bold text-purple-600 mb-3">1,250,000 دج</div>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-all font-bold text-sm">
+                        عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+
+            <!-- Related Product 4 -->
+            <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img src="../../assets/images/food-machinery/industrial-oven.jpg" alt="فرن صناعي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        خصم
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">فرن صناعي للمخابز</h3>
+                    <p class="text-gray-600 text-sm mb-3">فرن عالي الكفاءة 12 صينية</p>
+                    <div class="text-xl font-bold text-red-600 mb-3">1,680,000 دج</div>
+                    <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-all font-bold text-sm">
+                        عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="modal-content bg-white rounded-xl max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
+        <div class="p-6 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-gray-800">طلب عرض سعر مفصل</h3>
+                <button onclick="closeQuoteModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <form class="p-6 space-y-6">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block mb-2 font-bold text-gray-700">الاسم الكامل *</label>
+                    <input type="text" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                </div>
+                <div>
+                    <label class="block mb-2 font-bold text-gray-700">رقم الهاتف *</label>
+                    <input type="tel" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                </div>
+            </div>
+            
+            <div>
+                <label class="block mb-2 font-bold text-gray-700">البريد الإلكتروني *</label>
+                <input type="email" required class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+            </div>
+            
+            <div>
+                <label class="block mb-2 font-bold text-gray-700">اسم الشركة</label>
+                <input type="text" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block mb-2 font-bold text-gray-700">الكمية المطلوبة</label>
+                    <input type="number" min="1" value="1" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                </div>
+                <div>
+                    <label class="block mb-2 font-bold text-gray-700">تاريخ التسليم المطلوب</label>
+                    <input type="date" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                </div>
+            </div>
+            
+            <div>
+                <label class="block mb-2 font-bold text-gray-700">ملاحظات إضافية</label>
+                <textarea rows="4" class="w-full border-2 border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none" placeholder="أي متطلبات خاصة أو أسئلة..."></textarea>
+            </div>
+            
+            <div class="flex gap-4">
+                <button type="submit" class="flex-1 bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-all font-bold">
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    إرسال الطلب
+                </button>
+                <button type="button" onclick="closeQuoteModal()" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold">
+                    إلغاء
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contactModal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="modal-content bg-white rounded-xl max-w-lg w-full mx-4">
+        <div class="p-6 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-gray-800">تواصل معنا</h3>
+                <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="p-6 space-y-4">
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg">
+                <i class="fas fa-phone text-blue-600 text-2xl ml-4"></i>
+                <div>
+                    <div class="font-bold text-gray-800">اتصل بنا مباشرة</div>
+                    <div class="text-blue-600">027 XX XX XX</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center p-4 bg-green-50 rounded-lg">
+                <i class="fab fa-whatsapp text-green-600 text-2xl ml-4"></i>
+                <div>
+                    <div class="font-bold text-gray-800">واتساب</div>
+                    <div class="text-green-600">05XXXXXXXX</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                <i class="fas fa-envelope text-purple-600 text-2xl ml-4"></i>
+                <div>
+                    <div class="font-bold text-gray-800">البريد الإلكتروني</div>
+                    <div class="text-purple-600">sales@rafiktawriq.dz</div>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4">
+<button onclick="closeContactModal()" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all font-bold">
+                إغلاق
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">آلات عالية الجودة لجميع الصناعات</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">معلومات المنتج</h4>
+                <ul class="space-y-2">
+                    <li><a href="#specifications" class="text-gray-400 hover:text-white transition-colors">المواصفات التقنية</a></li>
+                    <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">المميزات والفوائد</a></li>
+                    <li><a href="#warranty" class="text-gray-400 hover:text-white transition-colors">الضمان والخدمات</a></li>
+                    <li><a href="maintenance.html" class="text-gray-400 hover:text-white transition-colors">خدمات الصيانة</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="help-selection.html" class="text-gray-400 hover:text-white transition-colors">مساعدة الاختيار</a></li>
+                    <li><a href="spare-parts.html" class="text-gray-400 hover:text-white transition-colors">قطع الغيار</a></li>
+                    <li><a href="used-machinery.html" class="text-gray-400 hover:text-white transition-colors">آلات مستعملة</a></li>
+                    <li><a href="../financing/index.html" class="text-gray-400 hover:text-white transition-colors">التمويل والتقسيط</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">sales@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">شلف، الجزائر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - تفاصيل المنتج. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/machinery.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    // Initialize Swiper for main gallery
+    const mainGallery = new Swiper('.product-gallery', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }
+    });
+    
+    // Initialize Swiper for thumbnails
+    const thumbnailGallery = new Swiper('.product-thumbnails', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        }
+    });
+    
+    // Connect thumbnails with main gallery
+    thumbnailGallery.slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+            mainGallery.slideTo(index);
+        });
+    });
+    
+    // Update thumbnail active state
+    mainGallery.on('slideChange', function() {
+        const activeIndex = this.realIndex;
+        thumbnailGallery.slides.forEach((slide, index) => {
+            const img = slide.querySelector('img');
+            if (index === activeIndex) {
+                img.classList.add('border-orange-500');
+                img.classList.remove('border-transparent');
+            } else {
+                img.classList.remove('border-orange-500');
+                img.classList.add('border-transparent');
+            }
+        });
+    });
+    
+    // Initialize tabs
+    initializeTabs();
+    
+    // Initialize quantity controls
+    initializeQuantityControls();
+    
+    // Initialize wishlist functionality
+    initializeWishlist();
+    
+    // Load product data from URL parameters
+    loadProductData();
+});
+
+// Tab functionality
+function initializeTabs() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+            showTab(targetTab);
+        });
+    });
+}
+
+function showTab(tabName) {
+    // Hide all panels
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+        panel.classList.remove('active');
+    });
+    
+    // Show target panel
+    const targetPanel = document.getElementById(tabName);
+    if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+        targetPanel.classList.add('active');
+    }
+    
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'text-orange-600', 'border-orange-600');
+        btn.classList.add('text-gray-600');
+    });
+    
+    // Activate current tab button
+    const activeButton = document.querySelector(`[onclick*="${tabName}"]`);
+    if (activeButton) {
+        activeButton.classList.add('active', 'text-orange-600', 'border-orange-600');
+        activeButton.classList.remove('text-gray-600');
+    }
+}
+
+// Quantity controls
+function initializeQuantityControls() {
+    const quantityInput = document.getElementById('quantity');
+    
+    window.increaseQuantity = function() {
+        const currentValue = parseInt(quantityInput.value);
+        const maxValue = 5; // Available stock
+        if (currentValue < maxValue) {
+            quantityInput.value = currentValue + 1;
+            updateTotalPrice();
+        }
+    };
+    
+    window.decreaseQuantity = function() {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+            updateTotalPrice();
+        }
+    };
+    
+    quantityInput.addEventListener('change', function() {
+        const value = parseInt(this.value);
+        if (value < 1) this.value = 1;
+        if (value > 5) this.value = 5;
+        updateTotalPrice();
+    });
+}
+
+function updateTotalPrice() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const unitPrice = 722500; // Base price
+    const totalPrice = quantity * unitPrice;
+    
+    // Update display if needed
+    console.log(`Total price for ${quantity} units: ${totalPrice.toLocaleString()} دج`);
+}
+
+// Modal functions
+window.openQuoteModal = function() {
+    const modal = document.getElementById('quoteModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    
+    // Pre-fill product information
+    const productName = document.querySelector('h1').textContent;
+    const quantity = document.getElementById('quantity').value;
+    
+    // You can add logic here to pre-fill form fields
+};
+
+window.closeQuoteModal = function() {
+    const modal = document.getElementById('quoteModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+};
+
+window.openContactModal = function() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeContactModal = function() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+};
+
+// Wishlist functionality
+function initializeWishlist() {
+    window.addToWishlist = function() {
+        const productId = getProductIdFromUrl();
+        let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+        
+        if (!wishlist.includes(productId)) {
+            wishlist.push(productId);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            
+            // Show success message
+            showNotification('تم إضافة المنتج إلى المفضلة', 'success');
+            
+            // Update button appearance
+            const wishlistBtn = document.querySelector('[onclick="addToWishlist()"]');
+            wishlistBtn.innerHTML = '<i class="fas fa-heart text-red-500 ml-2"></i>في المفضلة';
+            wishlistBtn.classList.add('bg-red-100', 'text-red-600');
+            wishlistBtn.classList.remove('bg-gray-600', 'text-white');
+        } else {
+            showNotification('المنتج موجود بالفعل في المفضلة', 'info');
+        }
+    };
+}
+
+// Load product data based on URL parameters
+function loadProductData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    
+    if (productId) {
+        // Here you would typically fetch product data from an API
+        // For now, we'll use the default data already in the HTML
+        console.log('Loading product:', productId);
+        
+        // Update page title and meta description
+        updatePageMeta(productId);
+        
+        // Check if product is in wishlist
+        checkWishlistStatus(productId);
+    }
+}
+
+function getProductIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id') || 'food-mixer-500';
+}
+
+function updatePageMeta(productId) {
+    // Update page title based on product
+    const productTitles = {
+        'food-mixer-500': 'خلاط صناعي للأغذية 500L - رفيق توريق',
+        'packaging-auto': 'ماكينة تعبئة أوتوماتيكية - رفيق توريق',
+        'industrial-oven': 'فرن صناعي للمخابز - رفيق توريق'
+    };
+    
+    if (productTitles[productId]) {
+        document.title = productTitles[productId];
+    }
+}
+
+function checkWishlistStatus(productId) {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    
+    if (wishlist.includes(productId)) {
+        const wishlistBtn = document.querySelector('[onclick="addToWishlist()"]');
+        wishlistBtn.innerHTML = '<i class="fas fa-heart text-red-500 ml-2"></i>في المفضلة';
+        wishlistBtn.classList.add('bg-red-100', 'text-red-600');
+        wishlistBtn.classList.remove('bg-gray-600', 'text-white');
+    }
+}
+
+// Notification system
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `fixed top-24 right-4 z-50 bg-white border-l-4 rounded-lg shadow-xl p-4 transform translate-x-full transition-all duration-300 max-w-sm`;
+    
+    const colors = {
+        success: 'border-green-500',
+        error: 'border-red-500',
+        warning: 'border-yellow-500',
+        info: 'border-blue-500'
+    };
+    
+    const icons = {
+        success: 'fas fa-check-circle text-green-500',
+        error: 'fas fa-times-circle text-red-500',
+        warning: 'fas fa-exclamation-triangle text-yellow-500',
+        info: 'fas fa-info-circle text-blue-500'
+    };
+    
+    notification.classList.add(colors[type]);
+    
+    notification.innerHTML = `
+        <div class="flex items-start">
+            <div class="flex-shrink-0">
+                <i class="${icons[type]} text-lg"></i>
+            </div>
+            <div class="mr-3 flex-1">
+                <p class="text-sm font-medium text-gray-800">${message}</p>
+            </div>
+            <button class="notification-close flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+        notification.classList.add('translate-x-0');
+    }, 100);
+    
+    // Add close functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        removeNotification(notification);
+    });
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        removeNotification(notification);
+    }, 5000);
+}
+
+function removeNotification(notification) {
+    notification.classList.add('translate-x-full');
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 300);
+}
+
+// Close modals when clicking outside
+document.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            if (modal.id === 'quoteModal') {
+                closeQuoteModal();
+            } else if (modal.id === 'contactModal') {
+                closeContactModal();
+            }
+        }
+    });
+});
+
+// Handle form submissions
+document.addEventListener('submit', function(event) {
+    if (event.target.closest('#quoteModal')) {
+        event.preventDefault();
+        handleQuoteSubmission(event.target);
+    }
+});
+
+function handleQuoteSubmission(form) {
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Show loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري الإرسال...';
+    submitBtn.disabled = true;
+    
+    // Simulate form submission
+    setTimeout(() => {
+        showNotification('تم إرسال طلب عرض السعر بنجاح! سنتواصل معك قريباً.', 'success');
+        closeQuoteModal();
+        form.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
+}
+
+console.log('📱 Product details page initialized successfully!');
+</script>
+
 </body>
 </html>
