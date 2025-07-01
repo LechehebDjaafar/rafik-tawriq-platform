@@ -1,10 +1,718 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تفاصيل الفعالية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الفعالية - رفيق توريق</title>
+    <meta name="description" content="تفاصيل شاملة للفعالية مع معلومات المتحدثين والبرنامج والتسجيل">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
-<body>
-  <h1>تفاصيل الفعالية</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-indigo-600 font-bold flex items-center relative">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        الفعاليات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html?event=ai-conference-2025" class="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white px-6 py-2 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-user-plus ml-2"></i>
+                    سجل الآن
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الفعاليات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="conferences.html" class="text-blue-600 hover:text-blue-800 transition-colors">المؤتمرات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">مؤتمر الذكاء الاصطناعي</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Event Hero -->
+<section class="py-12 bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <img src="../assets/images/events/ai-conference-hero.jpg" alt="مؤتمر الذكاء الاصطناعي" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2" data-aos="fade-right">
+                <div class="flex items-center mb-4">
+                    <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold ml-3">مؤتمر</span>
+                    <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">دولي</span>
+                </div>
+                <h1 class="text-3xl lg:text-5xl font-bold mb-4 leading-tight">
+                    مؤتمر الذكاء الاصطناعي 2025
+                </h1>
+                <p class="text-xl text-indigo-100 mb-6 leading-relaxed">
+                    انضم إلى أكبر مؤتمر للذكاء الاصطناعي في المنطقة واستكشف أحدث التطورات والابتكارات
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm">
+                        <i class="fas fa-calendar-alt text-yellow-400 text-2xl mb-2"></i>
+                        <div class="text-sm text-indigo-200">التاريخ</div>
+                        <div class="font-bold">10-12 أبريل</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm">
+                        <i class="fas fa-map-marker-alt text-yellow-400 text-2xl mb-2"></i>
+                        <div class="text-sm text-indigo-200">المكان</div>
+                        <div class="font-bold">الجزائر العاصمة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm">
+                        <i class="fas fa-users text-yellow-400 text-2xl mb-2"></i>
+                        <div class="text-sm text-indigo-200">المشاركون</div>
+                        <div class="font-bold">500 مشارك</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm">
+                        <i class="fas fa-microphone text-yellow-400 text-2xl mb-2"></i>
+                        <div class="text-sm text-indigo-200">المتحدثون</div>
+                        <div class="font-bold">25 خبير</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1" data-aos="fade-left">
+                <div class="bg-white rounded-xl p-6 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">معلومات التسجيل</h3>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">سعر التذكرة:</span>
+                            <span class="text-2xl font-bold text-indigo-600">15,000 دج</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">المقاعد المتبقية:</span>
+                            <span class="font-bold text-green-600">85 مقعد</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">آخر موعد للتسجيل:</span>
+                            <span class="font-bold text-red-600">5 أبريل 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <a href="registration.html?event=ai-conference-2025" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-all font-bold text-center block">
+                            <i class="fas fa-user-plus ml-2"></i>
+                            سجل الآن
+                        </a>
+                        <button class="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-200 transition-all font-bold">
+                            <i class="fas fa-heart ml-2"></i>
+                            أضف للمفضلة
+                        </button>
+                        <button class="w-full bg-blue-100 text-blue-700 py-3 px-6 rounded-lg hover:bg-blue-200 transition-all font-bold">
+                            <i class="fas fa-share-alt ml-2"></i>
+                            شارك الفعالية
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Event Details -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <!-- Description -->
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">حول المؤتمر</h2>
+                    <div class="prose prose-lg max-w-none text-gray-600">
+                        <p class="mb-4">
+                            يعد مؤتمر الذكاء الاصطناعي 2025 أكبر تجمع للخبراء والمختصين في مجال الذكاء الاصطناعي 
+                            في منطقة الشرق الأوسط وشمال أفريقيا. يهدف المؤتمر إلى استكشاف أحدث التطورات والابتكارات 
+                            في مجال الذكاء الاصطناعي وتطبيقاته في مختلف القطاعات.
+                        </p>
+                        <p class="mb-4">
+                            سيشارك في المؤتمر نخبة من الخبراء الدوليين والمحليين الذين سيقدمون محاضرات وورش عمل 
+                            حول أحدث التقنيات والأدوات في مجال الذكاء الاصطناعي، بالإضافة إلى مناقشة التحديات 
+                            والفرص المستقبلية.
+                        </p>
+                        <p>
+                            كما سيتضمن المؤتمر معرضاً للشركات الرائدة في مجال التكنولوجيا لعرض أحدث منتجاتها 
+                            وحلولها المبتكرة، مما يوفر فرصة ممتازة للتواصل وبناء الشراكات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Agenda -->
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">برنامج المؤتمر</h2>
+                    <div class="space-y-6">
+                        <!-- Day 1 -->
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold text-indigo-600 mb-4 flex items-center">
+                                <i class="fas fa-calendar-day ml-3"></i>
+                                اليوم الأول - 10 أبريل 2025
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        09:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">التسجيل والاستقبال</h4>
+                                        <p class="text-gray-600 text-sm">استقبال المشاركين وتوزيع المواد</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        10:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">الجلسة الافتتاحية</h4>
+                                        <p class="text-gray-600 text-sm">كلمة ترحيبية ونظرة عامة على مستقبل الذكاء الاصطناعي</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. أحمد محمد - خبير الذكاء الاصطناعي</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        11:30
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">التعلم الآلي في الطب</h4>
+                                        <p class="text-gray-600 text-sm">تطبيقات الذكاء الاصطناعي في التشخيص الطبي</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. سارة أحمد - جامعة هارفارد</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        14:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">ورشة عمل: TensorFlow للمبتدئين</h4>
+                                        <p class="text-gray-600 text-sm">تعلم أساسيات التعلم الآلي باستخدام TensorFlow</p>
+                                        <p class="text-indigo-600 text-sm font-medium">أ. محمد علي - Google</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Day 2 -->
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold text-indigo-600 mb-4 flex items-center">
+                                <i class="fas fa-calendar-day ml-3"></i>
+                                اليوم الثاني - 11 أبريل 2025
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        09:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">الذكاء الاصطناعي في الأعمال</h4>
+                                        <p class="text-gray-600 text-sm">كيفية تطبيق الذكاء الاصطناعي لتحسين العمليات التجارية</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. فاطمة زهرة - IBM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        11:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">أخلاقيات الذكاء الاصطناعي</h4>
+                                        <p class="text-gray-600 text-sm">التحديات الأخلاقية والقانونية للذكاء الاصطناعي</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. عمر حسن - جامعة أكسفورد</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        14:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">ورشة عمل: معالجة اللغات الطبيعية</h4>
+                                        <p class="text-gray-600 text-sm">تطبيقات عملية في معالجة النصوص العربية</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. ليلى محمد - Microsoft</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Day 3 -->
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h3 class="text-xl font-bold text-indigo-600 mb-4 flex items-center">
+                                <i class="fas fa-calendar-day ml-3"></i>
+                                اليوم الثالث - 12 أبريل 2025
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        09:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">مستقبل الذكاء الاصطناعي</h4>
+                                        <p class="text-gray-600 text-sm">التوجهات المستقبلية والتقنيات الناشئة</p>
+                                        <p class="text-indigo-600 text-sm font-medium">د. يوسف أحمد - OpenAI</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-indigo-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        11:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">جلسة نقاشية مفتوحة</h4>
+                                        <p class="text-gray-600 text-sm">حوار مفتوح مع الخبراء حول تحديات الذكاء الاصطناعي</p>
+                                        <p class="text-indigo-600 text-sm font-medium">جميع المتحدثين</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 space-x-reverse">
+                                    <div class="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-bold min-w-fit">
+                                        15:00
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">الجلسة الختامية</h4>
+                                        <p class="text-gray-600 text-sm">ملخص المؤتمر وتوزيع الشهادات</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speakers -->
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">المتحدثون الرئيسيون</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Speaker 1 -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <img src="../assets/images/speakers/ai-expert-1.jpg" alt="د. أحمد محمد" class="w-20 h-20 rounded-full object-cover border-4 border-indigo-500">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">د. أحمد محمد</h3>
+                                    <p class="text-indigo-600 font-medium mb-2">خبير الذكاء الاصطناعي - MIT</p>
+                                    <p class="text-gray-600 text-sm mb-3">
+                                        أستاذ في معهد ماساتشوستس للتكنولوجيا ومؤسس شركة تقنية رائدة في مجال الذكاء الاصطناعي
+                                    </p>
+                                    <div class="flex items-center space-x-2 space-x-reverse">
+                                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                                            <i class="fab fa-linkedin text-lg"></i>
+                                        </a>
+                                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                                            <i class="fab fa-twitter text-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Speaker 2 -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <img src="../assets/images/speakers/ai-expert-2.jpg" alt="د. سارة أحمد" class="w-20 h-20 rounded-full object-cover border-4 border-indigo-500">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">د. سارة أحمد</h3>
+                                    <p class="text-indigo-600 font-medium mb-2">خبيرة الذكاء الاصطناعي الطبي - Harvard</p>
+                                    <p class="text-gray-600 text-sm mb-3">
+                                        باحثة رائدة في تطبيقات الذكاء الاصطناعي في المجال الطبي ومؤلفة عدة كتب علمية
+                                    </p>
+                                    <div class="flex items-center space-x-2 space-x-reverse">
+                                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                                            <i class="fab fa-linkedin text-lg"></i>
+                                        </a>
+                                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                                            <i class="fab fa-twitter text-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Speaker 3 -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <img src="../assets/images/speakers/ai-expert-3.jpg" alt="د. فاطمة زهرة" class="w-20 h-20 rounded-full object-cover border-4 border-indigo-500">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">د. فاطمة زهرة</h3>
+                                    <p class="text-indigo-600 font-medium mb-2">مديرة الذكاء الاصطناعي - IBM</p>
+                                    <p class="text-gray-600 text-sm mb-3">
+                                        خبيرة في تطبيقات الذكاء الاصطناعي في الأعمال وقائدة فريق تطوير Watson
+                                    </p>
+                                    <div class="flex items-center space-x-2 space-x-reverse">
+                                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                                            <i class="fab fa-linkedin text-lg"></i>
+                                        </a>
+                                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                                            <i class="fab fa-twitter text-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Speaker 4 -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                            <div class="flex items-start space-x-4 space-x-reverse">
+                                <img src="../assets/images/speakers/ai-expert-4.jpg" alt="د. يوسف أحمد" class="w-20 h-20 rounded-full object-cover border-4 border-indigo-500">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">د. يوسف أحمد</h3>
+                                    <p class="text-indigo-600 font-medium mb-2">باحث رئيسي - OpenAI</p>
+                                    <p class="text-gray-600 text-sm mb-3">
+                                        باحث في شركة OpenAI ومتخصص في نماذج اللغة الكبيرة والذكاء الاصطناعي التوليدي
+                                    </p>
+                                    <div class="flex items-center space-x-2 space-x-reverse">
+                                        <a href="#" class="text-blue-500 hover:text-blue-700">
+                                            <i class="fab fa-linkedin text-lg"></i>
+                                        </a>
+                                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                                            <i class="fab fa-twitter text-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Event Info -->
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-28" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">معلومات سريعة</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">10-12 أبريل 2025</div>
+                                <div class="text-sm text-gray-600">3 أيام</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">09:00 - 17:00</div>
+                                <div class="text-sm text-gray-600">يومياً</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">فندق الأوراسي</div>
+                                <div class="text-sm text-gray-600">الجزائر العاصمة</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">500 مشارك</div>
+                                <div class="text-sm text-gray-600">85 مقعد متبقي</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-ticket-alt text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">15,000 دج</div>
+                                <div class="text-sm text-gray-600">يشمل الوجبات</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-language text-indigo-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">عربي / إنجليزي</div>
+                                <div class="text-sm text-gray-600">مع ترجمة فورية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What's Included -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">ما يشمله التسجيل</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">حضور جميع الجلسات</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">المواد التدريبية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">وجبات الطعام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">شهادة حضور معتمدة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">الوصول للمعرض</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700">شبكة علاقات مهنية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Map -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">موقع المؤتمر</h3>
+                    <div id="event-map" class="h-48 rounded-lg mb-4"></div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-gray-800">فندق الأوراسي</h4>
+                        <p class="text-gray-600 text-sm">شارع فرانتز فانون، الجزائر العاصمة</p>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">
+                            <i class="fas fa-directions ml-1"></i>
+                            احصل على الاتجاهات
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Events -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">فعاليات ذات صلة</h3>
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-3 hover:bg-gray-50 transition-all">
+                            <h4 class="font-bold text-gray-800 text-sm">ورشة تعلم الآلة</h4>
+                            <p class="text-gray-600 text-xs">15 أبريل 2025</p>
+                            <p class="text-indigo-600 text-xs font-medium">3,000 دج</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-3 hover:bg-gray-50 transition-all">
+                            <h4 class="font-bold text-gray-800 text-sm">مؤتمر البيانات الضخمة</h4>
+                            <p class="text-gray-600 text-xs">20 أبريل 2025</p>
+                            <p class="text-indigo-600 text-xs font-medium">8,000 دج</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-3 hover:bg-gray-50 transition-all">
+                            <h4 class="font-bold text-gray-800 text-sm">ورشة الأمن السيبراني</h4>
+                            <p class="text-gray-600 text-xs">25 أبريل 2025</p>
+                            <p class="text-indigo-600 text-xs font-medium">4,500 دج</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">شريكك في تنظيم أفضل الفعاليات</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">التسجيل</a></li>
+                    <li><a href="conferences.html" class="text-gray-400 hover:text-white transition-colors">المؤتمرات</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">معلومات التواصل</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-indigo-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-indigo-400 ml-3"></i>
+                        <span class="text-gray-400">events@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تابعنا</h4>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - تفاصيل الفعالية. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/events.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    initializeMap();
+    initializeMobileMenu();
+    initializeHeaderScroll();
+    initializeEventActions();
+});
+
+function initializeMap() {
+    // Initialize Leaflet map
+    const map = L.map('event-map').setView([36.7538, 3.0588], 15);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    
+    // Add marker for event location
+    L.marker([36.7538, 3.0588]).addTo(map)
+        .bindPopup('فندق الأوراسي<br>موقع المؤتمر')
+        .openPopup();
+}
+
+function initializeEventActions() {
+    // Add to favorites
+    const favoriteBtn = document.querySelector('[data-action="favorite"]');
+    if (favoriteBtn) {
+        favoriteBtn.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas', 'text-red-500');
+                this.innerHTML = '<i class="fas fa-heart text-red-500 ml-2"></i>تمت الإضافة للمفضلة';
+            } else {
+                icon.classList.remove('fas', 'text-red-500');
+                icon.classList.add('far');
+                this.innerHTML = '<i class="far fa-heart ml-2"></i>أضف للمفضلة';
+            }
+        });
+    }
+    
+    // Share event
+    const shareBtn = document.querySelector('[data-action="share"]');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'مؤتمر الذكاء الاصطناعي 2025',
+                    text: 'انضم إلى أكبر مؤتمر للذكاء الاصطناعي في المنطقة',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('تم نسخ رابط الفعالية إلى الحافظة!');
+                });
+            }
+        });
+    }
+}
+
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+}
+
+function initializeHeaderScroll() {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+}
+
+console.log('📅 Event details page initialized successfully!');
+</script>
+
 </body>
 </html>

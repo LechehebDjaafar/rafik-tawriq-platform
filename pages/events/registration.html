@@ -1,10 +1,823 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تسجيل الفعاليات</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الفعاليات - رفيق توريق</title>
+    <meta name="description" content="سجل في فعالياتنا المميزة واحصل على تجربة تعليمية وتدريبية استثنائية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>تسجيل الفعاليات</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-teal-600 font-bold flex items-center relative">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        الفعاليات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="index.html" class="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-2 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة للفعاليات
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الفعاليات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تسجيل الفعاليات</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <img src="../assets/images/events/registration-hero.jpg" alt="خلفية التسجيل" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    سجل في فعالياتنا
+                </h1>
+                <p class="text-xl mb-8 text-teal-100 leading-relaxed">
+                    انضم إلى آلاف المشاركين واحصل على تجربة تعليمية وتدريبية استثنائية
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="5000">0</div>
+                        <div class="text-sm text-teal-200">مشارك مسجل</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="150">0</div>
+                        <div class="text-sm text-teal-200">فعالية سنوياً</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="98">0</div>
+                        <div class="text-sm text-teal-200">% رضا المشاركين</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="24">0</div>
+                        <div class="text-sm text-teal-200">ساعة دعم</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Form -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Main Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200" data-aos="fade-right">
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">نموذج التسجيل</h2>
+                        <p class="text-gray-600">املأ النموذج أدناه للتسجيل في الفعالية</p>
+                    </div>
+
+                    <form id="registration-form" class="space-y-6">
+                        <!-- Event Selection -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-type">
+                                    <i class="fas fa-calendar-alt text-teal-500 ml-2"></i>
+                                    نوع الفعالية *
+                                </label>
+                                <select id="event-type" name="event-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" required>
+                                    <option value="">اختر نوع الفعالية</option>
+                                    <option value="conference">مؤتمر</option>
+                                    <option value="workshop">ورشة عمل</option>
+                                    <option value="exhibition">معرض</option>
+                                    <option value="competition">مسابقة</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="event-name">
+                                    <i class="fas fa-star text-teal-500 ml-2"></i>
+                                    اسم الفعالية *
+                                </label>
+                                <select id="event-name" name="event-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" required>
+                                    <option value="">اختر الفعالية</option>
+                                    <option value="ai-conference-2025">مؤتمر الذكاء الاصطناعي 2025</option>
+                                    <option value="business-summit-2025">قمة ريادة الأعمال 2025</option>
+                                    <option value="web-dev-workshop">ورشة تطوير الويب</option>
+                                    <option value="design-workshop">ورشة التصميم الجرافيكي</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">المعلومات الشخصية</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="first-name">
+                                        <i class="fas fa-user text-teal-500 ml-2"></i>
+                                        الاسم الأول *
+                                    </label>
+                                    <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="أدخل اسمك الأول" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="last-name">
+                                        <i class="fas fa-user text-teal-500 ml-2"></i>
+                                        اسم العائلة *
+                                    </label>
+                                    <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="أدخل اسم العائلة" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                        <i class="fas fa-envelope text-teal-500 ml-2"></i>
+                                        البريد الإلكتروني *
+                                    </label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="example@email.com" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                                        <i class="fas fa-phone text-teal-500 ml-2"></i>
+                                        رقم الهاتف *
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="05XXXXXXXX" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Information -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">المعلومات المهنية</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="job-title">
+                                        <i class="fas fa-briefcase text-teal-500 ml-2"></i>
+                                        المسمى الوظيفي
+                                    </label>
+                                    <input type="text" id="job-title" name="job-title" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="مطور ويب، مصمم، إلخ">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="company">
+                                        <i class="fas fa-building text-teal-500 ml-2"></i>
+                                        الشركة/المؤسسة
+                                    </label>
+                                    <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="اسم الشركة أو المؤسسة">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="experience">
+                                        <i class="fas fa-chart-line text-teal-500 ml-2"></i>
+                                        سنوات الخبرة
+                                    </label>
+                                    <select id="experience" name="experience" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                                        <option value="">اختر سنوات الخبرة</option>
+                                        <option value="0-1">أقل من سنة</option>
+                                        <option value="1-3">1-3 سنوات</option>
+                                        <option value="3-5">3-5 سنوات</option>
+                                        <option value="5-10">5-10 سنوات</option>
+                                        <option value="10+">أكثر من 10 سنوات</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="industry">
+                                        <i class="fas fa-industry text-teal-500 ml-2"></i>
+                                        المجال
+                                    </label>
+                                    <select id="industry" name="industry" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                                        <option value="">اختر المجال</option>
+                                        <option value="technology">التكنولوجيا</option>
+                                        <option value="business">الأعمال</option>
+                                        <option value="education">التعليم</option>
+                                        <option value="healthcare">الصحة</option>
+                                        <option value="finance">المالية</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Requirements -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">متطلبات خاصة</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="dietary">
+                                        <i class="fas fa-utensils text-teal-500 ml-2"></i>
+                                        متطلبات غذائية خاصة
+                                    </label>
+                                    <select id="dietary" name="dietary" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all">
+                                        <option value="">لا توجد متطلبات خاصة</option>
+                                        <option value="vegetarian">نباتي</option>
+                                        <option value="vegan">نباتي صرف</option>
+                                        <option value="halal">حلال</option>
+                                        <option value="gluten-free">خالي من الجلوتين</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="accessibility">
+                                        <i class="fas fa-wheelchair text-teal-500 ml-2"></i>
+                                        متطلبات الوصول
+                                    </label>
+                                    <textarea id="accessibility" name="accessibility" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all" placeholder="أي متطلبات خاصة للوصول أو المساعدة"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Preferences -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">تفضيلات التواصل</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="newsletter" class="rounded border-gray-300 text-teal-600 shadow-sm focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50">
+                                    <span class="mr-2 text-gray-700">أرغب في تلقي النشرة الإخبارية</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="sms" class="rounded border-gray-300 text-teal-600 shadow-sm focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50">
+                                    <span class="mr-2 text-gray-700">أرغب في تلقي تحديثات عبر الرسائل النصية</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="events" class="rounded border-gray-300 text-teal-600 shadow-sm focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50">
+                                    <span class="mr-2 text-gray-700">أرغب في تلقي دعوات للفعاليات القادمة</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="border-t pt-6">
+                            <label class="flex items-start">
+                                <input type="checkbox" name="terms" class="rounded border-gray-300 text-teal-600 shadow-sm focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50 mt-1" required>
+                                <span class="mr-2 text-gray-700">
+                                    أوافق على 
+                                    <a href="#" class="text-teal-600 hover:text-teal-800 underline">الشروط والأحكام</a>
+                                    و
+                                    <a href="#" class="text-teal-600 hover:text-teal-800 underline">سياسة الخصوصية</a>
+                                    *
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-6">
+                            <button type="submit" class="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white py-4 px-6 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all transform hover:scale-105 shadow-lg font-bold text-lg">
+                                <i class="fas fa-user-plus ml-2"></i>
+                                إتمام التسجيل
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Registration Summary -->
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-28" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">ملخص التسجيل</h3>
+                    <div id="registration-summary" class="space-y-4">
+                        <div class="text-center text-gray-500 py-8">
+                            <i class="fas fa-calendar-plus text-4xl mb-4"></i>
+                            <p>اختر فعالية للمتابعة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help & Support -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">تحتاج مساعدة؟</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-teal-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">027 XX XX XX</div>
+                                <div class="text-sm text-gray-600">الدعم الهاتفي</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-teal-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">registration@rafiktawriq.dz</div>
+                                <div class="text-sm text-gray-600">الدعم عبر البريد</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-teal-500 w-5 ml-3"></i>
+                            <div>
+                                <div class="font-bold text-gray-800">05XXXXXXXX</div>
+                                <div class="text-sm text-gray-600">واتساب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">الأسئلة الشائعة</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm mb-2">هل يمكنني إلغاء التسجيل؟</h4>
+                            <p class="text-gray-600 text-sm">نعم، يمكنك إلغاء التسجيل حتى 48 ساعة قبل الفعالية</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm mb-2">هل أحصل على شهادة؟</h4>
+                            <p class="text-gray-600 text-sm">نعم، ستحصل على شهادة حضور معتمدة</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm mb-2">ما هي طرق الدفع المتاحة؟</h4>
+                            <p class="text-gray-600 text-sm">نقبل الدفع نقداً، بالبطاقة، أو التحويل البنكي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">شريكك في تنظيم أفضل الفعاليات</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الفعاليات</h4>
+                <ul class="space-y-2">
+                    <li><a href="conferences.html" class="text-gray-400 hover:text-white transition-colors">المؤتمرات</a></li>
+                    <li><a href="workshops.html" class="text-gray-400 hover:text-white transition-colors">ورش العمل</a></li>
+                    <li><a href="exhibitions.html" class="text-gray-400 hover:text-white transition-colors">المعارض</a></li>
+                    <li><a href="competitions.html" class="text-gray-400 hover:text-white transition-colors">المسابقات</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">الدعم</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مركز المساعدة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الإلغاء</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-teal-400 ml-3"></i>
+                        <span class="text-gray-400">registration@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - تسجيل الفعاليات. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/events.js"></script>
+
+<script>
+// Event data
+const eventData = {
+    'ai-conference-2025': {
+        name: 'مؤتمر الذكاء الاصطناعي 2025',
+        type: 'مؤتمر',
+        date: '10-12 أبريل 2025',
+        location: 'فندق الأوراسي، الجزائر العاصمة',
+        price: 15000,
+        duration: '3 أيام',
+        includes: ['جميع الجلسات', 'المواد التدريبية', 'الوجبات', 'شهادة حضور', 'شبكة علاقات']
+    },
+    'business-summit-2025': {
+        name: 'قمة ريادة الأعمال 2025',
+        type: 'مؤتمر',
+        date: '18-19 أبريل 2025',
+        location: 'مركز المؤتمرات الدولي، وهران',
+        price: 8000,
+        duration: 'يومان',
+        includes: ['جميع الجلسات', 'ورش عمل', 'الوجبات', 'شهادة حضور', 'فرص استثمار']
+    },
+    'web-dev-workshop': {
+        name: 'ورشة تطوير الويب',
+        type: 'ورشة عمل',
+        date: '20-22 مارس 2025',
+        location: 'مركز التدريب التقني، الجزائر العاصمة',
+        price: 5000,
+        duration: '3 أيام',
+        includes: ['مشروع عملي', 'شهادة إتمام', 'مواد تدريبية', 'دعم لمدة 3 أشهر']
+    },
+    'design-workshop': {
+        name: 'ورشة التصميم الجرافيكي',
+        type: 'ورشة عمل',
+        date: '25-26 مارس 2025',
+        location: 'أكاديمية التصميم، وهران',
+        price: 4000,
+        duration: 'يومان',
+        includes: ['تطبيقات عملية', 'ملفات العمل', 'نصائح احترافية', 'شهادة إتمام']
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    initializeCounters();
+    initializeRegistrationForm();
+    initializeMobileMenu();
+    initializeHeaderScroll();
+});
+
+function initializeCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+function initializeRegistrationForm() {
+    const form = document.getElementById('registration-form');
+    const eventNameSelect = document.getElementById('event-name');
+    const summaryDiv = document.getElementById('registration-summary');
+    
+    // Update summary when event is selected
+    eventNameSelect.addEventListener('change', function() {
+        updateRegistrationSummary(this.value);
+    });
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        handleFormSubmission();
+    });
+    
+    // Real-time validation
+    const inputs = form.querySelectorAll('input[required], select[required]');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+        
+        input.addEventListener('input', function() {
+            clearFieldError(this);
+        });
+    });
+}
+
+function updateRegistrationSummary(eventId) {
+    const summaryDiv = document.getElementById('registration-summary');
+    
+    if (!eventId || !eventData[eventId]) {
+        summaryDiv.innerHTML = `
+            <div class="text-center text-gray-500 py-8">
+                <i class="fas fa-calendar-plus text-4xl mb-4"></i>
+                <p>اختر فعالية للمتابعة</p>
+            </div>
+        `;
+        return;
+    }
+    
+    const event = eventData[eventId];
+    
+    summaryDiv.innerHTML = `
+        <div class="border border-teal-200 rounded-lg p-4 bg-teal-50">
+            <h4 class="font-bold text-gray-800 mb-2">${event.name}</h4>
+            <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar text-teal-500 w-4 ml-2"></i>
+                    <span>${event.date}</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-teal-500 w-4 ml-2"></i>
+                    <span>${event.location}</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-teal-500 w-4 ml-2"></i>
+                    <span>${event.duration}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t pt-4">
+            <div class="flex items-center justify-between mb-4">
+                <span class="font-bold text-gray-800">سعر التذكرة:</span>
+                <span class="text-2xl font-bold text-teal-600">${event.price.toLocaleString()} دج</span>
+            </div>
+        </div>
+        
+        <div class="border-t pt-4">
+            <h5 class="font-bold text-gray-800 mb-2">ما يشمله التسجيل:</h5>
+            <ul class="space-y-1 text-sm text-gray-600">
+                ${event.includes.map(item => `
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 w-4 ml-2"></i>
+                        <span>${item}</span>
+                    </li>
+                `).join('')}
+            </ul>
+        </div>
+        
+        <div class="border-t pt-4">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                <div class="flex items-center">
+                    <i class="fas fa-info-circle text-yellow-600 ml-2"></i>
+                    <span class="text-sm text-yellow-800">سيتم إرسال تفاصيل الدفع عبر البريد الإلكتروني</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function handleFormSubmission() {
+    const form = document.getElementById('registration-form');
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Validate form
+    if (!validateForm()) {
+        return;
+    }
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    // Show loading state
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التسجيل...';
+    submitBtn.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+        // Show success message
+        showSuccessMessage(data);
+        
+        // Reset form
+        form.reset();
+        updateRegistrationSummary('');
+        
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 2000);
+}
+
+function showSuccessMessage(data) {
+    const eventName = eventData[data['event-name']]?.name || 'الفعالية المحددة';
+    
+    // Create success modal
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="bg-white rounded-xl p-8 max-w-md mx-4 text-center">
+            <div class="text-green-500 text-6xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">تم التسجيل بنجاح!</h3>
+            <p class="text-gray-600 mb-6">
+                تم تسجيلك في <strong>${eventName}</strong> بنجاح. 
+                ستصلك رسالة تأكيد على البريد الإلكتروني خلال دقائق.
+            </p>
+            <button onclick="this.parentElement.parentElement.remove()" 
+                    class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-all font-bold">
+                حسناً
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (modal.parentElement) {
+            modal.remove();
+        }
+    }, 5000);
+}
+
+function validateForm() {
+    const form = document.getElementById('registration-form');
+    const requiredFields = form.querySelectorAll('[required]');
+    let isValid = true;
+    
+    requiredFields.forEach(field => {
+        if (!validateField(field)) {
+            isValid = false;
+        }
+    });
+    
+    return isValid;
+}
+
+function validateField(field) {
+    const value = field.value.trim();
+    const fieldType = field.type;
+    
+    // Clear previous errors
+    clearFieldError(field);
+    
+    // Check required fields
+    if (field.hasAttribute('required') && !value) {
+        showFieldError(field, 'هذا الحقل مطلوب');
+        return false;
+    }
+    
+    // Validate email
+    if (fieldType === 'email' && value && !isValidEmail(value)) {
+        showFieldError(field, 'يرجى إدخال بريد إلكتروني صحيح');
+        return false;
+    }
+    
+    // Validate phone
+    if (fieldType === 'tel' && value && !isValidPhone(value)) {
+        showFieldError(field, 'يرجى إدخال رقم هاتف صحيح (05XXXXXXXX)');
+        return false;
+    }
+    
+    return true;
+}
+
+function showFieldError(field, message) {
+    field.classList.add('border-red-500', 'bg-red-50');
+    
+    let errorElement = field.parentNode.querySelector('.field-error');
+    if (!errorElement) {
+        errorElement = document.createElement('div');
+        errorElement.className = 'field-error text-red-500 text-sm mt-1';
+        field.parentNode.appendChild(errorElement);
+    }
+    
+    errorElement.textContent = message;
+}
+
+function clearFieldError(field) {
+    field.classList.remove('border-red-500', 'bg-red-50');
+    
+    const errorElement = field.parentNode.querySelector('.field-error');
+    if (errorElement) {
+        errorElement.remove();
+    }
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidPhone(phone) {
+    const phoneRegex = /^0[567][0-9]{8}$/;
+    return phoneRegex.test(phone);
+}
+
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+}
+
+function initializeHeaderScroll() {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+}
+
+console.log('📝 Registration page initialized successfully!');
+</script>
+
 </body>
 </html>

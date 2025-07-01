@@ -1,10 +1,744 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>المسابقات</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسابقات - رفيق توريق</title>
+    <meta name="description" content="مسابقات متنوعة في مختلف المجالات مع جوائز قيمة وفرص للتطوير والإبداع">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>المسابقات</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-calendar-alt ml-2"></i>
+                        الفعاليات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-home ml-3 text-green-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="exhibitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-store ml-3 text-green-500"></i>
+                                <span>المعارض</span>
+                            </a>
+                            <a href="competitions.html" class="flex items-center px-4 py-3 text-green-600 bg-green-50 border-r-4 border-green-600">
+                                <i class="fas fa-trophy ml-3 text-green-500"></i>
+                                <span>المسابقات</span>
+                            </a>
+                            <a href="conferences.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-users ml-3 text-green-500"></i>
+                                <span>المؤتمرات</span>
+                            </a>
+                            <a href="workshops.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-tools ml-3 text-green-500"></i>
+                                <span>ورش العمل</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="registration.html" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-trophy ml-2"></i>
+                    شارك الآن
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الفعاليات</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">المسابقات</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-emerald-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <img src="../assets/images/events/competitions-hero.jpg" alt="خلفية المسابقات" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    المسابقات والتحديات
+                </h1>
+                <p class="text-xl mb-8 text-green-100 leading-relaxed">
+                    اختبر مهاراتك وإبداعك في مسابقاتنا المتنوعة واربح جوائز قيمة ومميزة
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="12">0</div>
+                        <div class="text-sm text-green-200">مسابقة نشطة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="2500">0</div>
+                        <div class="text-sm text-green-200">مشارك</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="500000">0</div>
+                        <div class="text-sm text-green-200">دج جوائز</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="8">0</div>
+                        <div class="text-sm text-green-200">مجال</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Competition Categories -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع المسابقات</h2>
+            <p class="text-xl text-gray-600">مسابقات متنوعة لجميع المواهب والاهتمامات</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Innovation -->
+            <div class="competition-category bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الابتكار</h3>
+                    <p class="text-gray-600 mb-4">مسابقات الأفكار الإبداعية</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-blue-600">3</div>
+                        <div class="text-xs text-gray-500">مسابقة نشطة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology -->
+            <div class="competition-category bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">التكنولوجيا</h3>
+                    <p class="text-gray-600 mb-4">مسابقات البرمجة والتطوير</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-purple-600">2</div>
+                        <div class="text-xs text-gray-500">مسابقة نشطة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="competition-category bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">ريادة الأعمال</h3>
+                    <p class="text-gray-600 mb-4">مسابقات خطط الأعمال</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-green-600">4</div>
+                        <div class="text-xs text-gray-500">مسابقة نشطة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="competition-category bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-pink-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">التصميم</h3>
+                    <p class="text-gray-600 mb-4">مسابقات التصميم الإبداعي</p>
+                    <div class="bg-white rounded-lg p-3 mb-4">
+                        <div class="text-2xl font-bold text-pink-600">3</div>
+                        <div class="text-xs text-gray-500">مسابقة نشطة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Active Competitions -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">المسابقات النشطة</h2>
+            <p class="text-xl text-gray-600">شارك الآن في هذه المسابقات المميزة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Competition 1 -->
+            <div class="competition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <div class="relative">
+                    <img src="../assets/images/events/innovation-contest.jpg" alt="مسابقة الابتكار" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        ابتكار
+                    </div>
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مميز
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">ينتهي في 15 يوم</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">ابتكار</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-trophy ml-1"></i>
+                            <span class="text-sm text-gray-600">50,000 دج</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مسابقة الابتكار الشبابي</h3>
+                    <p class="text-gray-600 mb-4">
+                        مسابقة للأفكار الإبداعية في مجال التكنولوجيا والحلول الذكية
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-green-500 ml-2"></i>
+                            <span>150 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar text-green-500 ml-2"></i>
+                            <span>15 يوم متبقي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-trophy text-green-500 ml-2"></i>
+                            <span>3 جوائز</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-green-500 ml-2"></i>
+                            <span>مجاني</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>الجائزة الأولى: 50,000 دج</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادات تقدير</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>فرص استثمار</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=innovation-contest-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=innovation-contest-2025" class="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-trophy ml-1"></i>
+                            شارك الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competition 2 -->
+            <div class="competition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img src="../assets/images/events/coding-contest.jpg" alt="مسابقة البرمجة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        برمجة
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">ينتهي في 8 أيام</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">برمجة</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-trophy ml-1"></i>
+                            <span class="text-sm text-gray-600">30,000 دج</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">تحدي البرمجة السريعة</h3>
+                    <p class="text-gray-600 mb-4">
+                        مسابقة برمجة لحل المشاكل التقنية في وقت محدود
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-green-500 ml-2"></i>
+                            <span>80 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar text-green-500 ml-2"></i>
+                            <span>8 أيام متبقية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-green-500 ml-2"></i>
+                            <span>4 ساعات</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-green-500 ml-2"></i>
+                            <span>أونلاين</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>جوائز نقدية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>فرص عمل</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادات معتمدة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=coding-contest-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=coding-contest-2025" class="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-trophy ml-1"></i>
+                            شارك الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competition 3 -->
+            <div class="competition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <img src="../assets/images/events/business-plan.jpg" alt="مسابقة خطة الأعمال" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        أعمال
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">ينتهي في 22 يوم</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">أعمال</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-trophy ml-1"></i>
+                            <span class="text-sm text-gray-600">100,000 دج</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مسابقة أفضل خطة أعمال</h3>
+                    <p class="text-gray-600 mb-4">
+                        مسابقة لأفضل خطة أعمال مبتكرة وقابلة للتنفيذ
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-green-500 ml-2"></i>
+                            <span>45 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar text-green-500 ml-2"></i>
+                            <span>22 يوم متبقي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-trophy text-green-500 ml-2"></i>
+                            <span>5 جوائز</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-handshake text-green-500 ml-2"></i>
+                            <span>استثمار</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تمويل للمشاريع الفائزة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إرشاد من خبراء</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شبكة علاقات</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=business-plan-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=business-plan-2025" class="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-trophy ml-1"></i>
+                            شارك الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="#all-competitions" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg font-bold">
+                <i class="fas fa-trophy ml-2"></i>
+                عرض جميع المسابقات
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Competition Benefits -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">فوائد المشاركة في المسابقات</h2>
+            <p class="text-xl text-gray-600">لماذا تشارك في مسابقاتنا؟</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Benefit 1 -->
+            <div class="benefit-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-trophy text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">جوائز قيمة</h3>
+                <p class="text-gray-600 mb-4">جوائز نقدية ومعنوية مميزة</p>
+                <div class="text-yellow-600 font-bold">+500,000 دج جوائز</div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="benefit-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">تطوير المهارات</h3>
+                <p class="text-gray-600 mb-4">فرصة لتطوير وصقل مهاراتك</p>
+                <div class="text-blue-600 font-bold">خبرة عملية</div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="benefit-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات</h3>
+                <p class="text-gray-600 mb-4">تواصل مع المحترفين والخبراء</p>
+                <div class="text-purple-600 font-bold">+1000 متخصص</div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="benefit-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-briefcase text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">فرص وظيفية</h3>
+                <p class="text-gray-600 mb-4">فرص عمل من الشركات الراعية</p>
+                <div class="text-green-600 font-bold">+50 فرصة عمل</div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="benefit-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-certificate text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">شهادات معتمدة</h3>
+                <p class="text-gray-600 mb-4">شهادات مشاركة وتقدير معتمدة</p>
+                <div class="text-red-600 font-bold">شهادات دولية</div>
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="benefit-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-rocket text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">دعم للمشاريع</h3>
+                <p class="text-gray-600 mb-4">دعم وتمويل للأفكار المميزة</p>
+                <div class="text-indigo-600 font-bold">استثمار مضمون</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Participate -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">كيفية المشاركة</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة للمشاركة في مسابقاتنا</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="step-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    1
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">التسجيل</h3>
+                <p class="text-gray-600">سجل في المسابقة التي تناسب اهتماماتك</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    2
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">التحضير</h3>
+                <p class="text-gray-600">حضر مشروعك أو فكرتك وفقاً للمتطلبات</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    3
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">التقديم</h3>
+                <p class="text-gray-600">قدم عملك قبل انتهاء الموعد المحدد</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    4
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">النتائج</h3>
+                <p class="text-gray-600">انتظر النتائج واستلم جائزتك</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-green-900 via-green-800 to-emerald-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6">هل أنت مستعد للتحدي؟</h2>
+            <p class="text-xl text-green-200 mb-8 max-w-2xl mx-auto">
+                انضم إلى مسابقاتنا واختبر مهاراتك واربح جوائز قيمة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="registration.html?type=participant" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-trophy ml-2"></i>
+                    شارك في مسابقة
+                </a>
+                <a href="#all-competitions" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                    <i class="fas fa-list ml-2"></i>
+                    تصفح المسابقات
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                </div>
+                <p class="text-gray-400 mb-4">أفضل المسابقات مع جوائز قيمة</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">أنواع المسابقات</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مسابقات الابتكار</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مسابقات البرمجة</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مسابقات ريادة الأعمال</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مسابقات التصميم</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
+                <ul class="space-y-2">
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">التسجيل في المسابقات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">تنظيم المسابقات</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الجوائز والشهادات</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">027 XX XX XX</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">competitions@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - المسابقات. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/events.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+    });
+    
+    initializeCounters();
+    initializeMobileMenu();
+    initializeHeaderScroll();
+});
+
+function initializeCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-counter'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    }
+}
+
+function initializeHeaderScroll() {
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white/95', 'backdrop-blur-md');
+        } else {
+            header.classList.remove('bg-white/95', 'backdrop-blur-md');
+        }
+    });
+}
+
+console.log('🏆 Competitions page initialized successfully!');
+</script>
+
 </body>
 </html>
