@@ -1,10 +1,1207 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>حاسبة الأسعار</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة أسعار بناء المصانع - رفيق توريق</title>
+    <meta name="description" content="احسب تكلفة بناء مصنعك بدقة مع حاسبة الأسعار المتطورة. تقدير فوري وشامل لجميع أنواع المصانع والمنشآت الصناعية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/construction.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-  <h1>حاسبة الأسعار</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-industry ml-2"></i>
+                        بناء المصانع
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="metallic-factories.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-hammer ml-3 text-gray-500"></i>
+                                <span>المصانع المعدنية</span>
+                            </a>
+                            <a href="factory-types.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all">
+                                <i class="fas fa-building ml-3 text-gray-500"></i>
+                                <span>أنواع المصانع</span>
+                            </a>
+                            <a href="price-calculator.html" class="flex items-center px-4 py-3 text-green-600 bg-green-50 border-r-4 border-green-600">
+                                <i class="fas fa-calculator ml-3 text-green-500"></i>
+                                <span>حاسبة الأسعار (الحالية)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="quote-request.html" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-file-invoice ml-2"></i>
+                    طلب عرض سعر مفصل
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">بناء المصانع</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">حاسبة الأسعار</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-green-900 via-green-800 to-emerald-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"calculator\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><rect x=\"2\" y=\"2\" width=\"16\" height=\"16\" fill=\"white\" opacity=\"0.3\"/><circle cx=\"6\" cy=\"6\" r=\"1\" fill=\"white\" opacity=\"0.5\"/><circle cx=\"10\" cy=\"6\" r=\"1\" fill=\"white\" opacity=\"0.5\"/><circle cx=\"14\" cy=\"6\" r=\"1\" fill=\"white\" opacity=\"0.5\"/><circle cx=\"6\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.5\"/><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.5\"/><circle cx=\"14\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23calculator)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-green-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-calculator text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">تقدير فوري ودقيق للتكلفة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    حاسبة <span class="text-yellow-400">أسعار</span> بناء المصانع
+                </h1>
+                <p class="text-xl mb-8 text-green-100 leading-relaxed">
+                    احصل على تقدير دقيق وفوري لتكلفة بناء مصنعك. حاسبة متطورة تأخذ في الاعتبار جميع العوامل والمتطلبات
+                </p>
+                
+                <!-- Quick Features -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-bolt text-3xl text-yellow-400 mb-2"></i>
+                        <div class="text-sm text-green-200">تقدير فوري</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-chart-line text-3xl text-yellow-400 mb-2"></i>
+                        <div class="text-sm text-green-200">دقة عالية</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-cogs text-3xl text-yellow-400 mb-2"></i>
+                        <div class="text-sm text-green-200">تخصيص كامل</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-download text-3xl text-yellow-400 mb-2"></i>
+                        <div class="text-sm text-green-200">تقرير مفصل</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Calculator Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Calculator Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200" data-aos="fade-right">
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 text-green-600 p-3 rounded-lg ml-4">
+                                <i class="fas fa-calculator text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-3xl font-bold text-gray-800">حاسبة التكلفة التفاعلية</h2>
+                                <p class="text-gray-600">أدخل تفاصيل مشروعك للحصول على تقدير دقيق</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="price-calculator-form" class="space-y-8">
+                        <!-- Step 1: Factory Type -->
+                        <div class="calculator-step active" id="step-1">
+                            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 text-sm">1</span>
+                                    نوع المصنع والصناعة
+                                </h3>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                                            نوع الصناعة *
+                                        </label>
+                                        <select id="industry-type" name="industry-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all bg-white" required>
+                                            <option value="">اختر نوع الصناعة</option>
+                                            <option value="food" data-multiplier="1.2">الصناعات الغذائية</option>
+                                            <option value="chemical" data-multiplier="1.8">الصناعات الكيماوية</option>
+                                            <option value="metallic" data-multiplier="1.4">الصناعات المعدنية</option>
+                                            <option value="textile" data-multiplier="1.1">الصناعات النسجية</option>
+                                            <option value="pharmaceutical" data-multiplier="2.2">الصناعات الدوائية</option>
+                                            <option value="construction" data-multiplier="1.0">مواد البناء</option>
+                                            <option value="automotive" data-multiplier="1.6">صناعة السيارات</option>
+                                            <option value="electronics" data-multiplier="1.9">الصناعات الإلكترونية</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                                            نوع المنشأة *
+                                        </label>
+                                        <select id="facility-type" name="facility-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all bg-white" required>
+                                            <option value="">اختر نوع المنشأة</option>
+                                            <option value="factory" data-multiplier="1.0">مصنع إنتاج</option>
+                                            <option value="warehouse" data-multiplier="0.6">مستودع تخزين</option>
+                                            <option value="workshop" data-multiplier="0.8">ورشة تصنيع</option>
+                                            <option value="laboratory" data-multiplier="1.5">مختبر أبحاث</option>
+                                            <option value="processing" data-multiplier="1.3">وحدة معالجة</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Size and Specifications -->
+                        <div class="calculator-step" id="step-2">
+                            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                    <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 text-sm">2</span>
+                                    المساحة والمواصفات
+                                </h3>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                                            المساحة الإجمالية (متر مربع) *
+                                        </label>
+                                        <input type="number" id="total-area" name="total-area" min="100" max="100000" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white" placeholder="مثال: 5000" required>
+                                        <div class="mt-2">
+                                            <input type="range" id="area-slider" min="100" max="50000" value="5000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                                <span>100 م²</span>
+                                                <span>50,000 م²</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                                            ارتفاع المبنى (متر) *
+                                        </label>
+                                        <select id="building-height" name="building-height" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white" required>
+                                            <option value="">اختر الارتفاع</option>
+                                            <option value="6" data-multiplier="1.0">6 متر (طابق واحد)</option>
+                                            <option value="9" data-multiplier="1.2">9 متر (طابق ونصف)</option>
+                                            <option value="12" data-multiplier="1.4">12 متر (طابقان)</option>
+                                            <option value="15" data-multiplier="1.6">15 متر (ثلاثة طوابق)</option>
+                                            <option value="20" data-multiplier="1.8">20 متر (أربعة طوابق)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        نوع الهيكل الإنشائي
+                                    </label>
+                                    <div class="grid md:grid-cols-3 gap-4">
+                                        <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                            <input type="radio" name="structure-type" value="concrete" data-multiplier="1.0" class="text-blue-600 focus:ring-blue-500">
+                                            <span class="mr-3 text-gray-700">خرسانة مسلحة</span>
+                                        </label>
+                                        <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                            <input type="radio" name="structure-type" value="steel" data-multiplier="1.3" class="text-blue-600 focus:ring-blue-500">
+                                            <span class="mr-3 text-gray-700">هيكل معدني</span>
+                                        </label>
+                                        <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                            <input type="radio" name="structure-type" value="mixed" data-multiplier="1.15" class="text-blue-600 focus:ring-blue-500">
+                                            <span class="mr-3 text-gray-700">مختلط</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Additional Features -->
+                        <div class="calculator-step" id="step-3">
+                            <div class="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                    <span class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 text-sm">3</span>
+                                    المرافق والأنظمة الإضافية
+                                </h3>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-3">الأنظمة الكهربائية والميكانيكية</h4>
+                                        <div class="grid md:grid-cols-2 gap-4">
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="hvac" data-cost="150" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">نظام تكييف وتهوية</span>
+                                                <span class="mr-auto text-sm text-gray-500">+150 دج/م²</span>
+                                            </label>
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="electrical" data-cost="100" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">نظام كهربائي متطور</span>
+                                                <span class="mr-auto text-sm text-gray-500">+100 دج/م²</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-3">أنظمة السلامة والأمان</h4>
+                                        <div class="grid md:grid-cols-2 gap-4">
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="fire-system" data-cost="80" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">نظام إطفاء الحريق</span>
+                                                <span class="mr-auto text-sm text-gray-500">+80 دج/م²</span>
+                                            </label>
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="security" data-cost="60" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">نظام أمان ومراقبة</span>
+                                                <span class="mr-auto text-sm text-gray-500">+60 دج/م²</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-3">مرافق إضافية</h4>
+                                        <div class="grid md:grid-cols-2 gap-4">
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="offices" data-cost="200" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">مكاتب إدارية</span>
+                                                <span class="mr-auto text-sm text-gray-500">+200 دج/م²</span>
+                                            </label>
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="parking" data-cost="50" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">موقف سيارات</span>
+                                                <span class="mr-auto text-sm text-gray-500">+50 دج/م²</span>
+                                            </label>
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="canteen" data-cost="120" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">كافتيريا للعمال</span>
+                                                <span class="mr-auto text-sm text-gray-500">+120 دج/م²</span>
+                                            </label>
+                                            <label class="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors cursor-pointer">
+                                                <input type="checkbox" name="features" value="laboratory" data-cost="300" class="text-purple-600 focus:ring-purple-500">
+                                                <span class="mr-3 text-gray-700">مختبر جودة</span>
+                                                <span class="mr-auto text-sm text-gray-500">+300 دج/م²</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-between pt-6">
+                            <button type="button" id="prev-step" class="bg-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-400 transition-all font-bold" style="display: none;">
+                                <i class="fas fa-arrow-right ml-2"></i>
+                                السابق
+                            </button>
+                            <button type="button" id="next-step" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all font-bold">
+                                التالي
+                                <i class="fas fa-arrow-left mr-2"></i>
+                            </button>
+                            <button type="button" id="calculate-btn" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all font-bold" style="display: none;">
+                                <i class="fas fa-calculator ml-2"></i>
+                                احسب التكلفة
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky top-28 border border-gray-200" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chart-pie text-green-600 ml-2"></i>
+                        نتائج التقدير
+                    </h3>
+                    
+                    <div id="calculation-results" class="space-y-4">
+                        <div class="text-center text-gray-500 py-8">
+                            <i class="fas fa-calculator text-4xl mb-4 text-gray-400"></i>
+                            <p>أكمل النموذج للحصول على التقدير</p>
+                        </div>
+                    </div>
+
+                    <!-- Progress Indicator -->
+                    <div class="mt-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-gray-700">تقدم النموذج</span>
+                            <span class="text-sm text-gray-600" id="progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full transition-all duration-500" id="progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">كيف تعمل الحاسبة؟</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة للحصول على تقدير دقيق</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="how-it-works-step text-center" data-aos="fade-up">
+                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                    1
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">اختر نوع المصنع</h3>
+                <p class="text-gray-600 text-sm">حدد نوع الصناعة والمنشأة المطلوبة</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="how-it-works-step text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                    2
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">أدخل المواصفات</h3>
+                <p class="text-gray-600 text-sm">حدد المساحة والارتفاع ونوع الهيكل</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="how-it-works-step text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                    3
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">اختر المرافق</h3>
+                <p class="text-gray-600 text-sm">أضف الأنظمة والمرافق الإضافية</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="how-it-works-step text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                    4
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-3">احصل على التقدير</h3>
+                <p class="text-gray-600 text-sm">تقدير فوري مع تفاصيل التكلفة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Factors -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">العوامل المؤثرة في التسعير</h2>
+            <p class="text-xl text-gray-600">فهم العوامل التي تؤثر على تكلفة بناء المصنع</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Factor 1 -->
+            <div class="pricing-factor bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-expand-arrows-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">المساحة والحجم</h3>
+                    <p class="text-gray-600 text-sm mb-4">المساحة الإجمالية وارتفاع المبنى</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-blue-600">40-60%</div>
+                        <div class="text-xs text-gray-500">من إجمالي التكلفة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factor 2 -->
+            <div class="pricing-factor bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-industry text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">نوع الصناعة</h3>
+                    <p class="text-gray-600 text-sm mb-4">المتطلبات الخاصة لكل صناعة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-green-600">20-30%</div>
+                        <div class="text-xs text-gray-500">تباين في التكلفة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factor 3 -->
+            <div class="pricing-factor bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الأنظمة والمعدات</h3>
+                    <p class="text-gray-600 text-sm mb-4">الأنظمة الكهربائية والميكانيكية</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-purple-600">15-25%</div>
+                        <div class="text-xs text-gray-500">من إجمالي التكلفة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factor 4 -->
+            <div class="pricing-factor bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الموقع الجغرافي</h3>
+                    <p class="text-gray-600 text-sm mb-4">تكلفة النقل والعمالة المحلية</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-orange-600">5-15%</div>
+                        <div class="text-xs text-gray-500">تباين حسب المنطقة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factor 5 -->
+            <div class="pricing-factor bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الجدول الزمني</h3>
+                    <p class="text-gray-600 text-sm mb-4">سرعة التنفيذ المطلوبة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-red-600">5-10%</div>
+                        <div class="text-xs text-gray-500">للتنفيذ السريع</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factor 6 -->
+            <div class="pricing-factor bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-award text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">مستوى الجودة</h3>
+                    <p class="text-gray-600 text-sm mb-4">معايير الجودة والتشطيبات</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-sm font-bold text-teal-600">10-20%</div>
+                        <div class="text-xs text-gray-500">للجودة العالية</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل تحتاج تقدير أكثر دقة؟</h2>
+            <p class="text-xl mb-8 text-green-100">
+                احصل على عرض سعر مفصل ومخصص من خبرائنا مع زيارة موقعية مجانية
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="quote-request.html" class="bg-yellow-500 text-green-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-file-invoice ml-2"></i>
+                    طلب عرض سعر مفصل
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل مع خبير
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-green-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    حاسبة أسعار متطورة لتقدير تكلفة بناء المصانع بدقة عالية ومعايير احترافية.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">أدوات مفيدة</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">حاسبة الأسعار</a></li>
+                    <li><a href="quote-request.html" class="text-gray-400 hover:text-white transition-colors">طلب عرض سعر</a></li>
+                    <li><a href="construction-process.html" class="text-gray-400 hover:text-white transition-colors">عملية البناء</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="factory-types.html" class="text-gray-400 hover:text-white transition-colors">أنواع المصانع</a></li>
+                    <li><a href="metallic-factories.html" class="text-gray-400 hover:text-white transition-colors">المصانع المعدنية</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">+213 770 123 456</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">calculator@rafiktawriq.dz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 رفيق توريق - حاسبة الأسعار. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Calculator functionality
+class PriceCalculator {
+    constructor() {
+        this.currentStep = 1;
+        this.totalSteps = 3;
+        this.basePricePerSqm = 8000; // Base price per square meter in DZD
+        this.initializeEventListeners();
+        this.updateProgress();
+    }
+
+    initializeEventListeners() {
+        // Step navigation
+        document.getElementById('next-step').addEventListener('click', () => this.nextStep());
+        document.getElementById('prev-step').addEventListener('click', () => this.prevStep());
+        document.getElementById('calculate-btn').addEventListener('click', () => this.calculatePrice());
+
+        // Area slider
+        const areaSlider = document.getElementById('area-slider');
+        const areaInput = document.getElementById('total-area');
+        
+        areaSlider.addEventListener('input', (e) => {
+            areaInput.value = e.target.value;
+            this.updateCalculation();
+        });
+        
+        areaInput.addEventListener('input', (e) => {
+            areaSlider.value = e.target.value;
+            this.updateCalculation();
+        });
+
+        // Form inputs
+        document.querySelectorAll('select, input[type="radio"], input[type="checkbox"]').forEach(input => {
+            input.addEventListener('change', () => this.updateCalculation());
+        });
+
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    nextStep() {
+        if (this.validateCurrentStep()) {
+            if (this.currentStep < this.totalSteps) {
+                this.hideStep(this.currentStep);
+                this.currentStep++;
+                this.showStep(this.currentStep);
+                this.updateProgress();
+                this.updateButtons();
+            }
+        }
+    }
+
+    prevStep() {
+        if (this.currentStep > 1) {
+            this.hideStep(this.currentStep);
+            this.currentStep--;
+            this.showStep(this.currentStep);
+            this.updateProgress();
+            this.updateButtons();
+        }
+    }
+
+    hideStep(step) {
+        document.getElementById(`step-${step}`).style.display = 'none';
+    }
+
+    showStep(step) {
+        document.getElementById(`step-${step}`).style.display = 'block';
+    }
+
+    updateButtons() {
+        const prevBtn = document.getElementById('prev-step');
+        const nextBtn = document.getElementById('next-step');
+        const calcBtn = document.getElementById('calculate-btn');
+
+        prevBtn.style.display = this.currentStep > 1 ? 'block' : 'none';
+        
+        if (this.currentStep === this.totalSteps) {
+            nextBtn.style.display = 'none';
+            calcBtn.style.display = 'block';
+        } else {
+            nextBtn.style.display = 'block';
+            calcBtn.style.display = 'none';
+        }
+    }
+
+    updateProgress() {
+        const progress = (this.currentStep / this.totalSteps) * 100;
+        document.getElementById('progress-bar').style.width = `${progress}%`;
+        document.getElementById('progress-text').textContent = `${Math.round(progress)}%`;
+    }
+
+    validateCurrentStep() {
+        const currentStepElement = document.getElementById(`step-${this.currentStep}`);
+        const requiredInputs = currentStepElement.querySelectorAll('[required]');
+        
+        for (let input of requiredInputs) {
+            if (!input.value) {
+                input.focus();
+                this.showError(input, 'هذا الحقل مطلوب');
+                return false;
+            }
+        }
+        
+        // Validate radio buttons
+        const radioGroups = currentStepElement.querySelectorAll('input[type="radio"]');
+        const radioGroupNames = [...new Set(Array.from(radioGroups).map(r => r.name))];
+        
+        for (let groupName of radioGroupNames) {
+            const groupInputs = currentStepElement.querySelectorAll(`input[name="${groupName}"]`);
+            const isChecked = Array.from(groupInputs).some(input => input.checked);
+            
+            if (!isChecked && groupInputs.length > 0) {
+                groupInputs[0].focus();
+                this.showError(groupInputs[0], 'يرجى اختيار أحد الخيارات');
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    showError(input, message) {
+        // Remove existing error
+        const existingError = input.parentNode.querySelector('.error-message');
+        if (existingError) {
+            existingError.remove();
+        }
+
+        // Add error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+        errorDiv.textContent = message;
+        input.parentNode.appendChild(errorDiv);
+
+        // Remove error after 3 seconds
+        setTimeout(() => {
+            if (errorDiv.parentNode) {
+                errorDiv.remove();
+            }
+        }, 3000);
+    }
+
+    updateCalculation() {
+        if (this.currentStep === this.totalSteps) {
+            this.calculatePrice();
+        }
+    }
+
+    calculatePrice() {
+        const formData = new FormData(document.getElementById('price-calculator-form'));
+        const data = Object.fromEntries(formData.entries());
+        
+        // Get area
+        const area = parseFloat(data['total-area']) || 0;
+        if (area === 0) return;
+
+        // Base calculation
+        let totalPrice = area * this.basePricePerSqm;
+
+        // Industry multiplier
+        const industrySelect = document.getElementById('industry-type');
+        const industryMultiplier = parseFloat(industrySelect.selectedOptions[0]?.dataset.multiplier || 1);
+        totalPrice *= industryMultiplier;
+
+        // Facility type multiplier
+        const facilitySelect = document.getElementById('facility-type');
+        const facilityMultiplier = parseFloat(facilitySelect.selectedOptions[0]?.dataset.multiplier || 1);
+        totalPrice *= facilityMultiplier;
+
+        // Height multiplier
+        const heightSelect = document.getElementById('building-height');
+        const heightMultiplier = parseFloat(heightSelect.selectedOptions[0]?.dataset.multiplier || 1);
+        totalPrice *= heightMultiplier;
+
+        // Structure type multiplier
+        const structureType = document.querySelector('input[name="structure-type"]:checked');
+        const structureMultiplier = parseFloat(structureType?.dataset.multiplier || 1);
+        totalPrice *= structureMultiplier;
+
+        // Additional features
+        const features = document.querySelectorAll('input[name="features"]:checked');
+        let additionalCosts = 0;
+        features.forEach(feature => {
+            const cost = parseFloat(feature.dataset.cost || 0);
+            additionalCosts += cost * area;
+        });
+
+        totalPrice += additionalCosts;
+
+        // Display results
+        this.displayResults({
+            area,
+            basePrice: area * this.basePricePerSqm,
+            industryMultiplier,
+            facilityMultiplier,
+            heightMultiplier,
+            structureMultiplier,
+            additionalCosts,
+            totalPrice,
+            pricePerSqm: totalPrice / area
+        });
+    }
+
+    displayResults(calculation) {
+        const resultsDiv = document.getElementById('calculation-results');
+        
+        resultsDiv.innerHTML = `
+            <div class="space-y-4">
+                <!-- Total Price -->
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">
+                        ${this.formatNumber(calculation.totalPrice)} دج
+                    </div>
+                    <div class="text-sm text-gray-600">التكلفة الإجمالية المقدرة</div>
+                </div>
+
+                <!-- Price per sqm -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-center">
+                    <div class="text-lg font-bold text-blue-600">
+                        ${this.formatNumber(calculation.pricePerSqm)} دج/م²
+                    </div>
+                    <div class="text-xs text-gray-600">سعر المتر المربع</div>
+                </div>
+
+                <!-- Breakdown -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-800 text-sm">تفاصيل التكلفة:</h4>
+                    
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">التكلفة الأساسية</span>
+                        <span class="font-medium">${this.formatNumber(calculation.basePrice)} دج</span>
+                    </div>
+                    
+                    ${calculation.industryMultiplier !== 1 ? `
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">معامل نوع الصناعة</span>
+                        <span class="font-medium">×${calculation.industryMultiplier}</span>
+                    </div>
+                    ` : ''}
+                    
+                    ${calculation.facilityMultiplier !== 1 ? `
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">معامل نوع المنشأة</span>
+                        <span class="font-medium">×${calculation.facilityMultiplier}</span>
+                    </div>
+                    ` : ''}
+                    
+                    ${calculation.heightMultiplier !== 1 ? `
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">معامل الارتفاع</span>
+                        <span class="font-medium">×${calculation.heightMultiplier}</span>
+                    </div>
+                    ` : ''}
+                    
+                    ${calculation.additionalCosts > 0 ? `
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">المرافق الإضافية</span>
+                        <span class="font-medium">+${this.formatNumber(calculation.additionalCosts)} دج</span>
+                    </div>
+                    ` : ''}
+                </div>
+
+                <!-- Actions -->
+                <div class="space-y-2 pt-4 border-t border-gray-200">
+                    <button onclick="calculator.downloadReport()" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-all text-sm font-bold">
+                        <i class="fas fa-download ml-2"></i>
+                        تحميل التقرير
+                    </button>
+                    <a href="quote-request.html" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-all text-sm font-bold block text-center">
+                        <i class="fas fa-file-invoice ml-2"></i>
+                        طلب عرض سعر مفصل
+                    </a>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mt-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-yellow-600 mt-1 ml-2"></i>
+                        <div class="text-xs text-yellow-800">
+                            <strong>ملاحظة:</strong> هذا تقدير أولي قد يختلف السعر النهائي حسب المواصفات التفصيلية والموقع والظروف الخاصة بالمشروع.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    formatNumber(number) {
+        return new Intl.NumberFormat('ar-DZ').format(Math.round(number));
+    }
+
+    downloadReport() {
+        // Create a simple report
+        const reportData = {
+            date: new Date().toLocaleDateString('ar-SA'),
+            area: document.getElementById('total-area').value,
+            industryType: document.getElementById('industry-type').selectedOptions[0]?.text,
+            facilityType: document.getElementById('facility-type').selectedOptions[0]?.text,
+            height: document.getElementById('building-height').selectedOptions[0]?.text,
+            structureType: document.querySelector('input[name="structure-type"]:checked')?.nextElementSibling?.textContent,
+            features: Array.from(document.querySelectorAll('input[name="features"]:checked')).map(f => f.nextElementSibling.textContent),
+            totalPrice: document.querySelector('#calculation-results .text-3xl').textContent
+        };
+
+        // Create report content
+        const reportContent = `
+تقرير تقدير تكلفة بناء المصنع
+=====================================
+
+تاريخ التقرير: ${reportData.date}
+
+تفاصيل المشروع:
+- نوع الصناعة: ${reportData.industryType || 'غير محدد'}
+- نوع المنشأة: ${reportData.facilityType || 'غير محدد'}
+- المساحة الإجمالية: ${reportData.area} متر مربع
+- ارتفاع المبنى: ${reportData.height || 'غير محدد'}
+- نوع الهيكل: ${reportData.structureType || 'غير محدد'}
+
+المرافق الإضافية:
+${reportData.features.length > 0 ? reportData.features.map(f => `- ${f}`).join('\n') : '- لا توجد مرافق إضافية'}
+
+التكلفة المقدرة:
+${reportData.totalPrice}
+
+ملاحظات مهمة:
+- هذا تقدير أولي وقد تختلف التكلفة النهائية
+- يُنصح بطلب عرض سعر مفصل للحصول على تقدير دقيق
+- التكلفة لا تشمل تكاليف الأراضي والتراخيص
+
+شركة رفيق توريق
+هاتف: +213 770 123 456
+البريد الإلكتروني: calculator@rafiktawriq.dz
+        `;
+
+        // Download the report
+        const blob = new Blob([reportContent], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `تقرير_تقدير_التكلفة_${new Date().getTime()}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+}
+
+// Initialize calculator
+let calculator;
+document.addEventListener('DOMContentLoaded', function() {
+    calculator = new PriceCalculator();
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Pricing factor cards animation
+document.querySelectorAll('.pricing-factor').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// How it works steps animation
+document.querySelectorAll('.how-it-works-step').forEach(step => {
+    step.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    step.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Form validation styling
+document.querySelectorAll('input, select').forEach(input => {
+    input.addEventListener('focus', function() {
+        this.classList.add('ring-2', 'ring-green-500', 'border-green-500');
+    });
+    
+    input.addEventListener('blur', function() {
+        this.classList.remove('ring-2', 'ring-green-500', 'border-green-500');
+        if (this.value) {
+            this.classList.add('border-green-400', 'bg-green-50');
+        } else {
+            this.classList.remove('border-green-400', 'bg-green-50');
+        }
+    });
+});
+
+// Add loading animation for calculations
+function showCalculationLoading() {
+    const resultsDiv = document.getElementById('calculation-results');
+    resultsDiv.innerHTML = `
+        <div class="text-center py-8">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">جاري حساب التكلفة...</p>
+        </div>
+    `;
+}
+
+// Enhanced error handling
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `fixed top-4 right-4 z-50 transform translate-x-full transition-transform duration-300`;
+    
+    let bgColor, iconColor, icon;
+    switch(type) {
+        case 'success':
+            bgColor = 'bg-green-500';
+            iconColor = 'text-green-100';
+            icon = 'fa-check-circle';
+            break;
+        case 'error':
+            bgColor = 'bg-red-500';
+            iconColor = 'text-red-100';
+            icon = 'fa-exclamation-circle';
+            break;
+        default:
+            bgColor = 'bg-blue-500';
+            iconColor = 'text-blue-100';
+            icon = 'fa-info-circle';
+    }
+    
+    notification.innerHTML = `
+        <div class="${bgColor} text-white px-6 py-4 rounded-lg shadow-lg flex items-center max-w-sm">
+            <i class="fas ${icon} ${iconColor} ml-3"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Hide notification after 5 seconds
+    setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 5000);
+}
+
+// Add CSS for custom styling
+const style = document.createElement('style');
+style.textContent = `
+    .calculator-step {
+        display: none;
+        animation: fadeIn 0.5s ease-in;
+    }
+    
+    .calculator-step.active {
+        display: block;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .pricing-factor {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .how-it-works-step {
+        transition: all 0.3s ease;
+    }
+    
+    input:focus, select:focus {
+        outline: none;
+    }
+    
+    .error-message {
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Custom slider styling */
+    input[type="range"] {
+        -webkit-appearance: none;
+        background: transparent;
+    }
+    
+    input[type="range"]::-webkit-slider-track {
+        background: #e5e7eb;
+        height: 8px;
+        border-radius: 4px;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: #10b981;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: -6px;
+    }
+    
+    input[type="range"]::-moz-range-track {
+        background: #e5e7eb;
+        height: 8px;
+        border-radius: 4px;
+        border: none;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        background: #10b981;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('💰 Price Calculator page initialized successfully!');
+</script>
+
 </body>
 </html>
