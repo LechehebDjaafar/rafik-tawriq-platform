@@ -1,10 +1,1501 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>حجز الرحلات</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز الرحلات التجارية - رفيق توريق</title>
+    <meta name="description" content="احجز رحلتك التجارية الآن إلى تركيا، فرنسا، الصين، والإمارات. نظام حجز سهل وآمن مع خيارات دفع متعددة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/business-tourism.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>حجز الرحلات</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header الموحد -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl group-hover:scale-105 transition-transform shadow-lg">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium flex items-center">
+                        <i class="fas fa-th-large ml-2"></i>
+                        الخدمات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-4 grid grid-cols-2 gap-2">
+                            <a href="../courses/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-graduation-cap text-blue-500 ml-3"></i>
+                                <span>الدورات التدريبية</span>
+                            </a>
+                            <a href="../incubator/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-seedling text-green-500 ml-3"></i>
+                                <span>الحاضنة</span>
+                            </a>
+                            <a href="../consulting/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-user-tie text-purple-500 ml-3"></i>
+                                <span>الاستشارات</span>
+                            </a>
+                            <a href="../machinery/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-cogs text-orange-500 ml-3"></i>
+                                <span>الآلات الصناعية</span>
+                            </a>
+                            <a href="../real-estate/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-building text-red-500 ml-3"></i>
+                                <span>العقارات</span>
+                            </a>
+                            <a href="../events/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-calendar-alt text-yellow-500 ml-3"></i>
+                                <span>الفعاليات</span>
+                            </a>
+                            <a href="../projects/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-project-diagram text-indigo-500 ml-3"></i>
+                                <span>المشاريع</span>
+                            </a>
+                            <a href="../construction/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-hammer text-gray-500 ml-3"></i>
+                                <span>بناء المصانع</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tourism -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-purple-600 font-bold flex items-center relative">
+                        <i class="fas fa-plane ml-2"></i>
+                        سياحة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="turkey-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات تركيا</span>
+                            </a>
+                            <a href="france-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات فرنسا</span>
+                            </a>
+                            <a href="china-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الصين</span>
+                            </a>
+                            <a href="uae-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الإمارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
+                                <i class="fas fa-calendar-check ml-3 text-purple-500"></i>
+                                <span>حجز الرحلات (الحالية)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Services -->
+                <a href="../legal/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium">
+                    <i class="fas fa-balance-scale ml-2"></i>
+                    الخدمات القانونية
+                </a>
+                
+                <!-- Contact -->
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="../contact/index.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    ابدأ مشروعك
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+        <div class="px-4 py-6 space-y-4">
+            <a href="../index.html" class="block text-gray-700 py-2">الرئيسية</a>
+            <a href="../courses/index.html" class="block text-gray-700 py-2">الدورات التدريبية</a>
+            <a href="../incubator/index.html" class="block text-gray-700 py-2">الحاضنة</a>
+            <a href="../consulting/index.html" class="block text-gray-700 py-2">الاستشارات</a>
+            <a href="../machinery/index.html" class="block text-gray-700 py-2">الآلات الصناعية</a>
+            <a href="../real-estate/index.html" class="block text-gray-700 py-2">العقارات</a>
+            <a href="../events/index.html" class="block text-gray-700 py-2">الفعاليات</a>
+            <a href="../projects/index.html" class="block text-gray-700 py-2">المشاريع</a>
+            <a href="../construction/index.html" class="block text-gray-700 py-2">بناء المصانع</a>
+            <a href="index.html" class="block text-purple-600 font-bold py-2">سياحة الأعمال</a>
+            <a href="../legal/index.html" class="block text-gray-700 py-2">الخدمات القانونية</a>
+            <a href="../contact/index.html" class="block text-gray-700 py-2">تواصل معنا</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">سياحة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">حجز الرحلات</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"booking\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"8\" fill=\"white\" opacity=\"0.3\"/><path d=\"M5 12.5 L20 12.5 M12.5 5 L12.5 20\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"3\" fill=\"white\" opacity=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23booking)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-calendar-check text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">نظام حجز متطور وآمن</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    احجز رحلتك <span class="text-yellow-400">التجارية</span> الآن
+                </h1>
+                <p class="text-xl mb-8 text-purple-100 leading-relaxed">
+                    اختر وجهتك المفضلة واحجز رحلتك التجارية بسهولة وأمان. نوفر لك أفضل العروض والخدمات لضمان نجاح رحلتك
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="500">0</div>
+                        <div class="text-sm text-purple-200">عميل راضي</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="4">0</div>
+                        <div class="text-sm text-purple-200">وجهات متاحة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="24">0</div>
+                        <div class="text-sm text-purple-200">ساعة دعم</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="100">0</div>
+                        <div class="text-sm text-purple-200">% ضمان الجودة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Form Header -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">احجز رحلتك التجارية</h2>
+                <p class="text-xl text-gray-600">املأ النموذج أدناه وسنتواصل معك خلال 24 ساعة</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Booking Form -->
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <form id="booking-form" class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                        <!-- Step Indicator -->
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="flex items-center">
+                                <div class="step-indicator active" data-step="1">
+                                    <span>1</span>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step-indicator" data-step="2">
+                                    <span>2</span>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step-indicator" data-step="3">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-600">
+                                خطوة <span id="current-step">1</span> من 3
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Destination & Dates -->
+                        <div class="form-step active" id="step-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">اختر وجهتك وتواريخ السفر</h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Destination -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-map-marker-alt text-purple-500 ml-2"></i>
+                                        الوجهة
+                                    </label>
+                                    <select id="destination" name="destination" class="form-input" required>
+                                        <option value="">اختر الوجهة</option>
+                                        <option value="turkey">تركيا - اكتشف الفرص التجارية</option>
+                                        <option value="france">فرنسا - التكنولوجيا والابتكار</option>
+                                        <option value="china">الصين - التصنيع والتجارة</option>
+                                        <option value="uae">الإمارات - الاستثمار والأعمال</option>
+                                    </select>
+                                </div>
+
+                                <!-- Program Duration -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-calendar-alt text-purple-500 ml-2"></i>
+                                        مدة البرنامج
+                                    </label>
+                                    <select id="program-duration" name="program-duration" class="form-input" required>
+                                        <option value="">اختر المدة</option>
+                                        <option value="6-days">6 أيام</option>
+                                        <option value="7-days">7 أيام</option>
+                                        <option value="8-days">8 أيام</option>
+                                        <option value="10-days">10 أيام</option>
+                                        <option value="12-days">12 يوم</option>
+                                        <option value="14-days">14 يوم</option>
+                                        <option value="15-days">15 يوم</option>
+                                        <option value="21-days">21 يوم</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Departure Date -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-plane-departure text-purple-500 ml-2"></i>
+                                        تاريخ المغادرة
+                                    </label>
+                                    <input type="date" id="departure-date" name="departure-date" class="form-input" required min="2025-01-01">
+                                </div>
+
+                                <!-- Number of Travelers -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-users text-purple-500 ml-2"></i>
+                                        عدد المسافرين
+                                    </label>
+                                    <select id="travelers" name="travelers" class="form-input" required>
+                                        <option value="">اختر العدد</option>
+                                        <option value="1">شخص واحد</option>
+                                        <option value="2">شخصان</option>
+                                        <option value="3-5">3-5 أشخاص</option>
+                                        <option value="6-10">6-10 أشخاص</option>
+                                        <option value="11-20">11-20 شخص</option>
+                                        <option value="20+">أكثر من 20 شخص</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Business Type -->
+                            <div class="form-group mb-6">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">
+                                    <i class="fas fa-briefcase text-purple-500 ml-2"></i>
+                                    نوع النشاط التجاري
+                                </label>
+                                <select id="business-type" name="business-type" class="form-input" required>
+                                    <option value="">اختر نوع النشاط</option>
+                                    <option value="import-export">الاستيراد والتصدير</option>
+                                    <option value="manufacturing">التصنيع</option>
+                                    <option value="technology">التكنولوجيا</option>
+                                    <option value="retail">البيع بالتجزئة</option>
+                                    <option value="services">الخدمات</option>
+                                    <option value="real-estate">العقارات</option>
+                                    <option value="investment">الاستثمار</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="button" class="btn-next bg-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-purple-700 transition-all">
+                                    التالي
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Personal Information -->
+                        <div class="form-step" id="step-2">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">معلوماتك الشخصية</h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Full Name -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-user text-purple-500 ml-2"></i>
+                                        الاسم الكامل
+                                    </label>
+                                    <input type="text" id="full-name" name="full-name" class="form-input" placeholder="أدخل اسمك الكامل" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-envelope text-purple-500 ml-2"></i>
+                                        البريد الإلكتروني
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Phone -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-phone text-purple-500 ml-2"></i>
+                                        رقم الهاتف
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+213 XXX XXX XXX" required>
+                                </div>
+
+                                <!-- Company Name -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-building text-purple-500 ml-2"></i>
+                                        اسم الشركة
+                                    </label>
+                                    <input type="text" id="company-name" name="company-name" class="form-input" placeholder="اسم شركتك">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Position -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-id-badge text-purple-500 ml-2"></i>
+                                        المنصب
+                                    </label>
+                                    <input type="text" id="position" name="position" class="form-input" placeholder="منصبك في الشركة">
+                                </div>
+
+                                <!-- City -->
+                                <div class="form-group">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                                        <i class="fas fa-map-marker-alt text-purple-500 ml-2"></i>
+                                        المدينة
+                                    </label>
+                                    <select id="city" name="city" class="form-input" required>
+                                        <option value="">اختر المدينة</option>
+                                        <option value="algiers">الجزائر العاصمة</option>
+                                        <option value="oran">وهران</option>
+                                        <option value="constantine">قسنطينة</option>
+                                        <option value="annaba">عنابة</option>
+                                        <option value="blida">البليدة</option>
+                                        <option value="batna">باتنة</option>
+                                        <option value="setif">سطيف</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Special Requirements -->
+                            <div class="form-group mb-6">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">
+                                    <i class="fas fa-clipboard-list text-purple-500 ml-2"></i>
+                                    متطلبات خاصة أو ملاحظات
+                                </label>
+                                <textarea id="special-requirements" name="special-requirements" rows="4" class="form-input" placeholder="أي متطلبات خاصة أو ملاحظات تود إضافتها..."></textarea>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <button type="button" class="btn-prev bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition-all">
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                    السابق
+                                </button>
+                                <button type="button" class="btn-next bg-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-purple-700 transition-all">
+                                    التالي
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Confirmation & Payment -->
+                        <div class="form-step" id="step-3">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">مراجعة الحجز والدفع</h3>
+                            
+                            <!-- Booking Summary -->
+                            <div class="bg-purple-50 rounded-lg p-6 mb-6">
+                                <h4 class="text-lg font-bold text-gray-800 mb-4">ملخص الحجز</h4>
+                                <div id="booking-summary" class="space-y-3">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="form-group mb-6">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">
+                                    <i class="fas fa-credit-card text-purple-500 ml-2"></i>
+                                    طريقة الدفع
+                                </label>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <label class="payment-option">
+                                        <input type="radio" name="payment-method" value="bank-transfer" class="sr-only">
+                                        <div class="payment-card">
+                                            <i class="fas fa-university text-2xl text-blue-600 mb-2"></i>
+                                            <div class="font-bold">تحويل بنكي</div>
+                                            <div class="text-sm text-gray-600">دفع آمن عبر البنك</div>
+                                        </div>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input type="radio" name="payment-method" value="installments" class="sr-only">
+                                        <div class="payment-card">
+                                            <i class="fas fa-calendar-alt text-2xl text-green-600 mb-2"></i>
+                                            <div class="font-bold">دفع بالتقسيط</div>
+                                            <div class="text-sm text-gray-600">قسط على دفعات</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-group mb-6">
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="terms" name="terms" class="mt-1 ml-3" required>
+                                    <span class="text-sm text-gray-700">
+                                        أوافق على <a href="#" class="text-purple-600 hover:underline">الشروط والأحكام</a> و
+                                        <a href="#" class="text-purple-600 hover:underline">سياسة الخصوصية</a>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Newsletter Subscription -->
+                            <div class="form-group mb-6">
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 ml-3">
+                                    <span class="text-sm text-gray-700">
+                                        أرغب في تلقي النشرة الإخبارية والعروض الخاصة
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <button type="button" class="btn-prev bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition-all">
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                    السابق
+                                </button>
+                                <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-check ml-2"></i>
+                                    تأكيد الحجز
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <div class="lg:col-span-1" data-aos="fade-left">
+                    <div class="sticky top-24">
+                        <!-- Price Calculator -->
+                        <div class="bg-white rounded-2xl shadow-lg p-6 mb-6 border border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-calculator text-purple-500 ml-2"></i>
+                                حاسبة التكلفة
+                            </h3>
+                            <div id="price-calculator" class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">الوجهة:</span>
+                                    <span id="calc-destination" class="font-bold">غير محدد</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">المدة:</span>
+                                    <span id="calc-duration" class="font-bold">غير محدد</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">عدد المسافرين:</span>
+                                    <span id="calc-travelers" class="font-bold">غير محدد</span>
+                                </div>
+                                <hr class="border-gray-200">
+                                <div class="flex justify-between text-lg">
+                                    <span class="font-bold text-gray-800">التكلفة الإجمالية:</span>
+                                    <span id="calc-total" class="font-bold text-purple-600">€0</span>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                    * الأسعار تقديرية وقابلة للتغيير
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Why Choose Us -->
+                        <div class="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-2xl p-6 border border-purple-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-star text-yellow-500 ml-2"></i>
+                                لماذا تختارنا؟
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                                    <span class="text-sm text-gray-700">خبرة 10+ سنوات</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                                    <span class="text-sm text-gray-700">دعم 24/7</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                                    <span class="text-sm text-gray-700">أسعار تنافسية</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                                    <span class="text-sm text-gray-700">ضمان الجودة</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 ml-3"></i>
+                                    <span class="text-sm text-gray-700">مرشدين متخصصين</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Destinations -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الوجهات الأكثر طلباً</h2>
+            <p class="text-xl text-gray-600">اكتشف أشهر وجهاتنا التجارية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Turkey -->
+            <div class="destination-quick bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" data-destination="turkey" data-aos="fade-up">
+                <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center relative">
+                    <i class="fas fa-flag text-6xl text-white group-hover:scale-110 transition-transform"></i>
+                    <div class="absolute bottom-4 left-4 bg-white text-red-600 px-3 py-1 rounded-full text-sm font-bold">
+                        من €1,500
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">تركيا</h3>
+                    <p class="text-gray-600 text-sm mb-4">اكتشف الفرص التجارية والمصانع</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock ml-2"></i>
+                        <span>7-15 أيام</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- France -->
+            <div class="destination-quick bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" data-destination="france" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center relative">
+                    <i class="fas fa-flag text-6xl text-white group-hover:scale-110 transition-transform"></i>
+                    <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-bold">
+                        من €2,200
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">فرنسا</h3>
+                    <p class="text-gray-600 text-sm mb-4">التكنولوجيا والابتكار</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock ml-2"></i>
+                        <span>8-15 أيام</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- China -->
+            <div class="destination-quick bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" data-destination="china" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 bg-gradient-to-br from-yellow-500 to-red-500 flex items-center justify-center relative">
+                    <i class="fas fa-flag text-6xl text-white group-hover:scale-110 transition-transform"></i>
+                    <div class="absolute bottom-4 left-4 bg-white text-red-600 px-3 py-1 rounded-full text-sm font-bold">
+                        من €1,800
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">الصين</h3>
+                    <p class="text-gray-600 text-sm mb-4">التصنيع ومعرض كانتون</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock ml-2"></i>
+                        <span>10-21 أيام</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UAE -->
+            <div class="destination-quick bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" data-destination="uae" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center relative">
+                    <i class="fas fa-flag text-6xl text-white group-hover:scale-110 transition-transform"></i>
+                    <div class="absolute bottom-4 left-4 bg-white text-emerald-600 px-3 py-1 rounded-full text-sm font-bold">
+                        من €1,200
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">الإمارات</h3>
+                    <p class="text-gray-600 text-sm mb-4">الاستثمار والمناطق الحرة</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock ml-2"></i>
+                        <span>6-14 أيام</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Security & Trust -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">حجز آمن وموثوق</h2>
+            <p class="text-xl text-gray-600">نضمن لك أعلى مستويات الأمان والخصوصية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- SSL Security -->
+            <div class="security-feature text-center" data-aos="fade-up">
+                <div class="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">تشفير SSL</h3>
+                <p class="text-gray-600 text-sm">جميع بياناتك محمية بتشفير 256-bit</p>
+            </div>
+
+            <!-- 24/7 Support -->
+            <div class="security-feature text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-headset text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">دعم 24/7</h3>
+                <p class="text-gray-600 text-sm">فريق الدعم متاح طوال الوقت</p>
+            </div>
+
+            <!-- Money Back -->
+            <div class="security-feature text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-100 text-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-money-bill-wave text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">ضمان الاسترداد</h3>
+                <p class="text-gray-600 text-sm">ضمان استرداد الأموال في حالة الإلغاء</p>
+            </div>
+
+            <!-- Verified Partners -->
+            <div class="security-feature text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-100 text-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-certificate text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">شركاء معتمدون</h3>
+                <p class="text-gray-600 text-sm">نتعامل مع شركاء موثوقين فقط</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الأسئلة الشائعة</h2>
+            <p class="text-xl text-gray-600">إجابات على أكثر الأسئلة شيوعاً حول الحجز</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">كيف يمكنني إلغاء أو تعديل حجزي؟</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">يمكنك إلغاء أو تعديل حجزك حتى 30 يوماً قبل تاريخ المغادرة بدون رسوم إضافية. بعد ذلك، قد تطبق رسوم إلغاء حسب سياسة الشركة.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">ما هي طرق الدفع المتاحة؟</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نقبل التحويل البنكي والدفع بالتقسيط. يمكنك دفع 50% عند الحجز والباقي قبل السفر بأسبوعين.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">هل تشمل الأسعار تذاكر الطيران؟</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نعم، جميع أسعارنا تشمل تذاكر الطيران ذهاباً وإياباً، الإقامة الفندقية، وجبات الإفطار، والتنقلات المحلية.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">هل أحتاج إلى فيزا للسفر؟</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نساعدك في الحصول على الفيزا المطلوبة. فريقنا سيرشدك خلال جميع الإجراءات ويوفر لك قائمة بالوثائق المطلوبة.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">ماذا لو احتجت لمساعدة أثناء الرحلة؟</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نوفر دعماً مستمراً 24/7 أثناء رحلتك. ستحصل على أرقام طوارئ ومرشد محلي يتحدث العربية لمساعدتك في أي وقت.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل تحتاج مساعدة في الحجز؟</h2>
+            <p class="text-xl mb-8 text-purple-100">
+                فريقنا المتخصص جاهز لمساعدتك في اختيار الرحلة المناسبة وإتمام الحجز
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact/index.html" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا الآن
+                </a>
+                <a href="index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    تصفح الوجهات
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Success Modal -->
+<div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
+        <div class="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-check text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">تم إرسال طلب الحجز بنجاح!</h3>
+        <p class="text-gray-600 mb-6">سنتواصل معك خلال 24 ساعة لتأكيد الحجز وتفاصيل الدفع</p>
+        <button onclick="closeSuccessModal()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-all">
+            حسناً
+        </button>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Booking Form Management
+class BookingFormManager {
+    constructor() {
+        this.currentStep = 1;
+        this.totalSteps = 3;
+        this.formData = {};
+        this.prices = {
+            turkey: { 6: 1500, 7: 1500, 10: 2200, 15: 3500 },
+            france: { 8: 2200, 12: 3800, 15: 5500 },
+            china: { 10: 1800, 14: 2800, 21: 4200 },
+            uae: { 6: 1200, 10: 2000, 14: 3200 }
+        };
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.updateStepIndicator();
+        this.setupFormValidation();
+    }
+
+    setupEventListeners() {
+        // Step navigation
+        document.querySelectorAll('.btn-next').forEach(btn => {
+            btn.addEventListener('click', () => this.nextStep());
+        });
+
+        document.querySelectorAll('.btn-prev').forEach(btn => {
+            btn.addEventListener('click', () => this.prevStep());
+        });
+
+        // Form inputs
+        document.getElementById('destination').addEventListener('change', () => this.updateCalculator());
+        document.getElementById('program-duration').addEventListener('change', () => this.updateCalculator());
+        document.getElementById('travelers').addEventListener('change', () => this.updateCalculator());
+
+        // Quick destination selection
+        document.querySelectorAll('.destination-quick').forEach(card => {
+            card.addEventListener('click', (e) => {
+                const destination = e.currentTarget.getAttribute('data-destination');
+                document.getElementById('destination').value = destination;
+                this.updateCalculator();
+                document.getElementById('destination').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form submission
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.submitForm();
+        });
+
+        // FAQ toggles
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Payment method selection
+        document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                document.querySelectorAll('.payment-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                e.target.closest('.payment-option').classList.add('selected');
+            });
+        });
+    }
+
+    nextStep() {
+        if (this.validateCurrentStep()) {
+            if (this.currentStep < this.totalSteps) {
+                this.hideStep(this.currentStep);
+                this.currentStep++;
+                this.showStep(this.currentStep);
+                this.updateStepIndicator();
+                
+                if (this.currentStep === 3) {
+                    this.updateBookingSummary();
+                }
+            }
+        }
+    }
+
+    prevStep() {
+        if (this.currentStep > 1) {
+            this.hideStep(this.currentStep);
+            this.currentStep--;
+            this.showStep(this.currentStep);
+            this.updateStepIndicator();
+        }
+    }
+
+    showStep(step) {
+        document.getElementById(`step-${step}`).classList.add('active');
+        document.querySelector(`[data-step="${step}"]`).classList.add('active');
+    }
+
+    hideStep(step) {
+        document.getElementById(`step-${step}`).classList.remove('active');
+        document.querySelector(`[data-step="${step}"]`).classList.remove('active');
+    }
+
+    updateStepIndicator() {
+        document.getElementById('current-step').textContent = this.currentStep;
+        
+        // Update step indicators
+        document.querySelectorAll('.step-indicator').forEach((indicator, index) => {
+            const stepNumber = index + 1;
+            if (stepNumber < this.currentStep) {
+                indicator.classList.add('completed');
+                indicator.classList.remove('active');
+            } else if (stepNumber === this.currentStep) {
+                indicator.classList.add('active');
+                indicator.classList.remove('completed');
+            } else {
+                indicator.classList.remove('active', 'completed');
+            }
+        });
+    }
+
+    validateCurrentStep() {
+        const currentStepElement = document.getElementById(`step-${this.currentStep}`);
+        const requiredFields = currentStepElement.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                this.showFieldError(field, 'هذا الحقل مطلوب');
+                isValid = false;
+            } else {
+                this.clearFieldError(field);
+                
+                // Additional validation
+                if (field.type === 'email' && !this.isValidEmail(field.value)) {
+                    this.showFieldError(field, 'يرجى إدخال بريد إلكتروني صحيح');
+                    isValid = false;
+                }
+                
+                if (field.type === 'tel' && !this.isValidPhone(field.value)) {
+                    this.showFieldError(field, 'يرجى إدخال رقم هاتف صحيح');
+                    isValid = false;
+                }
+            }
+        });
+
+        return isValid;
+    }
+
+    showFieldError(field, message) {
+        this.clearFieldError(field);
+        field.classList.add('error');
+        
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'field-error text-red-500 text-sm mt-1';
+        errorDiv.textContent = message;
+        
+        field.parentNode.appendChild(errorDiv);
+    }
+
+    clearFieldError(field) {
+        field.classList.remove('error');
+        const existingError = field.parentNode.querySelector('.field-error');
+        if (existingError) {
+            existingError.remove();
+        }
+    }
+
+    isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    isValidPhone(phone) {
+        const phoneRegex = /^(\+213|0)[567][0-9]{8}$/;
+        return phoneRegex.test(phone.replace(/\s/g, ''));
+    }
+
+    updateCalculator() {
+        const destination = document.getElementById('destination').value;
+        const duration = document.getElementById('program-duration').value;
+        const travelers = document.getElementById('travelers').value;
+
+        // Update display
+        document.getElementById('calc-destination').textContent = 
+            destination ? this.getDestinationName(destination) : 'غير محدد';
+        document.getElementById('calc-duration').textContent = 
+            duration ? duration.replace('-', ' ') : 'غير محدد';
+        document.getElementById('calc-travelers').textContent = 
+            travelers ? this.getTravelersText(travelers) : 'غير محدد';
+
+        // Calculate price
+        let totalPrice = 0;
+        if (destination && duration && travelers) {
+            const days = parseInt(duration.split('-')[0]);
+            const basePrice = this.prices[destination]?.[days] || 0;
+            const travelerCount = this.getTravelerCount(travelers);
+            totalPrice = basePrice * travelerCount;
+        }
+
+        document.getElementById('calc-total').textContent = `€${totalPrice.toLocaleString()}`;
+    }
+
+    getDestinationName(destination) {
+        const names = {
+            turkey: 'تركيا',
+            france: 'فرنسا',
+            china: 'الصين',
+            uae: 'الإمارات'
+        };
+        return names[destination] || destination;
+    }
+
+    getTravelersText(travelers) {
+        const texts = {
+            '1': 'شخص واحد',
+            '2': 'شخصان',
+            '3-5': '3-5 أشخاص',
+            '6-10': '6-10 أشخاص',
+            '11-20': '11-20 شخص',
+            '20+': 'أكثر من 20 شخص'
+        };
+        return texts[travelers] || travelers;
+    }
+
+    getTravelerCount(travelers) {
+        if (travelers === '1') return 1;
+        if (travelers === '2') return 2;
+        if (travelers === '3-5') return 4;
+        if (travelers === '6-10') return 8;
+        if (travelers === '11-20') return 15;
+        if (travelers === '20+') return 25;
+        return 1;
+    }
+
+    updateBookingSummary() {
+        const formData = new FormData(document.getElementById('booking-form'));
+        const summaryHTML = `
+            <div class="space-y-3">
+                <div class="flex justify-between">
+                    <span class="text-gray-600">الوجهة:</span>
+                    <span class="font-bold">${this.getDestinationName(formData.get('destination'))}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">مدة البرنامج:</span>
+                    <span class="font-bold">${formData.get('program-duration')?.replace('-', ' ')}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">تاريخ المغادرة:</span>
+                    <span class="font-bold">${formData.get('departure-date')}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">عدد المسافرين:</span>
+                    <span class="font-bold">${this.getTravelersText(formData.get('travelers'))}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">الاسم:</span>
+                    <span class="font-bold">${formData.get('full-name')}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">البريد الإلكتروني:</span>
+                    <span class="font-bold">${formData.get('email')}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">رقم الهاتف:</span>
+                    <span class="font-bold">${formData.get('phone')}</span>
+                </div>
+                <hr class="border-gray-300">
+                <div class="flex justify-between text-lg">
+                    <span class="font-bold text-gray-800">التكلفة الإجمالية:</span>
+                    <span class="font-bold text-purple-600">${document.getElementById('calc-total').textContent}</span>
+                </div>
+            </div>
+        `;
+        
+        document.getElementById('booking-summary').innerHTML = summaryHTML;
+    }
+
+    async submitForm() {
+        const formData = new FormData(document.getElementById('booking-form'));
+        
+        // Show loading state
+        const submitBtn = document.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري الإرسال...';
+        submitBtn.disabled = true;
+
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // Show success modal
+            this.showSuccessModal();
+            
+            // Reset form
+            document.getElementById('booking-form').reset();
+            this.currentStep = 1;
+            this.updateStepIndicator();
+            this.showStep(1);
+            this.hideStep(2);
+            this.hideStep(3);
+            this.updateCalculator();
+            
+        } catch (error) {
+            alert('حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.');
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    }
+
+    showSuccessModal() {
+        document.getElementById('success-modal').classList.remove('hidden');
+    }
+
+    setupFormValidation() {
+        // Real-time validation
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('blur', () => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    this.showFieldError(input, 'هذا الحقل مطلوب');
+                } else {
+                    this.clearFieldError(input);
+                }
+            });
+
+            input.addEventListener('input', () => {
+                this.clearFieldError(input);
+            });
+        });
+    }
+}
+
+// Initialize booking form
+const bookingForm = new BookingFormManager();
+
+// Success modal close function
+function closeSuccessModal() {
+    document.getElementById('success-modal').classList.add('hidden');
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Add custom CSS for form styling
+const style = document.createElement('style');
+style.textContent = `
+    .form-step {
+        display: none;
+    }
+    
+    .form-step.active {
+        display: block;
+    }
+    
+    .step-indicator {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #e5e7eb;
+        color: #6b7280;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .step-indicator.active {
+        background: #7c3aed;
+        color: white;
+    }
+    
+    .step-indicator.completed {
+        background: #10b981;
+        color: white;
+    }
+    
+    .step-line {
+        width: 60px;
+        height: 2px;
+        background: #e5e7eb;
+        margin: 0 10px;
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background: white;
+    }
+    
+    .form-input:focus {
+        outline: none;
+        border-color: #7c3aed;
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+    
+    .form-input.error {
+        border-color: #ef4444;
+    }
+    
+    .payment-option {
+        cursor: pointer;
+    }
+    
+    .payment-card {
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .payment-option:hover .payment-card {
+        border-color: #7c3aed;
+        background: #f3f4f6;
+    }
+    
+    .payment-option input:checked + .payment-card {
+        border-color: #7c3aed;
+        background: #ede9fe;
+    }
+    
+    .security-feature:hover {
+        transform: translateY(-5px);
+    }
+    
+    .faq-question:hover {
+        background: #f9fafb;
+    }
+    
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+    
+    @media (max-width: 768px) {
+        .step-line {
+            width: 40px;
+        }
+        
+        .step-indicator {
+            width: 35px;
+            height: 35px;
+            font-size: 14px;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('📅 Booking page initialized successfully!');
+</script>
+
 </body>
 </html>

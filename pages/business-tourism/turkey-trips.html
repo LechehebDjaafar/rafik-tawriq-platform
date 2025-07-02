@@ -1,10 +1,938 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>رحلات تركيا</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلات تركيا التجارية - اكتشف الفرص الاستثمارية - رفيق توريق</title>
+    <meta name="description" content="رحلات تجارية متخصصة إلى تركيا. زيارة المصانع في إسطنبول وأنقرة، لقاءات مع مصدرين أتراك، واستكشاف الفرص الاستثمارية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/business-tourism.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>رحلات تركيا</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header الموحد -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl group-hover:scale-105 transition-transform shadow-lg">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium flex items-center">
+                        <i class="fas fa-th-large ml-2"></i>
+                        الخدمات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-4 grid grid-cols-2 gap-2">
+                            <a href="../courses/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-graduation-cap text-blue-500 ml-3"></i>
+                                <span>الدورات التدريبية</span>
+                            </a>
+                            <a href="../incubator/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-seedling text-green-500 ml-3"></i>
+                                <span>الحاضنة</span>
+                            </a>
+                            <a href="../consulting/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-user-tie text-purple-500 ml-3"></i>
+                                <span>الاستشارات</span>
+                            </a>
+                            <a href="../machinery/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-cogs text-orange-500 ml-3"></i>
+                                <span>الآلات الصناعية</span>
+                            </a>
+                            <a href="../real-estate/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-building text-red-500 ml-3"></i>
+                                <span>العقارات</span>
+                            </a>
+                            <a href="../events/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-calendar-alt text-yellow-500 ml-3"></i>
+                                <span>الفعاليات</span>
+                            </a>
+                            <a href="../projects/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-project-diagram text-indigo-500 ml-3"></i>
+                                <span>المشاريع</span>
+                            </a>
+                            <a href="../construction/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-hammer text-gray-500 ml-3"></i>
+                                <span>بناء المصانع</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tourism -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-red-600 font-bold flex items-center relative">
+                        <i class="fas fa-plane ml-2"></i>
+                        سياحة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="turkey-trips.html" class="flex items-center px-4 py-3 text-red-600 bg-red-50 border-r-4 border-red-600">
+                                <i class="fas fa-flag ml-3 text-red-500"></i>
+                                <span>رحلات تركيا (الحالية)</span>
+                            </a>
+                            <a href="france-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات فرنسا</span>
+                            </a>
+                            <a href="china-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الصين</span>
+                            </a>
+                            <a href="uae-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الإمارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-calendar-check ml-3 text-gray-500"></i>
+                                <span>حجز الرحلات</span>
+                            </a>
+                            <a href="trip-details.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-info-circle ml-3 text-gray-500"></i>
+                                <span>تفاصيل الرحلة</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Services -->
+                <a href="../legal/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium">
+                    <i class="fas fa-balance-scale ml-2"></i>
+                    الخدمات القانونية
+                </a>
+                
+                <!-- Contact -->
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="../contact/index.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    ابدأ مشروعك
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+        <div class="px-4 py-6 space-y-4">
+            <a href="../index.html" class="block text-gray-700 py-2">الرئيسية</a>
+            <a href="../courses/index.html" class="block text-gray-700 py-2">الدورات التدريبية</a>
+            <a href="../incubator/index.html" class="block text-gray-700 py-2">الحاضنة</a>
+            <a href="../consulting/index.html" class="block text-gray-700 py-2">الاستشارات</a>
+            <a href="../machinery/index.html" class="block text-gray-700 py-2">الآلات الصناعية</a>
+            <a href="../real-estate/index.html" class="block text-gray-700 py-2">العقارات</a>
+            <a href="../events/index.html" class="block text-gray-700 py-2">الفعاليات</a>
+            <a href="../projects/index.html" class="block text-gray-700 py-2">المشاريع</a>
+            <a href="../construction/index.html" class="block text-gray-700 py-2">بناء المصانع</a>
+            <a href="index.html" class="block text-red-600 font-bold py-2">سياحة الأعمال</a>
+            <a href="../legal/index.html" class="block text-gray-700 py-2">الخدمات القانونية</a>
+            <a href="../contact/index.html" class="block text-gray-700 py-2">تواصل معنا</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">سياحة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">رحلات تركيا</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-red-900 via-red-800 to-rose-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"turkey\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"8\" fill=\"white\" opacity=\"0.3\"/><path d=\"M5 12.5 L20 12.5 M12.5 5 L12.5 20\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"3\" fill=\"white\" opacity=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23turkey)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-red-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-flag text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">رحلات تجارية إلى تركيا</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    اكتشف الفرص التجارية في <span class="text-yellow-400">تركيا</span>
+                </h1>
+                <p class="text-xl mb-8 text-red-100 leading-relaxed">
+                    انطلق في رحلة تجارية استثنائية إلى تركيا، البوابة بين أوروبا وآسيا. زر أهم المصانع والمعارض التجارية في إسطنبول وأنقرة، والتق مع أبرز المصدرين الأتراك
+                </p>
+                
+                <!-- Key Features -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-industry text-yellow-400 text-xl ml-3"></i>
+                        <div>
+                            <div class="font-bold text-sm">زيارة المصانع</div>
+                            <div class="text-xs text-red-200">في إسطنبول وأنقرة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-handshake text-yellow-400 text-xl ml-3"></i>
+                        <div>
+                            <div class="font-bold text-sm">لقاءات مصدرين</div>
+                            <div class="text-xs text-red-200">شركاء تجاريين موثوقين</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-store text-yellow-400 text-xl ml-3"></i>
+                        <div>
+                            <div class="font-bold text-sm">المعارض التجارية</div>
+                            <div class="text-xs text-red-200">أحدث المنتجات</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-lg p-3 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-landmark text-yellow-400 text-xl ml-3"></i>
+                        <div>
+                            <div class="font-bold text-sm">جولات سياحية</div>
+                            <div class="text-xs text-red-200">في المدن التاريخية</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Price and CTA -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-4 mb-6 backdrop-blur-sm">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="text-2xl font-bold text-yellow-400">من 1,500€</div>
+                            <div class="text-sm text-red-200">للشخص الواحد - 7 أيام</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-red-200">يشمل:</div>
+                            <div class="text-xs text-red-200">الطيران + الإقامة + الجولات</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="booking.html" class="bg-yellow-500 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-plane ml-2"></i>
+                        احجز رحلتك الآن
+                    </a>
+                    <a href="trip-details.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-900 transition-all">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        تفاصيل الرحلة
+                    </a>
+                </div>
+            </div>
+
+            <!-- Turkey Flag Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl">
+                        <div class="text-center">
+                            <i class="fas fa-flag text-6xl text-white mb-4"></i>
+                            <div class="text-white font-bold text-xl">تركيا</div>
+                            <div class="text-red-200 text-sm">Türkiye</div>
+                        </div>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-red-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-mosque text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-ship text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-chart-line text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trip Itineraries -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-red-100 text-red-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">برامج رحلات متنوعة</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">برامج رحلات تركيا التجارية</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                اختر البرنامج الذي يناسب احتياجاتك التجارية من بين برامجنا المتخصصة
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 7 Days Program -->
+            <div class="itinerary-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center mb-6">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">7</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">برنامج 7 أيام</h3>
+                    <p class="text-blue-600 font-medium">الأساسي</p>
+                    <div class="text-2xl font-bold text-blue-600 mt-2">1,500€</div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>يومان في كابادوكيا - متحف جوريم المفتوح</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>زيارة ورشة الفخار في أفانوس</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>جولة في باموكالي (يومان)</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>زيارة أفسس التاريخية</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>رحلة إلى إسطنبول (يومان)</span>
+                    </div>
+                </div>
+                
+                <a href="booking.html" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                    احجز الآن
+                </a>
+            </div>
+
+            <!-- 10 Days Program -->
+            <div class="itinerary-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200 relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    الأكثر شعبية
+                </div>
+                <div class="text-center mb-6">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">10</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">برنامج 10 أيام</h3>
+                    <p class="text-green-600 font-medium">المتوسط</p>
+                    <div class="text-2xl font-bold text-green-600 mt-2">2,200€</div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>3 أيام في كابادوكيا - رحلة بالمنطاد</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>زيارة المدن الجوفية</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>يومان في إزمير - الثقافة التركية الأصيلة</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>جولة أفسس الأثرية الشهيرة</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>4 أيام في إسطنبول</span>
+                    </div>
+                </div>
+                
+                <a href="booking.html" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                    احجز الآن
+                </a>
+            </div>
+
+            <!-- 15 Days Program -->
+            <div class="itinerary-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center mb-6">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">15</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">برنامج 15 يوم</h3>
+                    <p class="text-purple-600 font-medium">الشامل</p>
+                    <div class="text-2xl font-bold text-purple-600 mt-2">3,500€</div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>جولة شاملة في إسطنبول القديمة</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>زيارة طروادة وجناق قلعة</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>جولة بيرغامون وكوشاداسي</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>بودروم وأنطاليا وقونية</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-700">
+                        <i class="fas fa-check text-green-500 ml-2"></i>
+                        <span>يومان في كابادوكيا وإهلارا</span>
+                    </div>
+                </div>
+                
+                <a href="booking.html" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                    احجز الآن
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Opportunities -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الفرص التجارية في تركيا</h2>
+            <p class="text-xl text-gray-600">اكتشف القطاعات الاقتصادية الرائدة والفرص الاستثمارية المتاحة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Textile Industry -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-tshirt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الصناعات النسجية</h3>
+                    <p class="text-gray-600 mb-4">تركيا من أكبر منتجي النسيج في العالم</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• مصانع الملابس الجاهزة</div>
+                        <div>• صناعة الأقمشة المتطورة</div>
+                        <div>• منسوجات منزلية عالية الجودة</div>
+                        <div>• تصدير إلى 180 دولة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automotive -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">صناعة السيارات</h3>
+                    <p class="text-gray-600 mb-4">مركز إقليمي لصناعة السيارات والقطع</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• مصانع السيارات العالمية</div>
+                        <div>• قطع غيار متطورة</div>
+                        <div>• تقنيات حديثة</div>
+                        <div>• شراكات دولية</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food Industry -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-apple-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الصناعات الغذائية</h3>
+                    <p class="text-gray-600 mb-4">منتجات غذائية متنوعة وعالية الجودة</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• منتجات زراعية طازجة</div>
+                        <div>• صناعات غذائية متطورة</div>
+                        <div>• حلويات ومعجنات تركية</div>
+                        <div>• تصدير عالمي</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">مواد البناء</h3>
+                    <p class="text-gray-600 mb-4">صناعة متقدمة في مواد البناء والإنشاء</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• الرخام والحجر الطبيعي</div>
+                        <div>• السيراميك والبلاط</div>
+                        <div>• مواد عزل متطورة</div>
+                        <div>• تقنيات بناء حديثة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronics -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الإلكترونيات</h3>
+                    <p class="text-gray-600 mb-4">صناعات إلكترونية متقدمة وتقنيات حديثة</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• الأجهزة المنزلية</div>
+                        <div>• معدات الاتصالات</div>
+                        <div>• تقنيات ذكية</div>
+                        <div>• ابتكارات تقنية</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tourism -->
+            <div class="opportunity-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">السياحة والضيافة</h3>
+                    <p class="text-gray-600 mb-4">قطاع سياحي متطور وخدمات ضيافة عالمية</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• فنادق ومنتجعات فاخرة</div>
+                        <div>• خدمات سياحية متنوعة</div>
+                        <div>• مواقع تاريخية فريدة</div>
+                        <div>• ضيافة تركية أصيلة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Cities -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">المدن التجارية الرئيسية</h2>
+            <p class="text-xl text-gray-600">استكشف أهم المراكز التجارية والصناعية في تركيا</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Istanbul -->
+            <div class="city-card" data-aos="fade-right">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border border-blue-200">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-4">
+                            <i class="fas fa-city text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">إسطنبول</h3>
+                            <p class="text-blue-600">العاصمة الاقتصادية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        أكبر مدينة في تركيا ومركزها الاقتصادي الرئيسي. تضم أهم المصانع والشركات التجارية، وتربط بين قارتي أوروبا وآسيا.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-blue-600">15 مليون</div>
+                            <div class="text-sm text-gray-600">نسمة</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-blue-600">40%</div>
+                            <div class="text-sm text-gray-600">من الاقتصاد التركي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ankara -->
+            <div class="city-card" data-aos="fade-left">
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-4">
+                            <i class="fas fa-landmark text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">أنقرة</h3>
+                            <p class="text-green-600">العاصمة السياسية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        عاصمة تركيا ومركز الحكومة. تتميز بالثقافة العثمانية الأصيلة والأسواق التجارية النابضة بالحياة.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-green-600">5.6 مليون</div>
+                            <div class="text-sm text-gray-600">نسمة</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="font-bold text-green-600">مركز</div>
+                            <div class="text-sm text-gray-600">الحكومة والإدارة</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Included -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">ما يشمله البرنامج</h2>
+            <p class="text-xl text-gray-600">خدمات شاملة لضمان رحلة تجارية ناجحة ومريحة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Flights -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up">
+                <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-plane text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">تذاكر الطيران</h3>
+                <p class="text-gray-600 text-sm">رحلات مباشرة من الجزائر إلى إسطنبول ذهاباً وإياباً</p>
+            </div>
+
+            <!-- Hotels -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hotel text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">الإقامة الفندقية</h3>
+                <p class="text-gray-600 text-sm">فنادق 4-5 نجوم في مواقع استراتيجية بالمدن</p>
+            </div>
+
+            <!-- Transportation -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-bus text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">التنقلات</h3>
+                <p class="text-gray-600 text-sm">حافلات مكيفة مريحة لجميع الجولات والزيارات</p>
+            </div>
+
+            <!-- Guide -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-100 text-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-user-tie text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">مرشد متخصص</h3>
+                <p class="text-gray-600 text-sm">مرشد تجاري يتحدث العربية والتركية</p>
+            </div>
+
+            <!-- Meals -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-utensils text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">الوجبات</h3>
+                <p class="text-gray-600 text-sm">إفطار يومي ووجبات غداء في المطاعم المحلية</p>
+            </div>
+
+            <!-- Business Meetings -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-teal-100 text-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-handshake text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">اللقاءات التجارية</h3>
+                <p class="text-gray-600 text-sm">ترتيب لقاءات مع مصدرين وشركاء تجاريين</p>
+            </div>
+
+            <!-- Factory Visits -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-industry text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">زيارات المصانع</h3>
+                <p class="text-gray-600 text-sm">جولات مخصصة في أهم المصانع التركية</p>
+            </div>
+
+            <!-- Support -->
+            <div class="included-item bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="700">
+                <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-headset text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">دعم مستمر</h3>
+                <p class="text-gray-600 text-sm">دعم 24/7 طوال فترة الرحلة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-600 to-rose-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">ابدأ رحلتك التجارية إلى تركيا</h2>
+            <p class="text-xl mb-8 text-red-100">
+                انضم إلى مئات رجال الأعمال الذين حققوا نجاحات تجارية مع رحلاتنا إلى تركيا
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html" class="bg-yellow-500 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-plane ml-2"></i>
+                    احجز رحلة تركيا الآن
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Itinerary cards animation
+document.querySelectorAll('.itinerary-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Opportunity cards animation
+document.querySelectorAll('.opportunity-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// City cards animation
+document.querySelectorAll('.city-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
+// Included items animation
+document.querySelectorAll('.included-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+console.log('🇹🇷 Turkey trips page initialized successfully!');
+</script>
+
 </body>
 </html>

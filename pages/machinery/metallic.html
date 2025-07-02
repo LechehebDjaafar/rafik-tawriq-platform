@@ -340,57 +340,114 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
             <div>
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
                         <i class="fas fa-rocket text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 mb-4">آلات الصناعات المعدنية المتطورة</p>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- Services -->
             <div>
-                <h4 class="text-lg font-bold mb-4">عمليات التشغيل</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('cutting')">القطع والتقطيع</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('welding')">اللحام والوصل</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('forming')">التشكيل والكبس</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors" onclick="filterByProcess('machining')">التشغيل والخراطة</a></li>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
                 </ul>
             </div>
 
+            <!-- Quick Links -->
             <div>
-                <h4 class="text-lg font-bold mb-4">أنواع المعادن</h4>
-                <ul class="space-y-2">
-                    <li><span class="text-gray-400">الفولاذ والحديد</span></li>
-                    <li><span class="text-gray-400">الألومنيوم</span></li>
-                    <li><span class="text-gray-400">النحاس والبرونز</span></li>
-                    <li><span class="text-gray-400">التيتانيوم</span></li>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
                 </ul>
             </div>
 
+            <!-- Contact Info -->
             <div>
-                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
-                <div class="space-y-3">
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
                     <div class="flex items-center">
-                        <i class="fas fa-phone text-gray-400 ml-3"></i>
-                        <span class="text-gray-400">027 XX XX XX</span>
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-envelope text-gray-400 ml-3"></i>
-                        <span class="text-gray-400">metallic@rafiktawriq.dz</span>
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2025 رفيق توريق - آلات الصناعات المعدنية. جميع الحقوق محفوظة.</p>
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

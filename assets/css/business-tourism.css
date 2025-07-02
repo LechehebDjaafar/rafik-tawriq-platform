@@ -1,0 +1,1113 @@
+/* ===== BUSINESS TOURISM SECTION STYLES ===== */
+
+/* Variables for Business Tourism */
+:root {
+    --bt-primary: #6366f1;
+    --bt-secondary: #8b5cf6;
+    --bt-accent: #f59e0b;
+    --bt-success: #10b981;
+    --bt-warning: #f59e0b;
+    --bt-error: #ef4444;
+    --bt-info: #3b82f6;
+    --bt-dark: #1f2937;
+    --bt-light: #f8fafc;
+    --bt-border: #e5e7eb;
+    --bt-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --bt-shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --bt-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bt-gradient: linear-gradient(135deg, var(--bt-primary) 0%, var(--bt-secondary) 100%);
+}
+
+/* Country-specific color schemes */
+:root {
+    --turkey-primary: #dc2626;
+    --turkey-secondary: #f87171;
+    --france-primary: #2563eb;
+    --france-secondary: #60a5fa;
+    --china-primary: #eab308;
+    --china-secondary: #fbbf24;
+    --uae-primary: #059669;
+    --uae-secondary: #34d399;
+}
+
+/* Base Styles */
+.business-tourism-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.business-tourism-section {
+    padding: 5rem 0;
+}
+
+.business-tourism-card {
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: var(--bt-shadow);
+    padding: 2rem;
+    transition: var(--bt-transition);
+    border: 1px solid var(--bt-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.business-tourism-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.business-tourism-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bt-gradient);
+    transform: scaleX(0);
+    transition: var(--bt-transition);
+}
+
+.business-tourism-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Hero Sections */
+.business-tourism-hero {
+    background: var(--bt-gradient);
+    color: white;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.business-tourism-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bt-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23bt-pattern)"/></svg>');
+    opacity: 0.1;
+}
+
+.business-tourism-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.business-tourism-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.business-tourism-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Destination Cards */
+.destination-card {
+    background: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: var(--bt-shadow);
+    transition: var(--bt-transition);
+    border: 1px solid var(--bt-border);
+    position: relative;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.destination-card .destination-header {
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bt-gradient);
+}
+
+.destination-card .destination-flag {
+    font-size: 5rem;
+    color: white;
+    transition: var(--bt-transition);
+}
+
+.destination-card:hover .destination-flag {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.destination-card .destination-price {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+}
+
+.destination-card .destination-content {
+    padding: 2rem;
+}
+
+.destination-card .destination-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bt-dark);
+}
+
+.destination-card .destination-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.destination-card .destination-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.destination-card .destination-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.destination-card .destination-features li::before {
+    content: '✓';
+    color: var(--bt-success);
+    font-weight: bold;
+    margin-left: 0.75rem;
+    width: 1rem;
+}
+
+/* Country-specific destination cards */
+.destination-card.turkey {
+    --card-primary: var(--turkey-primary);
+    --card-secondary: var(--turkey-secondary);
+}
+
+.destination-card.france {
+    --card-primary: var(--france-primary);
+    --card-secondary: var(--france-secondary);
+}
+
+.destination-card.china {
+    --card-primary: var(--china-primary);
+    --card-secondary: var(--china-secondary);
+}
+
+.destination-card.uae {
+    --card-primary: var(--uae-primary);
+    --card-secondary: var(--uae-secondary);
+}
+
+.destination-card.turkey .destination-header {
+    background: linear-gradient(135deg, var(--turkey-primary), var(--turkey-secondary));
+}
+
+.destination-card.france .destination-header {
+    background: linear-gradient(135deg, var(--france-primary), var(--france-secondary));
+}
+
+.destination-card.china .destination-header {
+    background: linear-gradient(135deg, var(--china-primary), var(--china-secondary));
+}
+
+.destination-card.uae .destination-header {
+    background: linear-gradient(135deg, var(--uae-primary), var(--uae-secondary));
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: var(--bt-shadow);
+    transition: var(--bt-transition);
+    border: 1px solid var(--bt-border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bt-gradient);
+    transform: scaleX(0);
+    transition: var(--bt-transition);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.service-card .service-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    color: white;
+    background: var(--bt-gradient);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    transition: var(--bt-transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card .service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bt-dark);
+}
+
+.service-card .service-description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Itinerary Timeline */
+.itinerary-timeline {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.itinerary-timeline::before {
+    content: '';
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--bt-gradient);
+    border-radius: 2px;
+}
+
+.itinerary-day {
+    position: relative;
+    margin-bottom: 3rem;
+    transition: var(--bt-transition);
+}
+
+.itinerary-day:hover {
+    transform: translateX(10px);
+}
+
+.itinerary-day .day-number {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--bt-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    z-index: 10;
+}
+
+.itinerary-day .day-content {
+    margin-right: 6rem;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--bt-shadow);
+    border: 1px solid var(--bt-border);
+    transition: var(--bt-transition);
+}
+
+.itinerary-day:hover .day-content {
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.itinerary-day .day-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--bt-dark);
+}
+
+.itinerary-day .day-subtitle {
+    color: var(--bt-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.itinerary-day .day-activities {
+    appearance: 1rem;
+}
+
+.itinerary-activity {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    transition: var(--bt-transition);
+}
+
+.itinerary-activity:last-child {
+    border-bottom: none;
+}
+
+.itinerary-activity:hover {
+    background: #f9fafb;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+}
+
+.itinerary-activity .activity-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--bt-dark);
+}
+
+.itinerary-activity .activity-time i {
+    margin-left: 0.75rem;
+    color: var(--bt-primary);
+}
+
+.itinerary-activity .activity-description {
+    color: #6b7280;
+    padding-right: 2rem;
+    line-height: 1.6;
+}
+
+/* Booking Form Styles */
+.booking-form {
+    background: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: var(--bt-shadow-lg);
+    border: 1px solid var(--bt-border);
+}
+
+.form-step {
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-indicator {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: var(--bt-transition);
+    position: relative;
+}
+
+.step-indicator.active {
+    background: var(--bt-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.step-indicator.completed {
+    background: var(--bt-success);
+    color: white;
+}
+
+.step-indicator.completed::after {
+    content: '✓';
+    position: absolute;
+    font-size: 1.2rem;
+}
+
+.step-line {
+    height: 2px;
+    background: #e5e7eb;
+    flex: 1;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.step-line.completed {
+    background: var(--bt-success);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--bt-dark);
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--bt-border);
+    border-radius: 1rem;
+    font-size: 1rem;
+    transition: var(--bt-transition);
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--bt-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-input.error {
+    border-color: var(--bt-error);
+    background: #fef2f2;
+}
+
+.form-input.success {
+    border-color: var(--bt-success);
+    background: #f0fdf4;
+}
+
+.field-error {
+    color: var(--bt-error);
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.field-error::before {
+    content: '⚠';
+    margin-left: 0.25rem;
+}
+
+/* Payment Options */
+.payment-option {
+    cursor: pointer;
+    transition: var(--bt-transition);
+}
+
+.payment-card {
+    border: 2px solid var(--bt-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--bt-transition);
+    background: white;
+}
+
+.payment-option:hover .payment-card {
+    border-color: var(--bt-primary);
+    background: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.payment-option input:checked + .payment-card {
+    border-color: var(--bt-primary);
+    background: #ede9fe;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Price Calculator */
+.price-calculator {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--bt-shadow);
+    border: 1px solid var(--bt-border);
+    position: sticky;
+    top: 2rem;
+}
+
+.price-calculator .calculator-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--bt-dark);
+    display: flex;
+    align-items: center;
+}
+
+.price-calculator .calculator-title i {
+    margin-left: 0.5rem;
+    color: var(--bt-primary);
+}
+
+.price-calculator .calculator-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.price-calculator .calculator-row:last-child {
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--bt-primary);
+}
+
+.price-calculator .calculator-label {
+    color: #6b7280;
+}
+
+.price-calculator .calculator-value {
+    font-weight: 600;
+    color: var(--bt-dark);
+}
+
+/* FAQ Styles */
+.faq-item {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--bt-shadow);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: var(--bt-transition);
+}
+
+.faq-item:hover {
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: right;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--bt-transition);
+}
+
+.faq-question:hover {
+    background: #f9fafb;
+}
+
+.faq-question .question-text {
+    font-weight: 700;
+    color: var(--bt-dark);
+    font-size: 1rem;
+}
+
+.faq-question .question-icon {
+    color: var(--bt-primary);
+    transition: var(--bt-transition);
+    font-size: 1.25rem;
+}
+
+.faq-question .question-icon.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Statistics Cards */
+.stats-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--bt-transition);
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stats-card .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bt-accent);
+    margin-bottom: 0.5rem;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stats-card .stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--bt-shadow);
+    transition: var(--bt-transition);
+    border: 1px solid var(--bt-border);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--bt-shadow-lg);
+}
+
+.testimonial-card .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card .testimonial-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--bt-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.testimonial-card .testimonial-info .name {
+    font-weight: 700;
+    color: var(--bt-dark);
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-card .testimonial-info .position {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.testimonial-card .testimonial-rating {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .testimonial-rating i {
+    color: #fbbf24;
+    margin-left: 0.25rem;
+}
+
+.testimonial-card .testimonial-text {
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Loading States */
+.loading-spinner {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--bt-border);
+    border-radius: 50%;
+    border-top-color: var(--bt-primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 0.5rem;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--bt-shadow-lg);
+    border-left: 4px solid var(--bt-primary);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: var(--bt-transition);
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    border-left-color: var(--bt-success);
+}
+
+.notification.error {
+    border-left-color: var(--bt-error);
+}
+
+.notification.warning {
+    border-left-color: var(--bt-warning);
+}
+
+.notification .notification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.notification .notification-title {
+    font-weight: 600;
+    color: var(--bt-dark);
+}
+
+.notification .notification-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 0;
+    transition: var(--bt-transition);
+}
+
+.notification .notification-close:hover {
+    color: var(--bt-dark);
+    transform: scale(1.1);
+}
+
+.notification .notification-message {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .business-tourism-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .itinerary-timeline::before {
+        display: none;
+    }
+    
+    .itinerary-day .day-number {
+        position: relative;
+        margin: 0 auto 1rem;
+    }
+    
+    .itinerary-day .day-content {
+        margin-right: 0;
+    }
+    
+    .price-calculator {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-tourism-hero {
+        padding: 6rem 0;
+    }
+    
+    .business-tourism-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .business-tourism-hero p {
+        font-size: 1.25rem;
+    }
+    
+    .destination-card .destination-header {
+        height: 200px;
+    }
+    
+    .destination-card .destination-flag {
+        font-size: 4rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+    
+    .booking-form {
+        padding: 2rem;
+    }
+    
+    .step-indicator {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .step-line {
+        margin: 0 0.5rem;
+    }
+    
+    .notification {
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-tourism-container {
+        padding: 0 0.5rem;
+    }
+    
+    .business-tourism-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .destination-card .destination-content {
+        padding: 1.5rem;
+    }
+    
+    .service-card .service-icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+    
+    .itinerary-day .day-content {
+        padding: 1.5rem;
+    }
+    
+    .booking-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .business-tourism-hero,
+    .notification,
+    .booking-form button {
+        display: none;
+    }
+    
+    .business-tourism-card,
+    .service-card {
+        box-shadow: none;
+        border: 1px solid var(--bt-border);
+        break-inside: avoid;
+    }
+    
+    .destination-card .destination-header {
+        background: #f3f4f6 !important;
+        color: var(--bt-dark) !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bt-dark: #f9fafb;
+        --bt-light: #1f2937;
+        --bt-border: #374151;
+    }
+    
+    .business-tourism-card,
+    .service-card,
+    .booking-form,
+    .price-calculator,
+    .testimonial-card,
+    .faq-item {
+        background: #1f2937;
+        color: #f9fafb;
+        border-color: #374151;
+    }
+    
+    .form-input {
+        background: #374151;
+        color: #f9fafb;
+        border-color: #4b5563;
+    }
+    
+    .itinerary-day .day-content {
+        background: #1f2937;
+        color: #f9fafb;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .business-tourism-card,
+    .service-card {
+        border: 2px solid var(--bt-dark);
+    }
+    
+    .form-input {
+        border-width: 2px;
+    }
+    
+    .destination-card .destination-header {
+        border: 2px solid var(--bt-dark);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .loading-spinner {
+        animation: none;
+        border-top-color: var(--bt-primary);
+    }
+    
+    .skeleton {
+        animation: none;
+        background: #f0f0f0;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus-visible:focus-visible {
+    outline: 2px solid var(--bt-primary);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bt-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bt-secondary);
+}
+
+/* Selection */
+::selection {
+    background: var(--bt-primary);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--bt-primary);
+    color: white;
+}

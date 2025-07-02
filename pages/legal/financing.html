@@ -1,10 +1,1238 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>آليات التمويل</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آليات التمويل والقروض للمشاريع - رفيق توريق</title>
+    <meta name="description" content="دليل شامل لآليات التمويل المتاحة للمشاريع والشركات في الجزائر. القروض البنكية، صناديق الدعم، والتمويل الإسلامي">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/legal.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>آليات التمويل</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-red-600 font-bold flex items-center relative">
+                        <i class="fas fa-balance-scale ml-2"></i>
+                        الجوانب القانونية
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="business-setup.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-building ml-3 text-gray-500"></i>
+                                <span>تأسيس الأعمال</span>
+                            </a>
+                            <a href="commercial-register.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-file-alt ml-3 text-gray-500"></i>
+                                <span>السجل التجاري</span>
+                            </a>
+                            <a href="casnos.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-shield-alt ml-3 text-gray-500"></i>
+                                <span>CASNOS</span>
+                            </a>
+                            <a href="licenses.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all">
+                                <i class="fas fa-certificate ml-3 text-gray-500"></i>
+                                <span>التراخيص</span>
+                            </a>
+                            <a href="financing.html" class="flex items-center px-4 py-3 text-red-600 bg-red-50 border-r-4 border-red-600">
+                                <i class="fas fa-money-bill ml-3 text-red-500"></i>
+                                <span>آليات التمويل (الحالية)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="#financing-options" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-money-bill ml-2"></i>
+                    اطلب التمويل
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-red-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الجوانب القانونية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">آليات التمويل</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-red-900 via-red-800 to-rose-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"financing\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"8\" fill=\"white\" opacity=\"0.3\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"4\" fill=\"white\" opacity=\"0.5\"/><path d=\"M5 12.5 L20 12.5 M12.5 5 L12.5 20\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23financing)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-red-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-money-bill text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">حلول التمويل المتنوعة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    آليات <span class="text-yellow-400">التمويل</span> والقروض
+                </h1>
+                <p class="text-xl mb-8 text-red-100 leading-relaxed">
+                    دليل شامل لجميع آليات التمويل المتاحة للمشاريع والشركات في الجزائر. من القروض البنكية إلى صناديق الدعم الحكومية والتمويل الإسلامي
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                        <div class="text-sm text-red-200">مصدر تمويل</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="5">0</div>
+                        <div class="text-sm text-red-200">% معدل فائدة</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="20">0</div>
+                        <div class="text-sm text-red-200">سنة مدة السداد</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="85">0</div>
+                        <div class="text-sm text-red-200">% نسبة الموافقة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is Financing -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-red-100 text-red-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">ما هو التمويل؟</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">آليات التمويل المتاحة للمشاريع</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                التمويل هو توفير الأموال اللازمة لبدء أو تطوير المشاريع التجارية والاستثمارية
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">أهمية التمويل للمشاريع</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    يُعتبر التمويل العنصر الأساسي لنجاح أي مشروع تجاري أو استثماري. في الجزائر، تتنوع مصادر التمويل بين البنوك التجارية، صناديق الدعم الحكومية، والمؤسسات المالية الإسلامية، مما يوفر خيارات متعددة لرجال الأعمال والمستثمرين.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-rocket text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">بدء المشاريع</h4>
+                            <p class="text-gray-600 text-sm">توفير رأس المال اللازم لإطلاق المشاريع الجديدة</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-chart-line text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">التوسع والنمو</h4>
+                            <p class="text-gray-600 text-sm">دعم توسيع الأعمال الحالية ودخول أسواق جديدة</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-cogs text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">التحديث والتطوير</h4>
+                            <p class="text-gray-600 text-sm">تحديث المعدات والتقنيات لزيادة الكفاءة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-red-400 to-rose-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-money-bill-wave text-8xl text-white"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-red-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-university text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-chart-line text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Financing Options -->
+<section id="financing-options" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مصادر التمويل المتاحة</h2>
+            <p class="text-xl text-gray-600">تنوع في الخيارات لتناسب جميع أنواع المشاريع</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Bank Loans -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">القروض البنكية</h3>
+                    <p class="text-gray-600 text-sm mb-4">قروض تقليدية من البنوك التجارية</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">معدل الفائدة</span>
+                                <span class="font-bold text-blue-600">4-8%</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة السداد</span>
+                                <span class="font-bold text-blue-600">5-15 سنة</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأقصى</span>
+                                <span class="font-bold text-blue-600">500 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إجراءات واضحة ومحددة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مبالغ كبيرة متاحة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 ml-2"></i>
+                            <span>يتطلب ضمانات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Government Support Funds -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-flag text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">صناديق الدعم الحكومية</h3>
+                    <p class="text-gray-600 text-sm mb-4">دعم حكومي للمشاريع الصغيرة والمتوسطة</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-green-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">معدل الفائدة</span>
+                                <span class="font-bold text-green-600">1-3%</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة السداد</span>
+                                <span class="font-bold text-green-600">7-20 سنة</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأقصى</span>
+                                <span class="font-bold text-green-600">100 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>فوائد منخفضة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>دعم للشباب والمرأة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 ml-2"></i>
+                            <span>شروط محددة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Islamic Financing -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-mosque text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التمويل الإسلامي</h3>
+                    <p class="text-gray-600 text-sm mb-4">تمويل متوافق مع أحكام الشريعة الإسلامية</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-purple-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">نسبة الربح</span>
+                                <span class="font-bold text-purple-600">3-6%</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة السداد</span>
+                                <span class="font-bold text-purple-600">5-12 سنة</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأقصى</span>
+                                <span class="font-bold text-purple-600">300 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>متوافق مع الشريعة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مشاركة في الأرباح</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>بدون فوائد ربوية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Venture Capital -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">رؤوس الأموال الاستثمارية</h3>
+                    <p class="text-gray-600 text-sm mb-4">استثمار في الشركات الناشئة والمبتكرة</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-orange-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">نسبة الملكية</span>
+                                <span class="font-bold text-orange-600">10-40%</span>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة الاستثمار</span>
+                                <span class="font-bold text-orange-600">3-7 سنوات</span>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المبلغ</span>
+                                <span class="font-bold text-orange-600">50-500 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>بدون ضمانات</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>خبرة إدارية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 ml-2"></i>
+                            <span>تنازل عن جزء من الملكية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Microfinance -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-coins text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التمويل الأصغر</h3>
+                    <p class="text-gray-600 text-sm mb-4">قروض صغيرة للمشاريع المتناهية الصغر</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-teal-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">معدل الفائدة</span>
+                                <span class="font-bold text-teal-600">8-12%</span>
+                            </div>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة السداد</span>
+                                <span class="font-bold text-teal-600">1-3 سنوات</span>
+                            </div>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأقصى</span>
+                                <span class="font-bold text-teal-600">5 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إجراءات مبسطة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>سرعة في الموافقة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>للمشاريع الصغيرة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Leasing -->
+            <div class="financing-option bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التأجير التمويلي</h3>
+                    <p class="text-gray-600 text-sm mb-4">تأجير المعدات والآلات مع خيار الشراء</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-indigo-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الدفعة الأولى</span>
+                                <span class="font-bold text-indigo-600">10-30%</span>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">مدة التأجير</span>
+                                <span class="font-bold text-indigo-600">2-7 سنوات</span>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">قيمة المعدات</span>
+                                <span class="font-bold text-indigo-600">10-200 مليون دج</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="text-right space-y-2 text-sm text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>بدون دفع كامل المبلغ</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>خيار الشراء في النهاية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مناسب للمعدات الثقيلة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Major Financing Institutions -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">المؤسسات المالية الرئيسية</h2>
+            <p class="text-xl text-gray-600">البنوك والمؤسسات المالية المتخصصة في التمويل</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Commercial Banks -->
+            <div class="institution-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">البنوك التجارية</h3>
+                    <p class="text-gray-600 text-sm mb-4">البنوك الرئيسية في الجزائر</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• بنك الجزائر الخارجي (BEA)</div>
+                        <div>• القرض الشعبي الجزائري (CPA)</div>
+                        <div>• البنك الوطني الجزائري (BNA)</div>
+                        <div>• بنك التنمية المحلية (BDL)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Banks -->
+            <div class="institution-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">بنوك التنمية</h3>
+                    <p class="text-gray-600 text-sm mb-4">متخصصة في تمويل المشاريع التنموية</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• بنك التنمية الريفية (BADR)</div>
+                        <div>• بنك تطوير الصناعات المحلية</div>
+                        <div>• صندوق ضمان القروض</div>
+                        <div>• صندوق الاستثمار والتنمية</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Funds -->
+            <div class="institution-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">صناديق الدعم</h3>
+                    <p class="text-gray-600 text-sm mb-4">صناديق حكومية لدعم المشاريع</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• الوكالة الوطنية لدعم تشغيل الشباب (ANSEJ)</div>
+                        <div>• الصندوق الوطني للتأمين على البطالة (CNAC)</div>
+                        <div>• الوكالة الوطنية لتسيير القرض المصغر (ANGEM)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Islamic Banks -->
+            <div class="institution-card bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-mosque text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">البنوك الإسلامية</h3>
+                    <p class="text-gray-600 text-sm mb-4">تمويل متوافق مع الشريعة الإسلامية</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• بنك البركة الجزائر</div>
+                        <div>• بنك السلام الجزائر</div>
+                        <div>• النوافذ الإسلامية للبنوك التقليدية</div>
+                        <div>• مؤسسات التمويل الإسلامي</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Private Banks -->
+            <div class="institution-card bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">البنوك الخاصة</h3>
+                    <p class="text-gray-600 text-sm mb-4">بنوك القطاع الخاص والأجنبية</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• بنك الخليج الجزائر</div>
+                        <div>• بنك سوسيتيه جنرال الجزائر</div>
+                        <div>• البنك العربي</div>
+                        <div>• بنك ناتيكسيس الجزائر</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Funds -->
+            <div class="institution-card bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-pie text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">صناديق الاستثمار</h3>
+                    <p class="text-gray-600 text-sm mb-4">صناديق رؤوس الأموال الاستثمارية</p>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div>• صندوق الاستثمار المباشر</div>
+                        <div>• صناديق رؤوس الأموال الجريئة</div>
+                        <div>• صناديق الاستثمار الإقليمية</div>
+                        <div>• المستثمرون الملائكة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Process -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">خطوات الحصول على التمويل</h2>
+            <p class="text-xl text-gray-600">عملية منظمة للحصول على التمويل المناسب</p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Step 1 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">تحديد نوع التمويل</h3>
+                    <p class="text-gray-600 text-sm mb-4">اختيار مصدر التمويل المناسب</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• دراسة احتياجات المشروع</li>
+                        <li>• مقارنة الخيارات المتاحة</li>
+                        <li>• تحديد المبلغ المطلوب</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">إعداد دراسة الجدوى</h3>
+                    <p class="text-gray-600 text-sm mb-4">تحضير خطة عمل مفصلة</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• دراسة السوق والمنافسة</li>
+                        <li>• التوقعات المالية</li>
+                        <li>• خطة التسويق</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">تقديم الطلب</h3>
+                    <p class="text-gray-600 text-sm mb-4">تقديم طلب التمويل مع الوثائق</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• ملء استمارة الطلب</li>
+                        <li>• تقديم الوثائق المطلوبة</li>
+                        <li>• دفع رسوم الدراسة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الحصول على الموافقة</h3>
+                    <p class="text-gray-600 text-sm mb-4">دراسة الطلب والحصول على التمويل</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• دراسة الملف</li>
+                        <li>• الموافقة المبدئية</li>
+                        <li>• صرف التمويل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Required Documents -->
+        <div class="bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">الوثائق المطلوبة للتمويل</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-4">الوثائق الشخصية والقانونية</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">نسخة من بطاقة الهوية الوطنية</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">شهادة الإقامة</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">مستخرج من السجل التجاري</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">القانون الأساسي للشركة</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-4">الوثائق المالية والتقنية</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">دراسة الجدوى الاقتصادية</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">الكشوف المالية (إن وجدت)</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">عروض أسعار المعدات</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-check text-green-500 ml-3"></i>
+                            <span class="text-gray-700 text-sm">ضمانات التمويل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-red-600 to-rose-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل تحتاج مساعدة في الحصول على التمويل؟</h2>
+            <p class="text-xl mb-8 text-red-100">
+                فريقنا المتخصص جاهز لمساعدتك في اختيار أفضل خيارات التمويل وإعداد الملفات المطلوبة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact/index.html" class="bg-yellow-500 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا الآن
+                </a>
+                <a href="business-setup.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-900 transition-all">
+                    <i class="fas fa-building ml-2"></i>
+                    ابدأ تأسيس شركتك
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Financing option animation
+document.querySelectorAll('.financing-option').forEach(option => {
+    option.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    option.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Institution cards animation
+document.querySelectorAll('.institution-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Process steps animation
+document.querySelectorAll('.process-step').forEach(step => {
+    step.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    step.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Financing calculator
+class FinancingCalculator {
+    constructor() {
+        this.createCalculator();
+    }
+
+    createCalculator() {
+        const calculator = document.createElement('div');
+        calculator.className = 'fixed left-4 bottom-4 bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition-all z-50 cursor-pointer';
+        calculator.innerHTML = '<i class="fas fa-calculator text-xl"></i>';
+        calculator.onclick = () => this.showCalculator();
+        
+        document.body.appendChild(calculator);
+    }
+
+    showCalculator() {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+        
+        modal.innerHTML = `
+            <div class="bg-white rounded-2xl p-8 max-w-lg mx-4 transform scale-0 transition-transform duration-300">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">حاسبة التمويل</h3>
+                    <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">مبلغ التمويل المطلوب (دج)</label>
+                        <input type="number" id="loan-amount" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500" placeholder="مثال: 10000000" min="100000" max="1000000000">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">مدة السداد (سنوات)</label>
+                        <select id="loan-term" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500">
+                            <option value="1">سنة واحدة</option>
+                            <option value="3">3 سنوات</option>
+                            <option value="5" selected>5 سنوات</option>
+                            <option value="7">7 سنوات</option>
+                            <option value="10">10 سنوات</option>
+                            <option value="15">15 سنة</option>
+                            <option value="20">20 سنة</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">نوع التمويل</label>
+                        <select id="financing-type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500">
+                            <option value="5">قرض بنكي تقليدي (5%)</option>
+                            <option value="2">صندوق دعم حكومي (2%)</option>
+                            <option value="4">تمويل إسلامي (4%)</option>
+                            <option value="10">تمويل أصغر (10%)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6" id="calculation-result">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-red-600 mb-2" id="monthly-payment">0 دج</div>
+                        <div class="text-sm text-gray-600">القسط الشهري</div>
+                        <div class="mt-3 text-sm text-gray-600">
+                            <div>إجمالي المبلغ المسدد: <span id="total-payment" class="font-bold">0 دج</span></div>
+                            <div>إجمالي الفوائد: <span id="total-interest" class="font-bold">0 دج</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button onclick="this.closest('.fixed').remove()" 
+                            class="flex-1 bg-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-400 transition-all">
+                        إغلاق
+                    </button>
+                    <a href="../contact/index.html" 
+                       class="flex-1 bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-all text-center">
+                        طلب التمويل
+                    </a>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Animate modal
+        setTimeout(() => {
+            modal.querySelector('.bg-white').style.transform = 'scale(1)';
+        }, 100);
+        
+        // Add event listeners
+        this.setupCalculatorEvents(modal);
+    }
+
+    setupCalculatorEvents(modal) {
+        const loanAmount = modal.querySelector('#loan-amount');
+        const loanTerm = modal.querySelector('#loan-term');
+        const financingType = modal.querySelector('#financing-type');
+        const monthlyPayment = modal.querySelector('#monthly-payment');
+        const totalPayment = modal.querySelector('#total-payment');
+        const totalInterest = modal.querySelector('#total-interest');
+
+        const calculatePayment = () => {
+            const principal = parseFloat(loanAmount.value) || 0;
+            const years = parseInt(loanTerm.value) || 5;
+            const annualRate = parseFloat(financingType.value) || 5;
+            
+            if (principal <= 0) {
+                monthlyPayment.textContent = '0 دج';
+                totalPayment.textContent = '0 دج';
+                totalInterest.textContent = '0 دج';
+                return;
+            }
+
+            const monthlyRate = annualRate / 100 / 12;
+            const numberOfPayments = years * 12;
+            
+            let monthly;
+            if (monthlyRate === 0) {
+                monthly = principal / numberOfPayments;
+            } else {
+                monthly = principal * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+                         (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+            }
+            
+            const total = monthly * numberOfPayments;
+            const interest = total - principal;
+            
+            monthlyPayment.textContent = `${Math.round(monthly).toLocaleString()} دج`;
+            totalPayment.textContent = `${Math.round(total).toLocaleString()} دج`;
+            totalInterest.textContent = `${Math.round(interest).toLocaleString()} دج`;
+        };
+
+        loanAmount.addEventListener('input', calculatePayment);
+        loanTerm.addEventListener('change', calculatePayment);
+        financingType.addEventListener('change', calculatePayment);
+        
+        // Initial calculation
+        calculatePayment();
+    }
+}
+
+// Initialize financing calculator
+const financingCalculator = new FinancingCalculator();
+
+// Financing comparison tool
+function showFinancingComparison() {
+    const comparison = document.createElement('div');
+    comparison.className = 'fixed top-4 left-4 bg-white rounded-lg shadow-lg p-4 z-50 max-w-sm';
+    comparison.innerHTML = `
+        <div class="flex justify-between items-center mb-3">
+            <h4 class="font-bold text-gray-800">مقارنة سريعة</h4>
+            <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-gray-600">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+                <span>قرض بنكي (5%)</span>
+                <span class="text-blue-600 font-bold">متوسط</span>
+            </div>
+            <div class="flex justify-between">
+                <span>صندوق دعم (2%)</span>
+                <span class="text-green-600 font-bold">منخفض</span>
+            </div>
+            <div class="flex justify-between">
+                <span>تمويل إسلامي (4%)</span>
+                <span class="text-purple-600 font-bold">منخفض</span>
+            </div>
+            <div class="flex justify-between">
+                <span>رأس مال جريء</span>
+                <span class="text-orange-600 font-bold">بدون فوائد</span>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(comparison);
+    
+    // Auto remove after 10 seconds
+    setTimeout(() => {
+        if (comparison.parentElement) {
+            comparison.remove();
+        }
+    }, 10000);
+}
+
+// Show comparison after page load
+setTimeout(() => {
+    showFinancingComparison();
+}, 8000);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Add CSS for enhanced styling
+const style = document.createElement('style');
+style.textContent = `
+    .financing-option {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .institution-card {
+        transition: all 0.3s ease;
+    }
+    
+    .process-step {
+        transition: all 0.3s ease;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+    }
+    
+    .animate-pulse-custom {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('💰 Financing page initialized successfully!');
+</script>
+
 </body>
 </html>

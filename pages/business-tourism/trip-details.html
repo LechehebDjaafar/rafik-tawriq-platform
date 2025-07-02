@@ -1,10 +1,1340 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تفاصيل الرحلة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الرحلة التجارية - رفيق توريق</title>
+    <meta name="description" content="تفاصيل شاملة للرحلات التجارية مع خط سير مفصل، الأنشطة المتضمنة، معلومات الإقامة والطيران، والخدمات المقدمة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/business-tourism.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>تفاصيل الرحلة</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header الموحد -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl group-hover:scale-105 transition-transform shadow-lg">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium flex items-center">
+                        <i class="fas fa-th-large ml-2"></i>
+                        الخدمات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-4 grid grid-cols-2 gap-2">
+                            <a href="../courses/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-graduation-cap text-blue-500 ml-3"></i>
+                                <span>الدورات التدريبية</span>
+                            </a>
+                            <a href="../incubator/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-seedling text-green-500 ml-3"></i>
+                                <span>الحاضنة</span>
+                            </a>
+                            <a href="../consulting/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-user-tie text-purple-500 ml-3"></i>
+                                <span>الاستشارات</span>
+                            </a>
+                            <a href="../machinery/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-cogs text-orange-500 ml-3"></i>
+                                <span>الآلات الصناعية</span>
+                            </a>
+                            <a href="../real-estate/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-building text-red-500 ml-3"></i>
+                                <span>العقارات</span>
+                            </a>
+                            <a href="../events/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-calendar-alt text-yellow-500 ml-3"></i>
+                                <span>الفعاليات</span>
+                            </a>
+                            <a href="../projects/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-project-diagram text-indigo-500 ml-3"></i>
+                                <span>المشاريع</span>
+                            </a>
+                            <a href="../construction/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-hammer text-gray-500 ml-3"></i>
+                                <span>بناء المصانع</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tourism -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-indigo-600 font-bold flex items-center relative">
+                        <i class="fas fa-plane ml-2"></i>
+                        سياحة الأعمال
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="turkey-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات تركيا</span>
+                            </a>
+                            <a href="france-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات فرنسا</span>
+                            </a>
+                            <a href="china-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الصين</span>
+                            </a>
+                            <a href="uae-trips.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-flag ml-3 text-gray-500"></i>
+                                <span>رحلات الإمارات</span>
+                            </a>
+                            <a href="booking.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all">
+                                <i class="fas fa-calendar-check ml-3 text-gray-500"></i>
+                                <span>حجز الرحلات</span>
+                            </a>
+                            <a href="trip-details.html" class="flex items-center px-4 py-3 text-indigo-600 bg-indigo-50 border-r-4 border-indigo-600">
+                                <i class="fas fa-info-circle ml-3 text-indigo-500"></i>
+                                <span>تفاصيل الرحلة (الحالية)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Services -->
+                <a href="../legal/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium">
+                    <i class="fas fa-balance-scale ml-2"></i>
+                    الخدمات القانونية
+                </a>
+                
+                <!-- Contact -->
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="../contact/index.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    ابدأ مشروعك
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+        <div class="px-4 py-6 space-y-4">
+            <a href="../index.html" class="block text-gray-700 py-2">الرئيسية</a>
+            <a href="../courses/index.html" class="block text-gray-700 py-2">الدورات التدريبية</a>
+            <a href="../incubator/index.html" class="block text-gray-700 py-2">الحاضنة</a>
+            <a href="../consulting/index.html" class="block text-gray-700 py-2">الاستشارات</a>
+            <a href="../machinery/index.html" class="block text-gray-700 py-2">الآلات الصناعية</a>
+            <a href="../real-estate/index.html" class="block text-gray-700 py-2">العقارات</a>
+            <a href="../events/index.html" class="block text-gray-700 py-2">الفعاليات</a>
+            <a href="../projects/index.html" class="block text-gray-700 py-2">المشاريع</a>
+            <a href="../construction/index.html" class="block text-gray-700 py-2">بناء المصانع</a>
+            <a href="index.html" class="block text-indigo-600 font-bold py-2">سياحة الأعمال</a>
+            <a href="../legal/index.html" class="block text-gray-700 py-2">الخدمات القانونية</a>
+            <a href="../contact/index.html" class="block text-gray-700 py-2">تواصل معنا</a>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">سياحة الأعمال</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تفاصيل الرحلة</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"details\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"8\" fill=\"white\" opacity=\"0.3\"/><path d=\"M5 12.5 L20 12.5 M12.5 5 L12.5 20\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"3\" fill=\"white\" opacity=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23details)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-indigo-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-info-circle text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">تفاصيل شاملة ومفصلة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    تفاصيل <span class="text-yellow-400">الرحلة</span> التجارية
+                </h1>
+                <p class="text-xl mb-8 text-indigo-100 leading-relaxed">
+                    اطلع على جميع تفاصيل رحلتك التجارية من خط السير اليومي إلى الخدمات المتضمنة والمعلومات العملية
+                </p>
+                
+                <!-- Trip Selector -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 mb-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold mb-4">اختر الرحلة لعرض التفاصيل</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <button class="trip-selector active" data-destination="turkey">
+                            <i class="fas fa-flag text-2xl mb-2"></i>
+                            <div class="font-bold">تركيا</div>
+                        </button>
+                        <button class="trip-selector" data-destination="france">
+                            <i class="fas fa-flag text-2xl mb-2"></i>
+                            <div class="font-bold">فرنسا</div>
+                        </button>
+                        <button class="trip-selector" data-destination="china">
+                            <i class="fas fa-flag text-2xl mb-2"></i>
+                            <div class="font-bold">الصين</div>
+                        </button>
+                        <button class="trip-selector" data-destination="uae">
+                            <i class="fas fa-flag text-2xl mb-2"></i>
+                            <div class="font-bold">الإمارات</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trip Overview -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Trip Header -->
+            <div class="trip-overview" id="turkey-overview">
+                <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                    <!-- Main Info -->
+                    <div class="lg:col-span-2" data-aos="fade-right">
+                        <div class="bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-8 border border-red-200">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-4">
+                                    <i class="fas fa-flag text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-3xl font-bold text-gray-800">رحلة تركيا التجارية</h2>
+                                    <p class="text-red-600 font-medium">اكتشف الفرص التجارية والاستثمارية</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                رحلة تجارية شاملة إلى تركيا تتضمن زيارة أهم المصانع والمعارض التجارية في إسطنبول وأنقرة. ستتاح لك الفرصة للتواصل مع المصدرين الأتراك واستكشاف الأسواق المحلية والاستمتاع بالثقافة التركية الغنية.
+                            </p>
+                            
+                            <!-- Quick Facts -->
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="text-center bg-white rounded-lg p-4">
+                                    <i class="fas fa-calendar-alt text-red-500 text-2xl mb-2"></i>
+                                    <div class="font-bold text-gray-800">7-15 أيام</div>
+                                    <div class="text-sm text-gray-600">المدة</div>
+                                </div>
+                                <div class="text-center bg-white rounded-lg p-4">
+                                    <i class="fas fa-users text-red-500 text-2xl mb-2"></i>
+                                    <div class="font-bold text-gray-800">2-20 شخص</div>
+                                    <div class="text-sm text-gray-600">المجموعة</div>
+                                </div>
+                                <div class="text-center bg-white rounded-lg p-4">
+                                    <i class="fas fa-star text-red-500 text-2xl mb-2"></i>
+                                    <div class="font-bold text-gray-800">متوسط</div>
+                                    <div class="text-sm text-gray-600">المستوى</div>
+                                </div>
+                                <div class="text-center bg-white rounded-lg p-4">
+                                    <i class="fas fa-euro-sign text-red-500 text-2xl mb-2"></i>
+                                    <div class="font-bold text-gray-800">من €1,500</div>
+                                    <div class="text-sm text-gray-600">السعر</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Card -->
+                    <div class="lg:col-span-1" data-aos="fade-left">
+                        <div class="sticky top-24">
+                            <div class="bg-white rounded-2xl shadow-2xl p-6 border border-gray-200">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">احجز رحلتك الآن</h3>
+                                
+                                <!-- Price Options -->
+                                <div class="space-y-3 mb-6">
+                                    <div class="price-option border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-red-500 transition-all">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <div class="font-bold text-gray-800">برنامج 7 أيام</div>
+                                                <div class="text-sm text-gray-600">الأساسي</div>
+                                            </div>
+                                            <div class="text-red-600 font-bold">€1,500</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-option border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-red-500 transition-all">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <div class="font-bold text-gray-800">برنامج 10 أيام</div>
+                                                <div class="text-sm text-gray-600">المتوسط</div>
+                                            </div>
+                                            <div class="text-red-600 font-bold">€2,200</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-option border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-red-500 transition-all">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <div class="font-bold text-gray-800">برنامج 15 يوم</div>
+                                                <div class="text-sm text-gray-600">الشامل</div>
+                                            </div>
+                                            <div class="text-red-600 font-bold">€3,500</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="booking.html" class="w-full bg-gradient-to-r from-red-600 to-rose-600 text-white py-3 px-6 rounded-lg font-bold hover:from-red-700 hover:to-rose-700 transition-all transform hover:scale-105 shadow-lg block text-center mb-4">
+                                    <i class="fas fa-calendar-check ml-2"></i>
+                                    احجز الآن
+                                </a>
+                                
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-600 mb-2">أو تواصل معنا</div>
+                                    <a href="../contact/index.html" class="text-red-600 hover:text-red-700 font-medium">
+                                        <i class="fas fa-phone ml-1"></i>
+                                        +213 770 123 456
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Daily Itinerary -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">خط سير الرحلة اليومي</h2>
+                <p class="text-xl text-gray-600">برنامج مفصل يوم بيوم لرحلتك التجارية</p>
+            </div>
+
+            <!-- Itinerary Timeline -->
+            <div class="trip-itinerary" id="turkey-itinerary">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute right-8 top-0 bottom-0 w-1 bg-red-300"></div>
+                    
+                    <!-- Day 1 -->
+                    <div class="itinerary-day mb-12" data-aos="fade-up">
+                        <div class="flex items-start">
+                            <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-8 relative z-10 shadow-lg">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">اليوم الأول - الوصول إلى إسطنبول</h3>
+                                        <p class="text-red-600 font-medium">الاستقبال والتوجه للفندق</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        <i class="fas fa-clock ml-1"></i>
+                                        طوال اليوم
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-plane text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">09:00 - الوصول إلى مطار إسطنبول</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">استقبال في المطار ونقل إلى الفندق بسيارة خاصة</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-hotel text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">11:00 - تسجيل الوصول في الفندق</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">فندق 5 نجوم في منطقة تقسيم أو السلطان أحمد</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-utensils text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">13:00 - غداء ترحيبي</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">وجبة تركية تقليدية في مطعم محلي مع إطلالة على البوسفور</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-map-marked-alt text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">15:00 - جولة استطلاعية</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">جولة سريعة في المدينة للتعرف على المعالم الرئيسية</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-handshake text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">19:00 - اجتماع تعريفي</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">لقاء مع المرشد التجاري وشرح برنامج الأيام القادمة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="itinerary-day mb-12" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start">
+                            <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-8 relative z-10 shadow-lg">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">اليوم الثاني - زيارة المصانع</h3>
+                                        <p class="text-red-600 font-medium">جولة في المنطقة الصناعية</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        <i class="fas fa-clock ml-1"></i>
+                                        08:00 - 18:00
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-coffee text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">08:00 - إفطار في الفندق</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">إفطار تركي تقليدي مع التحضير لليوم</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-industry text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">10:00 - زيارة مصنع النسيج</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">جولة في أحد أكبر مصانع النسيج التركية ولقاء مع الإدارة</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-handshake text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">12:00 - لقاء تجاري</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">اجتماع مع مدراء المصنع لمناقشة فرص التعاون</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-utensils text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">13:30 - غداء عمل</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">وجبة غداء مع رجال الأعمال الأتراك</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-building text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">15:00 - زيارة مصنع الأثاث</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">استكشاف صناعة الأثاث التركي والتقنيات المستخدمة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="itinerary-day mb-12" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-8 relative z-10 shadow-lg">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">اليوم الثالث - المعارض التجارية</h3>
+                                        <p class="text-red-600 font-medium">زيارة أهم المعارض في إسطنبول</p>
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        <i class="fas fa-clock ml-1"></i>
+                                        09:00 - 17:00
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-store text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">09:00 - معرض إسطنبول التجاري</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">زيارة شاملة لأكبر معرض تجاري في المدينة</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-users text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">11:00 - لقاءات مع العارضين</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">جلسات مجدولة مع أهم العارضين والموردين</p>
+                                    </div>
+                                    
+                                    <div class="timeline-activity">
+                                        <div class="flex items-center mb-2">
+                                            <i class="fas fa-shopping-bag text-red-500 ml-3"></i>
+                                            <span class="font-bold text-gray-800">14:00 - البازار الكبير</span>
+                                        </div>
+                                        <p class="text-gray-600 pr-8">جولة في البازار الكبير لاستكشاف التجارة التقليدية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continue Button -->
+                    <div class="text-center" data-aos="fade-up">
+                        <button class="show-more-days bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-all">
+                            <i class="fas fa-plus ml-2"></i>
+                            عرض المزيد من الأيام
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Included -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">ما يشمله البرنامج</h2>
+                <p class="text-xl text-gray-600">خدمات شاملة ومتكاملة لضمان نجاح رحلتك</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Included Services -->
+                <div class="included-services" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-green-600 mb-6 flex items-center">
+                        <i class="fas fa-check-circle ml-2"></i>
+                        الخدمات المشمولة
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-plane text-green-500 ml-3"></i>
+                            <span class="text-gray-700">تذاكر الطيران ذهاباً وإياباً</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-hotel text-green-500 ml-3"></i>
+                            <span class="text-gray-700">إقامة فندقية 4-5 نجوم</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-car text-green-500 ml-3"></i>
+                            <span class="text-gray-700">التنقلات المحلية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-utensils text-green-500 ml-3"></i>
+                            <span class="text-gray-700">وجبات الإفطار اليومية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-user-tie text-green-500 ml-3"></i>
+                            <span class="text-gray-700">مرشد تجاري متخصص</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-language text-green-500 ml-3"></i>
+                            <span class="text-gray-700">خدمات الترجمة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-handshake text-green-500 ml-3"></i>
+                            <span class="text-gray-700">ترتيب اللقاءات التجارية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-industry text-green-500 ml-3"></i>
+                            <span class="text-gray-700">زيارات المصانع والمعارض</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not Included -->
+                <div class="not-included-services" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-red-600 mb-6 flex items-center">
+                        <i class="fas fa-times-circle ml-2"></i>
+                        غير مشمول
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-passport text-red-500 ml-3"></i>
+                            <span class="text-gray-700">رسوم الفيزا</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-utensils text-red-500 ml-3"></i>
+                            <span class="text-gray-700">وجبات الغداء والعشاء</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shopping-bag text-red-500 ml-3"></i>
+                            <span class="text-gray-700">المشتريات الشخصية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-red-500 ml-3"></i>
+                            <span class="text-gray-700">المكالمات الشخصية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-cocktail text-red-500 ml-3"></i>
+                            <span class="text-gray-700">المشروبات في الفندق</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-taxi text-red-500 ml-3"></i>
+                            <span class="text-gray-700">التنقلات الشخصية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-umbrella text-red-500 ml-3"></i>
+                            <span class="text-gray-700">التأمين الشخصي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-gift text-red-500 ml-3"></i>
+                            <span class="text-gray-700">الهدايا والتذكارات</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notes -->
+                <div class="important-notes" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-blue-600 mb-6 flex items-center">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        ملاحظات مهمة
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <div class="font-bold text-blue-800 mb-2">متطلبات السفر</div>
+                            <p class="text-blue-700 text-sm">جواز سفر ساري المفعول لمدة 6 أشهر على الأقل</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <div class="font-bold text-yellow-800 mb-2">الحجز المسبق</div>
+                            <p class="text-yellow-700 text-sm">يُنصح بالحجز قبل 30 يوماً من تاريخ السفر</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <div class="font-bold text-green-800 mb-2">المجموعات</div>
+                            <p class="text-green-700 text-sm">خصومات خاصة للمجموعات أكثر من 10 أشخاص</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <div class="font-bold text-purple-800 mb-2">التخصيص</div>
+                            <p class="text-purple-700 text-sm">يمكن تخصيص البرنامج حسب احتياجاتك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">الأسئلة الشائعة</h2>
+                <p class="text-xl text-gray-600">إجابات على أكثر الأسئلة شيوعاً حول الرحلة</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">ما هي أفضل أوقات السفر إلى تركيا؟</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">أفضل أوقات السفر إلى تركيا هي فصلي الربيع (أبريل-مايو) والخريف (سبتمبر-أكتوبر) حيث يكون الطقس معتدلاً ومناسباً للجولات التجارية.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">هل يمكن تخصيص البرنامج حسب احتياجاتي؟</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نعم، يمكننا تخصيص البرنامج بالكامل حسب نوع نشاطك التجاري واهتماماتك. نقوم بترتيب زيارات خاصة للمصانع والشركات التي تهمك.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">ما هي اللغات المستخدمة في الجولات؟</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نوفر مرشدين يتحدثون العربية والتركية والإنجليزية. كما نقدم خدمات الترجمة الفورية في الاجتماعات التجارية المهمة.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">هل تساعدون في الحصول على الفيزا؟</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">نعم، نقدم المساعدة الكاملة في إجراءات الحصول على الفيزا التركية، بما في ذلك تجهيز الوثائق المطلوبة وحجز المواعيد.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question w-full text-right p-6 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">ما هي سياسة الإلغاء والاسترداد؟</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-600">يمكن الإلغاء مجاناً حتى 30 يوماً قبل السفر. بعد ذلك تطبق رسوم إلغاء تدريجية حسب المدة المتبقية قبل السفر.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">جاهز لبدء رحلتك التجارية؟</h2>
+            <p class="text-xl mb-8 text-indigo-100">
+                احجز الآن واستفد من خبرتنا في تنظيم الرحلات التجارية الناجحة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html" class="bg-yellow-500 text-indigo-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-check ml-2"></i>
+                    احجز رحلتك الآن
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Trip Details Manager
+class TripDetailsManager {
+    constructor() {
+        this.currentDestination = 'turkey';
+        this.tripData = {
+            turkey: {
+                title: 'رحلة تركيا التجارية',
+                subtitle: 'اكتشف الفرص التجارية والاستثمارية',
+                description: 'رحلة تجارية شاملة إلى تركيا تتضمن زيارة أهم المصانع والمعارض التجارية في إسطنبول وأنقرة.',
+                duration: '7-15 أيام',
+                groupSize: '2-20 شخص',
+                difficulty: 'متوسط',
+                priceFrom: '€1,500',
+                color: 'red',
+                programs: [
+                    { days: 7, name: 'الأساسي', price: '€1,500' },
+                    { days: 10, name: 'المتوسط', price: '€2,200' },
+                    { days: 15, name: 'الشامل', price: '€3,500' }
+                ]
+            },
+            france: {
+                title: 'رحلة فرنسا التقنية',
+                subtitle: 'التكنولوجيا والابتكار',
+                description: 'رحلة تجارية متخصصة إلى فرنسا لاستكشاف التكنولوجيا والابتكار في باريس وليون.',
+                duration: '8-15 أيام',
+                groupSize: '2-15 شخص',
+                difficulty: 'متقدم',
+                priceFrom: '€2,200',
+                color: 'blue',
+                programs: [
+                    { days: 8, name: 'التكنولوجيا', price: '€2,200' },
+                    { days: 12, name: 'الشامل', price: '€3,800' },
+                    { days: 15, name: 'الاستثماري', price: '€5,500' }
+                ]
+            },
+            china: {
+                title: 'رحلة الصين الصناعية',
+                subtitle: 'التصنيع ومعرض كانتون',
+                description: 'رحلة تجارية إلى الصين لاستكشاف عالم التصنيع وحضور معرض كانتون الشهير.',
+                duration: '10-21 أيام',
+                groupSize: '3-25 شخص',
+                difficulty: 'متوسط',
+                priceFrom: '€1,800',
+                color: 'yellow',
+                programs: [
+                    { days: 10, name: 'التصنيع', price: '€1,800' },
+                    { days: 14, name: 'الشامل', price: '€2,800' },
+                    { days: 21, name: 'الكامل', price: '€4,200' }
+                ]
+            },
+            uae: {
+                title: 'رحلة الإمارات الاستثمارية',
+                subtitle: 'الاستثمار والمناطق الحرة',
+                description: 'رحلة تجارية إلى دولة الإمارات لاستكشاف الفرص الاستثمارية والمناطق الحرة.',
+                duration: '6-14 أيام',
+                groupSize: '2-20 شخص',
+                difficulty: 'سهل',
+                priceFrom: '€1,200',
+                color: 'green',
+                programs: [
+                    { days: 6, name: 'الاستكشافي', price: '€1,200' },
+                    { days: 10, name: 'الشامل', price: '€2,000' },
+                    { days: 14, name: 'الكامل', price: '€3,200' }
+                ]
+            }
+        };
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.updateTripDetails();
+    }
+
+    setupEventListeners() {
+        // Trip selector buttons
+        document.querySelectorAll('.trip-selector').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const destination = e.currentTarget.getAttribute('data-destination');
+                this.switchDestination(destination);
+            });
+        });
+
+        // Price option selection
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.price-option')) {
+                document.querySelectorAll('.price-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+                e.target.closest('.price-option').classList.add('selected');
+            }
+        });
+
+        // Show more days button
+        document.querySelector('.show-more-days')?.addEventListener('click', () => {
+            this.showMoreDays();
+        });
+
+        // FAQ toggles
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    }
+
+    switchDestination(destination) {
+        this.currentDestination = destination;
+        
+        // Update active selector
+        document.querySelectorAll('.trip-selector').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        document.querySelector(`[data-destination="${destination}"]`).classList.add('active');
+        
+        // Update trip details
+        this.updateTripDetails();
+    }
+
+    updateTripDetails() {
+        const trip = this.tripData[this.currentDestination];
+        const colorMap = {
+            red: 'red',
+            blue: 'blue', 
+            yellow: 'yellow',
+            green: 'green'
+        };
+        
+        // Update overview section
+        const overview = document.querySelector('.trip-overview');
+        overview.innerHTML = `
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-${trip.color}-50 to-${trip.color}-100 rounded-2xl p-8 border border-${trip.color}-200">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-${trip.color}-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-4">
+                                <i class="fas fa-flag text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-3xl font-bold text-gray-800">${trip.title}</h2>
+                                <p class="text-${trip.color}-600 font-medium">${trip.subtitle}</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">${trip.description}</p>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center bg-white rounded-lg p-4">
+                                <i class="fas fa-calendar-alt text-${trip.color}-500 text-2xl mb
+                                <i class="fas fa-calendar-alt text-${trip.color}-500 text-2xl mb-2"></i>
+                                <div class="font-bold text-gray-800">${trip.duration}</div>
+                                <div class="text-sm text-gray-600">المدة</div>
+                            </div>
+                            <div class="text-center bg-white rounded-lg p-4">
+                                <i class="fas fa-users text-${trip.color}-500 text-2xl mb-2"></i>
+                                <div class="font-bold text-gray-800">${trip.groupSize}</div>
+                                <div class="text-sm text-gray-600">المجموعة</div>
+                            </div>
+                            <div class="text-center bg-white rounded-lg p-4">
+                                <i class="fas fa-star text-${trip.color}-500 text-2xl mb-2"></i>
+                                <div class="font-bold text-gray-800">${trip.difficulty}</div>
+                                <div class="text-sm text-gray-600">المستوى</div>
+                            </div>
+                            <div class="text-center bg-white rounded-lg p-4">
+                                <i class="fas fa-euro-sign text-${trip.color}-500 text-2xl mb-2"></i>
+                                <div class="font-bold text-gray-800">${trip.priceFrom}</div>
+                                <div class="text-sm text-gray-600">السعر</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Card -->
+                <div class="lg:col-span-1" data-aos="fade-left">
+                    <div class="sticky top-24">
+                        <div class="bg-white rounded-2xl shadow-2xl p-6 border border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">احجز رحلتك الآن</h3>
+                            
+                            <!-- Price Options -->
+                            <div class="space-y-3 mb-6">
+                                ${trip.programs.map(program => `
+                                <div class="price-option border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-${trip.color}-500 transition-all">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <div class="font-bold text-gray-800">برنامج ${program.days} أيام</div>
+                                            <div class="text-sm text-gray-600">${program.name}</div>
+                                        </div>
+                                        <div class="text-${trip.color}-600 font-bold">${program.price}</div>
+                                    </div>
+                                </div>
+                                `).join('')}
+                            </div>
+                            
+                            <a href="booking.html" class="w-full bg-gradient-to-r from-${trip.color}-600 to-${trip.color}-700 text-white py-3 px-6 rounded-lg font-bold hover:from-${trip.color}-700 hover:to-${trip.color}-800 transition-all transform hover:scale-105 shadow-lg block text-center mb-4">
+                                <i class="fas fa-calendar-check ml-2"></i>
+                                احجز الآن
+                            </a>
+                            
+                            <div class="text-center">
+                                <div class="text-sm text-gray-600 mb-2">أو تواصل معنا</div>
+                                <a href="../contact/index.html" class="text-${trip.color}-600 hover:text-${trip.color}-700 font-medium">
+                                    <i class="fas fa-phone ml-1"></i>
+                                    +213 770 123 456
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        overview.innerHTML = overviewHTML;
+    }
+
+    showMoreDays() {
+        // Add more days to the itinerary
+        const additionalDays = `
+            <!-- Day 4 -->
+            <div class="itinerary-day mb-12" data-aos="fade-up">
+                <div class="flex items-start">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-8 relative z-10 shadow-lg">
+                        <span class="font-bold">4</span>
+                    </div>
+                    <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">اليوم الرابع - الرحلة إلى أنقرة</h3>
+                                <p class="text-red-600 font-medium">العاصمة التركية</p>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-clock ml-1"></i>
+                                08:00 - 20:00
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-bus text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">08:00 - الانطلاق إلى أنقرة</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">رحلة بالحافلة السياحية المريحة (4 ساعات)</p>
+                            </div>
+                            
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-landmark text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">13:00 - زيارة أنيت كابير</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">ضريح أتاتورك ومتحف الحضارة الأناضولية</p>
+                            </div>
+                            
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-building text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">16:00 - زيارة غرفة التجارة</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">لقاء مع ممثلي غرفة التجارة في أنقرة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="itinerary-day mb-12" data-aos="fade-up">
+                <div class="flex items-start">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center ml-8 relative z-10 shadow-lg">
+                        <span class="font-bold">5</span>
+                    </div>
+                    <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">اليوم الخامس - العودة إلى إسطنبول</h3>
+                                <p class="text-red-600 font-medium">جولة ثقافية</p>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-clock ml-1"></i>
+                                09:00 - 19:00
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-mosque text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">10:00 - جامع السلطان أحمد</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">زيارة الجامع الأزرق وآيا صوفيا</p>
+                            </div>
+                            
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-ship text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">14:00 - رحلة البوسفور</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">جولة بحرية في مضيق البوسفور</p>
+                            </div>
+                            
+                            <div class="timeline-activity">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-utensils text-red-500 ml-3"></i>
+                                    <span class="font-bold text-gray-800">18:00 - عشاء وداع</span>
+                                </div>
+                                <p class="text-gray-600 pr-8">عشاء تركي تقليدي مع عرض فولكلوري</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Insert additional days before the "show more" button
+        const showMoreButton = document.querySelector('.show-more-days').parentElement;
+        showMoreButton.insertAdjacentHTML('beforebegin', additionalDays);
+        
+        // Hide the show more button
+        document.querySelector('.show-more-days').style.display = 'none';
+        
+        // Re-initialize AOS for new elements
+        AOS.refresh();
+    }
+}
+
+// Initialize trip details manager
+const tripDetailsManager = new TripDetailsManager();
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Add custom CSS for trip details
+const style = document.createElement('style');
+style.textContent = `
+    .trip-selector {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        color: white;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .trip-selector:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .trip-selector.active {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: #fbbf24;
+        transform: translateY(-2px);
+    }
+    
+    .price-option {
+        transition: all 0.3s ease;
+    }
+    
+    .price-option:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .price-option.selected {
+        border-color: #6366f1 !important;
+        background: #f0f9ff;
+    }
+    
+    .timeline-activity {
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+    
+    .timeline-activity:last-child {
+        border-bottom: none;
+    }
+    
+    .itinerary-day:hover {
+        transform: translateX(5px);
+    }
+    
+    .faq-question:hover {
+        background: #f9fafb;
+    }
+    
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+    
+    @media (max-width: 768px) {
+        .trip-selector {
+            padding: 12px;
+            font-size: 14px;
+        }
+        
+        .itinerary-day {
+            margin-bottom: 24px;
+        }
+        
+        .timeline-line {
+            display: none;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('🎯 Trip Details page initialized successfully!');
+</script>
+
 </body>
 </html>

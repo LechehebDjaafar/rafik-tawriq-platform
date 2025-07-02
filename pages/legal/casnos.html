@@ -1,10 +1,911 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>CASNOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASNOS - الضمان الاجتماعي لغير الأجراء - رفيق توريق</title>
+    <meta name="description" content="دليل شامل للضمان الاجتماعي لغير الأجراء CASNOS في الجزائر. إجراءات التسجيل، الاشتراكات، والخدمات المتاحة">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/legal.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>CASNOS</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-purple-600 font-bold flex items-center relative">
+                        <i class="fas fa-balance-scale ml-2"></i>
+                        الجوانب القانونية
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="business-setup.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-building ml-3 text-gray-500"></i>
+                                <span>تأسيس الأعمال</span>
+                            </a>
+                            <a href="commercial-register.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
+                                <i class="fas fa-file-alt ml-3 text-gray-500"></i>
+                                <span>السجل التجاري</span>
+                            </a>
+                            <a href="casnos.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
+                                <i class="fas fa-shield-alt ml-3 text-purple-500"></i>
+                                <span>CASNOS (الحالية)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="#registration-process" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-user-plus ml-2"></i>
+                    سجل الآن
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-purple-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الجوانب القانونية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">CASNOS</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"casnos\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><circle cx=\"12.5\" cy=\"12.5\" r=\"8\" fill=\"white\" opacity=\"0.3\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"4\" fill=\"white\" opacity=\"0.5\"/><path d=\"M5 12.5 L20 12.5 M12.5 5 L12.5 20\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23casnos)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-shield-alt text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">الضمان الاجتماعي لغير الأجراء</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    <span class="text-yellow-400">CASNOS</span> - الحماية الاجتماعية
+                </h1>
+                <p class="text-xl mb-8 text-purple-100 leading-relaxed">
+                    الصندوق الوطني للضمان الاجتماعي لغير الأجراء - دليل شامل للتسجيل والاشتراكات والخدمات المتاحة لأصحاب الأعمال الحرة والمهن المستقلة
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                        <div class="text-sm text-purple-200">% نسبة الاشتراك</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="10">0</div>
+                        <div class="text-sm text-purple-200">أيام للتسجيل</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="48">0</div>
+                        <div class="text-sm text-purple-200">وكالة محلية</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1300">0</div>
+                        <div class="text-sm text-purple-200">نشاط مؤهل</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is CASNOS -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-purple-100 text-purple-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">ما هو CASNOS؟</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الصندوق الوطني للضمان الاجتماعي لغير الأجراء</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                مؤسسة عمومية تهدف إلى توفير الحماية الاجتماعية لأصحاب المهن الحرة والأنشطة المستقلة
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">تعريف CASNOS</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    الصندوق الوطني للضمان الاجتماعي لغير الأجراء (CASNOS) هو مؤسسة عمومية ذات طابع إداري تتمتع بالشخصية المعنوية والاستقلال المالي، تهدف إلى توفير الحماية الاجتماعية للأشخاص الذين يمارسون أنشطة مهنية مستقلة أو حرة.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-users text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">المستفيدون</h4>
+                            <p class="text-gray-600 text-sm">أصحاب المهن الحرة، التجار، الحرفيون، أصحاب المؤسسات الفردية</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-heart text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">الخدمات المقدمة</h4>
+                            <p class="text-gray-600 text-sm">التأمين الصحي، معاش التقاعد، تعويضات العجز والوفاة</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-4 mt-1">
+                            <i class="fas fa-shield-alt text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">الحماية الشاملة</h4>
+                            <p class="text-gray-600 text-sm">تغطية اجتماعية شاملة للمنخرط وأفراد عائلته</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-shield-alt text-8xl text-white"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-purple-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-user-md text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-coins text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-heart text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Process -->
+<section id="registration-process" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">عملية التسجيل في CASNOS</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة للانضمام إلى نظام الضمان الاجتماعي</p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Step 1 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">تحضير الوثائق</h3>
+                    <p class="text-gray-600 text-sm mb-4">جمع الوثائق المطلوبة للتسجيل</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• نسخة من السجل التجاري</li>
+                        <li>• نسخة من القانون الأساسي</li>
+                        <li>• استمارة CASNOS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">تقديم الطلب</h3>
+                    <p class="text-gray-600 text-sm mb-4">إيداع الملف في وكالة CASNOS</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• زيارة الوكالة المحلية</li>
+                        <li>• تقديم الملف كاملاً</li>
+                        <li>• الحصول على وصل الإيداع</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">المعالجة</h3>
+                    <p class="text-gray-600 text-sm mb-4">معالجة الملف من قبل المختصين</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• فحص الوثائق</li>
+                        <li>• التحقق من البيانات</li>
+                        <li>• مدة المعالجة: 4 أيام</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الحصول على الشهادة</h3>
+                    <p class="text-gray-600 text-sm mb-4">استلام شهادة الانخراط والتحديث</p>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                        <li>• شهادة الانخراط</li>
+                        <li>• شهادة التحديث</li>
+                        <li>• رقم الانخراط</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notice -->
+        <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-6" data-aos="fade-up">
+            <div class="flex items-start">
+                <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl ml-4 mt-1"></i>
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">مهلة التسجيل الإجبارية</h3>
+                    <p class="text-gray-700 mb-4">
+                        يجب تقديم ملف الانخراط إلى وكالة أو فرع CASNOS المسؤول عن مكان النشاط في غضون <strong>10 أيام</strong> من إنشاء النشاط التجاري.
+                    </p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">للأشخاص الطبيعيين:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• شهادة ميلاد صاحب العمل</li>
+                                    <li>• نسخة من بطاقة الهوية</li>
+                                    <li>• نسخة من السجل التجاري</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">للأشخاص المعنويين:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• شهادة ميلاد المسير</li>
+                                    <li>• نسخة من القانون الأساسي</li>
+                                    <li>• نسخة من السجل التجاري</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Required Documents -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الوثائق المطلوبة للتسجيل</h2>
+            <p class="text-xl text-gray-600">قائمة شاملة بجميع الوثائق المطلوبة حسب نوع النشاط</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Basic Documents -->
+            <div class="document-category bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-file-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">الوثائق الأساسية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>طلب موقع على استمارة CASNOS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>نسخة من السجل التجاري</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>نسخة من القانون الأساسي</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>شهادة ميلاد المسير أو صاحب العمل</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Identity Documents -->
+            <div class="document-category bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-id-card text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">وثائق الهوية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>نسخة من بطاقة الهوية الوطنية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>شهادة الإقامة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>نسخة من جواز السفر (للأجانب)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>صورة شمسية حديثة</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Documents -->
+            <div class="document-category bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-plus-circle text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">وثائق إضافية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادة التسجيل الضريبي</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>عقد إيجار المحل التجاري</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادة من البنك (إن وجدت)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تراخيص النشاط (للأنشطة المنظمة)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contributions and Benefits -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الاشتراكات والمنافع</h2>
+            <p class="text-xl text-gray-600">تفاصيل الاشتراكات المطلوبة والمنافع المقدمة</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contributions -->
+            <div data-aos="fade-right">
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-coins text-purple-600 ml-3"></i>
+                        الاشتراكات المطلوبة
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-800 mb-3">معدل الاشتراك</h4>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-purple-600 mb-2">15%</div>
+                                <div class="text-sm text-gray-600">من إجمالي قاعدة الاشتراك السنوية</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">فترة الدفع</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">بداية فترة الدفع</span>
+                                    <span class="font-bold text-gray-800">2 يناير</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">نهاية فترة الدفع</span>
+                                    <span class="font-bold text-gray-800">30 يونيو</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <h4 class="font-bold text-gray-800 mb-2">غرامات التأخير</h4>
+                            <p class="text-sm text-gray-700">
+                                المستثمرون الذين لا يدفعون اشتراكاتهم السنوية في الفترة المحددة سيواجهون غرامات مالية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div data-aos="fade-left">
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-heart text-red-600 ml-3"></i>
+                        المنافع والخدمات
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-4 mt-1">
+                                <i class="fas fa-user-md text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">التأمين الصحي</h4>
+                                <p class="text-gray-600 text-sm">تغطية صحية شاملة للمنخرط وأفراد عائلته</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-4 mt-1">
+                                <i class="fas fa-wheelchair text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">معاش التقاعد</h4>
+                                <p class="text-gray-600 text-sm">معاش شهري عند بلوغ سن التقاعد</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-4 mt-1">
+                                <i class="fas fa-hand-holding-heart text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">تعويضات العجز</h4>
+                                <p class="text-gray-600 text-sm">تعويضات في حالة العجز عن العمل</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-4 mt-1">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">تعويضات الوفاة</h4>
+                                <p class="text-gray-600 text-sm">تعويضات لأفراد العائلة في حالة الوفاة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 text-yellow-600 p-2 rounded-lg ml-4 mt-1">
+                                <i class="fas fa-baby text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">منح الأمومة</h4>
+                                <p class="text-gray-600 text-sm">إعانات خاصة بالأمومة والطفولة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Online Services -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الخدمات الإلكترونية</h2>
+            <p class="text-xl text-gray-600">منصة ضمانكم الإلكترونية لتسهيل إجراءاتك</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Online Registration -->
+            <div class="service-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-plus text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">التسجيل الإلكتروني</h3>
+                    <p class="text-gray-600 text-sm mb-4">سجل في CASNOS عبر الإنترنت بسهولة</p>
+                    <a href="https://damancom.casnos.dz" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all text-sm font-bold">
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                        زيارة المنصة
+                    </a>
+                </div>
+            </div>
+
+            <!-- Account Management -->
+            <div class="service-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-cog text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">إدارة الحساب</h3>
+                    <p class="text-gray-600 text-sm mb-4">تحديث البيانات ومتابعة الاشتراكات</p>
+                    <a href="https://www.casnos.com.dz" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all text-sm font-bold">
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                        الموقع الرسمي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="service-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">الشهادات الإلكترونية</h3>
+                    <p class="text-gray-600 text-sm mb-4">احصل على الشهادات المطلوبة فوراً</p>
+                    <div class="space-y-2 text-xs text-gray-600">
+                        <div>• شهادة الانخراط</div>
+                        <div>• شهادة التحديث</div>
+                        <div>• شهادة توقف النشاط</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل تحتاج مساعدة في التسجيل؟</h2>
+            <p class="text-xl mb-8 text-purple-100">
+                فريقنا المتخصص جاهز لمساعدتك في جميع إجراءات التسجيل في CASNOS
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact/index.html" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا الآن
+                </a>
+                <a href="https://damancom.casnos.dz" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-external-link-alt ml-2"></i>
+                    منصة ضمانكم
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Process steps animation
+document.querySelectorAll('.process-step').forEach(step => {
+    step.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    step.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Document category animation
+document.querySelectorAll('.document-category').forEach(category => {
+    category.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    category.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Service cards animation
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// CASNOS deadline reminder
+class CasnosReminder {
+    constructor() {
+        this.createReminder();
+    }
+
+    createReminder() {
+        const reminder = document.createElement('div');
+        reminder.className = 'fixed bottom-4 right-4 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm';
+        reminder.innerHTML = `
+            <div class="flex items-start">
+                <i class="fas fa-exclamation-triangle text-yellow-400 ml-3 mt-1"></i>
+                <div>
+                    <div class="font-bold mb-1">تذكير مهم!</div>
+                    <div class="text-sm">يجب التسجيل في CASNOS خلال 10 أيام من بدء النشاط</div>
+                    <button onclick="this.closest('.fixed').remove()" class="text-xs text-red-200 hover:text-white mt-2">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(reminder);
+        
+        // Auto remove after 10 seconds
+        setTimeout(() => {
+            if (reminder.parentElement) {
+                reminder.remove();
+            }
+        }, 10000);
+    }
+}
+
+// Initialize reminder after page load
+setTimeout(() => {
+    new CasnosReminder();
+}, 3000);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+console.log('🛡️ CASNOS page initialized successfully!');
+</script>
+
 </body>
 </html>

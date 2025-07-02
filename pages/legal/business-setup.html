@@ -1,10 +1,1292 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تأسيس الأعمال</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأسيس الأعمال والشركات - رفيق توريق</title>
+    <meta name="description" content="دليل شامل لتأسيس الأعمال والشركات في الجزائر. خطوات مفصلة لإنشاء جميع أنواع الشركات مع الدعم القانوني المتخصص">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/legal.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>تأسيس الأعمال</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-blue-600 font-bold flex items-center relative">
+                        <i class="fas fa-balance-scale ml-2"></i>
+                        الجوانب القانونية
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-home ml-3 text-gray-500"></i>
+                                <span>الصفحة الرئيسية</span>
+                            </a>
+                            <a href="business-setup.html" class="flex items-center px-4 py-3 text-blue-600 bg-blue-50 border-r-4 border-blue-600">
+                                <i class="fas fa-building ml-3 text-blue-500"></i>
+                                <span>تأسيس الأعمال (الحالية)</span>
+                            </a>
+                            <a href="commercial-register.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-file-alt ml-3 text-gray-500"></i>
+                                <span>السجل التجاري</span>
+                            </a>
+                            <a href="casnos.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
+                                <i class="fas fa-shield-alt ml-3 text-gray-500"></i>
+                                <span>CASNOS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="#company-types" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-play ml-2"></i>
+                    ابدأ الآن
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">الجوانب القانونية</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تأسيس الأعمال</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"business\" width=\"25\" height=\"25\" patternUnits=\"userSpaceOnUse\"><rect x=\"5\" y=\"5\" width=\"15\" height=\"15\" fill=\"white\" opacity=\"0.3\"/><circle cx=\"12.5\" cy=\"12.5\" r=\"3\" fill=\"white\" opacity=\"0.5\"/><path d=\"M8 8 L17 17 M17 8 L8 17\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23business)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center bg-blue-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-building text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">دليل شامل لتأسيس الأعمال</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    تأسيس <span class="text-yellow-400">الأعمال</span> والشركات
+                </h1>
+                <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                    دليل شامل ومفصل لتأسيس جميع أنواع الشركات والمؤسسات في الجزائر. خطوات واضحة ومبسطة مع الدعم القانوني المتخصص
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="500">0</div>
+                        <div class="text-sm text-blue-200">شركة أسسناها</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="7">0</div>
+                        <div class="text-sm text-blue-200">أيام متوسط التأسيس</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="99">0</div>
+                        <div class="text-sm text-blue-200">% نسبة النجاح</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="6">0</div>
+                        <div class="text-sm text-blue-200">أنواع شركات</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Types Section -->
+<section id="company-types" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-blue-100 text-blue-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">أنواع الشركات المتاحة</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">اختر نوع الشركة المناسب لك</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نساعدك في اختيار الشكل القانوني الأمثل لنشاطك التجاري حسب احتياجاتك وأهدافك
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- SARL -->
+            <div class="company-type bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-200 group" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">شركة ذات مسؤولية محدودة</h3>
+                    <p class="text-blue-600 font-medium mb-4">SARL</p>
+                    <p class="text-gray-600 mb-6">الأكثر شيوعاً للمشاريع الصغيرة والمتوسطة</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-blue-600">100,000 دج</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد الشركاء</span>
+                                <span class="font-bold text-blue-600">1-50 شريك</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-blue-600">محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مرونة في الإدارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>حماية الأصول الشخصية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إجراءات تأسيس مبسطة</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#sarl-details" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+
+            <!-- SPA -->
+            <div class="company-type bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-green-200 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">شركة المساهمة</h3>
+                    <p class="text-green-600 font-medium mb-4">SPA</p>
+                    <p class="text-gray-600 mb-6">للمشاريع الكبيرة والشركات المساهمة العامة</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-green-600">5,000,000 دج</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد المساهمين</span>
+                                <span class="font-bold text-green-600">7+ مساهم</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-green-600">محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إمكانية الاكتتاب العام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>هيكل إداري منظم</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مناسبة للمشاريع الكبيرة</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#spa-details" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+
+            <!-- EURL -->
+            <div class="company-type bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">مؤسسة فردية ذات مسؤولية محدودة</h3>
+                    <p class="text-purple-600 font-medium mb-4">EURL</p>
+                    <p class="text-gray-600 mb-6">للمشاريع الفردية والأعمال الصغيرة</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-purple-600">100,000 دج</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد الشركاء</span>
+                                <span class="font-bold text-purple-600">شريك واحد</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-purple-600">محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>سهولة في الإدارة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مرونة في اتخاذ القرارات</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مناسبة للمبتدئين</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#eurl-details" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+
+            <!-- SNC -->
+            <div class="company-type bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-orange-200 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-handshake text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الشركة التضامنية</h3>
+                    <p class="text-orange-600 font-medium mb-4">SNC</p>
+                    <p class="text-gray-600 mb-6">للشراكات التجارية والمهنية</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-orange-600">غير محدد</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد الشركاء</span>
+                                <span class="font-bold text-orange-600">2+ شريك</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-orange-600">تضامنية</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مرونة في رأس المال</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ثقة أكبر من الدائنين</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 ml-2"></i>
+                            <span>مسؤولية غير محدودة</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#snc-details" class="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+
+            <!-- Individual Business -->
+            <div class="company-type bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-red-200 group" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-store text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">المؤسسة الفردية</h3>
+                    <p class="text-red-600 font-medium mb-4">EI</p>
+                    <p class="text-gray-600 mb-6">للأنشطة التجارية البسيطة</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-red-600">غير محدد</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد الأشخاص</span>
+                                <span class="font-bold text-red-600">شخص واحد</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-red-600">غير محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إجراءات مبسطة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تكاليف قليلة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 ml-2"></i>
+                            <span>مسؤولية شخصية</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#ei-details" class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+
+            <!-- SCS -->
+            <div class="company-type bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-teal-200 group" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-balance-scale text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الشركة البسيطة بالأسهم</h3>
+                    <p class="text-teal-600 font-medium mb-4">SCS</p>
+                    <p class="text-gray-600 mb-6">للمشاريع المتخصصة والاستثمارية</p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">الحد الأدنى لرأس المال</span>
+                                <span class="font-bold text-teal-600">1,000,000 دج</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">عدد الشركاء</span>
+                                <span class="font-bold text-teal-600">2-200 شريك</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">المسؤولية</span>
+                                <span class="font-bold text-teal-600">مختلطة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مرونة في الهيكل</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مناسبة للاستثمار</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>إدارة متخصصة</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#scs-details" class="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-teal-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        ابدأ التأسيس
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Setup Process -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">خطوات تأسيس الشركة</h2>
+            <p class="text-xl text-gray-600">عملية منظمة ومبسطة لتأسيس شركتك خطوة بخطوة</p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="absolute right-1/2 transform translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-500 hidden lg:block"></div>
+            
+            <!-- Step 1 -->
+            <div class="setup-step mb-16" data-aos="fade-right">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="lg:text-right">
+                        <div class="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 border border-blue-200">
+                            <div class="flex items-center mb-6 lg:justify-end">
+                                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg ml-4 lg:ml-0 lg:mr-4">
+                                    <span class="text-2xl font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800">اختيار نوع الشركة</h3>
+                                    <p class="text-blue-600 font-medium">تحديد الشكل القانوني المناسب</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نساعدك في اختيار نوع الشركة الأنسب لنشاطك التجاري وأهدافك المستقبلية مع مراعاة رأس المال المتاح.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-blue-500 ml-3"></i>
+                                    <span class="text-gray-700">دراسة طبيعة النشاط التجاري</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-blue-500 ml-3"></i>
+                                    <span class="text-gray-700">تحديد رأس المال المطلوب</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-blue-500 ml-3"></i>
+                                    <span class="text-gray-700">اختيار الشكل القانوني الأمثل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <div class="bg-gray-100 rounded-2xl p-6 h-64 flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-6xl text-blue-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="setup-step mb-16" data-aos="fade-left">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 mt-8 lg:mt-0">
+                        <div class="bg-gray-100 rounded-2xl p-6 h-64 flex items-center justify-center">
+                            <i class="fas fa-file-contract text-6xl text-green-500"></i>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg ml-4">
+                                    <span class="text-2xl font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800">إعداد الوثائق القانونية</h3>
+                                    <p class="text-green-600 font-medium">تحضير المستندات المطلوبة</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نقوم بإعداد جميع الوثائق القانونية المطلوبة للتأسيس بما يتماشى مع القانون الجزائري.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-3"></i>
+                                    <span class="text-gray-700">صياغة القانون الأساسي</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-3"></i>
+                                    <span class="text-gray-700">إعداد عقد التأسيس</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 ml-3"></i>
+                                    <span class="text-gray-700">تجميع الوثائق الشخصية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="setup-step mb-16" data-aos="fade-right">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="lg:text-right">
+                        <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 border border-purple-200">
+                            <div class="flex items-center mb-6 lg:justify-end">
+                                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg ml-4 lg:ml-0 lg:mr-4">
+                                    <span class="text-2xl font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800">إيداع رأس المال</h3>
+                                    <p class="text-purple-600 font-medium">فتح حساب مصرفي مؤقت</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نساعدك في إيداع رأس المال في بنك معتمد والحصول على شهادة الإيداع المطلوبة.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 ml-3"></i>
+                                    <span class="text-gray-700">اختيار البنك المناسب</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 ml-3"></i>
+                                    <span class="text-gray-700">إيداع رأس المال</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 ml-3"></i>
+                                    <span class="text-gray-700">الحصول على شهادة الإيداع</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <div class="bg-gray-100 rounded-2xl p-6 h-64 flex items-center justify-center">
+                            <i class="fas fa-university text-6xl text-purple-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="setup-step mb-16" data-aos="fade-left">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 mt-8 lg:mt-0">
+                        <div class="bg-gray-100 rounded-2xl p-6 h-64 flex items-center justify-center">
+                            <i class="fas fa-stamp text-6xl text-orange-500"></i>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-8 border border-orange-200">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg ml-4">
+                                    <span class="text-2xl font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800">التسجيل في السجل التجاري</h3>
+                                    <p class="text-orange-600 font-medium">الحصول على الشخصية الاعتبارية</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نتولى إجراءات التسجيل في السجل التجاري والحصول على جميع الشهادات المطلوبة.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-orange-500 ml-3"></i>
+                                    <span class="text-gray-700">تقديم ملف التسجيل</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-orange-500 ml-3"></i>
+                                    <span class="text-gray-700">الحصول على رقم التسجيل</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-orange-500 ml-3"></i>
+                                    <span class="text-gray-700">استلام الشهادات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="setup-step" data-aos="fade-right">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="lg:text-right">
+                        <div class="bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-8 border border-teal-200">
+                            <div class="flex items-center mb-6 lg:justify-end">
+                                <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg ml-4 lg:ml-0 lg:mr-4">
+                                    <span class="text-2xl font-bold">5</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800">إكمال الإجراءات الإدارية</h3>
+                                    <p class="text-teal-600 font-medium">التسجيل في الجهات الرسمية</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                نكمل جميع الإجراءات الإدارية المطلوبة لبدء النشاط التجاري بشكل قانوني.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-teal-500 ml-3"></i>
+                                    <span class="text-gray-700">التسجيل الضريبي</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-teal-500 ml-3"></i>
+                                    <span class="text-gray-700">التسجيل في CASNOS</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-teal-500 ml-3"></i>
+                                    <span class="text-gray-700">الحصول على التراخيص</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <div class="bg-gray-100 rounded-2xl p-6 h-64 flex items-center justify-center">
+                            <i class="fas fa-check-circle text-6xl text-teal-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Required Documents -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">الوثائق المطلوبة</h2>
+            <p class="text-xl text-gray-600">قائمة شاملة بجميع الوثائق المطلوبة لتأسيس شركتك</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Personal Documents -->
+            <div class="document-category bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-id-card text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">الوثائق الشخصية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>نسخة من بطاقة الهوية الوطنية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>شهادة الإقامة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>صحيفة السوابق العدلية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 ml-2"></i>
+                            <span>شهادة الجنسية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Legal Documents -->
+            <div class="document-category bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">الوثائق القانونية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>القانون الأساسي للشركة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>عقد التأسيس</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>محضر الجمعية التأسيسية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تعيين المسيرين</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Financial Documents -->
+            <div class="document-category bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-coins text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">الوثائق المالية</h3>
+                    <ul class="text-right space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>شهادة إيداع رأس المال</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>كشف حساب بنكي</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>تقييم الحصص العينية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 ml-2"></i>
+                            <span>إقرار الذمة المالية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل أنت مستعد لتأسيس شركتك؟</h2>
+            <p class="text-xl mb-8 text-blue-100">
+                ابدأ رحلة ريادة الأعمال معنا واحصل على الدعم القانوني الكامل
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact/index.html" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا الآن
+                </a>
+                <a href="commercial-register.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
+                    <i class="fas fa-file-alt ml-2"></i>
+                    تعرف على السجل التجاري
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer الموحد -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة شاملة تجمع بين مكتب أعمال ومنصة رقمية متطورة لدعم رواد الأعمال والمقاولين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-blue-700 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="bg-pink-600 text-white p-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/courses/index.html" class="text-gray-400 hover:text-white transition-colors">الدورات التدريبية</a></li>
+                    <li><a href="pages/incubator/index.html" class="text-gray-400 hover:text-white transition-colors">الحاضنة</a></li>
+                    <li><a href="pages/consulting/index.html" class="text-gray-400 hover:text-white transition-colors">الاستشارات</a></li>
+                    <li><a href="pages/machinery/index.html" class="text-gray-400 hover:text-white transition-colors">الآلات الصناعية</a></li>
+                    <li><a href="pages/real-estate/index.html" class="text-gray-400 hover:text-white transition-colors">العقارات</a></li>
+                    <li><a href="pages/events/index.html" class="text-gray-400 hover:text-white transition-colors">الفعاليات</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="pages/projects/index.html" class="text-gray-400 hover:text-white transition-colors">المشاريع</a></li>
+                    <li><a href="pages/construction/index.html" class="text-gray-400 hover:text-white transition-colors">بناء المصانع</a></li>
+                    <li><a href="pages/business-tourism/index.html" class="text-gray-400 hover:text-white transition-colors">سياحة الأعمال</a></li>
+                    <li><a href="pages/legal/index.html" class="text-gray-400 hover:text-white transition-colors">الخدمات القانونية</a></li>
+                    <li><a href="pages/contact/index.html" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a></li>
+                    <li><a href="pages/contact/support.html" class="text-gray-400 hover:text-white transition-colors">الدعم الفني</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">027 XX XX XX</div>
+                            <div class="text-sm text-gray-400">اتصل الآن</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">info@rafiktawriq.dz</div>
+                            <div class="text-sm text-gray-400">أرسل إيميل</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">شلف، الجزائر</div>
+                            <div class="text-sm text-gray-400">عرض الخريطة</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <div>
+                            <div class="font-medium">8:00 - 17:00</div>
+                            <div class="text-sm text-gray-400">السبت - الخميس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 رفيق توريق. جميع الحقوق محفوظة.
+                </div>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">اتفاقية الخدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Company type cards animation
+document.querySelectorAll('.company-type').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Setup steps animation
+document.querySelectorAll('.setup-step').forEach((step, index) => {
+    step.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+    });
+    
+    step.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
+// Document category animation
+document.querySelectorAll('.document-category').forEach(category => {
+    category.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    category.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Company type selector functionality
+class CompanyTypeSelector {
+    constructor() {
+        this.selectedType = null;
+        this.initializeEventListeners();
+    }
+
+    initializeEventListeners() {
+        // Add click handlers to company type cards
+        document.querySelectorAll('.company-type').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.selectCompanyType(card);
+            });
+        });
+    }
+
+    selectCompanyType(selectedCard) {
+        // Remove previous selection
+        document.querySelectorAll('.company-type').forEach(card => {
+            card.classList.remove('selected', 'ring-4', 'ring-blue-500');
+        });
+
+        // Add selection to clicked card
+        selectedCard.classList.add('selected', 'ring-4', 'ring-blue-500');
+        
+        // Get company type info
+        const companyName = selectedCard.querySelector('h3').textContent;
+        const companyCode = selectedCard.querySelector('p').textContent;
+        
+        this.selectedType = {
+            name: companyName,
+            code: companyCode,
+            element: selectedCard
+        };
+
+        // Show selection feedback
+        this.showSelectionFeedback(companyName, companyCode);
+        
+        // Scroll to next section
+        setTimeout(() => {
+            document.getElementById('setup-process')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 500);
+    }
+
+    showSelectionFeedback(name, code) {
+        // Create or update selection indicator
+        let indicator = document.getElementById('selection-indicator');
+        
+        if (!indicator) {
+            indicator = document.createElement('div');
+            indicator.id = 'selection-indicator';
+            indicator.className = 'fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            document.body.appendChild(indicator);
+        }
+
+        indicator.innerHTML = `
+            <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 ml-3"></i>
+                <div>
+                    <div class="font-bold">${name}</div>
+                    <div class="text-sm text-blue-200">${code} - تم الاختيار</div>
+                </div>
+            </div>
+        `;
+
+        // Show indicator
+        setTimeout(() => {
+            indicator.classList.remove('translate-x-full');
+        }, 100);
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+            indicator.classList.add('translate-x-full');
+        }, 3000);
+    }
+
+    getSelectedType() {
+        return this.selectedType;
+    }
+}
+
+// Initialize company type selector
+const companySelector = new CompanyTypeSelector();
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white/95', 'backdrop-blur-md');
+    } else {
+        header.classList.remove('bg-white/95', 'backdrop-blur-md');
+    }
+});
+
+// Progressive disclosure for company details
+function showCompanyDetails(type) {
+    const detailsModal = document.createElement('div');
+    detailsModal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+    
+    const companyDetails = {
+        'SARL': {
+            title: 'الشركة ذات المسؤولية المحدودة (SARL)',
+            description: 'الشكل القانوني الأكثر شيوعاً للمشاريع الصغيرة والمتوسطة',
+            advantages: [
+                'مسؤولية محدودة للشركاء',
+                'مرونة في الإدارة والتسيير',
+                'إجراءات تأسيس مبسطة نسبياً',
+                'حماية الأصول الشخصية للشركاء'
+            ],
+            requirements: [
+                'حد أدنى لرأس المال: 100,000 دج',
+                'عدد الشركاء: من 1 إلى 50 شريك',
+                'مسير واحد أو أكثر',
+                'مقر اجتماعي في الجزائر'
+            ],
+            timeline: '5-7 أيام عمل',
+            cost: '50,000 - 80,000 دج'
+        }
+        // يمكن إضافة تفاصيل أنواع الشركات الأخرى هنا
+    };
+
+    const details = companyDetails[type] || companyDetails['SARL'];
+    
+    detailsModal.innerHTML = `
+        <div class="bg-white rounded-2xl p-8 max-w-2xl mx-4 max-h-[90vh] overflow-y-auto transform scale-0 transition-transform duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">${details.title}</h3>
+                <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <p class="text-gray-600 mb-6">${details.description}</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-3">المزايا:</h4>
+                    <ul class="space-y-2">
+                        ${details.advantages.map(advantage => `
+                            <li class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-green-500 ml-2"></i>
+                                <span>${advantage}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-3">المتطلبات:</h4>
+                    <ul class="space-y-2">
+                        ${details.requirements.map(requirement => `
+                            <li class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-info-circle text-blue-500 ml-2"></i>
+                                <span>${requirement}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                        <div class="text-lg font-bold text-blue-600">${details.timeline}</div>
+                        <div class="text-sm text-gray-600">مدة التأسيس</div>
+                    </div>
+                    <div>
+                        <div class="text-lg font-bold text-blue-600">${details.cost}</div>
+                        <div class="text-sm text-gray-600">التكلفة المتوقعة</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex gap-4">
+                <button onclick="this.closest('.fixed').remove()" 
+                        class="flex-1 bg-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-400 transition-all">
+                    إغلاق
+                </button>
+                <a href="../contact/index.html" 
+                   class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all text-center">
+                    ابدأ التأسيس
+                </a>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(detailsModal);
+    
+    // Animate modal
+    setTimeout(() => {
+        detailsModal.querySelector('.bg-white').style.transform = 'scale(1)';
+    }, 100);
+}
+
+// Add CSS for enhanced styling
+const style = document.createElement('style');
+style.textContent = `
+    .company-type {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+    
+    .company-type.selected {
+        border-color: #3b82f6;
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    
+    .setup-step {
+        transition: all 0.3s ease;
+    }
+    
+    .document-category {
+        transition: all 0.3s ease;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+    
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('🏢 Business Setup page initialized successfully!');
+</script>
+
 </body>
 </html>
