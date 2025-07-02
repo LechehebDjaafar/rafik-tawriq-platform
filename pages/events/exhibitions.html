@@ -24,7 +24,7 @@
 </head>
 <body class="font-tajawal bg-gray-50">
 
-<!-- Header -->
+<!-- Header المحسن -->
 <header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
@@ -41,13 +41,19 @@
                 </a>
             </div>
 
-            <!-- Navigation Menu -->
+            <!-- Navigation Menu المحسن -->
             <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
                 <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
                     <i class="fas fa-home ml-2"></i>
                     الرئيسية
                 </a>
                 
+                <a href="../projects/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-project-diagram ml-2"></i>
+                    المشاريع
+                </a>
+                
+                <!-- قائمة الفعاليات الفرعية المحسنة -->
                 <div class="relative group">
                     <a href="index.html" class="nav-link text-blue-600 font-bold flex items-center relative">
                         <i class="fas fa-calendar-alt ml-2"></i>
@@ -56,38 +62,139 @@
                     </a>
                     <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                         <div class="py-3">
-                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
-                                <i class="fas fa-home ml-3 text-blue-500"></i>
-                                <span>الصفحة الرئيسية</span>
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الفعاليات</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-gray-500">نظرة شاملة</div>
+                                </div>
                             </a>
                             <a href="exhibitions.html" class="flex items-center px-4 py-3 text-blue-600 bg-blue-50 border-r-4 border-blue-600">
-                                <i class="fas fa-store ml-3 text-blue-500"></i>
-                                <span>المعارض</span>
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-store text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المعارض</div>
+                                    <div class="text-xs text-blue-500">معارض تجارية (الحالية)</div>
+                                </div>
                             </a>
-                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
-                                <i class="fas fa-trophy ml-3 text-blue-500"></i>
-                                <span>المسابقات</span>
+                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المسابقات</div>
+                                    <div class="text-xs text-gray-500">مسابقات متنوعة</div>
+                                </div>
                             </a>
-                            <a href="conferences.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
-                                <i class="fas fa-users ml-3 text-blue-500"></i>
-                                <span>المؤتمرات</span>
+                            <a href="conferences.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المؤتمرات</div>
+                                    <div class="text-xs text-gray-500">مؤتمرات علمية</div>
+                                </div>
                             </a>
-                            <a href="workshops.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all">
-                                <i class="fas fa-tools ml-3 text-blue-500"></i>
-                                <span>ورش العمل</span>
+                            <a href="workshops.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-tools text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">ورش العمل</div>
+                                    <div class="text-xs text-gray-500">ورش تدريبية</div>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Buttons المحسنة -->
             <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
                 <a href="registration.html" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg">
                     <i class="fas fa-plus ml-2"></i>
                     احجز جناحك
                 </a>
+                <button class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../index.html" class="flex items-center text-gray-700 hover:text-blue-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-blue-600 pr-3">
+                    <span class="text-blue-600 font-bold text-sm">المعارض</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية
+                        </a>
+                        <a href="exhibitions.html" class="flex items-center text-blue-600 font-medium py-1 text-sm">
+                            <i class="fas fa-store ml-2 w-4"></i>
+                            المعارض (الحالية)
+                        </a>
+                        <a href="competitions.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-trophy ml-2 w-4"></i>
+                            المسابقات
+                        </a>
+                        <a href="conferences.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-users ml-2 w-4"></i>
+                            المؤتمرات
+                        </a>
+                        <a href="workshops.html" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-tools ml-2 w-4"></i>
+                            ورش العمل
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="registration.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-plus ml-2"></i>
+                        احجز جناحك
+                    </a>
+                    <button class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
         </div>
     </div>
 </header>
@@ -108,22 +215,29 @@
     </div>
 </section>
 
-<!-- Hero Section -->
+<!-- Hero Section المحسن -->
 <section class="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-600 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-        <img src="../assets/images/events/exhibitions-hero.jpg" alt="خلفية المعارض" class="w-full h-full object-cover">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"exhibitions\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1.5\" fill=\"white\"/><rect x=\"8\" y=\"8\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/><path d=\"M5 5 L25 25 M25 5 L5 25\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23exhibitions)\"/></svg>');"></div>
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-            <div data-aos="fade-up">
-                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                    المعارض التجارية
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-blue-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-store text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">معارض تجارية متخصصة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    المعارض <span class="text-yellow-400">التجارية</span>
                 </h1>
                 <p class="text-xl mb-8 text-blue-100 leading-relaxed">
-                    اكتشف أحدث المنتجات والخدمات في معارضنا المتخصصة واستفد من فرص التواصل مع الخبراء
+                    اكتشف أحدث المنتجات والخدمات في معارضنا المتخصصة واستفد من فرص التواصل مع الخبراء والشركاء
                 </p>
                 
+                <!-- Statistics -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="25">0</div>
@@ -142,124 +256,204 @@
                         <div class="text-sm text-blue-200">قطاع</div>
                     </div>
                 </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#upcoming-exhibitions" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-store ml-2"></i>
+                        تصفح المعارض
+                    </a>
+                    <a href="registration.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
+                        <i class="fas fa-plus ml-2"></i>
+                        احجز جناحك
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-store text-8xl text-blue-900"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-blue-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-green-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-purple-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-users text-lg"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Exhibition Categories -->
+<!-- Exhibition Categories المحسن -->
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع المعارض</h2>
-            <p class="text-xl text-gray-600">معارض متخصصة في مختلف القطاعات</p>
+            <div class="inline-flex items-center bg-blue-100 text-blue-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">أنواع المعارض</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">معارض متخصصة في مختلف القطاعات</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نقدم معارض متنوعة تغطي جميع القطاعات الاقتصادية والتجارية
+            </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Technology -->
-            <div class="exhibition-category bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+            <div class="exhibition-category bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-200 group" data-aos="fade-up">
                 <div class="text-center">
-                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-laptop text-2xl"></i>
+                    <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-laptop text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التكنولوجيا</h3>
-                    <p class="text-gray-600 mb-4">معارض التقنية والابتكار</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-blue-600">8</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التكنولوجيا</h3>
+                    <p class="text-gray-600 mb-6">معارض التقنية والابتكار والذكاء الاصطناعي</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-blue-200">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" data-counter="8">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#tech-exhibitions" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
 
             <!-- Industrial -->
-            <div class="exhibition-category bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+            <div class="exhibition-category bg-gradient-to-br from-gray-50 to-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-200 group" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
-                    <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-industry text-2xl"></i>
+                    <div class="bg-gray-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-industry text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الصناعة</h3>
-                    <p class="text-gray-600 mb-4">معارض الآلات والمعدات</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-gray-600">6</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الصناعة</h3>
+                    <p class="text-gray-600 mb-6">معارض الآلات والمعدات الصناعية</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-gray-200">
+                        <div class="text-3xl font-bold text-gray-600 mb-2" data-counter="6">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#industrial-exhibitions" class="w-full bg-gray-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
 
             <!-- Agriculture -->
-            <div class="exhibition-category bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="200">
+            <div class="exhibition-category bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-green-200 group" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
-                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-seedling text-2xl"></i>
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-seedling text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الزراعة</h3>
-                    <p class="text-gray-600 mb-4">معارض الزراعة والغذاء</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-green-600">4</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الزراعة</h3>
+                    <p class="text-gray-600 mb-6">معارض الزراعة والغذاء والتقنيات الزراعية</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                        <div class="text-3xl font-bold text-green-600 mb-2" data-counter="4">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#agri-exhibitions" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
 
             <!-- Healthcare -->
-            <div class="exhibition-category bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="300">
+            <div class="exhibition-category bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-red-200 group" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-heartbeat text-2xl"></i>
+                    <div class="bg-red-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heartbeat text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الصحة</h3>
-                    <p class="text-gray-600 mb-4">معارض الطب والصحة</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-red-600">3</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الصحة</h3>
+                    <p class="text-gray-600 mb-6">معارض الطب والصحة والأجهزة الطبية</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-red-200">
+                        <div class="text-3xl font-bold text-red-600 mb-2" data-counter="3">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#health-exhibitions" class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
 
             <!-- Education -->
-            <div class="exhibition-category bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="400">
+            <div class="exhibition-category bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200 group" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center">
-                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التعليم</h3>
-                    <p class="text-gray-600 mb-4">معارض التعليم والتدريب</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-purple-600">2</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التعليم</h3>
+                    <p class="text-gray-600 mb-6">معارض التعليم والتدريب والتطوير المهني</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-purple-200">
+                        <div class="text-3xl font-bold text-purple-600 mb-2" data-counter="2">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#edu-exhibitions" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
 
             <!-- Construction -->
-            <div class="exhibition-category bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-yellow-200" data-aos="fade-up" data-aos-delay="500">
+            <div class="exhibition-category bg-gradient-to-br from-yellow-50 to-amber-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-yellow-200 group" data-aos="fade-up" data-aos-delay="500">
                 <div class="text-center">
-                    <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-hammer text-2xl"></i>
+                    <div class="bg-yellow-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hammer text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">البناء</h3>
-                    <p class="text-gray-600 mb-4">معارض البناء والإنشاء</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-yellow-600">2</div>
-                        <div class="text-xs text-gray-500">معرض سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">البناء</h3>
+                    <p class="text-gray-600 mb-6">معارض البناء والإنشاء ومواد البناء</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-yellow-200">
+                        <div class="text-3xl font-bold text-yellow-600 mb-2" data-counter="2">0</div>
+                        <div class="text-sm text-gray-500">معرض سنوياً</div>
                     </div>
+                    <a href="#construction-exhibitions" class="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-yellow-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المعارض
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Upcoming Exhibitions -->
-<section class="py-20 bg-gray-50">
+<!-- Upcoming Exhibitions المحسن -->
+<section id="upcoming-exhibitions" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">المعارض القادمة</h2>
-            <p class="text-xl text-gray-600">لا تفوت هذه المعارض المميزة</p>
+            <p class="text-xl text-gray-600">لا تفوت هذه المعارض المميزة والفرص التجارية الاستثنائية</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all" data-filter="all">
+                جميع المعارض
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="technology">
+                التكنولوجيا
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="industrial">
+                الصناعة
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="agriculture">
+                الزراعة
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="healthcare">
+                الصحة
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="exhibitions-container">
             <!-- Exhibition 1 -->
-            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 technology" data-aos="fade-up">
                 <div class="relative">
                     <img src="../assets/images/events/tech-expo.jpg" alt="معرض التكنولوجيا" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
@@ -273,6 +467,16 @@
                     </div>
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">تكنولوجيا</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">معرض التكنولوجيا والابتكار</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
@@ -327,7 +531,7 @@
             </div>
 
             <!-- Exhibition 2 -->
-            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 industrial" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative">
                     <img src="../assets/images/events/industrial-expo.jpg" alt="معرض الصناعة" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-bold">
@@ -338,6 +542,16 @@
                     </div>
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">صناعة</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">معرض الآلات الصناعية</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
@@ -392,7 +606,7 @@
             </div>
 
             <!-- Exhibition 3 -->
-            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 agriculture" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative">
                     <img src="../assets/images/events/agri-expo.jpg" alt="معرض الزراعة" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
@@ -403,6 +617,16 @@
                     </div>
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">زراعة</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">معرض الزراعة والغذاء</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
@@ -455,95 +679,364 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Exhibition 4 -->
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 healthcare" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img src="../assets/images/events/health-expo.jpg" alt="معرض الصحة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        صحة
+                    </div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">12-14 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">صحة</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">معرض الصحة والأجهزة الطبية</h3>
+                    <p class="text-gray-600 mb-4 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
+                        سطيف، مركز المعارض الطبية
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-store text-blue-500 ml-2"></i>
+                            <span>80 عارض</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-500 ml-2"></i>
+                            <span>2000 زائر</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 ml-2"></i>
+                            <span>3 أيام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-ticket-alt text-blue-500 ml-2"></i>
+                            <span>1000 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>أحدث الأجهزة الطبية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>محاضرات طبية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادات تعليم مستمر</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=health-expo-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=health-expo-2025" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibition 5 -->
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 technology" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <img src="../assets/images/events/ai-expo.jpg" alt="معرض الذكاء الاصطناعي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        تكنولوجيا
+                    </div>
+                    <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متقدم
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">20-22 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">ذكاء اصطناعي</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">معرض الذكاء الاصطناعي</h3>
+                    <p class="text-gray-600 mb-4 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
+                        الجزائر العاصمة، مركز التكنولوجيا
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-store text-blue-500 ml-2"></i>
+                            <span>100 عارض</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-500 ml-2"></i>
+                            <span>4000 زائر</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 ml-2"></i>
+                            <span>3 أيام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-ticket-alt text-blue-500 ml-2"></i>
+                            <span>800 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تقنيات الذكاء الاصطناعي</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>عروض تفاعلية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ورش تطبيقية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=ai-expo-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=ai-expo-2025" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibition 6 -->
+            <div class="exhibition-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 industrial" data-aos="fade-up" data-aos-delay="500">
+                <div class="relative">
+                    <img src="../assets/images/events/energy-expo.jpg" alt="معرض الطاقة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        طاقة
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">28-30 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">طاقة متجددة</span>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">معرض الطاقة المتجددة</h3>
+                    <p class="text-gray-600 mb-4 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-500 ml-2"></i>
+                        أدرار، مركز الطاقة الشمسية
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-store text-blue-500 ml-2"></i>
+                            <span>90 عارض</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-500 ml-2"></i>
+                            <span>2500 زائر</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 ml-2"></i>
+                            <span>3 أيام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-ticket-alt text-blue-500 ml-2"></i>
+                            <span>600 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تقنيات الطاقة الشمسية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>حلول الطاقة المستدامة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>استشارات بيئية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=energy-expo-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=energy-expo-2025" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- Load More Button -->
         <div class="text-center mt-12" data-aos="fade-up">
-            <a href="#all-exhibitions" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg font-bold">
-                <i class="fas fa-store ml-2"></i>
-                عرض جميع المعارض
-            </a>
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg font-bold" id="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من المعارض
+            </button>
+            <p class="text-gray-600 mt-2">عرض 6 من أصل 25 معرض</p>
         </div>
     </div>
 </section>
 
-<!-- Exhibition Benefits -->
+<!-- Exhibition Benefits المحسن -->
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">فوائد المشاركة في المعارض</h2>
-            <p class="text-xl text-gray-600">لماذا تشارك في معارضنا؟</p>
+            <div class="inline-flex items-center bg-blue-100 text-blue-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">فوائد المشاركة</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">لماذا تشارك في معارضنا؟</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                اكتشف الفوائد العديدة للمشاركة في معارضنا التجارية والصناعية
+            </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Benefit 1 -->
-            <div class="benefit-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
-                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-handshake text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تواصل مع العملاء والشركاء المحتملين من جميع أنحاء المنطقة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-blue-600">+500</div>
+                        <div class="text-xs text-gray-500">اتصال جديد</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات</h3>
-                <p class="text-gray-600 mb-4">تواصل مع العملاء والشركاء المحتملين</p>
-                <div class="text-blue-600 font-bold">+500 اتصال جديد</div>
             </div>
 
             <!-- Benefit 2 -->
-            <div class="benefit-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-chart-line text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">زيادة المبيعات</h3>
+                    <p class="text-gray-600 mb-4 text-sm">فرص مباشرة لعرض وبيع منتجاتك للجمهور المستهدف</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">+40%</div>
+                        <div class="text-xs text-gray-500">زيادة في المبيعات</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">زيادة المبيعات</h3>
-                <p class="text-gray-600 mb-4">فرص مباشرة لعرض وبيع منتجاتك</p>
-                <div class="text-green-600 font-bold">+40% زيادة في المبيعات</div>
             </div>
 
             <!-- Benefit 3 -->
-            <div class="benefit-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-bullhorn text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">تسويق العلامة التجارية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">زيادة الوعي بعلامتك التجارية وترسيخ مكانتها في السوق</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-purple-600">+60%</div>
+                        <div class="text-xs text-gray-500">وعي بالعلامة</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">تسويق العلامة التجارية</h3>
-                <p class="text-gray-600 mb-4">زيادة الوعي بعلامتك التجارية</p>
-                <div class="text-purple-600 font-bold">+60% وعي بالعلامة</div>
             </div>
 
             <!-- Benefit 4 -->
-            <div class="benefit-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-lightbulb text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">اكتشاف الاتجاهات</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تعرف على أحدث اتجاهات السوق والتقنيات الجديدة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-orange-600">رؤى</div>
+                        <div class="text-xs text-gray-500">قيمة للسوق</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">اكتشاف الاتجاهات</h3>
-                <p class="text-gray-600 mb-4">تعرف على أحدث اتجاهات السوق</p>
-                <div class="text-orange-600 font-bold">رؤى قيمة للسوق</div>
             </div>
 
             <!-- Benefit 5 -->
-            <div class="benefit-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-eye text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-eye text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">دراسة المنافسين</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تحليل استراتيجيات المنافسين ومعرفة نقاط القوة والضعف</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-red-600">تحليل</div>
+                        <div class="text-xs text-gray-500">شامل للسوق</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">دراسة المنافسين</h3>
-                <p class="text-gray-600 mb-4">تحليل استراتيجيات المنافسين</p>
-                <div class="text-red-600 font-bold">تحليل شامل للسوق</div>
             </div>
 
             <!-- Benefit 6 -->
-            <div class="benefit-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
-                <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-graduation-cap text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">التعلم والتطوير</h3>
+                    <p class="text-gray-600 mb-4 text-sm">ورش عمل ومحاضرات تعليمية من خبراء الصناعة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-teal-600">+20</div>
+                        <div class="text-xs text-gray-500">ورشة عمل</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">التعلم والتطوير</h3>
-                <p class="text-gray-600 mb-4">ورش عمل ومحاضرات تعليمية</p>
-                <div class="text-teal-600 font-bold">+20 ورشة عمل</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-600 text-white">
+<section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
     <div class="container mx-auto px-4 text-center">
         <div data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">هل تريد المشاركة في معارضنا؟</h2>
-            <p class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4">هل تريد المشاركة في معارضنا؟</h2>
+            <p class="text-xl mb-8 text-blue-100">
                 احجز جناحك الآن واستفد من فرص التواصل والتسويق المميزة
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -560,56 +1053,122 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+<!-- Footer المحسن -->
+<footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
             <div>
-                <div class="flex items-center mb-4">
+                <div class="flex items-center mb-6">
                     <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
                         <i class="fas fa-rocket text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 mb-4">أفضل المعارض التجارية في الجزائر</p>
+                <p class="text-gray-400 mb-6">
+                    منصة رائدة في تنظيم المعارض التجارية والصناعية، نقدم أفضل الفرص للتواصل والنمو التجاري.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- Exhibition Types -->
             <div>
-                <h4 class="text-lg font-bold mb-4">أنواع المعارض</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">معارض التكنولوجيا</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المعارض الصناعية</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">معارض الزراعة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">معارض الصحة</a></li>
+                <h4 class="text-lg font-bold mb-6">أنواع المعارض</h4>
+                <ul class="space-y-3">
+                    <li><a href="#tech-exhibitions" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-laptop ml-2 w-4"></i>
+                        معارض التكنولوجيا
+                    </a></li>
+                    <li><a href="#industrial-exhibitions" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-industry ml-2 w-4"></i>
+                        المعارض الصناعية
+                    </a></li>
+                    <li><a href="#agri-exhibitions" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-seedling ml-2 w-4"></i>
+                        معارض الزراعة
+                    </a></li>
+                    <li><a href="#health-exhibitions" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-heartbeat ml-2 w-4"></i>
+                        معارض الصحة
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Services -->
             <div>
-                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
-                <ul class="space-y-2">
-                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">حجز الأجنحة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">تنظيم المعارض</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الخدمات اللوجستية</a></li>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-store ml-2 w-4"></i>
+                        حجز الأجنحة
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-calendar-plus ml-2 w-4"></i>
+                        تنظيم المعارض
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-truck ml-2 w-4"></i>
+                        الخدمات اللوجستية
+                    </a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        الاستشارات
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Contact Info -->
             <div>
-                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
-                <div class="space-y-3">
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-400 mt-1 ml-3"></i>
+                        <span class="text-gray-400">123 شارع الاستقلال، الجزائر العاصمة، الجزائر</span>
+                    </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-blue-400 ml-3"></i>
-                        <span class="text-gray-400">027 XX XX XX</span>
+                        <span class="text-gray-400">+213 770 123 456</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-blue-400 ml-3"></i>
                         <span class="text-gray-400">exhibitions@rafiktawriq.dz</span>
                     </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-400 ml-3"></i>
+                        <span class="text-gray-400">الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2025 رفيق توريق - المعارض. جميع الحقوق محفوظة.</p>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2025 رفيق توريق - المعارض. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">اتفاقية المشاركة</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -620,88 +1179,190 @@
 <script src="../assets/js/events.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        easing: 'ease-out-cubic'
-    });
-    
-    initializeCounters();
-    initializeMobileMenu();
-    initializeHeaderScroll();
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
 });
 
-function initializeCounters() {
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-blue-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active', 'bg-blue-600', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700');
+        
+        const filter = this.getAttribute('data-filter');
+        const exhibitions = document.querySelectorAll('.exhibition-card');
+        
+        exhibitions.forEach(exhibition => {
+            if (filter === 'all' || exhibition.classList.contains(filter)) {
+                exhibition.style.display = 'block';
+                exhibition.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                exhibition.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Counter Animation
+function animateCounters() {
     const counters = document.querySelectorAll('[data-counter]');
     
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-    
     counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
-}
-
-function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-counter'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += step;
-        if (current < target) {
-            element.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target;
-        }
-    };
-    
-    updateCounter();
-}
-
-function initializeMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            const icon = this.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
             } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                counter.textContent = Math.floor(current);
             }
-        });
-    }
-}
-
-function initializeHeaderScroll() {
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('bg-white/95', 'backdrop-blur-md');
-        } else {
-            header.classList.remove('bg-white/95', 'backdrop-blur-md');
-        }
+        }, 16);
     });
 }
 
-console.log('🏪 Exhibitions page initialized successfully!');
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+// Observe the statistics section
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white', 'shadow-xl');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-white', 'shadow-xl');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// Exhibition cards hover effect
+document.querySelectorAll('.exhibition-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Benefit cards animation
+document.querySelectorAll('.benefit-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Category cards animation
+document.querySelectorAll('.exhibition-category').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Load more functionality
+document.getElementById('load-more-btn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التحميل...';
+    
+    // Simulate loading
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-plus ml-2"></i>عرض المزيد من المعارض';
+        // Here you would typically load more exhibitions via AJAX
+    }, 1500);
+});
+
+// Add CSS for animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .exhibition-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .benefit-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .exhibition-category {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .filter-btn {
+        transition: all 0.2s ease;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('رفيق توريق - المعارض تم تحميلها بنجاح!');
 </script>
 
 </body>

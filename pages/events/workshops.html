@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورش العمل - رفيق توريق</title>
-    <meta name="description" content="ورش عمل تدريبية تطبيقية في مختلف المجالات مع خبراء ومدربين متخصصين">
+    <meta name="description" content="تعلم مهارات جديدة وطور قدراتك من خلال ورش العمل التطبيقية مع خبراء متخصصين">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
 </head>
 <body class="font-tajawal bg-gray-50">
 
-<!-- Header -->
+<!-- Header المحسن -->
 <header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
@@ -41,13 +41,19 @@
                 </a>
             </div>
 
-            <!-- Navigation Menu -->
+            <!-- Navigation Menu المحسن -->
             <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
                 <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
                     <i class="fas fa-home ml-2"></i>
                     الرئيسية
                 </a>
                 
+                <a href="../projects/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-project-diagram ml-2"></i>
+                    المشاريع
+                </a>
+                
+                <!-- قائمة الفعاليات الفرعية المحسنة -->
                 <div class="relative group">
                     <a href="index.html" class="nav-link text-orange-600 font-bold flex items-center relative">
                         <i class="fas fa-calendar-alt ml-2"></i>
@@ -56,38 +62,127 @@
                     </a>
                     <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                         <div class="py-3">
-                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
-                                <i class="fas fa-home ml-3 text-orange-500"></i>
-                                <span>الصفحة الرئيسية</span>
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الفعاليات</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-gray-500">نظرة شاملة</div>
+                                </div>
                             </a>
-                            <a href="exhibitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
-                                <i class="fas fa-store ml-3 text-orange-500"></i>
-                                <span>المعارض</span>
+                            <a href="exhibitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all group/item">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-store text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المعارض</div>
+                                    <div class="text-xs text-gray-500">معارض تجارية</div>
+                                </div>
                             </a>
-                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
-                                <i class="fas fa-trophy ml-3 text-orange-500"></i>
-                                <span>المسابقات</span>
+                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المسابقات</div>
+                                    <div class="text-xs text-gray-500">مسابقات متنوعة</div>
+                                </div>
                             </a>
-                            <a href="conferences.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all">
-                                <i class="fas fa-users ml-3 text-orange-500"></i>
-                                <span>المؤتمرات</span>
+                            <a href="conferences.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المؤتمرات</div>
+                                    <div class="text-xs text-gray-500">مؤتمرات علمية</div>
+                                </div>
                             </a>
                             <a href="workshops.html" class="flex items-center px-4 py-3 text-orange-600 bg-orange-50 border-r-4 border-orange-600">
-                                <i class="fas fa-tools ml-3 text-orange-500"></i>
-                                <span>ورش العمل</span>
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-tools text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">ورش العمل</div>
+                                    <div class="text-xs text-orange-500">ورش تدريبية (الحالية)</div>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Buttons المحسنة -->
             <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
                 <a href="registration.html" class="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-6 py-2 rounded-lg hover:from-orange-700 hover:to-orange-800 transition-all transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-user-plus ml-2"></i>
-                    انضم للورشة
+                    <i class="fas fa-plus ml-2"></i>
+                    سجل الآن
                 </a>
+                <button class="border-2 border-orange-600 text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-orange-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../index.html" class="flex items-center text-gray-700 hover:text-orange-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-orange-600 pr-3">
+                    <span class="text-orange-600 font-bold text-sm">ورش العمل</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-gray-600 hover:text-orange-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية
+                        </a>
+                        <a href="workshops.html" class="flex items-center text-orange-600 font-medium py-1 text-sm">
+                            <i class="fas fa-tools ml-2 w-4"></i>
+                            ورش العمل (الحالية)
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="registration.html" class="bg-orange-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-plus ml-2"></i>
+                        سجل الآن
+                    </a>
+                    <button class="border border-orange-600 text-orange-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
         </div>
     </div>
 </header>
@@ -108,38 +203,76 @@
     </div>
 </section>
 
-<!-- Hero Section -->
-<section class="py-16 bg-gradient-to-br from-orange-900 via-orange-800 to-red-600 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-        <img src="../assets/images/events/workshops-hero.jpg" alt="خلفية ورش العمل" class="w-full h-full object-cover">
+<!-- Hero Section المحسن -->
+<section class="py-16 bg-gradient-to-br from-orange-900 via-orange-800 to-amber-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"workshops\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1.5\" fill=\"white\"/><path d=\"M8 8 L22 8 L22 22 L8 22 Z\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/><path d=\"M10 12 L20 12 M10 15 L20 15 M10 18 L20 18\" stroke=\"white\" stroke-width=\"0.3\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23workshops)\"/></svg>');"></div>
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-            <div data-aos="fade-up">
-                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                    ورش العمل التدريبية
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-orange-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-tools text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">ورش تدريبية متخصصة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    ورش <span class="text-yellow-400">العمل</span> التدريبية
                 </h1>
                 <p class="text-xl mb-8 text-orange-100 leading-relaxed">
-                    تعلم مهارات جديدة وطور قدراتك من خلال ورش العمل التطبيقية مع خبراء متخصصين
+                    تعلم مهارات جديدة وطور قدراتك من خلال ورش العمل التطبيقية مع خبراء متخصصين في مختلف المجالات
                 </p>
                 
+                <!-- Statistics -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="35">0</div>
                         <div class="text-sm text-orange-200">ورشة متاحة</div>
                     </div>
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="85">0</div>
-                        <div class="text-sm text-orange-200">مدرب خبير</div>
-                    </div>
-                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1200">0</div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="1500">0</div>
                         <div class="text-sm text-orange-200">متدرب</div>
                     </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
+                        <div class="text-sm text-orange-200">خبير مدرب</div>
+                    </div>
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
-                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="96">0</div>
-                        <div class="text-sm text-orange-200">% رضا المتدربين</div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="95">0</div>
+                        <div class="text-sm text-orange-200">% نسبة النجاح</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#upcoming-workshops" class="bg-yellow-500 text-orange-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-tools ml-2"></i>
+                        تصفح الورش
+                    </a>
+                    <a href="registration.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-900 transition-all">
+                        <i class="fas fa-plus ml-2"></i>
+                        سجل الآن
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-tools text-8xl text-orange-900"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-orange-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-certificate text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-code text-lg"></i>
                     </div>
                 </div>
             </div>
@@ -147,89 +280,130 @@
     </div>
 </section>
 
-<!-- Workshop Categories -->
+<!-- Workshop Categories المحسن -->
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع ورش العمل</h2>
-            <p class="text-xl text-gray-600">ورش تدريبية متخصصة في مختلف المجالات</p>
+            <div class="inline-flex items-center bg-orange-100 text-orange-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">أنواع ورش العمل</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">ورش تدريبية متخصصة في مختلف المجالات</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نقدم ورش عمل تطبيقية مع خبراء متخصصين لتطوير مهاراتك المهنية والشخصية
+            </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Programming -->
-            <div class="workshop-category bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+            <div class="workshop-category bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-200 group" data-aos="fade-up">
                 <div class="text-center">
-                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-code text-2xl"></i>
+                    <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">البرمجة</h3>
-                    <p class="text-gray-600 mb-4">ورش تعلم لغات البرمجة</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-blue-600">12</div>
-                        <div class="text-xs text-gray-500">ورشة متاحة</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">البرمجة</h3>
+                    <p class="text-gray-600 mb-6">ورش تعلم لغات البرمجة والتطوير</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-blue-200">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" data-counter="12">0</div>
+                        <div class="text-sm text-gray-500">ورشة متاحة</div>
                     </div>
+                    <a href="#programming-workshops" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض الورش
+                    </a>
                 </div>
             </div>
 
             <!-- Design -->
-            <div class="workshop-category bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="100">
+            <div class="workshop-category bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200 group" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
-                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-palette text-2xl"></i>
+                    <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التصميم</h3>
-                    <p class="text-gray-600 mb-4">ورش التصميم الجرافيكي</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-purple-600">8</div>
-                        <div class="text-xs text-gray-500">ورشة متاحة</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التصميم</h3>
+                    <p class="text-gray-600 mb-6">ورش التصميم الجرافيكي والإبداعي</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-purple-200">
+                        <div class="text-3xl font-bold text-purple-600 mb-2" data-counter="8">0</div>
+                        <div class="text-sm text-gray-500">ورشة متاحة</div>
                     </div>
+                    <a href="#design-workshops" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض الورش
+                    </a>
                 </div>
             </div>
 
             <!-- Marketing -->
-            <div class="workshop-category bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="200">
+            <div class="workshop-category bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-green-200 group" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
-                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-bullhorn text-2xl"></i>
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bullhorn text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التسويق</h3>
-                    <p class="text-gray-600 mb-4">ورش التسويق الرقمي</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-green-600">6</div>
-                        <div class="text-xs text-gray-500">ورشة متاحة</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التسويق</h3>
+                    <p class="text-gray-600 mb-6">ورش التسويق الرقمي والإلكتروني</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                        <div class="text-3xl font-bold text-green-600 mb-2" data-counter="10">0</div>
+                        <div class="text-sm text-gray-500">ورشة متاحة</div>
                     </div>
+                    <a href="#marketing-workshops" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض الورش
+                    </a>
                 </div>
             </div>
 
             <!-- Business -->
-            <div class="workshop-category bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="300">
+            <div class="workshop-category bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-red-200 group" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-briefcase text-2xl"></i>
+                    <div class="bg-red-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-briefcase text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الأعمال</h3>
-                    <p class="text-gray-600 mb-4">ورش إدارة الأعمال</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-red-600">9</div>
-                        <div class="text-xs text-gray-500">ورشة متاحة</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">إدارة الأعمال</h3>
+                    <p class="text-gray-600 mb-6">ورش إدارة الأعمال وريادة الأعمال</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-red-200">
+                        <div class="text-3xl font-bold text-red-600 mb-2" data-counter="5">0</div>
+                        <div class="text-sm text-gray-500">ورشة متاحة</div>
                     </div>
+                    <a href="#business-workshops" class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض الورش
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Workshops -->
-<section class="py-20 bg-gray-50">
+<!-- Upcoming Workshops المحسن -->
+<section id="upcoming-workshops" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">ورش العمل المميزة</h2>
-            <p class="text-xl text-gray-600">ورش تدريبية عملية مع خبراء متخصصين</p>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">ورش العمل القادمة</h2>
+            <p class="text-xl text-gray-600">انضم إلى ورش العمل التطبيقية وطور مهاراتك مع خبراء متخصصين</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-all" data-filter="all">
+                جميع الورش
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="programming">
+                البرمجة
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="design">
+                التصميم
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="marketing">
+                التسويق
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="business">
+                إدارة الأعمال
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="workshops-container">
             <!-- Workshop 1 -->
-            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 programming" data-aos="fade-up">
                 <div class="relative">
                     <img src="../assets/images/events/web-dev-workshop.jpg" alt="ورشة تطوير الويب" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
@@ -253,9 +427,9 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة تطوير مواقع الويب</h3>
-                    <p class="text-gray-600 mb-4">
-                        تعلم تطوير مواقع الويب الحديثة باستخدام HTML, CSS, JavaScript
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة تطوير الويب الحديث</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        تعلم تطوير مواقع الويب باستخدام أحدث التقنيات مثل React و Node.js
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
@@ -269,44 +443,44 @@
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-level-up-alt text-orange-500 ml-2"></i>
-                            <span>مبتدئ</span>
+                            <span>متوسط</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-orange-500 ml-2"></i>
-                            <span>5,000 دج</span>
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>5000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مشروع عملي</span>
+                            <span>مشروع عملي متكامل</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>شهادة إتمام</span>
+                            <span>شهادة إتمام معتمدة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مواد تدريبية</span>
+                            <span>دعم لمدة 3 أشهر</span>
                         </div>
                     </div>
                     
                     <div class="flex gap-2">
-                        <a href="event-details.html?id=web-dev-workshop-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                        <a href="event-details.html?id=web-dev-workshop" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
                             <i class="fas fa-eye ml-1"></i>
                             التفاصيل
                         </a>
-                        <a href="registration.html?event=web-dev-workshop-2025" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                        <a href="registration.html?event=web-dev-workshop" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            انضم الآن
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Workshop 2 -->
-            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 design" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative">
                     <img src="../assets/images/events/design-workshop.jpg" alt="ورشة التصميم" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
@@ -318,7 +492,7 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">جرافيك</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">تصميم جرافيك</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -327,9 +501,9 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة التصميم الجرافيكي</h3>
-                    <p class="text-gray-600 mb-4">
-                        تعلم أساسيات التصميم الجرافيكي باستخدام Adobe Photoshop و Illustrator
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة التصميم الجرافيكي المتقدم</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        تعلم أساسيات ومتقدمات التصميم الجرافيكي باستخدام Adobe Creative Suite
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
@@ -343,22 +517,22 @@
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-level-up-alt text-orange-500 ml-2"></i>
-                            <span>متوسط</span>
+                            <span>مبتدئ</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-orange-500 ml-2"></i>
-                            <span>4,000 دج</span>
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>4000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>تطبيقات عملية</span>
+                            <span>تطبيقات عملية متنوعة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>ملفات العمل</span>
+                            <span>ملفات العمل والقوالب</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
@@ -367,32 +541,35 @@
                     </div>
                     
                     <div class="flex gap-2">
-                        <a href="event-details.html?id=design-workshop-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                        <a href="event-details.html?id=design-workshop" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
                             <i class="fas fa-eye ml-1"></i>
                             التفاصيل
                         </a>
-                        <a href="registration.html?event=design-workshop-2025" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                        <a href="registration.html?event=design-workshop" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            انضم الآن
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Workshop 3 -->
-            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 marketing" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative">
-                    <img src="../assets/images/events/marketing-workshop.jpg" alt="ورشة التسويق" class="w-full h-48 object-cover">
+                    <img src="../assets/images/events/digital-marketing.jpg" alt="ورشة التسويق الرقمي" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         تسويق
                     </div>
+                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مطلوب
+                    </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
-                        <div class="text-sm font-bold">1-2 أبريل 2025</div>
+                        <div class="text-sm font-bold">28 فبراير 2025</div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">رقمي</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">تسويق رقمي</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -401,15 +578,15 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة التسويق الرقمي</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة التسويق الرقمي الشامل</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
                         تعلم استراتيجيات التسويق الرقمي الحديثة ووسائل التواصل الاجتماعي
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-clock text-orange-500 ml-2"></i>
-                            <span>يومان</span>
+                            <span>نصف يوم</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-users text-orange-500 ml-2"></i>
@@ -420,199 +597,480 @@
                             <span>جميع المستويات</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-orange-500 ml-2"></i>
-                            <span>3,500 دج</span>
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>2000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>حملات إعلانية</span>
+                            <span>استراتيجيات تسويق فعالة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>تحليل البيانات</span>
+                            <span>أدوات تحليل مجانية</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>أدوات مجانية</span>
+                            <span>خطة تسويق شخصية</span>
                         </div>
                     </div>
                     
                     <div class="flex gap-2">
-                        <a href="event-details.html?id=marketing-workshop-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                        <a href="event-details.html?id=digital-marketing" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
                             <i class="fas fa-eye ml-1"></i>
                             التفاصيل
                         </a>
-                        <a href="registration.html?event=marketing-workshop-2025" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                        <a href="registration.html?event=digital-marketing" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            انضم الآن
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 4 -->
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 business" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img src="../assets/images/events/business-management.jpg" alt="ورشة إدارة الأعمال" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        أعمال
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">5-6 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">إدارة أعمال</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة إدارة الأعمال الناجحة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        تعلم أساسيات إدارة الأعمال والقيادة الفعالة لنجاح مشروعك
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-orange-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-orange-500 ml-2"></i>
+                            <span>30 متدرب</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-level-up-alt text-orange-500 ml-2"></i>
+                            <span>متقدم</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>6000 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>استراتيجيات إدارة متقدمة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>دراسات حالة واقعية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شبكة علاقات مهنية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=business-management" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=business-management" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 5 -->
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 programming" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <img src="../assets/images/events/python-workshop.jpg" alt="ورشة Python" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        برمجة
+                    </div>
+                    <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">10-12 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة برمجة Python للمبتدئين</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        تعلم أساسيات برمجة Python من الصفر مع مشاريع تطبيقية
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-orange-500 ml-2"></i>
+                            <span>3 أيام</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-orange-500 ml-2"></i>
+                            <span>18 متدرب</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-level-up-alt text-orange-500 ml-2"></i>
+                            <span>مبتدئ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>4500 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مشاريع تطبيقية متنوعة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>بيئة تطوير مجانية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مراجع ومصادر تعلم</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=python-workshop" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=python-workshop" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 6 -->
+            <div class="workshop-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 design" data-aos="fade-up" data-aos-delay="500">
+                <div class="relative">
+                    <img src="../assets/images/events/ui-ux-workshop.jpg" alt="ورشة UI/UX" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        تصميم
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">15-16 أبريل 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">UI/UX</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ورشة تصميم تجربة المستخدم</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        تعلم أساسيات تصميم واجهات المستخدم وتجربة المستخدم الحديثة
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-orange-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-orange-500 ml-2"></i>
+                            <span>12 متدرب</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-level-up-alt text-orange-500 ml-2"></i>
+                            <span>متوسط</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-orange-500 ml-2"></i>
+                            <span>5500 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>أدوات تصميم احترافية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مشروع تطبيق كامل</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ملف أعمال مهني</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=ui-ux-workshop" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=ui-ux-workshop" class="flex-1 bg-orange-600 text-white px-3 py-2 rounded-lg hover:bg-orange-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Load More Button -->
         <div class="text-center mt-12" data-aos="fade-up">
-            <a href="#all-workshops" class="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg font-bold">
-                <i class="fas fa-tools ml-2"></i>
-                عرض جميع ورش العمل
-            </a>
+            <button class="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-all transform hover:scale-105 shadow-lg font-bold" id="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من الورش
+            </button>
+            <p class="text-gray-600 mt-2">عرض 6 من أصل 35 ورشة</p>
         </div>
     </div>
 </section>
 
-<!-- Workshop Benefits -->
+<!-- Why Join Workshops المحسن -->
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">فوائد حضور ورش العمل</h2>
-            <p class="text-xl text-gray-600">لماذا تنضم إلى ورش العمل؟</p>
+            <div class="inline-flex items-center bg-orange-100 text-orange-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">مميزات ورش العمل</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">لماذا تنضم إلى ورش العمل؟</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                اكتشف الفوائد العديدة للانضمام إلى ورش العمل التطبيقية والتدريبية
+            </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Benefit 1 -->
-            <div class="benefit-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
-                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-hands-helping text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">تعلم تطبيقي</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تعلم عملي مع مشاريع حقيقية وتطبيق فوري للمهارات</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-blue-600">100%</div>
+                        <div class="text-xs text-gray-500">تطبيق عملي</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">تعلم تطبيقي</h3>
-                <p class="text-gray-600 mb-4">تعلم عملي مع التطبيق المباشر</p>
-                <div class="text-orange-600 font-bold">خبرة عملية</div>
             </div>
 
             <!-- Benefit 2 -->
-            <div class="benefit-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-user-tie text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-graduate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">خبراء متخصصون</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تعلم من خبراء الصناعة والمحترفين ذوي الخبرة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">15+</div>
+                        <div class="text-xs text-gray-500">خبير مدرب</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">خبراء متخصصون</h3>
-                <p class="text-gray-600 mb-4">تعلم من خبراء في المجال</p>
-                <div class="text-blue-600 font-bold">+85 مدرب خبير</div>
             </div>
 
             <!-- Benefit 3 -->
-            <div class="benefit-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-certificate text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شهادات معتمدة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">احصل على شهادات إتمام معتمدة تضيف لسيرتك الذاتية</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-purple-600">معتمد</div>
+                        <div class="text-xs text-gray-500">شهادات دولية</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">شهادات معتمدة</h3>
-                <p class="text-gray-600 mb-4">احصل على شهادة إتمام معتمدة</p>
-                <div class="text-green-600 font-bold">شهادات معترف بها</div>
             </div>
 
             <!-- Benefit 4 -->
-            <div class="benefit-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-users text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تواصل مع زملاء من نفس المجال وبناء علاقات مهنية</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-orange-600">+500</div>
+                        <div class="text-xs text-gray-500">علاقة مهنية</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">مجموعات صغيرة</h3>
-                <p class="text-gray-600 mb-4">تعلم في مجموعات صغيرة للحصول على اهتمام أكبر</p>
-                <div class="text-purple-600 font-bold">15-25 متدرب</div>
             </div>
 
             <!-- Benefit 5 -->
-            <div class="benefit-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-laptop text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">دعم مستمر</h3>
+                    <p class="text-gray-600 mb-4 text-sm">دعم فني ومتابعة بعد انتهاء الورشة لضمان التطبيق</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-red-600">3 أشهر</div>
+                        <div class="text-xs text-gray-500">دعم مجاني</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">مواد تدريبية</h3>
-                <p class="text-gray-600 mb-4">احصل على مواد تدريبية شاملة</p>
-                <div class="text-red-600 font-bold">ملفات وأدوات</div>
             </div>
 
             <!-- Benefit 6 -->
-            <div class="benefit-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
-                <div class="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-headset text-2xl"></i>
+            <div class="benefit-card bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">أدوات مجانية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">احصل على أدوات وبرامج مجانية للاستخدام الشخصي</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-teal-600">مجاني</div>
+                        <div class="text-xs text-gray-500">أدوات احترافية</div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">دعم مستمر</h3>
-                <p class="text-gray-600 mb-4">دعم ومتابعة بعد انتهاء الورشة</p>
-                <div class="text-indigo-600 font-bold">متابعة 3 أشهر</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Trainers Section -->
+<!-- Workshop Levels -->
 <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">المدربون المعتمدون</h2>
-            <p class="text-xl text-gray-600">خبراء ومتخصصون في مختلف المجالات</p>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مستويات التدريب</h2>
+            <p class="text-xl text-gray-600">ورش مصممة لجميع المستويات من المبتدئ إلى المحترف</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Trainer 1 -->
-            <div class="trainer-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
-                <img src="../assets/images/trainers/trainer-1.jpg" alt="أستاذ محمد" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-orange-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">أستاذ محمد علي</h3>
-                <p class="text-orange-600 font-medium mb-3">مطور ويب متقدم</p>
-                <p class="text-gray-600 text-sm mb-4">خبرة 10 سنوات في تطوير الويب</p>
-                <div class="flex items-center justify-center mb-3">
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Beginner Level -->
+            <div class="level-card bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-seedling text-3xl"></i>
                     </div>
-                    <span class="text-gray-600 text-sm mr-2">(4.9)</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">مبتدئ</h3>
+                    <p class="text-gray-600 mb-6">للمبتدئين الذين يريدون تعلم مهارات جديدة من الصفر</p>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span class="text-gray-600">أساسيات المجال</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span class="text-gray-600">تطبيقات بسيطة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span class="text-gray-600">مواد تعليمية شاملة</span>
+                        </li>
+                    </ul>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-green-600">2000-4000 دج</div>
+                        <div class="text-sm text-gray-500">متوسط السعر</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Trainer 2 -->
-            <div class="trainer-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
-                <img src="../assets/images/trainers/trainer-2.jpg" alt="أستاذة فاطمة" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-orange-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">أستاذة فاطمة زهرة</h3>
-                <p class="text-orange-600 font-medium mb-3">مصممة جرافيك</p>
-                <p class="text-gray-600 text-sm mb-4">خبرة 8 سنوات في التصميم</p>
-                <div class="flex items-center justify-center mb-3">
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+            <!-- Intermediate Level -->
+            <div class="level-card bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-orange-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-chart-line text-3xl"></i>
                     </div>
-                    <span class="text-gray-600 text-sm mr-2">(4.7)</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">متوسط</h3>
+                    <p class="text-gray-600 mb-6">لمن لديهم معرفة أساسية ويريدون تطوير مهاراتهم</p>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span class="text-gray-600">مفاهيم متقدمة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span class="text-gray-600">مشاريع متوسطة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-500 ml-2"></i>
+                            <span class="text-gray-600">تقنيات احترافية</span>
+                        </li>
+                    </ul>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-orange-600">4000-6000 دج</div>
+                        <div class="text-sm text-gray-500">متوسط السعر</div>
+                    </div>
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        الأكثر طلباً
+                    </div>
                 </div>
             </div>
 
-            <!-- Trainer 3 -->
-            <div class="trainer-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
-                <img src="../assets/images/trainers/trainer-3.jpg" alt="أستاذ أحمد" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-orange-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">أستاذ أحمد حسن</h3>
-                <p class="text-orange-600 font-medium mb-3">خبير تسويق رقمي</p>
-                <p class="text-gray-600 text-sm mb-4">خبرة 12 سنة في التسويق</p>
-                <div class="flex items-center justify-center mb-3">
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <!-- Advanced Level -->
+            <div class="level-card bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-crown text-3xl"></i>
                     </div>
-                    <span class="text-gray-600 text-sm mr-2">(5.0)</span>
-                </div>
-            </div>
-
-            <!-- Trainer 4 -->
-            <div class="trainer-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                <img src="../assets/images/trainers/trainer-4.jpg" alt="أستاذة سارة" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-orange-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">أستاذة سارة محمد</h3>
-                <p class="text-orange-600 font-medium mb-3">مستشارة أعمال</p>
-                <p class="text-gray-600 text-sm mb-4">خبرة 15 سنة في إدارة الأعمال</p>
-                <div class="flex items-center justify-center mb-3">
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">متقدم</h3>
+                    <p class="text-gray-600 mb-6">للمحترفين الذين يريدون إتقان أحدث التقنيات</p>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span class="text-gray-600">تقنيات متطورة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span class="text-gray-600">مشاريع معقدة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 ml-2"></i>
+                            <span class="text-gray-600">استراتيجيات خبراء</span>
+                        </li>
+                    </ul>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div class="text-2xl font-bold text-red-600">6000-8000 دج</div>
+                        <div class="text-sm text-gray-500">متوسط السعر</div>
                     </div>
-                    <span class="text-gray-600 text-sm mr-2">(4.8)</span>
                 </div>
             </div>
         </div>
@@ -620,20 +1078,20 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-600 text-white">
+<section class="py-16 bg-gradient-to-r from-orange-600 to-amber-600 text-white">
     <div class="container mx-auto px-4 text-center">
         <div data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">ابدأ رحلة التعلم اليوم</h2>
-            <p class="text-xl text-orange-200 mb-8 max-w-2xl mx-auto">
-                انضم إلى ورش العمل التدريبية وطور مهاراتك مع خبراء متخصصين
+            <h2 class="text-3xl font-bold mb-4">ابدأ رحلة التعلم اليوم</h2>
+            <p class="text-xl mb-8 text-orange-100">
+                انضم إلى آلاف المتدربين واكتسب مهارات جديدة تطور مسيرتك المهنية
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="registration.html?type=trainee" class="bg-yellow-500 text-orange-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-user-plus ml-2"></i>
-                    انضم لورشة
-                </a>
-                <a href="#all-workshops" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-900 transition-all">
+                <a href="registration.html?type=workshop" class="bg-yellow-500 text-orange-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
                     <i class="fas fa-tools ml-2"></i>
+                    سجل في ورشة
+                </a>
+                <a href="#upcoming-workshops" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-900 transition-all">
+                    <i class="fas fa-list ml-2"></i>
                     تصفح الورش
                 </a>
             </div>
@@ -641,56 +1099,122 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+<!-- Footer المحسن -->
+<footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
             <div>
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                <div class="flex items-center mb-6">
+                    <div class="bg-orange-600 text-white p-2 rounded-lg ml-3">
                         <i class="fas fa-rocket text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 mb-4">أفضل ورش العمل التدريبية</p>
+                <p class="text-gray-400 mb-6">
+                    منصة رائدة في تقديم ورش العمل التدريبية، نقدم تجارب تعليمية تطبيقية مع خبراء متخصصين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- Workshop Categories -->
             <div>
-                <h4 class="text-lg font-bold mb-4">أنواع ورش العمل</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">ورش البرمجة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">ورش التصميم</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">ورش التسويق</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">ورش الأعمال</a></li>
+                <h4 class="text-lg font-bold mb-6">أنواع الورش</h4>
+                <ul class="space-y-3">
+                    <li><a href="#programming-workshops" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-code ml-2 w-4"></i>
+                        ورش البرمجة
+                    </a></li>
+                    <li><a href="#design-workshops" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-palette ml-2 w-4"></i>
+                        ورش التصميم
+                    </a></li>
+                    <li><a href="#marketing-workshops" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-bullhorn ml-2 w-4"></i>
+                        ورش التسويق
+                    </a></li>
+                    <li><a href="#business-workshops" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-briefcase ml-2 w-4"></i>
+                        ورش إدارة الأعمال
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Services -->
             <div>
-                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
-                <ul class="space-y-2">
-                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">التسجيل في الورش</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">تنظيم ورش خاصة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الشهادات المعتمدة</a></li>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-user-plus ml-2 w-4"></i>
+                        التسجيل في الورش
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-calendar-plus ml-2 w-4"></i>
+                        تنظيم ورش خاصة
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-certificate ml-2 w-4"></i>
+                        الشهادات المعتمدة
+                    </a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        الاستشارات
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Contact Info -->
             <div>
-                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
-                <div class="space-y-3">
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-orange-400 mt-1 ml-3"></i>
+                        <span class="text-gray-400">123 شارع الاستقلال، الجزائر العاصمة، الجزائر</span>
+                    </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-orange-400 ml-3"></i>
-                        <span class="text-gray-400">027 XX XX XX</span>
+                        <span class="text-gray-400">+213 770 123 456</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-orange-400 ml-3"></i>
                         <span class="text-gray-400">workshops@rafiktawriq.dz</span>
                     </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-orange-400 ml-3"></i>
+                        <span class="text-gray-400">الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2025 رفيق توريق - ورش العمل. جميع الحقوق محفوظة.</p>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2025 رفيق توريق - ورش العمل. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الإلغاء</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -701,86 +1225,205 @@
 <script src="../assets/js/events.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        easing: 'ease-out-cubic'
-    });
-    
-    initializeCounters();
-    initializeMobileMenu();
-    initializeHeaderScroll();
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
 });
 
-function initializeCounters() {
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-orange-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active', 'bg-orange-600', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700');
+        
+        const filter = this.getAttribute('data-filter');
+        const workshops = document.querySelectorAll('.workshop-card');
+        
+        workshops.forEach(workshop => {
+            if (filter === 'all' || workshop.classList.contains(filter)) {
+                workshop.style.display = 'block';
+                workshop.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                workshop.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Counter Animation
+function animateCounters() {
     const counters = document.querySelectorAll('[data-counter]');
     
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-    
     counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
-}
-
-function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-counter'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += step;
-        if (current < target) {
-            element.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target;
-        }
-    };
-    
-    updateCounter();
-}
-
-function initializeMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            const icon = this.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
             } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                counter.textContent = Math.floor(current);
             }
-        });
-    }
-}
-
-function initializeHeaderScroll() {
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('bg-white/95', 'backdrop-blur-md');
-        } else {
-            header.classList.remove('bg-white/95', 'backdrop-blur-md');
-        }
+        }, 16);
     });
 }
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+// Observe the statistics section
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white', 'shadow-xl');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-white', 'shadow-xl');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// Workshop cards hover effect
+document.querySelectorAll('.workshop-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Benefit cards animation
+document.querySelectorAll('.benefit-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Category cards animation
+document.querySelectorAll('.workshop-category').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Level cards animation
+document.querySelectorAll('.level-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Load more functionality
+document.getElementById('load-more-btn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التحميل...';
+    
+    // Simulate loading
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-plus ml-2"></i>عرض المزيد من الورش';
+        // Here you would typically load more workshops via AJAX
+    }, 1500);
+});
+
+// Add CSS for animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .workshop-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .benefit-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .workshop-category {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .level-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .filter-btn {
+        transition: all 0.2s ease;
+    }
+`;
+document.head.appendChild(style);
 
 console.log('🛠️ Workshops page initialized successfully!');
 </script>

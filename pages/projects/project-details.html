@@ -1,10 +1,1622 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>تفاصيل المشروع</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المشروع - رفيق توريق</title>
+    <meta name="description" content="تفاصيل شاملة عن المشروع مع دراسة الجدوى والمعلومات المالية والتقنية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for financial charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-  <h1>تفاصيل المشروع</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu المحسن -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة المشاريع الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-project-diagram ml-2"></i>
+                        المشاريع
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع المشاريع</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-gray-500">نظرة شاملة</div>
+                                </div>
+                            </a>
+                            <a href="investment.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-cyan-100 text-cyan-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-coins text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع الاستثمار</div>
+                                    <div class="text-xs text-gray-500">فرص استثمارية</div>
+                                </div>
+                            </a>
+                            <a href="partnership.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-handshake text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع الشراكة</div>
+                                    <div class="text-xs text-gray-500">شراكات تجارية</div>
+                                </div>
+                            </a>
+                            <a href="purchase.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-shopping-cart text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع للشراء</div>
+                                    <div class="text-xs text-gray-500">مشاريع جاهزة</div>
+                                </div>
+                            </a>
+                            <hr class="my-2">
+                            <a href="feasibility-study.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-file-alt text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">دراسة الجدوى</div>
+                                    <div class="text-xs text-gray-500">تحليل احترافي</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons المحسنة -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="feasibility-study.html" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-file-alt ml-2"></i>
+                    دراسة جدوى
+                </a>
+                <button class="border-2 border-green-600 text-green-600 px-6 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../index.html" class="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-green-600 pr-3">
+                    <span class="text-green-600 font-bold text-sm">تفاصيل المشروع</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية
+                        </a>
+                        <a href="investment.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-coins ml-2 w-4"></i>
+                            مشاريع الاستثمار
+                        </a>
+                        <a href="partnership.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-handshake ml-2 w-4"></i>
+                            مشاريع الشراكة
+                        </a>
+                        <a href="purchase.html" class="flex items-center text-gray-600 hover:text-green-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-shopping-cart ml-2 w-4"></i>
+                            مشاريع للشراء
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="feasibility-study.html" class="bg-green-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-file-alt ml-2"></i>
+                        دراسة جدوى
+                    </a>
+                    <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">المشاريع</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">تفاصيل المشروع</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Project Header Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <!-- Project Images -->
+            <div class="project-gallery" data-aos="fade-right">
+                <div class="main-image mb-4">
+                    <img src="../assets/images/projects/olive-farm-main.jpg" alt="مزرعة زيتون عضوية" class="w-full h-96 object-cover rounded-2xl shadow-lg" id="main-image">
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">مميز</span>
+                        <span class="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">استثمار</span>
+                    </div>
+                </div>
+                <div class="thumbnail-grid grid grid-cols-4 gap-2">
+                    <img src="../assets/images/projects/olive-farm-1.jpg" alt="صورة 1" class="w-full h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity thumbnail active" onclick="changeMainImage(this)">
+                    <img src="../assets/images/projects/olive-farm-2.jpg" alt="صورة 2" class="w-full h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity thumbnail" onclick="changeMainImage(this)">
+                    <img src="../assets/images/projects/olive-farm-3.jpg" alt="صورة 3" class="w-full h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity thumbnail" onclick="changeMainImage(this)">
+                    <img src="../assets/images/projects/olive-farm-4.jpg" alt="صورة 4" class="w-full h-20 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity thumbnail" onclick="changeMainImage(this)">
+                </div>
+            </div>
+
+            <!-- Project Info -->
+            <div class="project-info" data-aos="fade-left">
+                <div class="mb-6">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-3">مشروع زراعة الزيتون العضوي</h1>
+                    <p class="text-lg text-gray-600 mb-4">
+                        مزرعة زيتون عضوية على مساحة 50 هكتار مع نظام ري حديث وتقنيات زراعة متطورة. 
+                        إنتاج متوقع 200 طن سنوياً من زيت الزيتون عالي الجودة.
+                    </p>
+                    
+                    <!-- Project Owner -->
+                    <div class="flex items-center mb-6 p-4 bg-gray-50 rounded-xl">
+                        <img src="../assets/images/owners/owner1.jpg" alt="محمد الأمين" class="w-12 h-12 rounded-full ml-3 object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">محمد الأمين</h3>
+                            <p class="text-sm text-gray-600">مالك المشروع - مهندس زراعي</p>
+                            <div class="flex items-center mt-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star text-sm"></i>
+                                    <i class="fas fa-star text-sm"></i>
+                                    <i class="fas fa-star text-sm"></i>
+                                    <i class="fas fa-star text-sm"></i>
+                                    <i class="fas fa-star text-sm"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 mr-2">(4.9) - 23 تقييم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="metric-card bg-gradient-to-br from-green-50 to-emerald-100 p-4 rounded-xl border border-green-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fas fa-money-bill-wave text-green-600 text-xl"></i>
+                            <span class="text-xs text-green-600 font-medium">رأس المال</span>
+                        </div>
+                        <div class="text-2xl font-bold text-gray-800">3.5</div>
+                        <div class="text-sm text-gray-600">مليون دج</div>
+                    </div>
+                    
+                    <div class="metric-card bg-gradient-to-br from-blue-50 to-cyan-100 p-4 rounded-xl border border-blue-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                            <span class="text-xs text-blue-600 font-medium">العائد المتوقع</span>
+                        </div>
+                        <div class="text-2xl font-bold text-gray-800">18%</div>
+                        <div class="text-sm text-gray-600">سنوياً</div>
+                    </div>
+                    
+                    <div class="metric-card bg-gradient-to-br from-purple-50 to-violet-100 p-4 rounded-xl border border-purple-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+                            <span class="text-xs text-purple-600 font-medium">الموقع</span>
+                        </div>
+                        <div class="text-lg font-bold text-gray-800">سطيف</div>
+                        <div class="text-sm text-gray-600">الجزائر</div>
+                    </div>
+                    
+                    <div class="metric-card bg-gradient-to-br from-orange-50 to-amber-100 p-4 rounded-xl border border-orange-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fas fa-clock text-orange-600 text-xl"></i>
+                            <span class="text-xs text-orange-600 font-medium">مدة المشروع</span>
+                        </div>
+                        <div class="text-lg font-bold text-gray-800">5</div>
+                        <div class="text-sm text-gray-600">سنوات</div>
+                    </div>
+                </div>
+
+                <!-- Funding Progress -->
+                <div class="funding-progress mb-6 p-6 bg-gray-50 rounded-xl">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-lg font-bold text-gray-800">حالة التمويل</h3>
+                        <span class="text-2xl font-bold text-green-600">75%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-3 mb-3">
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-1000" style="width: 75%"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="text-gray-600">تم تمويل:</span>
+                            <span class="font-bold text-green-600">2.6 مليون دج</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">متبقي:</span>
+                            <span class="font-bold text-orange-600">0.9 مليون دج</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="flex-1 bg-gradient-to-r from-green-600 to-green-700 text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-handshake ml-2"></i>
+                        استثمر الآن
+                    </button>
+                    <button class="flex-1 border-2 border-green-600 text-green-600 py-4 px-6 rounded-xl font-bold text-lg hover:bg-green-600 hover:text-white transition-all">
+                        <i class="fas fa-download ml-2"></i>
+                        دراسة الجدوى
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Tabs -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8" data-aos="fade-up">
+            <button class="tab-btn active bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all" data-tab="overview">
+                <i class="fas fa-info-circle ml-2"></i>
+                نظرة عامة
+            </button>
+            <button class="tab-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-medium transition-all hover:bg-gray-100" data-tab="financial">
+                <i class="fas fa-chart-bar ml-2"></i>
+                التحليل المالي
+            </button>
+            <button class="tab-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-medium transition-all hover:bg-gray-100" data-tab="technical">
+                <i class="fas fa-cogs ml-2"></i>
+                المواصفات التقنية
+            </button>
+            <button class="tab-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-medium transition-all hover:bg-gray-100" data-tab="risks">
+                <i class="fas fa-exclamation-triangle ml-2"></i>
+                تحليل المخاطر
+            </button>
+            <button class="tab-btn bg-white text-gray-700 px-6 py-3 rounded-lg font-medium transition-all hover:bg-gray-100" data-tab="documents">
+                <i class="fas fa-file-alt ml-2"></i>
+                الوثائق
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Overview Tab -->
+            <div class="tab-pane active" id="overview" data-aos="fade-up">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Project Description -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">وصف المشروع</h2>
+                            <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                                <p class="mb-4">
+                                    مشروع زراعة الزيتون العضوي هو استثمار زراعي طويل المدى يهدف إلى إنتاج زيت الزيتون البكر الممتاز 
+                                    عالي الجودة. يقع المشروع في منطقة سطيف على مساحة 50 هكتار من الأراضي الزراعية الخصبة.
+                                </p>
+                                <p class="mb-4">
+                                    يتميز المشروع باستخدام أحدث التقنيات في الزراعة العضوية ونظام الري بالتنقيط المحوسب، 
+                                    مما يضمن الحصول على منتج عالي الجودة مع تحسين كفاءة استخدام المياه.
+                                </p>
+                                <p class="mb-6">
+                                    المشروع مصمم لإنتاج 200 طن سنوياً من زيت الزيتون البكر الممتاز، مع إمكانية التوسع 
+                                    في المستقبل لتشمل منتجات أخرى مثل الزيتون المخلل والصابون الطبيعي.
+                                </p>
+                                
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">المميزات الرئيسية:</h3>
+                                <ul class="space-y-2 mb-6">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        زراعة عضوية معتمدة دولياً
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        نظام ري متطور وموفر للمياه
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        موقع استراتيجي قريب من الأسواق
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        عقود توريد مضمونة مع شركات كبرى
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                        فريق إدارة متخصص وذو خبرة
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Highlights -->
+                    <div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">نقاط القوة</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-leaf text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">زراعة عضوية</h4>
+                                        <p class="text-sm text-gray-600">منتج صحي وطبيعي بطلب متزايد</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-tint text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">نظام ري متطور</h4>
+                                        <p class="text-sm text-gray-600">توفير 40% من استهلاك المياه</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-award text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">جودة عالية</h4>
+                                        <p class="text-sm text-gray-600">زيت زيتون بكر ممتاز مصنف A+</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-handshake text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">عقود مضمونة</h4>
+                                        <p class="text-sm text-gray-600">اتفاقيات توريد طويلة المدى</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Market Analysis -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">تحليل السوق</h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">حجم السوق المحلي</span>
+                                        <span class="font-bold text-gray-800">15,000 طن</span>
+                                    </div>
+                                    <div class="bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 65%"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">نمو سنوي 8%</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">الطلب على المنتج العضوي</span>
+                                        <span class="font-bold text-green-600">مرتفع</span>
+                                    </div>
+                                    <div class="bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">نمو سنوي 15%</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600">المنافسة</span>
+                                        <span class="font-bold text-orange-600">متوسطة</span>
+                                    </div>
+                                    <div class="bg-gray-200 rounded-full h-2">
+                                        <div class="bg-orange-500 h-2 rounded-full" style="width: 45%"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">فرصة جيدة للدخول</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Tab -->
+            <div class="tab-pane hidden" id="financial" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Financial Summary -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">الملخص المالي</h2>
+                        
+                        <!-- Investment Breakdown -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">توزيع رأس المال</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">شراء الأرض</span>
+                                    <span class="font-bold text-gray-800">1.2 مليون دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">نظام الري</span>
+                                    <span class="font-bold text-gray-800">800,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">الأشجار والغراسة</span>
+                                    <span class="font-bold text-gray-800">600,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">المعدات والآلات</span>
+                                    <span class="font-bold text-gray-800">500,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">رأس المال العامل</span>
+                                    <span class="font-bold text-gray-800">400,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-green-100 rounded-lg border-t-2 border-green-500">
+                                    <span class="font-bold text-gray-800">إجمالي الاستثمار</span>
+                                    <span class="font-bold text-green-600 text-lg">3.5 مليون دج</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revenue Projections -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">توقعات الإيرادات (5 سنوات)</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                                    <span class="text-gray-700">السنة الأولى</span>
+                                    <span class="font-bold text-blue-600">200,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                                    <span class="text-gray-700">السنة الثانية</span>
+                                    <span class="font-bold text-blue-600">400,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                                    <span class="text-gray-700">السنة الثالثة</span>
+                                    <span class="font-bold text-blue-600">800,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                                    <span class="text-gray-700">السنة الرابعة</span>
+                                    <span class="font-bold text-blue-600">1,200,000 دج</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                                    <span class="text-gray-700">السنة الخامسة</span>
+                                    <span class="font-bold text-blue-600">1,500,000 دج</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ROI Calculation -->
+                        <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                            <h3 class="text-lg font-bold text-green-800 mb-4">العائد على الاستثمار</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-600">18%</div>
+                                    <div class="text-sm text-gray-600">عائد سنوي متوسط</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-600">3.2</div>
+                                    <div class="text-sm text-gray-600">سنة فترة الاسترداد</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Charts -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">نمو الإيرادات المتوقع</h3>
+                            <canvas id="revenueChart" width="400" height="200"></canvas>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">توزيع التكاليف</h3>
+                            <canvas id="costChart" width="400" height="200"></canvas>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">التدفق النقدي المتراكم</h3>
+                            <canvas id="cashflowChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Tab -->
+            <div class="tab-pane hidden" id="technical" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">المواصفات التقنية</h2>
+                        
+                        <!-- Land Specifications -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">مواصفات الأرض</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">المساحة الإجمالية</span>
+                                    <span class="font-bold text-gray-800">50 هكتار</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">نوع التربة</span>
+                                    <span class="font-bold text-gray-800">طينية خصبة</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">مستوى الحموضة (pH)</span>
+                                    <span class="font-bold text-gray-800">7.2 (مثالي)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">مصدر المياه</span>
+                                    <span class="font-bold text-gray-800">بئر ارتوازي + شبكة</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <span class="text-gray-700">الارتفاع عن سطح البحر</span>
+                                    <span class="font-bold text-gray-800">850 متر</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Irrigation System -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">نظام الري</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-tint text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">ري بالتنقيط المحوسب</h4>
+                                        <p class="text-sm text-gray-600">نظام ذكي يتحكم في كمية المياه حسب احتياجات النبات</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-leaf text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">أجهزة استشعار التربة</h4>
+                                        <p class="text-sm text-gray-600">مراقبة مستمرة لرطوبة التربة ومستوى المغذيات</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-mobile-alt text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">تحكم عن بُعد</h4>
+                                        <p class="text-sm text-gray-600">إدارة النظام عبر تطبيق الهاتف المحمول</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Equipment List -->
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">المعدات والآلات</h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center p-2 bg-gray-50 rounded">
+                                    <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                    <span class="text-gray-700">جرار زراعي 85 حصان</span>
+                                </div>
+                                <div class="flex items-center p-2 bg-gray-50 rounded">
+                                    <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                    <span class="text-gray-700">آلة تقليم أوتوماتيكية</span>
+                                </div>
+                                <div class="flex items-center p-2 bg-gray-50 rounded">
+                                    <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                    <span class="text-gray-700">معصرة زيت حديثة</span>
+                                </div>
+                                <div class="flex items-center p-2 bg-gray-50 rounded">
+                                    <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                    <span class="text-gray-700">خزانات تخزين من الستانلس ستيل</span>
+                                </div>
+                                <div class="flex items-center p-2 bg-gray-50 rounded">
+                                    <i class="fas fa-check-circle text-green-500 ml-2"></i>
+                                    <span class="text-gray-700">خط تعبئة وتغليف</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Production Process -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">عملية الإنتاج</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border-r-4 border-green-500">
+                                    <div class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 font-bold">1</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">الزراعة والرعاية</h4>
+                                        <p class="text-sm text-gray-600">زراعة الأشجار ورعايتها باستخدام الطرق العضوية</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-r-4 border-blue-500">
+                                    <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 font-bold">2</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">القطف والجمع</h4>
+                                        <p class="text-sm text-gray-600">قطف الثمار في الوقت المثالي للحصول على أفضل جودة</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border-r-4 border-purple-500">
+                                    <div class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 font-bold">3</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">العصر والاستخلاص</h4>
+                                        <p class="text-sm text-gray-600">عصر الزيتون على البارد للحفاظ على الجودة</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg border-r-4 border-orange-500">
+                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center ml-3 font-bold">4</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">التعبئة والتغليف</h4>
+                                        <p class="text-sm text-gray-600">تعبئة الزيت في عبوات محكمة الإغلاق</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">معايير الجودة</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <span class="text-gray-700">شهادة الزراعة العضوية</span>
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <span class="text-gray-700">شهادة ISO 22000</span>
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <span class="text-gray-700">شهادة HACCP</span>
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <span class="text-gray-700">اعتماد وزارة الزراعة</span>
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">الإنتاج المتوقع</h3>
+                            <div class="space-y-4">
+                                <div class="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+                                    <div class="text-3xl font-bold text-green-600 mb-1">200</div>
+                                    <div class="text-sm text-gray-600">طن زيت زيتون سنوياً</div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="text-center p-3 bg-blue-50 rounded-lg">
+                                        <div class="text-xl font-bold text-blue-600">85%</div>
+                                        <div class="text-xs text-gray-600">زيت بكر ممتاز</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-purple-50 rounded-lg">
+                                        <div class="text-xl font-bold text-purple-600">15%</div>
+                                        <div class="text-xs text-gray-600">زيت بكر</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risks Tab -->
+            <div class="tab-pane hidden" id="risks" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">تحليل المخاطر</h2>
+                        
+                        <!-- Risk Categories -->
+                        <div class="space-y-6">
+                            <!-- Weather Risks -->
+                            <div class="risk-category">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-lg font-bold text-gray-800">المخاطر المناخية</h3>
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">متوسط</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-start p-3 bg-yellow-50 rounded-lg border-r-4 border-yellow-400">
+                                        <i class="fas fa-cloud-rain text-yellow-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">الجفاف</h4>
+                                            <p class="text-sm text-gray-600">نقص الأمطار قد يؤثر على الإنتاج</p>
+                                            <p class="text-xs text-yellow-700 mt-1"><strong>الحل:</strong> نظام ري احتياطي ومخزون مياه</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start p-3 bg-yellow-50 rounded-lg border-r-4 border-yellow-400">
+                                        <i class="fas fa-snowflake text-yellow-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">الصقيع</h4>
+                                            <p class="text-sm text-gray-600">موجات برد قاسية في الشتاء</p>
+                                            <p class="text-xs text-yellow-700 mt-1"><strong>الحل:</strong> أصناف مقاومة للبرد ونظام حماية</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Market Risks -->
+                            <div class="risk-category">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-lg font-bold text-gray-800">مخاطر السوق</h3>
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">منخفض</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-start p-3 bg-orange-50 rounded-lg border-r-4 border-orange-400">
+                                        <i class="fas fa-chart-line text-orange-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">تقلبات الأسعار</h4>
+                                            <p class="text-sm text-gray-600">تذبذب أسعار زيت الزيتون في السوق</p>
+                                            <p class="text-xs text-orange-700 mt-1"><strong>الحل:</strong> عقود توريد طويلة المدى بأسعار ثابتة</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start p-3 bg-orange-50 rounded-lg border-r-4 border-orange-400">
+                                        <i class="fas fa-users text-orange-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">تغير أذواق المستهلكين</h4>
+                                            <p class="text-sm text-gray-600">تحول في تفضيلات المستهلكين</p>
+                                            <p class="text-xs text-orange-700 mt-1"><strong>الحل:</strong> تنويع المنتجات وتطوير علامة تجارية قوية</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Operational Risks -->
+                            <div class="risk-category">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h3 class="text-lg font-bold text-gray-800">المخاطر التشغيلية</h3>
+                                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">منخفض</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-start p-3 bg-red-50 rounded-lg border-r-4 border-red-400">
+                                        <i class="fas fa-bug text-red-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">الآفات والأمراض</h4>
+                                            <p class="text-sm text-gray-600">إصابة الأشجار بالآفات أو الأمراض النباتية</p>
+                                            <p class="text-xs text-red-700 mt-1"><strong>الحل:</strong> برنامج مراقبة دوري ومكافحة متكاملة عضوية</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start p-3 bg-red-50 rounded-lg border-r-4 border-red-400">
+                                        <i class="fas fa-tools text-red-600 mt-1 ml-3"></i>
+                                        <div>
+                                            <h4 class="font-bold text-gray-800">أعطال المعدات</h4>
+                                            <p class="text-sm text-gray-600">توقف المعدات الحيوية عن العمل</p>
+                                            <p class="text-xs text-red-700 mt-1"><strong>الحل:</strong> صيانة دورية وقطع غيار احتياطية</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Mitigation Strategies -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">استراتيجيات إدارة المخاطر</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-shield-alt text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">التأمين الشامل</h4>
+                                        <p class="text-sm text-gray-600">تأمين ضد المخاطر المناخية والحرائق والسرقة</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-chart-pie text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">تنويع المنتجات</h4>
+                                        <p class="text-sm text-gray-600">إنتاج أصناف مختلفة من زيت الزيتون والمنتجات الثانوية</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-handshake text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">عقود طويلة المدى</h4>
+                                        <p class="text-sm text-gray-600">اتفاقيات توريد مع شركات كبرى لضمان التسويق</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 mt-1">
+                                        <i class="fas fa-graduation-cap text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">التدريب المستمر</h4>
+                                        <p class="text-sm text-gray-600">تدريب العمالة على أحدث التقنيات الزراعية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">تقييم المخاطر الإجمالي</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                                    <span class="font-medium text-gray-800">مستوى المخاطر العام</span>
+                                    <span class="px-4 py-2 bg-green-500 text-white rounded-full font-bold">منخفض</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-3">
+                                    <div class="bg-green-500 h-3 rounded-full" style="width: 25%"></div>
+                                </div>
+                                <p class="text-sm text-gray-600">
+                                    المشروع يتمتع بمستوى مخاطر منخفض نسبياً مع وجود استراتيجيات فعالة لإدارة المخاطر المحتملة.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">خطة الطوارئ</h3>
+                            <div class="space-y-3">
+                                <div class="p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                                    <h4 class="font-bold text-blue-800">احتياطي نقدي</h4>
+                                    <p class="text-sm text-gray-600">10% من رأس المال كاحتياطي للطوارئ</p>
+                                </div>
+                                <div class="p-3 bg-green-50 rounded-lg border-r-4 border-green-500">
+                                    <h4 class="font-bold text-green-800">مصادر تمويل بديلة</h4>
+                                    <p class="text-sm text-gray-600">خطوط ائتمان جاهزة من البنوك الشريكة</p>
+                                </div>
+                                <div class="p-3 bg-purple-50 rounded-lg border-r-4 border-purple-500">
+                                    <h4 class="font-bold text-purple-800">شبكة دعم</h4>
+                                    <p class="text-sm text-gray-600">شراكات مع خبراء زراعيين ومؤسسات بحثية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents Tab -->
+            <div class="tab-pane hidden" id="documents" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">الوثائق القانونية</h2>
+                        
+                        <!-- Legal Documents -->
+                        <div class="space-y-4">
+                            <div class="document-item flex items-center justify-between p-4 bg-green-50 rounded-lg border border-green-200">
+                                <div class="flex items-center">
+                                    <div class="bg-green-500 text-white p-2 rounded-lg ml-3">
+                                        <i class="fas fa-file-contract text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">سند ملكية الأرض</h4>
+                                        <p class="text-sm text-gray-600">وثيقة ملكية مسجلة ومعتمدة</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600 transition-colors">
+                                        <i class="fas fa-eye ml-1"></i>
+                                        عرض
+                                    </button>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="document-item flex items-center justify-between p-4 bg-blue-50 rounded-lg border border-blue-200">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-500 text-white p-2 rounded-lg ml-3">
+                                        <i class="fas fa-certificate text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">رخصة الاستثمار الزراعي</h4>
+                                        <p class="text-sm text-gray-600">ترخيص من وزارة الزراعة</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600 transition-colors">
+                                        <i class="fas fa-eye ml-1"></i>
+                                        عرض
+                                    </button>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="document-item flex items-center justify-between p-4 bg-purple-50 rounded-lg border border-purple-200">
+                                <div class="flex items-center">
+                                    <div class="bg-purple-500 text-white p-2 rounded-lg ml-3">
+                                        <i class="fas fa-leaf text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">شهادة الزراعة العضوية</h4>
+                                        <p class="text-sm text-gray-600">معتمدة من الهيئة الدولية</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600 transition-colors">
+                                        <i class="fas fa-eye ml-1"></i>
+                                        عرض
+                                    </button>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="document-item flex items-center justify-between p-4 bg-orange-50 rounded-lg border border-orange-200">
+                                <div class="flex items-center">
+                                    <div class="bg-orange-500 text-white p-2 rounded-lg ml-3">
+                                        <i class="fas fa-tint text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">ترخيص استخدام المياه</h4>
+                                        <p class="text-sm text-gray-600">تصريح من وزارة الموارد المائية</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600 transition-colors">
+                                        <i class="fas fa-eye ml-1"></i>
+                                        عرض
+                                    </button>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="document-item flex items-center justify-between p-4 bg-red-50 rounded-lg border border-red-200">
+                                <div class="flex items-center">
+                                    <div class="bg-red-500 text-white p-2 rounded-lg ml-3">
+                                        <i class="fas fa-shield-alt text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">وثيقة التأمين</h4>
+                                        <p class="text-sm text-gray-600">تأمين شامل ضد المخاطر</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600 transition-colors">
+                                        <i class="fas fa-eye ml-1"></i>
+                                        عرض
+                                    </button>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Documents -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">الوثائق التقنية</h3>
+                            <div class="space-y-3">
+                                <div class="document-item flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-map text-blue-500 ml-3"></i>
+                                        <span class="text-gray-700">خريطة المشروع</span>
+                                    </div>
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded text-sm">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                                <div class="document-item flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chart-bar text-green-500 ml-3"></i>
+                                        <span class="text-gray-700">دراسة الجدوى الكاملة</span>
+                                    </div>
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded text-sm">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                                <div class="document-item flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-flask text-purple-500 ml-3"></i>
+                                        <span class="text-gray-700">تحليل التربة</span>
+                                    </div>
+                                    <button class="px-3 py-1 bg-purple-500 text-white rounded text-sm">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                                <div class="document-item flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-cogs text-orange-500 ml-3"></i>
+                                        <span class="text-gray-700">مواصفات المعدات</span>
+                                    </div>
+                                    <button class="px-3 py-1 bg-orange-500 text-white rounded text-sm">
+                                        <i class="fas fa-download ml-1"></i>
+                                        تحميل
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">العقود والاتفاقيات</h3>
+                            <div class="space-y-3">
+                                <div class="document-item flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-handshake text-green-500 ml-3"></i>
+                                        <span class="text-gray-700">عقد التوريد الرئيسي</span>
+                                    </div>
+                                    <span class="px-2 py-1 bg-green-500 text-white rounded text-xs">مؤكد</span>
+                                </div>
+                                <div class="document-item flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-truck text-blue-500 ml-3"></i>
+                                        <span class="text-gray-700">اتفاقية النقل والتوزيع</span>
+                                    </div>
+                                    <span class="px-2 py-1 bg-blue-500 text-white rounded text-xs">نشط</span>
+                                </div>
+                                <div class="document-item flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-user-tie text-purple-500 ml-3"></i>
+                                        <span class="text-gray-700">عقد الإدارة التشغيلية</span>
+                                    </div>
+                                    <span class="px-2 py-1 bg-purple-500 text-white rounded text-xs">جاري</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">تحميل مجمع</h3>
+                            <div class="space-y-3">
+                                <button class="w-full flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg font-bold hover:from-green-700 hover:to-green-800 transition-all">
+                                    <i class="fas fa-download"></i>
+                                    تحميل جميع الوثائق القانونية
+                                </button>
+                                <button class="w-full flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-bold hover:from-blue-700 hover:to-blue-800 transition-all">
+                                    <i class="fas fa-download"></i>
+                                    تحميل الوثائق التقنية
+                                </button>
+                                <button class="w-full flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg font-bold hover:from-purple-700 hover:to-purple-800 transition-all">
+                                    <i class="fas fa-download"></i>
+                                    تحميل دراسة الجدوى الكاملة
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Owner Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">تواصل مع مالك المشروع</h2>
+                        <p class="text-gray-600 mb-6">
+                            للحصول على معلومات إضافية أو لمناقشة تفاصيل الاستثمار، يمكنك التواصل مباشرة مع مالك المشروع
+                        </p>
+                        
+                        <!-- Owner Contact Info -->
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-green-500 text-white p-2 rounded-lg ml-3">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-800">محمد الأمين</div>
+                                    <div class="text-sm text-gray-600">مهندس زراعي - 15 سنة خبرة</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 text-white p-2 rounded-lg ml-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-800">+213 770 123 456</div>
+                                    <div class="text-sm text-gray-600">متاح من 8 صباحاً - 6 مساءً</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-purple-500 text-white p-2 rounded-lg ml-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-800">m.alamin@email.com</div>
+                                    <div class="text-sm text-gray-600">رد خلال 24 ساعة</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">أرسل رسالة سريعة</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="اسمك الكامل" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="بريدك الإلكتروني" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="رقم الهاتف" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <textarea placeholder="رسالتك..." rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-bold hover:from-green-700 hover:to-green-800 transition-all">
+                                <i class="fas fa-paper-plane ml-2"></i>
+                                إرسال الرسالة
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Projects Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">مشاريع مشابهة</h2>
+            <p class="text-gray-600">مشاريع أخرى قد تهمك في نفس القطاع</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Related Project 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                <img src="../assets/images/projects/greenhouse-project.jpg" alt="مشروع البيوت المحمية" class="w-full h-48 object-cover rounded-lg mb-4">
+                <div class="flex items-center mb-3">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">زراعي</span>
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">استثمار</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">مشروع البيوت المحمية</h3>
+                <p class="text-gray-600 text-sm mb-4">زراعة الخضروات في بيوت محمية حديثة بتقنية الزراعة المائية</p>
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm text-gray-500">رأس المال: 4.2 مليون دج</span>
+                    <span class="text-sm font-bold text-green-600">25% عائد</span>
+                </div>
+                <a href="project-details.html?id=5" class="w-full bg-green-600 text-white py-2 rounded-lg text-center block hover:bg-green-700 transition-colors">
+                    عرض التفاصيل
+                </a>
+            </div>
+
+            <!-- Related Project 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <img src="../assets/images/projects/dairy-farm.jpg" alt="مزرعة الألبان" class="w-full h-48 object-cover rounded-lg mb-4">
+                <div class="flex items-center mb-3">
+                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">زراعي</span>
+                    <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">شراكة</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">مزرعة الألبان العضوية</h3>
+                <p class="text-gray-600 text-sm mb-4">إنتاج الحليب ومنتجات الألبان العضوية عالية الجودة</p>
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm text-gray-500">رأس المال: 6.8 مليون دج</span>
+                    <span class="text-sm font-bold text-green-600">22% عائد</span>
+                </div>
+                <a href="project-details.html?id=7" class="w-full bg-green-600 text-white py-2 rounded-lg text-center block hover:bg-green-700 transition-colors">
+                    عرض التفاصيل
+                </a>
+            </div>
+
+            <!-- Related Project 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <img src="../assets/images/projects/fruit-processing.jpg" alt="مصنع تجفيف الفواكه" class="w-full h-48 object-cover rounded-lg mb-4">
+                <div class="flex items-center mb-3">
+                    <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs mr-2">صناعي</span>
+                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">شراء</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">مصنع تجفيف الفواكه</h3>
+                <p class="text-gray-600 text-sm mb-4">مصنع متكامل لتجفيف وتعبئة الفواكه المجففة للتصدير</p>
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm text-gray-500">السعر: 8.5 مليون دج</span>
+                    <span class="text-sm font-bold text-red-600">خصم 12%</span>
+                </div>
+                <a href="project-details.html?id=9" class="w-full bg-green-600 text-white py-2 rounded-lg text-center block hover:bg-green-700 transition-colors">
+                    عرض التفاصيل
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-green-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة رائدة في مجال المشاريع الاستثمارية، نقدم تفاصيل شاملة ودقيقة لجميع المشاريع مع دعم كامل للمستثمرين.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-home ml-2 w-4"></i>
+                        جميع المشاريع
+                    </a></li>
+                    <li><a href="investment.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-coins ml-2 w-4"></i>
+                        مشاريع الاستثمار
+                    </a></li>
+                    <li><a href="partnership.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        مشاريع الشراكة
+                    </a></li>
+                    <li><a href="purchase.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-shopping-cart ml-2 w-4"></i>
+                        مشاريع للشراء
+                    </a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="feasibility-study.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-file-alt ml-2 w-4"></i>
+                        دراسة الجدوى
+                    </a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        الاستشارات
+                    </a></li>
+                    <li><a href="../incubator/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-seedling ml-2 w-4"></i>
+                        حاضنة الأعمال
+                    </a></li>
+                    <li><a href="../machinery/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-cogs ml-2 w-4"></i>
+                        الآلات والمعدات
+                    </a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-green-400 mt-1 ml-3"></i>
+                        <span class="text-gray-400">123 شارع الاستقلال، الجزائر العاصمة، الجزائر</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-green-400 ml-3"></i>
+                        <span class="text-gray-400">+213 770 123 456</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-green-400 ml-3"></i>
+                        <span class="text-gray-400">info@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-green-400 ml-3"></i>
+                        <span class="text-gray-400">الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2025 رفيق توريق. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">اتفاقية الاستثمار</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/projects.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Tab functionality
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        
+        // Remove active class from all tabs and buttons
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('active', 'bg-green-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+        });
+        document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.add('hidden');
+            pane.classList.remove('active');
+        });
+        
+        // Add active class to clicked tab and button
+        this.classList.add('active', 'bg-green-600', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700');
+        document.getElementById(tabId).classList.remove('hidden');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+
+// Image gallery functionality
+function changeMainImage(thumbnail) {
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = thumbnail.src;
+    
+    // Remove active class from all thumbnails
+    document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active', 'ring-2', 'ring-green-500');
+    });
+    
+    // Add active class to clicked thumbnail
+    thumbnail.classList.add('active', 'ring-2', 'ring-green-500');
+}
+
+// Initialize Charts
+function initializeCharts() {
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(revenueCtx, {
+        type: 'line',
+        data: {
+            labels: ['السنة 1', 'السنة 2', 'السنة 3', 'السنة 4', 'السنة 5'],
+            datasets: [{
+                label: 'الإيرادات (مليون دج)',
+                data: [0.2, 0.4, 0.8, 1.2, 1.5],
+                borderColor: '#22c55e',
+                backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                tension: 0.4,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Cost Chart
+    const costCtx = document.getElementById('costChart').getContext('2d');
+    new Chart(costCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['الأرض', 'نظام الري', 'الأشجار', 'المعدات', 'رأس المال العامل'],
+            datasets: [{
+                data: [1.2, 0.8, 0.6, 0.5, 0.4],
+                backgroundColor: [
+                    '#22c55e',
+                    '#3b82f6',
+                    '#8b5cf6',
+                    '#f59e0b',
+                    '#ef4444'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+    // Cashflow Chart
+    const cashflowCtx = document.getElementById('cashflowChart').getContext('2d');
+    new Chart(cashflowCtx, {
+        type: 'bar',
+        data: {
+            labels: ['السنة 1', 'السنة 2', 'السنة 3', 'السنة 4', 'السنة 5'],
+            datasets: [{
+                label: 'التدفق النقدي التراكمي',
+                data: [-3.3, -2.9, -2.1, -0.9, 0.6],
+                backgroundColor: function(context) {
+                    return context.parsed.y < 0 ? '#ef4444' : '#22c55e';
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Initialize charts when financial tab is shown
+document.querySelector('[data-tab="financial"]').addEventListener('click', function() {
+    setTimeout(initializeCharts, 100);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white', 'shadow-xl');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-white', 'shadow-xl');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// Animate progress bars when visible
+const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progressBar = entry.target.querySelector('.bg-gradient-to-r');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.width = '75%';
+                }, 500);
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.funding-progress').forEach(progress => {
+    progressObserver.observe(progress);
+});
+
+console.log('رفيق توريق - تفاصيل المشروع تم تحميلها بنجاح!');
+</script>
+
 </body>
 </html>

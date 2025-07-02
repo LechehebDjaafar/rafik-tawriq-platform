@@ -1,10 +1,1191 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>مشاريع للاستثمار</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريع الاستثمار - رفيق توريق</title>
+    <meta name="description" content="اكتشف أفضل الفرص الاستثمارية مع عوائد مضمونة ودراسات جدوى احترافية من رفيق توريق">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>مشاريع للاستثمار</h1>
+<body class="font-tajawal bg-gray-50">
+
+<!-- Header المحسن -->
+<header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <p class="text-sm text-gray-600">شريكك في النجاح</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu المحسن -->
+            <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                
+                <!-- قائمة المشاريع الفرعية المحسنة -->
+                <div class="relative group">
+                    <a href="index.html" class="nav-link text-green-600 font-bold flex items-center relative">
+                        <i class="fas fa-project-diagram ml-2"></i>
+                        المشاريع
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-3">
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع المشاريع</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-gray-500">نظرة شاملة</div>
+                                </div>
+                            </a>
+                            <a href="investment.html" class="flex items-center px-4 py-3 text-cyan-600 bg-cyan-50 border-r-4 border-cyan-600">
+                                <div class="bg-cyan-100 text-cyan-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-coins text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع الاستثمار</div>
+                                    <div class="text-xs text-cyan-500">فرص استثمارية (الحالية)</div>
+                                </div>
+                            </a>
+                            <a href="partnership.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-handshake text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع الشراكة</div>
+                                    <div class="text-xs text-gray-500">شراكات تجارية</div>
+                                </div>
+                            </a>
+                            <a href="purchase.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-shopping-cart text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">مشاريع للشراء</div>
+                                    <div class="text-xs text-gray-500">مشاريع جاهزة</div>
+                                </div>
+                            </a>
+                            <hr class="my-2">
+                            <a href="feasibility-study.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all group/item">
+                                <div class="bg-red-100 text-red-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-file-alt text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">دراسة الجدوى</div>
+                                    <div class="text-xs text-gray-500">تحليل احترافي</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+            <!-- CTA Buttons المحسنة -->
+            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                <a href="feasibility-study.html" class="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-6 py-2 rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-file-alt ml-2"></i>
+                    دراسة جدوى
+                </a>
+                <button class="border-2 border-cyan-600 text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-cyan-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../index.html" class="flex items-center text-gray-700 hover:text-cyan-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-cyan-600 pr-3">
+                    <span class="text-cyan-600 font-bold text-sm">مشاريع الاستثمار</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-gray-600 hover:text-cyan-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية
+                        </a>
+                        <a href="investment.html" class="flex items-center text-cyan-600 font-medium py-1 text-sm">
+                            <i class="fas fa-coins ml-2 w-4"></i>
+                            مشاريع الاستثمار (الحالية)
+                        </a>
+                        <a href="partnership.html" class="flex items-center text-gray-600 hover:text-cyan-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-handshake ml-2 w-4"></i>
+                            مشاريع الشراكة
+                        </a>
+                        <a href="purchase.html" class="flex items-center text-gray-600 hover:text-cyan-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-shopping-cart ml-2 w-4"></i>
+                            مشاريع للشراء
+                        </a>
+                        <a href="feasibility-study.html" class="flex items-center text-gray-600 hover:text-cyan-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-file-alt ml-2 w-4"></i>
+                            دراسة الجدوى
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="feasibility-study.html" class="bg-cyan-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-file-alt ml-2"></i>
+                        دراسة جدوى
+                    </a>
+                    <button class="border border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
+            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+                <i class="fas fa-home ml-1"></i>
+                الرئيسية
+            </a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 transition-colors">المشاريع</a>
+            <i class="fas fa-chevron-left text-gray-400"></i>
+            <span class="text-gray-600 font-medium">مشاريع الاستثمار</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section class="py-16 bg-gradient-to-br from-cyan-900 via-cyan-800 to-blue-600 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"investment\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1.5\" fill=\"white\"/><path d=\"M5 15 L25 15 M15 5 L15 25\" stroke=\"white\" stroke-width=\"0.5\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23investment)\"/></svg>');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-cyan-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-coins text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">فرص استثمارية مضمونة</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">مشاريع الاستثمار</h1>
+                <p class="text-xl mb-8 text-cyan-100 leading-relaxed">
+                    اكتشف أفضل الفرص الاستثمارية مع عوائد مضمونة ودراسات جدوى احترافية. استثمر بثقة مع رفيق توريق
+                </p>
+                
+                <!-- Statistics -->
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="78">0</div>
+                        <div class="text-sm text-cyan-200">مشروع استثماري</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1">18%</div>
+                        <div class="text-sm text-cyan-200">متوسط العائد</div>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="95">0</div>
+                        <div class="text-sm text-cyan-200">% معدل النجاح</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#investment-projects" class="bg-yellow-500 text-cyan-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-search ml-2"></i>
+                        تصفح المشاريع
+                    </a>
+                    <a href="feasibility-study.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all">
+                        <i class="fas fa-file-alt ml-2"></i>
+                        طلب دراسة جدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-coins text-8xl text-cyan-900"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-cyan-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-dollar-sign text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-trending-up text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Investment Benefits Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-cyan-100 text-cyan-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">مميزات الاستثمار معنا</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">لماذا تختار الاستثمار مع رفيق توريق؟</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نقدم أفضل الفرص الاستثمارية مع ضمانات شاملة ودعم متكامل
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Benefit 1 -->
+            <div class="benefit-card bg-gradient-to-br from-cyan-50 to-blue-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-cyan-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-cyan-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">استثمار آمن</h3>
+                    <p class="text-gray-600 mb-4 text-sm">جميع المشاريع مدققة ومعتمدة من خبراء متخصصين</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-cyan-600">100%</div>
+                        <div class="text-xs text-gray-500">ضمان الأمان</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="benefit-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">عوائد مرتفعة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">متوسط عائد 18% سنوياً مع إمكانية نمو أعلى</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">18%</div>
+                        <div class="text-xs text-gray-500">متوسط العائد</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="benefit-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">دعم خبراء</h3>
+                    <p class="text-gray-600 mb-4 text-sm">فريق استشاري متخصص يرافقك في كل خطوة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-purple-600">24/7</div>
+                        <div class="text-xs text-gray-500">دعم متواصل</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="benefit-card bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شفافية كاملة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تقارير دورية وشفافية في جميع المعاملات</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-orange-600">100%</div>
+                        <div class="text-xs text-gray-500">شفافية</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Investment Projects Section -->
+<section id="investment-projects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">أحدث المشاريع الاستثمارية</h2>
+            <p class="text-xl text-gray-600">مشاريع مختارة بعناية مع دراسات جدوى معتمدة</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-all" data-filter="all">
+                جميع المشاريع
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="agriculture">
+                زراعي
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="industrial">
+                صناعي
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="tech">
+                تقني
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="commercial">
+                تجاري
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+            <!-- Investment Project 1 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 agriculture" data-aos="fade-up">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/olive-farm.jpg" alt="مزرعة زيتون" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">مزرعة زيتون عضوية</h3>
+                        <p class="text-sm text-gray-600">محمد الأمين - مالك المشروع</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">زراعي</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs mr-1">مميز</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "مزرعة زيتون عضوية على مساحة 50 هكتار مع نظام ري حديث وتقنيات زراعة متطورة. إنتاج متوقع 200 طن سنوياً."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">3.5 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">18% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">سطيف</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">5 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 2.6 مليون دج</span>
+                        <span>متبقي 0.9 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=1" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=1" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Project 2 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 industrial" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/textile-factory.jpg" alt="مصنع نسيج" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">مصنع نسيج حديث</h3>
+                        <p class="text-sm text-gray-600">فاطمة بن علي - مؤسسة</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">صناعي</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs mr-1">عائد مرتفع</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "مصنع نسيج متطور بخطوط إنتاج حديثة لإنتاج الأقمشة عالية الجودة. طاقة إنتاجية 1000 متر يومياً."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">8.2 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">22% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">وهران</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">4 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 4.9 مليون دج</span>
+                        <span>متبقي 3.3 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=2" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=2" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Project 3 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 tech" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/tech-startup.jpg" alt="شركة تقنية" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">منصة تجارة إلكترونية</h3>
+                        <p class="text-sm text-gray-600">أمين الدين - مطور</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">تقني</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs mr-1">جديد</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "منصة تجارة إلكترونية متطورة تربط التجار بالمستهلكين مع نظام دفع آمن وخدمة توصيل سريعة."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">2.8 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">30% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">الجزائر العاصمة</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">3 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 1.1 مليون دج</span>
+                        <span>متبقي 1.7 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=3" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=3" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Project 4 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 commercial" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/restaurant-chain.jpg" alt="سلسلة مطاعم" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">سلسلة مطاعم صحية</h3>
+                        <p class="text-sm text-gray-600">سارة حمدي - مديرة</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">تجاري</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs mr-1">نمو سريع</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "سلسلة مطاعم متخصصة في الوجبات الصحية والعضوية مع 5 فروع حالياً وخطة توسع لـ 15 فرع إضافي."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">6.5 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">20% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">قسنطينة</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">6 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 5.2 مليون دج</span>
+                        <span>متبقي 1.3 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=4" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=4" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Project 5 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 agriculture" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/greenhouse.jpg" alt="بيوت محمية" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">مشروع البيوت المحمية</h3>
+                        <p class="text-sm text-gray-600">يوسف العربي - مهندس زراعي</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">زراعي</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs mr-1">مبتكر</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "مشروع بيوت محمية حديثة لإنتاج الخضروات على مدار السنة باستخدام تقنيات الزراعة المائية والتحكم المناخي."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">4.2 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">25% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">تيزي وزو</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">4 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>55%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 55%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 2.3 مليون دج</span>
+                        <span>متبقي 1.9 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=5" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=5" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Project 6 -->
+            <div class="investment-project bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 industrial" data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center mb-4">
+                    <img src="../assets/images/projects/solar-energy.jpg" alt="طاقة شمسية" class="w-16 h-16 rounded-full ml-4 object-cover">
+                    <div>
+                        <h3 class="font-bold text-gray-800">محطة طاقة شمسية</h3>
+                        <p class="text-sm text-gray-600">نورالدين بلعيد - مهندس</p>
+                        <div class="flex items-center mt-1">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">طاقة</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-1">صديق للبيئة</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    "محطة طاقة شمسية بقدرة 5 ميجاوات لتوليد الكهرباء النظيفة وبيعها لشبكة الكهرباء الوطنية."
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">رأس المال</div>
+                        <div class="font-bold text-cyan-600">12 مليون دج</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">العائد المتوقع</div>
+                        <div class="font-bold text-green-600">15% سنوياً</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">الموقع</div>
+                        <div class="font-bold">أدرار</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-gray-500">مدة الاستثمار</div>
+                        <div class="font-bold">10 سنوات</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>نسبة التمويل</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-600 h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>تم تمويل 3.6 مليون دج</span>
+                        <span>متبقي 8.4 مليون دج</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="project-details.html?id=6" class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded text-center text-sm hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        التفاصيل
+                    </a>
+                    <a href="feasibility-study.html?id=6" class="flex-1 bg-cyan-600 text-white py-2 px-4 rounded text-center text-sm hover:bg-cyan-700 transition-colors">
+                        <i class="fas fa-download ml-1"></i>
+                        دراسة الجدوى
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <button class="bg-cyan-600 text-white px-8 py-3 rounded-lg hover:bg-cyan-700 transition-all transform hover:scale-105 shadow-lg font-bold" id="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من المشاريع
+            </button>
+            <p class="text-gray-600 mt-2">عرض 6 من أصل 78 مشروع استثماري</p>
+        </div>
+    </div>
+</section>
+
+<!-- Investment Process Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">كيف تبدأ الاستثمار؟</h2>
+            <p class="text-xl text-gray-600">خطوات بسيطة لبدء رحلتك الاستثمارية</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="relative">
+                <!-- Progress Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
+                
+                <!-- Steps -->
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-cyan-50 rounded-lg p-6 border border-cyan-200">
+                                <h3 class="text-xl font-bold text-cyan-800 mb-2">1. اختر المشروع</h3>
+                                <p class="text-gray-600">تصفح المشاريع المتاحة واختر ما يناسب أهدافك الاستثمارية</p>
+                                <div class="mt-3 text-sm text-cyan-600">
+                                    <i class="fas fa-clock ml-1"></i>
+                                    يستغرق 10-15 دقيقة
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10">1</div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10">2</div>
+                        <div class="flex-1 text-left pl-8">
+                            <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
+                                <h3 class="text-xl font-bold text-blue-800 mb-2">2. راجع دراسة الجدوى</h3>
+                                <p class="text-gray-600">اطلع على التحليل المالي المفصل والتوقعات المستقبلية</p>
+                                <div class="mt-3 text-sm text-blue-600">
+                                    <i class="fas fa-file-alt ml-1"></i>
+                                    دراسة شاملة ومعتمدة
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-green-50 rounded-lg p-6 border border-green-200">
+                                <h3 class="text-xl font-bold text-green-800 mb-2">3. استشارة مجانية</h3>
+                                <p class="text-gray-600">احصل على استشارة مجانية من خبرائنا المتخصصين</p>
+                                <div class="mt-3 text-sm text-green-600">
+                                    <i class="fas fa-phone ml-1"></i>
+                                    متاح 24/7
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10">3</div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10">4</div>
+                        <div class="flex-1 text-left pl-8">
+                            <div class="bg-purple-50 rounded-lg p-6 border border-purple-200">
+                                <h3 class="text-xl font-bold text-purple-800 mb-2">4. ابدأ الاستثمار</h3>
+                                <p class="text-gray-600">وقع العقود وابدأ رحلتك الاستثمارية مع دعمنا المستمر</p>
+                                <div class="mt-3 text-sm text-purple-600">
+                                    <i class="fas fa-handshake ml-1"></i>
+                                    دعم مستمر ومتابعة
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">هل لديك مشروع تريد تمويله؟</h2>
+            <p class="text-xl mb-8 text-cyan-100">
+                انضم إلى منصة رفيق توريق واعرض مشروعك على آلاف المستثمرين المهتمين
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="feasibility-study.html" class="bg-yellow-500 text-cyan-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-plus ml-2"></i>
+                    أضف مشروعك
+                </a>
+                <a href="../contact/index.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-900 transition-all">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="bg-cyan-600 text-white p-2 rounded-lg ml-3">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    منصة رائدة في مجال المشاريع الاستثمارية، نقدم أفضل الفرص الاستثمارية مع عوائد مضمونة ودعم شامل.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Investment Types -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">أنواع الاستثمار</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-seedling ml-2 w-4"></i>
+                        مشاريع زراعية
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-industry ml-2 w-4"></i>
+                        مشاريع صناعية
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-laptop-code ml-2 w-4"></i>
+                        مشاريع تقنية
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-store ml-2 w-4"></i>
+                        مشاريع تجارية
+                    </a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="feasibility-study.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-file-alt ml-2 w-4"></i>
+                        دراسة الجدوى
+                    </a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        الاستشارات
+                    </a></li>
+                    <li><a href="partnership.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-users ml-2 w-4"></i>
+                        الشراكات
+                    </a></li>
+                    <li><a href="../incubator/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-seedling ml-2 w-4"></i>
+                        حاضنة الأعمال
+                    </a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-cyan-400 mt-1 ml-3"></i>
+                        <span class="text-gray-400">123 شارع الاستقلال، الجزائر العاصمة، الجزائر</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-cyan-400 ml-3"></i>
+                        <span class="text-gray-400">+213 770 123 456</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-cyan-400 ml-3"></i>
+                        <span class="text-gray-400">investment@rafiktawriq.dz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-cyan-400 ml-3"></i>
+                        <span class="text-gray-400">الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2025 رفيق توريق. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">اتفاقية الاستثمار</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/projects.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-cyan-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active', 'bg-cyan-600', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700');
+        
+        const filter = this.getAttribute('data-filter');
+        const projects = document.querySelectorAll('.investment-project');
+        
+        projects.forEach(project => {
+            if (filter === 'all' || project.classList.contains(filter)) {
+                project.style.display = 'block';
+                project.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('[data-counter]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+// Observe the statistics section
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white', 'shadow-xl');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-white', 'shadow-xl');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// Project cards hover effect
+document.querySelectorAll('.investment-project').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Benefit cards animation
+document.querySelectorAll('.benefit-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Progress bars animation
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.bg-cyan-600');
+    
+    progressBars.forEach(bar => {
+        if (bar.parentElement.classList.contains('bg-gray-200')) {
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            bar.style.transition = 'width 2s ease-in-out';
+            
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        }
+    });
+}
+
+// Intersection Observer for progress bars
+const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateProgressBars();
+            progressObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe progress bars
+document.querySelectorAll('.investment-project').forEach(card => {
+    progressObserver.observe(card);
+});
+
+// Load more functionality
+document.getElementById('load-more-btn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التحميل...';
+    
+    // Simulate loading
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-plus ml-2"></i>عرض المزيد من المشاريع';
+        // Here you would typically load more projects via AJAX
+    }, 1500);
+});
+
+// Add CSS for animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .investment-project {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .benefit-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .filter-btn {
+        transition: all 0.2s ease;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('رفيق توريق - مشاريع الاستثمار تم تحميلها بنجاح!');
+</script>
+
 </body>
 </html>

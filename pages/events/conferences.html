@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المؤتمرات - رفيق توريق</title>
-    <meta name="description" content="مؤتمرات علمية ومهنية في مختلف المجالات مع خبراء دوليين ومحليين">
+    <meta name="description" content="انضم إلى مؤتمراتنا المتخصصة واستفد من خبرات المتحدثين المحليين والدوليين">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
 </head>
 <body class="font-tajawal bg-gray-50">
 
-<!-- Header -->
+<!-- Header المحسن -->
 <header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
@@ -41,13 +41,19 @@
                 </a>
             </div>
 
-            <!-- Navigation Menu -->
+            <!-- Navigation Menu المحسن -->
             <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
                 <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
                     <i class="fas fa-home ml-2"></i>
                     الرئيسية
                 </a>
                 
+                <a href="../projects/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-project-diagram ml-2"></i>
+                    المشاريع
+                </a>
+                
+                <!-- قائمة الفعاليات الفرعية المحسنة -->
                 <div class="relative group">
                     <a href="index.html" class="nav-link text-purple-600 font-bold flex items-center relative">
                         <i class="fas fa-calendar-alt ml-2"></i>
@@ -56,38 +62,127 @@
                     </a>
                     <div class="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                         <div class="py-3">
-                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
-                                <i class="fas fa-home ml-3 text-purple-500"></i>
-                                <span>الصفحة الرئيسية</span>
+                            <div class="px-4 py-2 border-b border-gray-100">
+                                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">أنواع الفعاليات</span>
+                            </div>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-home text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">الصفحة الرئيسية</div>
+                                    <div class="text-xs text-gray-500">نظرة شاملة</div>
+                                </div>
                             </a>
-                            <a href="exhibitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
-                                <i class="fas fa-store ml-3 text-purple-500"></i>
-                                <span>المعارض</span>
+                            <a href="exhibitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-store text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المعارض</div>
+                                    <div class="text-xs text-gray-500">معارض تجارية</div>
+                                </div>
                             </a>
-                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
-                                <i class="fas fa-trophy ml-3 text-purple-500"></i>
-                                <span>المسابقات</span>
+                            <a href="competitions.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-trophy text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المسابقات</div>
+                                    <div class="text-xs text-gray-500">مسابقات متنوعة</div>
+                                </div>
                             </a>
                             <a href="conferences.html" class="flex items-center px-4 py-3 text-purple-600 bg-purple-50 border-r-4 border-purple-600">
-                                <i class="fas fa-users ml-3 text-purple-500"></i>
-                                <span>المؤتمرات</span>
+                                <div class="bg-purple-100 text-purple-600 p-2 rounded-lg ml-3">
+                                    <i class="fas fa-users text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">المؤتمرات</div>
+                                    <div class="text-xs text-purple-500">مؤتمرات علمية (الحالية)</div>
+                                </div>
                             </a>
-                            <a href="workshops.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all">
-                                <i class="fas fa-tools ml-3 text-purple-500"></i>
-                                <span>ورش العمل</span>
+                            <a href="workshops.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all group/item">
+                                <div class="bg-orange-100 text-orange-600 p-2 rounded-lg ml-3 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-tools text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">ورش العمل</div>
+                                    <div class="text-xs text-gray-500">ورش تدريبية</div>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
+                
+                <a href="../incubator/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-seedling ml-2"></i>
+                    حاضنة الأعمال
+                </a>
+                <a href="../consulting/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-handshake ml-2"></i>
+                    الاستشارة
+                </a>
+                <a href="../machinery/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-cogs ml-2"></i>
+                    الآلات والمعدات
+                </a>
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Buttons المحسنة -->
             <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
                 <a href="registration.html" class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-user-plus ml-2"></i>
-                    احجز مقعدك
+                    <i class="fas fa-plus ml-2"></i>
+                    سجل الآن
                 </a>
+                <button class="border-2 border-purple-600 text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                    <i class="fas fa-sign-in-alt ml-2"></i>
+                    تسجيل الدخول
+                </button>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-purple-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu المحسن -->
+    <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex flex-col space-y-3">
+                <a href="../index.html" class="flex items-center text-gray-700 hover:text-purple-600 transition-colors py-2">
+                    <i class="fas fa-home ml-3 w-5"></i>
+                    الرئيسية
+                </a>
+                <div class="border-r-4 border-purple-600 pr-3">
+                    <span class="text-purple-600 font-bold text-sm">المؤتمرات</span>
+                    <div class="mt-2 space-y-2 pr-4">
+                        <a href="index.html" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors py-1 text-sm">
+                            <i class="fas fa-home ml-2 w-4"></i>
+                            الصفحة الرئيسية
+                        </a>
+                        <a href="conferences.html" class="flex items-center text-purple-600 font-medium py-1 text-sm">
+                            <i class="fas fa-users ml-2 w-4"></i>
+                            المؤتمرات (الحالية)
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+                    <a href="registration.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg text-center font-bold">
+                        <i class="fas fa-plus ml-2"></i>
+                        سجل الآن
+                    </a>
+                    <button class="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-bold">
+                        <i class="fas fa-sign-in-alt ml-2"></i>
+                        تسجيل الدخول
+                    </button>
+                </div>
+            </nav>
         </div>
     </div>
 </header>
@@ -108,38 +203,76 @@
     </div>
 </section>
 
-<!-- Hero Section -->
+<!-- Hero Section المحسن -->
 <section class="py-16 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-        <img src="../assets/images/events/conferences-hero.jpg" alt="خلفية المؤتمرات" class="w-full h-full object-cover">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"conferences\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><circle cx=\"15\" cy=\"15\" r=\"1.5\" fill=\"white\"/><path d=\"M8 8 L22 8 L22 22 L8 22 Z\" fill=\"none\" stroke=\"white\" stroke-width=\"0.5\"/><circle cx=\"10\" cy=\"12\" r=\"1\" fill=\"white\"/><circle cx=\"15\" cy=\"12\" r=\"1\" fill=\"white\"/><circle cx=\"20\" cy=\"12\" r=\"1\" fill=\"white\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23conferences)\"/></svg>');"></div>
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-            <div data-aos="fade-up">
-                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                    المؤتمرات العلمية والمهنية
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center bg-purple-800 bg-opacity-50 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-users text-yellow-400 ml-2"></i>
+                    <span class="text-sm font-medium">مؤتمرات علمية ومهنية</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    المؤتمرات <span class="text-yellow-400">العلمية</span>
                 </h1>
                 <p class="text-xl mb-8 text-purple-100 leading-relaxed">
-                    انضم إلى مؤتمراتنا المتخصصة واستفد من خبرات المتحدثين المحليين والدوليين
+                    انضم إلى مؤتمراتنا المتخصصة واستفد من خبرات المتحدثين المحليين والدوليين في مختلف المجالات العلمية والمهنية
                 </p>
                 
+                <!-- Statistics -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="8">0</div>
-                        <div class="text-sm text-purple-200">مؤتمر سنوياً</div>
+                        <div class="text-sm text-purple-200">مؤتمر قادم</div>
                     </div>
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="150">0</div>
-                        <div class="text-sm text-purple-200">متحدث خبير</div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="2000">0</div>
+                        <div class="text-sm text-purple-200">مشارك</div>
                     </div>
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="3000">0</div>
-                        <div class="text-sm text-purple-200">مشارك</div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="50">0</div>
+                        <div class="text-sm text-purple-200">متحدث خبير</div>
                     </div>
                     <div class="text-center bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
                         <div class="text-3xl font-bold text-yellow-400 mb-1" data-counter="15">0</div>
-                        <div class="text-sm text-purple-200">دولة</div>
+                        <div class="text-sm text-purple-200">دولة مشاركة</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#upcoming-conferences" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-users ml-2"></i>
+                        تصفح المؤتمرات
+                    </a>
+                    <a href="registration.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                        <i class="fas fa-plus ml-2"></i>
+                        سجل الآن
+                    </a>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="text-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-yellow-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <i class="fas fa-users text-8xl text-purple-900"></i>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-10 right-10 bg-yellow-400 text-purple-900 p-3 rounded-full animate-bounce shadow-lg">
+                        <i class="fas fa-microphone text-xl"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-10 bg-blue-400 text-white p-3 rounded-full animate-pulse shadow-lg">
+                        <i class="fas fa-globe text-xl"></i>
+                    </div>
+                    <div class="absolute top-1/2 left-0 bg-green-400 text-white p-2 rounded-full animate-ping shadow-lg">
+                        <i class="fas fa-graduation-cap text-lg"></i>
                     </div>
                 </div>
             </div>
@@ -147,111 +280,175 @@
     </div>
 </section>
 
-<!-- Conference Categories -->
+<!-- Conference Categories المحسن -->
 <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">أنواع المؤتمرات</h2>
-            <p class="text-xl text-gray-600">مؤتمرات متخصصة في مختلف المجالات العلمية والمهنية</p>
+            <div class="inline-flex items-center bg-purple-100 text-purple-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">أنواع المؤتمرات</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">مؤتمرات متخصصة في مختلف المجالات</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                نقدم مؤتمرات علمية ومهنية مع خبراء محليين ودوليين في أحدث المجالات والتخصصات
+            </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Technology -->
-            <div class="conference-category bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+            <!-- Technology & AI -->
+            <div class="conference-category bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-200 group" data-aos="fade-up">
                 <div class="text-center">
-                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-microchip text-2xl"></i>
+                    <div class="bg-blue-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-robot text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التكنولوجيا</h3>
-                    <p class="text-gray-600 mb-4">مؤتمرات التقنية والذكاء الاصطناعي</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-blue-600">3</div>
-                        <div class="text-xs text-gray-500">مؤتمر سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التقنية والذكاء الاصطناعي</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات حول أحدث التطورات التقنية والذكاء الاصطناعي</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-blue-200">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" data-counter="3">0</div>
+                        <div class="text-sm text-gray-500">مؤتمر قادم</div>
                     </div>
+                    <a href="#tech-conferences" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
                 </div>
             </div>
 
-            <!-- Business -->
-            <div class="conference-category bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+            <!-- Business & Management -->
+            <div class="conference-category bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-green-200 group" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-center">
-                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-briefcase text-2xl"></i>
+                    <div class="bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الأعمال</h3>
-                    <p class="text-gray-600 mb-4">مؤتمرات ريادة الأعمال والإدارة</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-green-600">2</div>
-                        <div class="text-xs text-gray-500">مؤتمر سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">ريادة الأعمال والإدارة</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات إدارة الأعمال وريادة الأعمال والقيادة</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-green-200">
+                        <div class="text-3xl font-bold text-green-600 mb-2" data-counter="2">0</div>
+                        <div class="text-sm text-gray-500">مؤتمر قادم</div>
                     </div>
+                    <a href="#business-conferences" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
                 </div>
             </div>
 
-            <!-- Healthcare -->
-            <div class="conference-category bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="200">
+            <!-- Health & Medicine -->
+            <div class="conference-category bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-red-200 group" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-center">
-                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-stethoscope text-2xl"></i>
+                    <div class="bg-red-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heartbeat text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">الصحة</h3>
-                    <p class="text-gray-600 mb-4">مؤتمرات الطب والصحة العامة</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-red-600">1</div>
-                        <div class="text-xs text-gray-500">مؤتمر سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الطب والصحة العامة</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات طبية وصحية مع أحدث الأبحاث والعلاجات</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-red-200">
+                        <div class="text-3xl font-bold text-red-600 mb-2" data-counter="1">0</div>
+                        <div class="text-sm text-gray-500">مؤتمر قادم</div>
                     </div>
+                    <a href="#health-conferences" class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
                 </div>
             </div>
 
-            <!-- Education -->
-            <div class="conference-category bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="300">
+            <!-- Education & Development -->
+            <div class="conference-category bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-purple-200 group" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    <div class="bg-purple-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">التعليم</h3>
-                    <p class="text-gray-600 mb-4">مؤتمرات التعليم والتطوير</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-purple-600">1</div>
-                        <div class="text-xs text-gray-500">مؤتمر سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">التعليم والتطوير</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات التعليم والتطوير المهني والأكاديمي</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-purple-200">
+                        <div class="text-3xl font-bold text-purple-600 mb-2" data-counter="1">0</div>
+                        <div class="text-sm text-gray-500">مؤتمر قادم</div>
                     </div>
+                    <a href="#education-conferences" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
                 </div>
             </div>
 
-            <!-- Environment -->
-            <div class="conference-category bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="400">
+            <!-- Environment & Sustainability -->
+            <div class="conference-category bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-teal-200 group" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center">
-                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-leaf text-2xl"></i>
+                    <div class="bg-teal-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-leaf text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">البيئة</h3>
-                    <p class="text-gray-600 mb-4">مؤتمرات البيئة والاستدامة</p>
-                    <div class="bg-white rounded-lg p-3 mb-4">
-                        <div class="text-2xl font-bold text-teal-600">1</div>
-                        <div class="text-xs text-gray-500">مؤتمر سنوياً</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">البيئة والاستدامة</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات البيئة والتنمية المستدامة والطاقة المتجددة</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-teal-200">
+                        <div class="text-3xl font-bold text-teal-600 mb-2" data-counter="1">0</div>
+                        <div class="text-sm text-gray-500">مؤتمر قادم</div>
                     </div>
+                    <a href="#environment-conferences" class="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-teal-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
+                </div>
+            </div>
+
+            <!-- Finance & Economics -->
+            <div class="conference-category bg-gradient-to-br from-yellow-50 to-amber-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-yellow-200 group" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-yellow-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-coins text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">المالية والاقتصاد</h3>
+                    <p class="text-gray-600 mb-6">مؤتمرات الاقتصاد والمالية والاستثمار والبنوك</p>
+                    <div class="bg-white rounded-lg p-4 mb-6 border border-yellow-200">
+                        <div class="text-3xl font-bold text-yellow-600 mb-2" data-counter="0">0</div>
+                        <div class="text-sm text-gray-500">قريباً</div>
+                    </div>
+                    <a href="#finance-conferences" class="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-yellow-700 transition-all transform hover:scale-105 shadow-lg block text-center">
+                        <i class="fas fa-arrow-left ml-2"></i>
+                        عرض المؤتمرات
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Upcoming Conferences -->
-<section class="py-20 bg-gray-50">
+<!-- Upcoming Conferences المحسن -->
+<section id="upcoming-conferences" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">المؤتمرات القادمة</h2>
-            <p class="text-xl text-gray-600">لا تفوت هذه المؤتمرات المميزة</p>
+            <p class="text-xl text-gray-600">لا تفوت هذه المؤتمرات المميزة مع خبراء ومتخصصين من جميع أنحاء العالم</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all" data-filter="all">
+                جميع المؤتمرات
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="technology">
+                التقنية
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="business">
+                الأعمال
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="health">
+                الصحة
+            </button>
+            <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-all border" data-filter="education">
+                التعليم
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="conferences-container">
             <!-- Conference 1 -->
-            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 technology" data-aos="fade-up">
                 <div class="relative">
                     <img src="../assets/images/events/ai-conference.jpg" alt="مؤتمر الذكاء الاصطناعي" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        تكنولوجيا
+                        ذكاء اصطناعي
                     </div>
                     <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        دولي
+                        مميز
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
                         <div class="text-sm font-bold">10-12 أبريل 2025</div>
@@ -259,7 +456,7 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">AI</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">تقنية</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -268,39 +465,38 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر الذكاء الاصطناعي</h3>
-                    <p class="text-gray-600 mb-4 flex items-center">
-                        <i class="fas fa-map-marker-alt text-purple-500 ml-2"></i>
-                        الجزائر العاصمة، فندق الأوراسي
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر الذكاء الاصطناعي 2025</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        مؤتمر دولي حول أحدث تطورات الذكاء الاصطناعي وتطبيقاته في مختلف المجالات
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>3 أيام</span>
+                        </div>
                         <div class="flex items-center">
                             <i class="fas fa-users text-purple-500 ml-2"></i>
                             <span>500 مشارك</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-microphone text-purple-500 ml-2"></i>
-                            <span>25 متحدث</span>
+                            <span>15 متحدث</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-clock text-purple-500 ml-2"></i>
-                            <span>3 أيام</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-purple-500 ml-2"></i>
-                            <span>15,000 دج</span>
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>15000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>خبراء دوليون</span>
+                            <span>جميع الجلسات والورش</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>ورش عمل تطبيقية</span>
+                            <span>المواد التدريبية والوجبات</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
@@ -315,18 +511,18 @@
                         </a>
                         <a href="registration.html?event=ai-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            احجز الآن
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Conference 2 -->
-            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 business" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative">
                     <img src="../assets/images/events/business-summit.jpg" alt="قمة ريادة الأعمال" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        أعمال
+                        ريادة أعمال
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
                         <div class="text-sm font-bold">18-19 أبريل 2025</div>
@@ -334,7 +530,7 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">ريادة أعمال</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">أعمال</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -343,43 +539,42 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">قمة ريادة الأعمال</h3>
-                    <p class="text-gray-600 mb-4 flex items-center">
-                        <i class="fas fa-map-marker-alt text-purple-500 ml-2"></i>
-                        وهران، مركز المؤتمرات الدولي
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">قمة ريادة الأعمال 2025</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        قمة دولية لريادة الأعمال مع رواد أعمال ومستثمرين من جميع أنحاء العالم
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
                         <div class="flex items-center">
                             <i class="fas fa-users text-purple-500 ml-2"></i>
                             <span>300 مشارك</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-microphone text-purple-500 ml-2"></i>
-                            <span>15 متحدث</span>
+                            <span>12 متحدث</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-clock text-purple-500 ml-2"></i>
-                            <span>يومان</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-purple-500 ml-2"></i>
-                            <span>8,000 دج</span>
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>8000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>رجال أعمال ناجحون</span>
+                            <span>جلسات مع مستثمرين</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>فرص استثمار</span>
+                            <span>ورش عمل تطبيقية</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>شبكة علاقات</span>
+                            <span>فرص استثمار حقيقية</span>
                         </div>
                     </div>
                     
@@ -390,18 +585,21 @@
                         </a>
                         <a href="registration.html?event=business-summit-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            احجز الآن
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Conference 3 -->
-            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 health" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative">
-                    <img src="../assets/images/events/health-conference.jpg" alt="مؤتمر الصحة" class="w-full h-48 object-cover">
+                    <img src="../assets/images/events/medical-conference.jpg" alt="مؤتمر الطب الحديث" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        صحة
+                        طب
+                    </div>
+                    <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                        جديد
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
                         <div class="text-sm font-bold">25-26 أبريل 2025</div>
@@ -409,7 +607,7 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">طب</span>
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">صحة</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -418,39 +616,38 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر الطب الحديث</h3>
-                    <p class="text-gray-600 mb-4 flex items-center">
-                        <i class="fas fa-map-marker-alt text-purple-500 ml-2"></i>
-                        قسنطينة، كلية الطب
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر الطب الحديث والتقنيات الطبية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        مؤتمر طبي متخصص حول أحدث التقنيات الطبية والعلاجات المبتكرة
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
                         <div class="flex items-center">
                             <i class="fas fa-users text-purple-500 ml-2"></i>
                             <span>200 مشارك</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-microphone text-purple-500 ml-2"></i>
-                            <span>20 متحدث</span>
+                            <span>10 متحدث</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-clock text-purple-500 ml-2"></i>
-                            <span>يومان</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-ticket-alt text-purple-500 ml-2"></i>
-                            <span>12,000 دج</span>
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>12000 دج</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>أطباء متخصصون</span>
+                            <span>أحدث الأبحاث الطبية</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>أحدث التقنيات الطبية</span>
+                            <span>ورش عملية متخصصة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
@@ -459,191 +656,461 @@
                     </div>
                     
                     <div class="flex gap-2">
-                        <a href="event-details.html?id=health-conference-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                        <a href="event-details.html?id=medical-conference-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
                             <i class="fas fa-eye ml-1"></i>
                             التفاصيل
                         </a>
-                        <a href="registration.html?event=health-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
+                        <a href="registration.html?event=medical-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
                             <i class="fas fa-user-plus ml-1"></i>
-                            احجز الآن
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference 4 -->
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 education" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <img src="../assets/images/events/education-conference.jpg" alt="مؤتمر التعليم الرقمي" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        تعليم
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">5-6 مايو 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">تعليم</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر التعليم الرقمي والتطوير</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        مؤتمر حول مستقبل التعليم الرقمي وأساليب التطوير المهني الحديثة
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-purple-500 ml-2"></i>
+                            <span>250 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-microphone text-purple-500 ml-2"></i>
+                            <span>8 متحدث</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>6000 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>أحدث تقنيات التعليم</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ورش تطوير المهارات</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شهادات تطوير مهني</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=education-conference-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=education-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference 5 -->
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 technology" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <img src="../assets/images/events/blockchain-conference.jpg" alt="مؤتمر البلوك تشين" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        بلوك تشين
+                    </div>
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        متقدم
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">12-13 مايو 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">بلوك تشين</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر البلوك تشين والعملات الرقمية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        مؤتمر متخصص حول تقنية البلوك تشين وتطبيقاتها في المالية والأعمال
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-purple-500 ml-2"></i>
+                            <span>150 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-microphone text-purple-500 ml-2"></i>
+                            <span>6 متحدث</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>10000 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>تقنيات البلوك تشين المتقدمة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>استراتيجيات الاستثمار</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>ورش تطبيقية متخصصة</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=blockchain-conference-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=blockchain-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference 6 -->
+            <div class="conference-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 business" data-aos="fade-up" data-aos-delay="500">
+                <div class="relative">
+                    <img src="../assets/images/events/sustainability-conference.jpg" alt="مؤتمر الاستدامة" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        استدامة
+                    </div>
+                    <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
+                        <div class="text-sm font-bold">20-21 مايو 2025</div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-medium">بيئة</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مؤتمر البيئة والتنمية المستدامة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        مؤتمر دولي حول التحديات البيئية والحلول المستدامة للمستقبل
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 ml-2"></i>
+                            <span>يومان</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-purple-500 ml-2"></i>
+                            <span>180 مشارك</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-microphone text-purple-500 ml-2"></i>
+                            <span>9 متحدث</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill text-purple-500 ml-2"></i>
+                            <span>7000 دج</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-4 text-xs text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>حلول بيئية مبتكرة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>مشاريع طاقة متجددة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 ml-2"></i>
+                            <span>شراكات دولية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-2">
+                        <a href="event-details.html?id=sustainability-conference-2025" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 transition-all text-center text-sm">
+                            <i class="fas fa-eye ml-1"></i>
+                            التفاصيل
+                        </a>
+                        <a href="registration.html?event=sustainability-conference-2025" class="flex-1 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-center text-sm font-bold">
+                            <i class="fas fa-user-plus ml-1"></i>
+                            سجل الآن
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Load More Button -->
         <div class="text-center mt-12" data-aos="fade-up">
-            <a href="#all-conferences" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg font-bold">
+            <button class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg font-bold" id="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من المؤتمرات
+            </button>
+            <p class="text-gray-600 mt-2">عرض 6 من أصل 8 مؤتمرات</p>
+        </div>
+    </div>
+</section>
+
+<!-- Conference Benefits المحسن -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-flex items-center bg-purple-100 text-purple-600 rounded-full px-4 py-2 mb-4">
+                <i class="fas fa-star ml-2"></i>
+                <span class="text-sm font-medium">فوائد المشاركة</span>
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">لماذا تشارك في مؤتمراتنا؟</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                اكتشف الفوائد العديدة للمشاركة في مؤتمراتنا العلمية والمهنية المتخصصة
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Benefit 1 -->
+            <div class="benefit-card bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-blue-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">معرفة متقدمة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تعلم أحدث التطورات والاتجاهات في مجالك من الخبراء</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-blue-600">50+</div>
+                        <div class="text-xs text-gray-500">متحدث خبير</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="benefit-card bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-green-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات دولية</h3>
+                    <p class="text-gray-600 mb-4 text-sm">تواصل مع محترفين وخبراء من جميع أنحاء العالم</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">15</div>
+                        <div class="text-xs text-gray-500">دولة مشاركة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="benefit-card bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-purple-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">شهادات معتمدة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">احصل على شهادات حضور معتمدة دولياً</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-purple-600">معتمد</div>
+                        <div class="text-xs text-gray-500">شهادات دولية</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="benefit-card bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-orange-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">أفكار مبتكرة</h3>
+                    <p class="text-gray-600 mb-4 text-sm">اكتشف حلول وأفكار مبتكرة لتحديات مجالك</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-orange-600">100+</div>
+                        <div class="text-xs text-gray-500">فكرة جديدة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="benefit-card bg-gradient-to-br from-red-50 to-rose-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-red-200" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">فرص استثمار</h3>
+                    <p class="text-gray-600 mb-4 text-sm">اكتشف فرص استثمار وشراكات تجارية جديدة</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-red-600">مليون</div>
+                        <div class="text-xs text-gray-500">دولار استثمارات</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="benefit-card bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-teal-200" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-center">
+                    <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">تطوير مهني</h3>
+                    <p class="text-gray-600 mb-4 text-sm">طور مهاراتك المهنية وارتق بمسيرتك المهنية</p>
+                    <div class="bg-white rounded-lg p-3">
+                        <div class="text-2xl font-bold text-teal-600">+40%</div>
+                        <div class="text-xs text-gray-500">نمو مهني</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Conference Speakers -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">المتحدثون المميزون</h2>
+            <p class="text-xl text-gray-600">خبراء ومتخصصون من أفضل الجامعات والشركات العالمية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Speaker 1 -->
+            <div class="speaker-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">د. أحمد محمد</h3>
+                    <p class="text-sm text-blue-600 mb-3">خبير الذكاء الاصطناعي</p>
+                    <p class="text-xs text-gray-600 mb-4">جامعة MIT - الولايات المتحدة</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">AI</span>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="speaker-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">سارة الأحمد</h3>
+                    <p class="text-sm text-green-600 mb-3">رائدة أعمال</p>
+                    <p class="text-xs text-gray-600 mb-4">مؤسسة شركة تك العربية</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">ريادة</span>
+                        <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-xs">تقنية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="speaker-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">د. فاطمة علي</h3>
+                    <p class="text-sm text-red-600 mb-3">استشاري طب القلب</p>
+                    <p class="text-xs text-gray-600 mb-4">مستشفى الملك فيصل التخصصي</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs">طب</span>
+                        <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">قلب</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 4 -->
+            <div class="speaker-card bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">محمد الزهراني</h3>
+                    <p class="text-sm text-purple-600 mb-3">خبير تعليم رقمي</p>
+                    <p class="text-xs text-gray-600 mb-4">جامعة الملك عبدالعزيز</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-xs">تعليم</span>
+                        <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded text-xs">رقمي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="#all-speakers" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg font-bold">
                 <i class="fas fa-users ml-2"></i>
-                عرض جميع المؤتمرات
+                عرض جميع المتحدثين
             </a>
         </div>
     </div>
 </section>
 
-<!-- Speakers Section -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">المتحدثون المميزون</h2>
-            <p class="text-xl text-gray-600">خبراء ومتخصصون من جميع أنحاء العالم</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Speaker 1 -->
-            <div class="speaker-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
-                <img src="../assets/images/speakers/speaker-1.jpg" alt="د. أحمد محمد" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-purple-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">د. أحمد محمد</h3>
-                <p class="text-purple-600 font-medium mb-3">خبير الذكاء الاصطناعي</p>
-                <p class="text-gray-600 text-sm mb-4">أستاذ في جامعة MIT ومؤسس شركة تقنية رائدة</p>
-                <div class="flex justify-center space-x-2 space-x-reverse">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-blue-600">
-                        <i class="fab fa-twitter text-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Speaker 2 -->
-            <div class="speaker-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
-                <img src="../assets/images/speakers/speaker-2.jpg" alt="د. فاطمة علي" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-purple-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">د. فاطمة علي</h3>
-                <p class="text-purple-600 font-medium mb-3">خبيرة ريادة الأعمال</p>
-                <p class="text-gray-600 text-sm mb-4">مؤسسة 3 شركات ناشئة ناجحة ومستشارة أعمال</p>
-                <div class="flex justify-center space-x-2 space-x-reverse">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-blue-600">
-                        <i class="fab fa-twitter text-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Speaker 3 -->
-            <div class="speaker-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
-                <img src="../assets/images/speakers/speaker-3.jpg" alt="د. محمد حسن" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-purple-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">د. محمد حسن</h3>
-                <p class="text-purple-600 font-medium mb-3">استشاري طب القلب</p>
-                <p class="text-gray-600 text-sm mb-4">رئيس قسم القلب في مستشفى دولي مرموق</p>
-                <div class="flex justify-center space-x-2 space-x-reverse">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-blue-600">
-                        <i class="fab fa-twitter text-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Speaker 4 -->
-            <div class="speaker-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                <img src="../assets/images/speakers/speaker-4.jpg" alt="د. سارة أحمد" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-purple-500">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">د. سارة أحمد</h3>
-                <p class="text-purple-600 font-medium mb-3">خبيرة البيئة والاستدامة</p>
-                <p class="text-gray-600 text-sm mb-4">باحثة في الأمم المتحدة ومؤلفة كتب بيئية</p>
-                <div class="flex justify-center space-x-2 space-x-reverse">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-blue-600">
-                        <i class="fab fa-twitter text-lg"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Conference Benefits -->
-<section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">فوائد حضور المؤتمرات</h2>
-            <p class="text-xl text-gray-600">لماذا تحضر مؤتمراتنا؟</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Benefit 1 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up">
-                <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-brain text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">اكتساب المعرفة</h3>
-                <p class="text-gray-600 mb-4">تعلم أحدث التطورات في مجالك</p>
-                <div class="text-purple-600 font-bold">+50 ساعة تعليمية</div>
-            </div>
-
-            <!-- Benefit 2 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-handshake text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">شبكة علاقات مهنية</h3>
-                <p class="text-gray-600 mb-4">تواصل مع خبراء ومتخصصين</p>
-                <div class="text-blue-600 font-bold">+200 اتصال جديد</div>
-            </div>
-
-            <!-- Benefit 3 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-certificate text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">شهادات معتمدة</h3>
-                <p class="text-gray-600 mb-4">احصل على شهادات حضور معتمدة</p>
-                <div class="text-green-600 font-bold">شهادات دولية</div>
-            </div>
-
-            <!-- Benefit 4 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-rocket text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">تطوير المهنة</h3>
-                <p class="text-gray-600 mb-4">فرص للتقدم المهني والوظيفي</p>
-                <div class="text-orange-600 font-bold">فرص وظيفية جديدة</div>
-            </div>
-
-            <!-- Benefit 5 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="400">
-                <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-lightbulb text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">الإلهام والابتكار</h3>
-                <p class="text-gray-600 mb-4">أفكار جديدة ومبتكرة</p>
-                <div class="text-red-600 font-bold">رؤى مستقبلية</div>
-            </div>
-
-            <!-- Benefit 6 -->
-            <div class="benefit-card bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="500">
-                <div class="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-globe text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">منظور عالمي</h3>
-                <p class="text-gray-600 mb-4">فهم الاتجاهات العالمية</p>
-                <div class="text-indigo-600 font-bold">رؤية شاملة</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CTA Section -->
-<section class="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-600 text-white">
+<section class="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
     <div class="container mx-auto px-4 text-center">
         <div data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">انضم إلى مؤتمراتنا المميزة</h2>
-            <p class="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-                احجز مقعدك الآن في أفضل المؤتمرات العلمية والمهنية
+            <h2 class="text-3xl font-bold mb-4">انضم إلى مؤتمراتنا المميزة</h2>
+            <p class="text-xl mb-8 text-purple-100">
+                استفد من خبرات المتحدثين الدوليين ووسع شبكة علاقاتك المهنية
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="registration.html?type=attendee" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-user-plus ml-2"></i>
-                    احجز مقعدك
+                <a href="registration.html?type=conference" class="bg-yellow-500 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-users ml-2"></i>
+                    سجل في مؤتمر
                 </a>
-                <a href="#all-conferences" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
-                    <i class="fas fa-calendar ml-2"></i>
+                <a href="#upcoming-conferences" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all">
+                    <i class="fas fa-list ml-2"></i>
                     تصفح المؤتمرات
                 </a>
             </div>
@@ -651,56 +1118,122 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+<!-- Footer المحسن -->
+<footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
             <div>
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg ml-3">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-600 text-white p-2 rounded-lg ml-3">
                         <i class="fas fa-rocket text-xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold">رفيق توريق</h3>
+                    <div>
+                        <h3 class="text-xl font-bold">رفيق توريق</h3>
+                        <p class="text-sm text-gray-400">شريكك في النجاح</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 mb-4">أفضل المؤتمرات العلمية والمهنية</p>
+                <p class="text-gray-400 mb-6">
+                    منصة رائدة في تنظيم المؤتمرات العلمية والمهنية، نجمع الخبراء والمتخصصين من جميع أنحاء العالم.
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- Conference Categories -->
             <div>
-                <h4 class="text-lg font-bold mb-4">أنواع المؤتمرات</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مؤتمرات التكنولوجيا</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مؤتمرات الأعمال</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مؤتمرات الصحة</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">مؤتمرات التعليم</a></li>
+                <h4 class="text-lg font-bold mb-6">أنواع المؤتمرات</h4>
+                <ul class="space-y-3">
+                    <li><a href="#tech-conferences" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-robot ml-2 w-4"></i>
+                        مؤتمرات التقنية
+                    </a></li>
+                    <li><a href="#business-conferences" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-chart-line ml-2 w-4"></i>
+                        مؤتمرات الأعمال
+                    </a></li>
+                    <li><a href="#health-conferences" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-heartbeat ml-2 w-4"></i>
+                        مؤتمرات طبية
+                    </a></li>
+                    <li><a href="#education-conferences" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-graduation-cap ml-2 w-4"></i>
+                        مؤتمرات تعليمية
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Services -->
             <div>
-                <h4 class="text-lg font-bold mb-4">خدماتنا</h4>
-                <ul class="space-y-2">
-                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors">حجز المقاعد</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">تنظيم المؤتمرات</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الشهادات المعتمدة</a></li>
+                <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><a href="registration.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-user-plus ml-2 w-4"></i>
+                        التسجيل في المؤتمرات
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-calendar-plus ml-2 w-4"></i>
+                        تنظيم مؤتمرات خاصة
+                    </a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-certificate ml-2 w-4"></i>
+                        شهادات معتمدة
+                    </a></li>
+                    <li><a href="../consulting/index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-handshake ml-2 w-4"></i>
+                        الاستشارات
+                    </a></li>
                 </ul>
             </div>
 
+            <!-- Contact Info -->
             <div>
-                <h4 class="text-lg font-bold mb-4">تواصل معنا</h4>
-                <div class="space-y-3">
+                <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-purple-400 mt-1 ml-3"></i>
+                        <span class="text-gray-400">123 شارع الاستقلال، الجزائر العاصمة، الجزائر</span>
+                    </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-purple-400 ml-3"></i>
-                        <span class="text-gray-400">027 XX XX XX</span>
+                        <span class="text-gray-400">+213 770 123 456</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-purple-400 ml-3"></i>
                         <span class="text-gray-400">conferences@rafiktawriq.dz</span>
                     </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-purple-400 ml-3"></i>
+                        <span class="text-gray-400">الأحد - الخميس: 8 صباحاً - 4 مساءً</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2025 رفيق توريق - المؤتمرات. جميع الحقوق محفوظة.</p>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2025 رفيق توريق - المؤتمرات. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="flex space-x-6 space-x-reverse mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">شروط الاستخدام</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">سياسة الإلغاء</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -711,86 +1244,205 @@
 <script src="../assets/js/events.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        easing: 'ease-out-cubic'
-    });
-    
-    initializeCounters();
-    initializeMobileMenu();
-    initializeHeaderScroll();
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
 });
 
-function initializeCounters() {
+// Mobile Menu Toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('active', 'bg-purple-600', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active', 'bg-purple-600', 'text-white');
+        this.classList.remove('bg-white', 'text-gray-700');
+        
+        const filter = this.getAttribute('data-filter');
+        const conferences = document.querySelectorAll('.conference-card');
+        
+        conferences.forEach(conference => {
+            if (filter === 'all' || conference.classList.contains(filter)) {
+                conference.style.display = 'block';
+                conference.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                conference.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Counter Animation
+function animateCounters() {
     const counters = document.querySelectorAll('[data-counter]');
     
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-    
     counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
-}
-
-function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-counter'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += step;
-        if (current < target) {
-            element.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target;
-        }
-    };
-    
-    updateCounter();
-}
-
-function initializeMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            const icon = this.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        const target = parseInt(counter.getAttribute('data-counter'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
             } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                counter.textContent = Math.floor(current);
             }
-        });
-    }
-}
-
-function initializeHeaderScroll() {
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('bg-white/95', 'backdrop-blur-md');
-        } else {
-            header.classList.remove('bg-white/95', 'backdrop-blur-md');
-        }
+        }, 16);
     });
 }
+
+// Intersection Observer for counters
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+        }
+    });
+}, observerOptions);
+
+// Observe the statistics section
+const statsSection = document.querySelector('.py-16.bg-gradient-to-br');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 100) {
+        header.classList.add('bg-white', 'shadow-xl');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-white', 'shadow-xl');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// Conference cards hover effect
+document.querySelectorAll('.conference-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Benefit cards animation
+document.querySelectorAll('.benefit-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Category cards animation
+document.querySelectorAll('.conference-category').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Speaker cards animation
+document.querySelectorAll('.speaker-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    });
+});
+
+// Load more functionality
+document.getElementById('load-more-btn').addEventListener('click', function() {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i>جاري التحميل...';
+    
+    // Simulate loading
+    setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-plus ml-2"></i>عرض المزيد من المؤتمرات';
+        // Here you would typically load more conferences via AJAX
+    }, 1500);
+});
+
+// Add CSS for animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .conference-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .benefit-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .conference-category {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .speaker-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .filter-btn {
+        transition: all 0.2s ease;
+    }
+`;
+document.head.appendChild(style);
 
 console.log('👥 Conferences page initialized successfully!');
 </script>

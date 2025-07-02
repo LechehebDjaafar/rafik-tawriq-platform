@@ -1,0 +1,663 @@
+/* ===== PROJECTS SECTION STYLES ===== */
+
+/* Custom Variables */
+:root {
+    --primary-green: #16a34a;
+    --primary-blue: #2563eb;
+    --primary-red: #dc2626;
+    --primary-orange: #ea580c;
+    --primary-purple: #9333ea;
+    --primary-cyan: #0891b2;
+    --gradient-green: linear-gradient(135deg, #16a34a, #15803d);
+    --gradient-blue: linear-gradient(135deg, #2563eb, #1d4ed8);
+    --gradient-red: linear-gradient(135deg, #dc2626, #b91c1c);
+    --gradient-orange: linear-gradient(135deg, #ea580c, #c2410c);
+    --gradient-purple: linear-gradient(135deg, #9333ea, #7c3aed);
+    --gradient-cyan: linear-gradient(135deg, #0891b2, #0e7490);
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --transition-fast: all 0.2s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}
+
+/* ===== GENERAL PROJECT STYLES ===== */
+
+.project-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-green);
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Project Type Specific Colors */
+.project-card.investment::before {
+    background: var(--gradient-cyan);
+}
+
+.project-card.partnership::before {
+    background: var(--gradient-orange);
+}
+
+.project-card.purchase::before {
+    background: var(--gradient-purple);
+}
+
+.project-card.feasibility::before {
+    background: var(--gradient-red);
+}
+
+/* ===== PROJECT GALLERY STYLES ===== */
+
+.project-gallery {
+    position: relative;
+}
+
+.main-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.main-image img {
+    transition: var(--transition-slow);
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+.thumbnail {
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+/* ===== METRIC CARDS ===== */
+
+.metric-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-green);
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.metric-card:hover::before {
+    transform: scaleX(1);
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
+}
+
+/* ===== FUNDING PROGRESS ===== */
+
+.funding-progress {
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-green);
+    border-radius: 9999px;
+    transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ===== TAB SYSTEM ===== */
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-normal);
+}
+
+.tab-btn:hover::before {
+    left: 100%;
+}
+
+.tab-btn.active {
+    background: var(--gradient-green);
+    color: white;
+    box-shadow: var(--shadow-medium);
+}
+
+.tab-pane {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition-normal);
+}
+
+.tab-pane.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== FILTER BUTTONS ===== */
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(22, 163, 74, 0.1) 0%, transparent 70%);
+    transition: var(--transition-normal);
+    transform: translate(-50%, -50%);
+}
+
+.filter-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.filter-btn.active {
+    background: var(--gradient-green);
+    color: white;
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ===== BENEFIT CARDS ===== */
+
+.benefit-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(22, 163, 74, 0.05) 0%, transparent 70%);
+    transform: scale(0);
+    transition: var(--transition-slow);
+}
+
+.benefit-card:hover::before {
+    transform: scale(1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===== PRICING CARDS ===== */
+
+.pricing-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-red);
+    transform: scale(1.05);
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-green);
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.pricing-card:hover::before {
+    transform: scaleX(1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.pricing-card.featured:hover {
+    transform: translateY(-8px) scale(1.07);
+}
+
+/* ===== FAQ STYLES ===== */
+
+.faq-item {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-content.show {
+    max-height: 200px;
+}
+
+/* ===== FORM STYLES ===== */
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    transition: var(--transition-fast);
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.form-input:hover {
+    border-color: #d1d5db;
+}
+
+/* ===== COMPONENT ANIMATIONS ===== */
+
+.component-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.component-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-red);
+    border-radius: 0 4px 4px 0;
+}
+
+.component-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-large);
+}
+
+/* ===== SAMPLE CARDS ===== */
+
+.sample-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-normal);
+    overflow: hidden;
+    position: relative;
+}
+
+.sample-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: var(--transition-slow);
+}
+
+.sample-card:hover::after {
+    transform: translateX(100%);
+}
+
+.sample-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===== DOCUMENT ITEMS ===== */
+
+.document-item {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.document-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-green);
+    transform: scaleY(0);
+    transition: var(--transition-normal);
+}
+
+.document-item:hover::before {
+    transform: scaleY(1);
+}
+
+.document-item:hover {
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-medium);
+    transform: translateX(4px);
+}
+
+/* ===== FLOATING ELEMENTS ===== */
+
+.floating-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.floating-element:nth-child(3) {
+    animation-delay: -2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== RIPPLE EFFECT ===== */
+
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ===== LOADING STATES ===== */
+
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .metric-card {
+        padding: 1rem;
+    }
+    
+    .benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+    }
+    
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .project-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .benefit-card:hover {
+        transform: translateY(-6px);
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus-visible:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+    .project-card {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .benefit-card,
+    .pricing-card,
+    .sample-card {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+        break-inside: avoid;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1f2937;
+        --bg-secondary: #374151;
+        --text-primary: #f9fafb;
+        --text-secondary: #d1d5db;
+    }
+    
+    .project-card,
+    .benefit-card,
+    .pricing-card,
+    .sample-card {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #15803d;
+}
