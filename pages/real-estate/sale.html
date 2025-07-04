@@ -24,18 +24,18 @@
 </head>
 <body class="font-tajawal bg-gray-50">
 
-<!-- Header -->
+<!-- Header الموحد -->
 <header class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="main-header">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-4 space-x-reverse">
-                <a href="../index.html" class="flex items-center space-x-4 space-x-reverse group">
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-2 rounded-lg group-hover:scale-105 transition-transform">
+                <a href="../../index.html" class="flex items-center space-x-4 space-x-reverse group">
+                    <div class="bg-gradient-to-br from-blue-600 to-purple-700 text-white p-3 rounded-xl group-hover:scale-105 transition-transform shadow-lg">
                         <i class="fas fa-rocket text-2xl"></i>
                     </div>
                     <div class="text-right">
-                        <h1 class="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">رفيق توريق</h1>
+                        <h1 class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">رفيق توريق</h1>
                         <p class="text-sm text-gray-600">شريكك في النجاح</p>
                     </div>
                 </a>
@@ -43,11 +43,63 @@
 
             <!-- Navigation Menu -->
             <nav class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                <a href="../../index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
                     <i class="fas fa-home ml-2"></i>
                     الرئيسية
                 </a>
                 
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium flex items-center">
+                        <i class="fas fa-th-large ml-2"></i>
+                        الخدمات
+                        <i class="fas fa-chevron-down mr-1 text-sm transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                        <div class="py-4 grid grid-cols-2 gap-2">
+                            <a href="../courses/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-graduation-cap text-blue-500 ml-3"></i>
+                                <span>الدورات التدريبية</span>
+                            </a>
+                            <a href="../incubator/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-seedling text-green-500 ml-3"></i>
+                                <span>الحاضنة</span>
+                            </a>
+                            <a href="../consulting/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-user-tie text-purple-500 ml-3"></i>
+                                <span>الاستشارات</span>
+                            </a>
+                            <a href="../machinery/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-cogs text-orange-500 ml-3"></i>
+                                <span>الآلات الصناعية</span>
+                            </a>
+                            <a href="index.html" class="flex items-center px-4 py-3 text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-lg mx-2">
+                                <i class="fas fa-building text-emerald-500 ml-3"></i>
+                                <span>العقارات (الحالية)</span>
+                            </a>
+                            <a href="../events/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-calendar-alt text-yellow-500 ml-3"></i>
+                                <span>الفعاليات</span>
+                            </a>
+                            <a href="../projects/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-project-diagram text-indigo-500 ml-3"></i>
+                                <span>المشاريع</span>
+                            </a>
+                            <a href="../construction/index.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-600 transition-all rounded-lg mx-2">
+                                <i class="fas fa-hammer text-gray-500 ml-3"></i>
+                                <span>بناء المصانع</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tourism -->
+                <a href="../business-tourism/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium">
+                    <i class="fas fa-plane ml-2"></i>
+                    سياحة الأعمال
+                </a>
+
+                <!-- Real Estate -->
                 <div class="relative group">
                     <a href="index.html" class="nav-link text-emerald-600 font-bold flex items-center relative">
                         <i class="fas fa-building ml-2"></i>
@@ -62,33 +114,77 @@
                             </a>
                             <a href="sale.html" class="flex items-center px-4 py-3 text-emerald-600 bg-emerald-50 border-r-4 border-emerald-600">
                                 <i class="fas fa-tag ml-3 text-emerald-500"></i>
-                                <span>عقارات للبيع</span>
+                                <span>عقارات للبيع (الحالية)</span>
                             </a>
                             <a href="rent.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">
                                 <i class="fas fa-key ml-3 text-emerald-500"></i>
                                 <span>عقارات للكراء</span>
                             </a>
+                            <a href="virtual-tour.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">
+                                <i class="fas fa-vr-cardboard ml-3 text-emerald-500"></i>
+                                <span>الجولة الافتراضية</span>
+                            </a>
+                            <a href="real-estate-consultation.html" class="flex items-center px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-all">
+                                <i class="fas fa-handshake ml-3 text-emerald-500"></i>
+                                <span>استشارة عقارية</span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Legal Services -->
+                <a href="../legal/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium">
+                    <i class="fas fa-balance-scale ml-2"></i>
+                    الخدمات القانونية
+                </a>
+                
+                <!-- Contact -->
+                <a href="../contact/index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-all font-medium relative">
+                    <i class="fas fa-phone ml-2"></i>
+                    تواصل معنا
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
-            <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
-                <a href="#contact" class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-6 py-2 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-plus ml-2"></i>
-                    أضف عقارك
+            <!-- CTA Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="../contact/index.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-rocket ml-2"></i>
+                    ابدأ مشروعك
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+        <div class="px-4 py-6 space-y-4">
+            <a href="../../index.html" class="block text-gray-700 py-2">الرئيسية</a>
+            <a href="../courses/index.html" class="block text-gray-700 py-2">الدورات التدريبية</a>
+            <a href="../incubator/index.html" class="block text-gray-700 py-2">الحاضنة</a>
+            <a href="../consulting/index.html" class="block text-gray-700 py-2">الاستشارات</a>
+            <a href="../machinery/index.html" class="block text-gray-700 py-2">الآلات الصناعية</a>
+            <a href="index.html" class="block text-emerald-600 font-bold py-2">العقارات</a>
+            <a href="../events/index.html" class="block text-gray-700 py-2">الفعاليات</a>
+            <a href="../projects/index.html" class="block text-gray-700 py-2">المشاريع</a>
+            <a href="../construction/index.html" class="block text-gray-700 py-2">بناء المصانع</a>
+            <a href="../business-tourism/index.html" class="block text-gray-700 py-2">سياحة الأعمال</a>
+            <a href="../legal/index.html" class="block text-gray-700 py-2">الخدمات القانونية</a>
+            <a href="../contact/index.html" class="block text-gray-700 py-2">تواصل معنا</a>
         </div>
     </div>
 </header>
+
 
 <!-- Breadcrumb -->
 <section class="pt-24 pb-8 bg-gradient-to-r from-gray-50 to-gray-100">
     <div class="container mx-auto px-4">
         <nav class="flex items-center space-x-2 space-x-reverse text-sm" data-aos="fade-right">
-            <a href="../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
+            <a href="../../index.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center">
                 <i class="fas fa-home ml-1"></i>
                 الرئيسية
             </a>
@@ -103,7 +199,7 @@
 <!-- Hero Section -->
 <section class="py-16 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-600 text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-20">
-        <img src="../assets/images/real-estate/sale-hero.jpg" alt="عقارات للبيع" class="w-full h-full object-cover">
+        <img src="../../assets/images/real-estate/sale-hero.jpeg" alt="عقارات للبيع" class="w-full h-full object-cover">
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
@@ -149,11 +245,11 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2">نوع العقار</label>
                     <select class="sale-filter w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" data-filter="type">
                         <option value="">جميع الأنواع</option>
-                        <option value="apartment">شقة</option>
-                        <option value="villa">فيلا</option>
-                        <option value="land">أرض</option>
-                        <option value="commercial">محل تجاري</option>
-                        <option value="office">مكتب</option>
+                        <option value="industrial">عقار صناعي</option>
+                        <option value="agricultural">عقار فلاحي</option>
+                        <option value="commercial">عقار تجاري</option>
+                        <option value="warehouse">مستودع</option>
+                        <option value="factory">مصنع</option>
                     </select>
                 </div>
                 
@@ -173,22 +269,22 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2">السعر</label>
                     <select class="sale-filter w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" data-filter="price">
                         <option value="">جميع الأسعار</option>
-                        <option value="low">أقل من 5 مليون</option>
-                        <option value="medium">5 - 15 مليون</option>
-                        <option value="high">15 - 30 مليون</option>
-                        <option value="premium">أكثر من 30 مليون</option>
+                        <option value="low">أقل من 500 مليون</option>
+                        <option value="medium">500 مليون - 2 مليار</option>
+                        <option value="high">2 - 5 مليار</option>
+                        <option value="premium">أكثر من 5 مليار</option>
                     </select>
                 </div>
                 
                 <div>
-                    <label class="block text-gray-700 text-sm font-bold mb-2">عدد الغرف</label>
-                    <select class="sale-filter w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" data-filter="rooms">
-                        <option value="">جميع الغرف</option>
-                        <option value="1">غرفة واحدة</option>
-                        <option value="2">غرفتان</option>
-                        <option value="3">3 غرف</option>
-                        <option value="4">4 غرف</option>
-                        <option value="5+">5+ غرف</option>
+                    <label class="block text-gray-700 text-sm font-bold mb-2">نوع النشاط</label>
+                    <select class="sale-filter w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" data-filter="activity">
+                        <option value="">جميع الأنشطة</option>
+                        <option value="food">صناعات غذائية</option>
+                        <option value="textile">صناعات نسيجية</option>
+                        <option value="agriculture">زراعة</option>
+                        <option value="livestock">تربية المواشي</option>
+                        <option value="storage">تخزين</option>
                     </select>
                 </div>
                 
@@ -196,10 +292,10 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2">المساحة</label>
                     <select class="sale-filter w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500" data-filter="area">
                         <option value="">جميع المساحات</option>
-                        <option value="small">أقل من 100 م²</option>
-                        <option value="medium">100 - 200 م²</option>
-                        <option value="large">200 - 400 م²</option>
-                        <option value="xlarge">أكثر من 400 م²</option>
+                        <option value="small">أقل من 1000 م²</option>
+                        <option value="medium">1000 - 5000 م²</option>
+                        <option value="large">5000 - 20000 م²</option>
+                        <option value="xlarge">أكثر من 20000 م²</option>
                     </select>
                 </div>
                 
@@ -218,7 +314,7 @@
 <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between mb-8" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-gray-800">العقارات المتاحة للبيع</h2>
+            <h2 class="text-3xl font-bold text-gray-800">العقارات الصناعية والفلاحية للبيع</h2>
             <div class="flex items-center gap-4">
                 <span class="text-gray-600">ترتيب حسب:</span>
                 <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 bg-white">
@@ -232,10 +328,10 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="sale-properties-grid">
-            <!-- Property 1: Apartment -->
-            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-type="apartment" data-location="algiers" data-price="medium" data-rooms="4" data-area="medium">
+            <!-- Property 1: مصنع صناعي -->
+            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-type="industrial" data-location="algiers" data-price="high" data-activity="food" data-area="large">
                 <div class="relative">
-                    <img src="../assets/images/real-estate/sale-1.jpg" alt="شقة للبيع" class="w-full h-48 object-cover">
+                    <img src="../../assets/images/real-estate/industrial-1.jpeg" alt="مصنع للبيع" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         للبيع
                     </div>
@@ -243,12 +339,12 @@
                         مميز
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
-                        <div class="text-lg font-bold">8,500,000 دج</div>
+                        <div class="text-lg font-bold">2.5 مليار دج</div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">شقة</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">مصنع</span>
                         <div class="flex text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -257,7 +353,7 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">شقة 4 غرف في حي راقي</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">مصنع للصناعات الغذائية</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-emerald-500 ml-2"></i>
                         الجزائر العاصمة، حيدرة
@@ -265,31 +361,31 @@
                     
                     <div class="grid grid-cols-3 gap-4 mb-4 text-sm text-gray-600">
                         <div class="flex items-center">
-                            <i class="fas fa-bed text-emerald-500 ml-2"></i>
-                            <span>4 غرف</span>
+                            <i class="fas fa-industry text-emerald-500 ml-2"></i>
+                            <span>مصنع</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-bath text-emerald-500 ml-2"></i>
-                            <span>2 حمام</span>
+                            <i class="fas fa-warehouse text-emerald-500 ml-2"></i>
+                            <span>مستودع</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-ruler-combined text-emerald-500 ml-2"></i>
-                            <span>120 م²</span>
+                            <span>5000 م²</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مطبخ مجهز</span>
+                            <span>خطوط إنتاج حديثة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>شرفة واسعة</span>
+                            <span>مكاتب إدارية</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>موقف سيارة</span>
+                            <span>موقف شاحنات</span>
                         </div>
                     </div>
                     
@@ -306,23 +402,23 @@
                 </div>
             </div>
 
-            <!-- Property 2: Villa -->
-            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-type="villa" data-location="oran" data-price="high" data-rooms="5+" data-area="xlarge">
+            <!-- Property 2: مزرعة فلاحية -->
+            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-type="agricultural" data-location="oran" data-price="medium" data-activity="agriculture" data-area="xlarge">
                 <div class="relative">
-                    <img src="../assets/images/real-estate/sale-2.jpg" alt="فيلا للبيع" class="w-full h-48 object-cover">
+                    <img src="../../assets/images/real-estate/farm-1.jpg" alt="مزرعة للبيع" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         للبيع
                     </div>
-                    <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        فاخر
+                    <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مروي
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
-                        <div class="text-lg font-bold">22,000,000 دج</div>
+                        <div class="text-lg font-bold">800 مليون دج</div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">فيلا</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">مزرعة</span>
                         <div class="flex text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -331,39 +427,39 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">فيلا فاخرة مع حديقة</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">مزرعة للإنتاج الزراعي</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-emerald-500 ml-2"></i>
-                        وهران، حي الأندلس
+                        وهران، منطقة فلاحية
                     </p>
                     
                     <div class="grid grid-cols-3 gap-4 mb-4 text-sm text-gray-600">
                         <div class="flex items-center">
-                            <i class="fas fa-bed text-emerald-500 ml-2"></i>
-                            <span>6 غرف</span>
+                            <i class="fas fa-seedling text-emerald-500 ml-2"></i>
+                            <span>زراعة</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-bath text-emerald-500 ml-2"></i>
-                            <span>4 حمام</span>
+                            <i class="fas fa-tractor text-emerald-500 ml-2"></i>
+                            <span>معدات</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-ruler-combined text-emerald-500 ml-2"></i>
-                            <span>350 م²</span>
+                            <span>20 هكتار</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>حديقة خاصة</span>
+                            <span>نظام ري حديث</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>حمام سباحة</span>
+                            <span>بيوت محمية</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مرآب 3 سيارات</span>
+                            <span>مخازن تبريد</span>
                         </div>
                     </div>
                     
@@ -380,10 +476,10 @@
                 </div>
             </div>
 
-            <!-- Property 3: Land -->
-            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-type="land" data-location="constantine" data-price="low" data-rooms="" data-area="large">
+            <!-- Property 3: مستودع تجاري -->
+            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200" data-type="warehouse" data-location="constantine" data-price="medium" data-activity="storage" data-area="large">
                 <div class="relative">
-                    <img src="../assets/images/real-estate/sale-3.jpg" alt="أرض للبيع" class="w-full h-48 object-cover">
+                    <img src="../../assets/images/real-estate/commercial-1.jpeg" alt="مستودع للبيع" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         للبيع
                     </div>
@@ -391,12 +487,12 @@
                         استثمار
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
-                        <div class="text-lg font-bold">3,500,000 دج</div>
+                        <div class="text-lg font-bold">1.2 مليار دج</div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">أرض</span>
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">مستودع</span>
                         <div class="flex text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -405,39 +501,39 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">أرض للبناء في موقع ممتاز</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">مستودع للتخزين والتوزيع</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-emerald-500 ml-2"></i>
-                        قسنطينة، منطقة التوسع
+                        قسنطينة، المنطقة الصناعية
                     </p>
                     
                     <div class="grid grid-cols-3 gap-4 mb-4 text-sm text-gray-600">
                         <div class="flex items-center">
+                            <i class="fas fa-warehouse text-emerald-500 ml-2"></i>
+                            <span>مستودع</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-truck text-emerald-500 ml-2"></i>
+                            <span>منصة تحميل</span>
+                        </div>
+                        <div class="flex items-center">
                             <i class="fas fa-ruler-combined text-emerald-500 ml-2"></i>
-                            <span>300 م²</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-road text-emerald-500 ml-2"></i>
-                            <span>واجهة 15م</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-certificate text-emerald-500 ml-2"></i>
-                            <span>سند ملكية</span>
+                            <span>3000 م²</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>قابل للبناء</span>
+                            <span>سقف عالي</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>جميع المرافق</span>
+                            <span>أنظمة أمان</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>موقع استراتيجي</span>
+                            <span>مكاتب إدارية</span>
                         </div>
                     </div>
                     
@@ -454,23 +550,23 @@
                 </div>
             </div>
 
-            <!-- Property 4: Commercial -->
-            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-type="commercial" data-location="chlef" data-price="medium" data-rooms="" data-area="medium">
+            <!-- Property 4: مصنع نسيج -->
+            <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300" data-type="industrial" data-location="chlef" data-price="high" data-activity="textile" data-area="large">
                 <div class="relative">
-                    <img src="../assets/images/real-estate/sale-4.jpg" alt="محل تجاري للبيع" class="w-full h-48 object-cover">
+                    <img src="../../assets/images/real-estate/textile-factory.jpeg" alt="مصنع نسيج للبيع" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         للبيع
                     </div>
-                    <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        موقع ممتاز
+                    <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        مجهز بالكامل
                     </div>
                     <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg">
-                        <div class="text-lg font-bold">12,000,000 دج</div>
+                        <div class="text-lg font-bold">3.8 مليار دج</div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">محل تجاري</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">مصنع نسيج</span>
                         <div class="flex text-yellow-400">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -479,39 +575,39 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">محل تجاري في شارع رئيسي</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">مصنع للصناعات النسيجية</h3>
                     <p class="text-gray-600 mb-4 flex items-center">
                         <i class="fas fa-map-marker-alt text-emerald-500 ml-2"></i>
-                        شلف، وسط المدينة
+                        شلف، المنطقة الصناعية
                     </p>
                     
                     <div class="grid grid-cols-3 gap-4 mb-4 text-sm text-gray-600">
                         <div class="flex items-center">
-                            <i class="fas fa-store text-emerald-500 ml-2"></i>
-                            <span>محل</span>
+                            <i class="fas fa-industry text-emerald-500 ml-2"></i>
+                            <span>مصنع</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-warehouse text-emerald-500 ml-2"></i>
-                            <span>مخزن</span>
+                            <i class="fas fa-cogs text-emerald-500 ml-2"></i>
+                            <span>آلات حديثة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-ruler-combined text-emerald-500 ml-2"></i>
-                            <span>80 م²</span>
+                            <span>4500 م²</span>
                         </div>
                     </div>
                     
                     <div class="space-y-2 mb-4 text-xs text-gray-600">
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>واجهة زجاجية</span>
+                            <span>خطوط إنتاج متطورة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مكيف هواء</span>
+                            <span>مختبر جودة</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check text-green-500 ml-2"></i>
-                            <span>مرافق كاملة</span>
+                            <span>مرافق عمال</span>
                         </div>
                     </div>
                     
@@ -538,6 +634,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Investment Tips -->
 <section class="py-20 bg-white">
